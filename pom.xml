@@ -27,7 +27,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
-    <org.springframework.version>5.2.1.RELEASE</org.springframework.version>
+    <org.springframework.version>5.2.3.RELEASE</org.springframework.version>
   </properties>
 
   <!-- =============================================================== -->
@@ -70,6 +70,16 @@
       <!-- == Spring dependencies == -->
       <dependency>
         <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>5.2.1.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>5.2.3.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>5.2.1.RELEASE</version>
       </dependency>
@@ -77,28 +87,21 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
-        <version>5.2.1.RELEASE</version>
+        <version>5.2.3.RELEASE</version>
       </dependency>
 
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>5.2.1.RELEASE</version>
+        <version>5.2.3.RELEASE</version>
       </dependency>
 
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
-        <version>5.2.1.RELEASE</version>
+        <version>5.2.3.RELEASE</version>
       </dependency>
 
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>${org.springframework.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
 
 
       <!-- == Java Servlet API == -->
