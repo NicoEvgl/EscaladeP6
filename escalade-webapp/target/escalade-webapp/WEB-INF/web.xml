@@ -3,6 +3,16 @@
 
   <display-name>Les amis de l'escalade</display-name>
 
+  <!-- Spring context configuration -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/bootstrapContext.xml</param-value>
+  </context-param>
+
   <welcome-file-list>
     <welcome-file>home.html</welcome-file>
     <welcome-file>home.jsp</welcome-file>
@@ -22,6 +32,7 @@
     <url-pattern>/home.jsp</url-pattern>
     <url-pattern>/home.html</url-pattern>
     <url-pattern>*.html</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
 </web-app>

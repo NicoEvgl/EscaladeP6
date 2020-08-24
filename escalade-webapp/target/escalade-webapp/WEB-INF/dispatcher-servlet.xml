@@ -13,7 +13,7 @@
 
     <mvc:annotation-driven />
     <context:component-scan
-            base-package="org.nico.webapp.controllers" />
+            base-package="org.nico.controllers" />
     <mvc:default-servlet-handler />
 
     <bean id="viewResolver"
