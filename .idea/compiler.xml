@@ -13,11 +13,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="escalade" target="1.5" />
-      <module name="escalade-business" target="1.5" />
-      <module name="escalade-consumer" target="1.5" />
-      <module name="escalade-model" target="1.5" />
-      <module name="escalade-webapp" target="1.7" />
+      <module name="escalade" target="1.8" />
+      <module name="escalade-business" target="1.8" />
+      <module name="escalade-consumer" target="1.8" />
+      <module name="escalade-model" target="1.8" />
+      <module name="escalade-webapp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

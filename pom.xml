@@ -1,80 +1,188 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-          
-  
-  
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-          
-  
-  
-  
+
+  <!-- =============================================================== -->
+  <!-- Project informations -->
+  <!-- =============================================================== -->
+
+  <!-- ===== Maven informations ===== -->
   <groupId>org.nico</groupId>
-          
-  
-  
-  
   <artifactId>escalade</artifactId>
-          
-  
-  
-  
   <version>1.0-SNAPSHOT</version>
-          
-  
-  
-  
   <packaging>pom</packaging>
-          
-  
-  
-  
+
+  <!-- ===== General informations ===== -->
   <name>escalade</name>
-          
-  
-  
-  
   <url>http://maven.apache.org</url>
-          
-  
-  
-  
+
+  <!-- =============================================================== -->
+  <!-- Properties -->
+  <!-- =============================================================== -->
   <properties>
-                    
-    
-    
-    
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                  
-  
-  
-  
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
+    <build.timestamp>${maven.build.timestamp}</build.timestamp>
+    <org.springframework.version>5.2.1.RELEASE</org.springframework.version>
   </properties>
-        
-  
-  
-  
+
+  <!-- =============================================================== -->
+  <!-- Modules -->
+  <!-- =============================================================== -->
   <modules>
-                  
-    
-    
-    
     <module>escalade-business</module>
-                  
-    
-    
-    
     <module>escalade-consumer</module>
-              
-    
-    
     <module>escalade-model</module>
-          
-    
     <module>escalade-webapp</module>
-      
   </modules>
-      
+
+  <!-- =============================================================== -->
+  <!-- Dependencies management -->
+  <!-- =============================================================== -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- ===== Modules ===== -->
+      <dependency>
+        <groupId>org.nico</groupId>
+        <artifactId>escalade-business</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nico</groupId>
+        <artifactId>escalade-consumer</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nico</groupId>
+        <artifactId>escalade-model</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nico</groupId>
+        <artifactId>escalade-webapp</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <!-- == Spring dependencies == -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.2.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>5.2.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>5.2.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>5.2.1.RELEASE</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${org.springframework.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
 
+      <!-- == Java Servlet API == -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!-- == JSP API == -->
+      <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.2</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!-- == JSTL dependencies == -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+      </dependency>
+
+      <!-- == POSTEGRESQL dependencies == -->
+      <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.5</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <!-- == Test == -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <!-- =============================================================== -->
+  <!-- Build -->
+  <!-- =============================================================== -->
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.3</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>

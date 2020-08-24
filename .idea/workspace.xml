@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="First Commit - Projet Maven multi-module">
+      <change beforePath="$PROJECT_DIR$/escalade-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Programmes/Maven/apache-maven-3.6.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Programmes/Maven/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -14,8 +42,68 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1gXnK5hg7VVCWQvxBZ6mkzpv7KE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Documents/DocNico/OpenClassrooms/Projet_3" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projet_3" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="" />
+      <created>1598269737221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598269737221</updated>
+      <workItem from="1598269742842" duration="1853000" />
+    </task>
+    <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
+      <created>1598269888215</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598269888215</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit - Projet Maven multi-module" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit - Projet Maven multi-module" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598269903378">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598269903378" />
   </component>
 </project>

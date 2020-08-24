@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+
+  <!-- =============================================================== -->
+  <!-- Project informations -->
+  <!-- =============================================================== -->
+
+  <!-- ===== Maven informations ===== -->
   <parent>
     <groupId>org.nico</groupId>
     <artifactId>escalade</artifactId>
@@ -10,17 +16,47 @@
   <groupId>org.nico</groupId>
   <artifactId>escalade-business</artifactId>
   <version>1.0-SNAPSHOT</version>
+
+  <!-- ===== General informations ===== -->
   <name>escalade-business</name>
   <url>http://maven.apache.org</url>
+
+  <!-- =============================================================== -->
+  <!-- Properties -->
+  <!-- =============================================================== -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <!-- =============================================================== -->
+  <!-- Dependencies management -->
+  <!-- =============================================================== -->
   <dependencies>
+    <!-- ===== Modules ===== -->
+    <dependency>
+      <groupId>org.nico</groupId>
+      <artifactId>escalade-consumer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nico</groupId>
+      <artifactId>escalade-model</artifactId>
+    </dependency>
+
+    <!-- == Spring dependencies == -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+    </dependency>
+
+    <!-- == Test dependencies == -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>
