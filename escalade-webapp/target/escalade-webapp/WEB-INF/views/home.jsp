@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8"%>
 
 <%@include file="head.jsp"%>
@@ -8,4 +7,5 @@
 <body>${message}
     <div class="bg"></div>
     <p class="py-5 text-center">
+
 </body>

@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"  %>
+<%@ taglib prefix="input" uri="http://www.springframework.org/tags/form" %>
 <html lang="fr">
     <head>
         <title>Les amis de l'escalade</title>
@@ -19,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/"/>">S'inscrire</a>
+                        <a class="nav-link" href="<c:url value="/register"/>">S'inscrire</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<c:url value="/"/>">Se connecter</a>
