@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- injection configuration -->
+    <context:annotation-config/>
+
+    <!-- package scanning for beans -->
+    <context:component-scan base-package="org.nico"/>
+
+    <!-- import context file Spring -->
+    <import resource="classpath:/webappContext.xml"/>
+    <import resource="classpath:businessContext.xml"/>
+    <import resource="classpath:consumerContext.xml"/>
+    <import resource="classpath:modelContext.xml"/>
+
+</beans>
