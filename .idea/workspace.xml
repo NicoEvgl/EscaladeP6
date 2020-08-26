@@ -15,19 +15,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new controller : LoginController">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/head.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/register.jsp" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new jsp : login.jsp">
+      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +32,9 @@
       <list>
         <option value="CSS File" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -94,17 +85,20 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org.nico.webapp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.model.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -261,7 +255,7 @@
       <workItem from="1598279354320" duration="35000" />
       <workItem from="1598284605786" duration="24850000" />
       <workItem from="1598354736236" duration="22901000" />
-      <workItem from="1598453159361" duration="5272000" />
+      <workItem from="1598453159361" duration="13349000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -312,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598455653087</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new jsp : login.jsp">
+      <created>1598458498552</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598458498552</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +339,8 @@
     <MESSAGE value="new view : register.jsp / new controller : RegistrationController(displayLogin) / new bean on model : User" />
     <MESSAGE value="new bean : Login" />
     <MESSAGE value="new controller : LoginController" />
-    <option name="LAST_COMMIT_MESSAGE" value="new controller : LoginController" />
+    <MESSAGE value="new jsp : login.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="new jsp : login.jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -349,70 +351,74 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598287368990" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1598454871231">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1598469539846">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1598454871231" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1598469539846" />
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598314256656">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598314256656" />
-    <state width="1293" height="205" key="GridCell.Tab.0.bottom" timestamp="1598458357080">
+    <state width="1293" height="205" key="GridCell.Tab.0.bottom" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357080" />
-    <state width="1293" height="205" key="GridCell.Tab.0.center" timestamp="1598458357080">
+    <state width="1293" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.0.center" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357080" />
-    <state width="1293" height="205" key="GridCell.Tab.0.left" timestamp="1598458357080">
+    <state width="1293" height="205" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.0.left" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357080" />
-    <state width="1293" height="205" key="GridCell.Tab.0.right" timestamp="1598458357080">
+    <state width="1293" height="205" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.0.right" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357080" />
-    <state width="1293" height="205" key="GridCell.Tab.1.bottom" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.1.bottom" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.1.center" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.1.center" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.1.left" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.1.left" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.1.right" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.1.right" timestamp="1598458440465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.2.bottom" timestamp="1598458357026">
+    <state width="1293" height="205" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440465" />
+    <state width="1293" height="205" key="GridCell.Tab.2.bottom" timestamp="1598458440466">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357026" />
-    <state width="1293" height="205" key="GridCell.Tab.2.center" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440466" />
+    <state width="1293" height="205" key="GridCell.Tab.2.center" timestamp="1598458440466">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.2.left" timestamp="1598458357025">
+    <state width="1293" height="205" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440466" />
+    <state width="1293" height="205" key="GridCell.Tab.2.left" timestamp="1598458440466">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357025" />
-    <state width="1293" height="205" key="GridCell.Tab.2.right" timestamp="1598458357026">
+    <state width="1293" height="205" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440466" />
+    <state width="1293" height="205" key="GridCell.Tab.2.right" timestamp="1598458440466">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458357026" />
+    <state width="1293" height="205" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598458440466" />
     <state x="922" y="185" key="SettingsEditor" timestamp="1598287297685">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="922" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598287297685" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598400828909">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598458603957">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598400828909" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598458603957" />
+    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog" timestamp="1598468761038">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598468761038" />
     <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1598384308919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

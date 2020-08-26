@@ -15,6 +15,7 @@ public class User {
     private String address2;
     private String zip;
     private String city;
+    private String role;
 
     //====  CONSTRUCTOR  ====
 
@@ -22,7 +23,7 @@ public class User {
     }
 
     public User(Integer id, String gender, String firstName, String lastName, String username, String email,
-                String password, String address, String address2, String zip, String city) {
+                String password, String address, String address2, String zip, String city, String role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,6 +35,7 @@ public class User {
         this.address2 = address2;
         this.zip = zip;
         this.city= city;
+        this.role= role;
     }
 
     //====  GETTERS AND SETTERS  ====
@@ -124,6 +126,14 @@ public class User {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     //======= toString =======
