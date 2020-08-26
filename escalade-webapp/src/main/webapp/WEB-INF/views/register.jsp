@@ -1,12 +1,12 @@
 <%@ page pageEncoding="UTF-8" %>
-<%@include file="head.jsp"%>
 
+<%@include file="header.jsp"%>
 
-<main class="page register-page">
-    <head>
-        <title>S'inscrire</title>
-    </head>
-    <body>
+<head>
+    <title>S'inscrire</title>
+</head>
+<body>
+    <main class="page register-page">
         <div class="view" style="background-image: url('https://cdn.crunchify.com/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center ;"/>
         <section class="clean-block clean-form dark">
             <div class="container">
@@ -14,7 +14,7 @@
                     <h3 class="text-info">S'inscrire</h3>
                 </div>
                 <div>
-                    <form:form cssClass="form-group" method="post" action="register.html" modelAttribute="user">
+                    <form:form cssClass="form-group" method="post" action="register" modelAttribute="user">
                         <div class="form-group">
                             <form:select path="gender" type="text" cssClass="form-control" placeholder="Genre" required="true" autofocus="">
                                 <form:option value="M" label="Monsieur"/>
@@ -74,10 +74,10 @@
                                 <form:errors path="city" cssClass="error"/>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">S'inscrire</button>
+                        <form:button type="submit" class="btn btn-primary">S'inscrire</form:button>
                     </form:form>
                 </div>
             </div>
         </section>
-    </body>
-</main>
+    </main>
+</body>

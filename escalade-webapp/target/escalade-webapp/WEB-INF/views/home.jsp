@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 
-<%@include file="head.jsp"%>
+<%@include file="header.jsp"%>
 <head>
     <title>Les amis de l'escalade</title>
 </head>
