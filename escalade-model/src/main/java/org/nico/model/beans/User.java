@@ -35,8 +35,8 @@ public class User {
         this.zip = zip;
         this.city= city;
     }
-    //====  GETTERS AND SETTERS  ====
 
+    //====  GETTERS AND SETTERS  ====
 
     public Integer getId() {
         return id;
@@ -125,13 +125,12 @@ public class User {
     public void setCity(String city) {
         this.city = city;
     }
-    //======= toString =======
 
+    //======= toString =======
 
     @Override
     public String toString() {
-        return "Member id= " + id + " firstName= " + firstName + " lastName= " + lastName + " username= " + username
-                + " gender= " + gender + " email= " + email + " password= " + password;
-
+        return "User id : " + id + "Genre : " + gender + " Prénom : " + firstName + " Nom : " + lastName + " Nom d'utilisateur : " + username +
+                " email : " + email + " mot de passe : " + password + "adresse : " + address + "code postal : " + zip + "Ville : " + city ;
     }
 }
