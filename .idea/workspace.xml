@@ -15,10 +15,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : GuideBook">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new controller : GuideBookController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/ClimbingSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/ClimbingSite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +261,7 @@
       <workItem from="1598284605786" duration="24850000" />
       <workItem from="1598354736236" duration="22901000" />
       <workItem from="1598453159361" duration="22205000" />
-      <workItem from="1598539699667" duration="3796000" />
+      <workItem from="1598539699667" duration="4504000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -336,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598543250571</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="new controller : GuideBookController">
+      <created>1598543520543</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598543520543</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +377,8 @@
     <MESSAGE value="new bean : ClimbingSite / new enum : Cotation" />
     <MESSAGE value="new jsp : climbingSite.jsp" />
     <MESSAGE value="new bean : GuideBook" />
-    <option name="LAST_COMMIT_MESSAGE" value="new bean : GuideBook" />
+    <MESSAGE value="new controller : GuideBookController" />
+    <option name="LAST_COMMIT_MESSAGE" value="new controller : GuideBookController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -385,54 +397,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598314256656" />
-    <state width="1293" height="205" key="GridCell.Tab.0.bottom" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.0.bottom" timestamp="1598544101110">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.0.center" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101110" />
+    <state width="619" height="205" key="GridCell.Tab.0.center" timestamp="1598544101110">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.0.left" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101110" />
+    <state width="619" height="205" key="GridCell.Tab.0.left" timestamp="1598544101110">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.0.right" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101110" />
+    <state width="619" height="205" key="GridCell.Tab.0.right" timestamp="1598544101110">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.1.bottom" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101110" />
+    <state width="619" height="205" key="GridCell.Tab.1.bottom" timestamp="1598544101035">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.1.center" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101035" />
+    <state width="619" height="205" key="GridCell.Tab.1.center" timestamp="1598544101035">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.1.left" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101035" />
+    <state width="619" height="205" key="GridCell.Tab.1.left" timestamp="1598544101035">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.1.right" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101035" />
+    <state width="619" height="205" key="GridCell.Tab.1.right" timestamp="1598544101035">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.2.bottom" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101035" />
+    <state width="619" height="205" key="GridCell.Tab.2.bottom" timestamp="1598544101036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.2.center" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101036" />
+    <state width="619" height="205" key="GridCell.Tab.2.center" timestamp="1598544101036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.2.left" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101036" />
+    <state width="619" height="205" key="GridCell.Tab.2.left" timestamp="1598544101036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
-    <state width="1293" height="205" key="GridCell.Tab.2.right" timestamp="1598492285866">
+    <state width="619" height="205" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101036" />
+    <state width="619" height="205" key="GridCell.Tab.2.right" timestamp="1598544101036">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="205" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598492285866" />
+    <state width="619" height="205" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598544101036" />
     <state x="922" y="185" key="SettingsEditor" timestamp="1598287297685">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

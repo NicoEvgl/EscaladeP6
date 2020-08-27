@@ -13,6 +13,6 @@ public class GuideBookController {
     @GetMapping(value = "/guideBook")
     public String displayGuideBookPage(Model model) {
         model.addAttribute("guidebook", new GuideBook());
-        return "guidebook";
+        return "guideBook";
     }
 }

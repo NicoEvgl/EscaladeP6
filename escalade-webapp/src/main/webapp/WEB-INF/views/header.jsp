@@ -33,7 +33,7 @@
                         <a class="nav-link" href="<c:url value="/climbingSite"/>">Les sites d'escalade</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/"/>">Les topos</a>
+                        <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
