@@ -136,8 +136,11 @@ public class User {
         this.role = role;
     }
 
-    //======= toString =======
 
+    /**
+     * method to string user
+     * @return id,gender,firstName,lastName,username,email,password,address,zip,city
+     */
     @Override
     public String toString() {
         return "User id : " + id + "Genre : " + gender + " Prénom : " + firstName + " Nom : " + lastName + " Nom d'utilisateur : " + username +

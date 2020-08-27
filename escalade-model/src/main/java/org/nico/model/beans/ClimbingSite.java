@@ -1,6 +1,5 @@
 package org.nico.model.beans;
 
-import org.nico.model.enums.Cotation;
 
 public class ClimbingSite {
 
@@ -14,13 +13,13 @@ public class ClimbingSite {
     private String height;
     private Integer nbRoutes;
     private String orientation;
-    private Cotation cotation;
+    private String cotation;
 
     //====  CONSTRUCTOR  ====//
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String orientation, Cotation cotation) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String orientation, String cotation) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -67,10 +66,15 @@ public class ClimbingSite {
 
     public void setOrientation(String orientation) { this.orientation = orientation; }
 
-    public Cotation getCotation() { return cotation; }
+    public String getCotation() { return cotation; }
 
-    public void setCotation(Cotation cotation) { this.cotation = cotation; }
+    public void setCotation(String cotation) { this.cotation = cotation; }
 
+
+    /**
+     * method to String climbing sites
+     * @return id,name,region,climbingType,rockType,height,nbRoutes,orientation,cotation
+     */
     @Override
     public String toString(){
         return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
