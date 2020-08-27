@@ -74,7 +74,7 @@ public class ClimbingSite {
     @Override
     public String toString(){
         return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
-                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Orientation : " + orientation + " Cotation : " + cotation;
+                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Orientation : " + orientation + " Cotation : " + cotation ;
     }
 }
 
