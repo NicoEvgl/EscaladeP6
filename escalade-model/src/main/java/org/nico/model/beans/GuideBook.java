@@ -89,6 +89,10 @@ public class GuideBook {
     }
 
 
+    /**
+     * method to string guidebook
+     * @return id,name,description,region,releaseDate,isBooked,user
+     */
     @Override
     public String toString() {
         return "Topo {" +
