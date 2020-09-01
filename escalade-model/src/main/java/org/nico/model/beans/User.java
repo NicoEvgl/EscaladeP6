@@ -16,6 +16,7 @@ public class User {
     private String zip;
     private String city;
     private String role;
+    private boolean enabled;
 
     //====  CONSTRUCTOR  ====
 
@@ -23,7 +24,7 @@ public class User {
     }
 
     public User(Integer id, String gender, String firstName, String lastName, String username, String email,
-                String password, String address, String address2, String zip, String city, String role) {
+                String password, String address, String address2, String zip, String city, String role, boolean enabled) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,6 +37,7 @@ public class User {
         this.zip = zip;
         this.city= city;
         this.role= role;
+        this.enabled = enabled;
     }
 
     //====  GETTERS AND SETTERS  ====
@@ -128,14 +130,13 @@ public class User {
         this.city = city;
     }
 
-    public String getRole() {
-        return role;
-    }
+    public String getRole() { return role; }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+    public void setRole(String role) { this.role = role; }
 
+    public boolean isEnabled() { return enabled; }
+
+    public void setEnabled(boolean enabled) { this.enabled = enabled; }
 
     /**
      * method to string user
