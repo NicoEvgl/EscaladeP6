@@ -2,11 +2,14 @@ package org.nico.consumer.impl.dao;
 
 import org.nico.consumer.contract.dao.MemberDao;
 import org.nico.consumer.impl.AbstractDaoImpl;
+import org.nico.consumer.impl.rowmapper.MemberRowMapper;
 import org.nico.model.beans.Member;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.sql.Types;
+import java.util.List;
 
 public class MemberDaoImpl extends AbstractDaoImpl implements MemberDao {
 
@@ -25,5 +28,15 @@ public class MemberDaoImpl extends AbstractDaoImpl implements MemberDao {
         parameterSource.addValue("role", member.getRole(), Types.VARCHAR);
 
         namedParameterJdbcTemplate.update(sql, parameterSource);
+    }
+
+    @Override
+    public List<Member> findMemberList() {
+        String sql = "SELECT * FROM public.member";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        MemberRowMapper memberRowMapper = new MemberRowMapper();
+        List<Member> memberList = jdbcTemplate.query(sql, memberRowMapper);
+
+        return memberList;
     }
 }

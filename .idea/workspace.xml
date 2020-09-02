@@ -15,9 +15,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add log4j2.xml + logs depedencies in pom.xml files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method createMember on MemberDaoImpl / sql dialect configured (postgresql);">
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/MemberRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.consumer.impl.rowmapper" />
       <recent name="org.nico.consumer.impl" />
       <recent name="org.nico.consumer.contract.dao" />
       <recent name="org.nico.business.contract.manager" />
@@ -271,7 +272,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="10536000" />
+      <workItem from="1599045032828" duration="12518000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -427,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599056589246</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="method createMember on MemberDaoImpl / sql dialect configured (postgresql);">
+      <created>1599058703867</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599058703867</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +476,8 @@
     <MESSAGE value="DAO config on consumerContext.xml" />
     <MESSAGE value="Managers statement &amp; Manager Factory in businessContext.xml" />
     <MESSAGE value="add log4j2.xml + logs depedencies in pom.xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add log4j2.xml + logs depedencies in pom.xml files" />
+    <MESSAGE value="method createMember on MemberDaoImpl / sql dialect configured (postgresql);" />
+    <option name="LAST_COMMIT_MESSAGE" value="method createMember on MemberDaoImpl / sql dialect configured (postgresql);" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
