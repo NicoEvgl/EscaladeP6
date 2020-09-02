@@ -19,9 +19,28 @@ public class Member {
 
     //====  CONSTRUCTOR  ====
 
+    /**
+     * Default constructor
+     */
     public Member() {
     }
 
+    /**
+     * Constructor
+     *
+     * @param id
+     * @param gender
+     * @param firstName
+     * @param lastName
+     * @param username
+     * @param email
+     * @param password
+     * @param address
+     * @param address2
+     * @param zip
+     * @param city
+     * @param role
+     */
     public Member(Integer id, String gender, String firstName, String lastName, String username, String email,
                   String password, String address, String address2, String zip, String city, String role) {
         this.id = id;
