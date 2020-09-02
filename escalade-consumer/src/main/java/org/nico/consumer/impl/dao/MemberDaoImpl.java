@@ -53,10 +53,17 @@ public class MemberDaoImpl extends AbstractDaoImpl implements MemberDao {
                 + "password = :password, "
                 + "role = :role, "
                 + "WHERE id = :id";
-        SqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(member);
+        BeanPropertySqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(member);
+        sqlParameterSource.registerSqlType("id", Types.INTEGER);
+        sqlParameterSource.registerSqlType("gender", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("firstName", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("lastName", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("pseudo", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("email", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("password", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("role", Types.VARCHAR);
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
 
         namedParameterJdbcTemplate.update(sql, sqlParameterSource);
-
     }
 }
