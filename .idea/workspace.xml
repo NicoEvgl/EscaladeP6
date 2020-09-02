@@ -15,8 +15,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="AbstractDaoImpl completed">
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="DAO config on consumerContext.xml">
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +263,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="6290000" />
+      <workItem from="1599045032828" duration="7812000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -398,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599051313687</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="DAO config on consumerContext.xml">
+      <created>1599052129182</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1599052129182</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +443,8 @@
     <MESSAGE value="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl" />
     <MESSAGE value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
     <MESSAGE value="AbstractDaoImpl completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="AbstractDaoImpl completed" />
+    <MESSAGE value="DAO config on consumerContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO config on consumerContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -511,10 +519,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="922" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598287297685" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1598972841915">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599052163567">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598972841915" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599052163567" />
     <state x="1235" y="288" key="refactoring.ChangeSignatureDialog" timestamp="1598468761038">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

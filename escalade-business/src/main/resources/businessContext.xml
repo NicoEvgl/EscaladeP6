@@ -3,4 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+    <!-- ===== Managers statement ===== -->
+    <bean id="memberManager" class="org.nico.business.impl.manager.MemberManagerImpl"></bean>
+
+    <!-- ===== ManagerFactory ===== -->
+    <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
+        <property name="MemberManager" ref="memberManager"/>
+    </bean>
 </beans>
