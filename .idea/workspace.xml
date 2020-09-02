@@ -15,13 +15,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/META-INF/context.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/resources/webappContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/resources/webappContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +264,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="4900000" />
+      <workItem from="1599045032828" duration="5560000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -389,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599049282261</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml">
+      <created>1599050717315</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1599050717315</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +428,8 @@
     <MESSAGE value="add file create_db_escalade.sql + import database 'db_escalade'" />
     <MESSAGE value="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl" />
     <MESSAGE value="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl" />
+    <MESSAGE value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
