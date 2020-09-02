@@ -15,11 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add spring tx dependency in pom.xml(business)">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/AbstractManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add AbstractManager / refactor AbstractDao">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="16984000" />
+      <workItem from="1599045032828" duration="18916000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -457,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599065317943</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add AbstractManager / refactor AbstractDao">
+      <created>1599066094752</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1599066094752</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +482,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Spring servlet configuration / new controller HomeController.java / new jsp home.jsp" />
     <MESSAGE value="add config filesContext.xml" />
     <MESSAGE value="add head.jsp / bootstrap.min.css / style.css&#10;Homepage ok" />
     <MESSAGE value="new view : register.jsp / new controller : RegistrationController(displayLogin) / new bean on model : User" />
@@ -501,7 +506,8 @@
     <MESSAGE value="method findMemberList on MemberDaoImpl / new package : rowmapper / add MemberRowMapper" />
     <MESSAGE value="method updateMember on MemberDaoImpl" />
     <MESSAGE value="add spring tx dependency in pom.xml(business)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring tx dependency in pom.xml(business)" />
+    <MESSAGE value="add AbstractManager / refactor AbstractDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="add AbstractManager / refactor AbstractDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">

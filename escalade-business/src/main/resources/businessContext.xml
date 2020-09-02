@@ -12,5 +12,9 @@
         <property name="MemberManager" ref="memberManager"/>
     </bean>
 
+    <!-- Transaction manager -->
 
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceEscalade"/>
+    </bean>
 </beans>
