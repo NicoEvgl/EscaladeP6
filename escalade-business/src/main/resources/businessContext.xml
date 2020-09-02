@@ -11,4 +11,6 @@
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
         <property name="MemberManager" ref="memberManager"/>
     </bean>
+
+
 </beans>

@@ -15,12 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="Managers statement &amp; Manager Factory in businessContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/pom.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add log4j2.xml + logs depedencies in pom.xml files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +85,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/escalade-webapp/src/main/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
@@ -246,6 +247,9 @@
       </method>
     </configuration>
   </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="SpringGeneralSettings">
     <option name="allowAutoConfigurationMode" value="true" />
   </component>
@@ -267,7 +271,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="8638000" />
+      <workItem from="1599045032828" duration="10536000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -416,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599055827681</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add log4j2.xml + logs depedencies in pom.xml files">
+      <created>1599056589246</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1599056589246</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,13 +467,22 @@
     <MESSAGE value="AbstractDaoImpl completed" />
     <MESSAGE value="DAO config on consumerContext.xml" />
     <MESSAGE value="Managers statement &amp; Manager Factory in businessContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Managers statement &amp; Manager Factory in businessContext.xml" />
+    <MESSAGE value="add log4j2.xml + logs depedencies in pom.xml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add log4j2.xml + logs depedencies in pom.xml files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1066" y="218" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1598456731696" />
+    <state x="880" y="118" key="#Project_Structure" timestamp="1599057057075">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="880" y="118" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1599057057075" />
+    <state x="699" y="382" key="#SQL_Dialects" timestamp="1599058429484">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="699" y="382" key="#SQL_Dialects/0.0.1920.1080@0.0.1920.1080" timestamp="1599058429484" />
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598972618700">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -543,9 +563,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1598384308919" />
-    <state x="1025" y="226" key="spring file set editor" timestamp="1598312657066">
+    <state x="1025" y="226" key="spring file set editor" timestamp="1599056910277">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1025" y="226" key="spring file set editor/0.0.1920.1080@0.0.1920.1080" timestamp="1598312657066" />
+    <state x="1025" y="226" key="spring file set editor/0.0.1920.1080@0.0.1920.1080" timestamp="1599056910277" />
   </component>
 </project>
