@@ -3,4 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- DAO statement -->
+    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDaoImpl" />
+
+    <!-- DAO Factory -->
+    <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">
+        <property name="MemberDao" ref="memberDao"/>
+    </bean>
+
+    <!-- ==== AbstractResource ===== -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="org.nico.consumer.impl.AbstractDaoImpl"/>
+        <property name="targetMethod" value="setDataSourceEscalade"/>
+        <property name="arguments" ref="daoFactory"/>
+    </bean>
+
+
 </beans>
