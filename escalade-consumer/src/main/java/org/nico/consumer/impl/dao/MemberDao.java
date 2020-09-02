@@ -1,19 +1,17 @@
 package org.nico.consumer.impl.dao;
 
-import org.nico.consumer.contract.dao.MemberDao;
-import org.nico.consumer.impl.AbstractDaoImpl;
+import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.MemberRowMapper;
 import org.nico.model.beans.Member;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 import java.sql.Types;
 import java.util.List;
 
-public class MemberDaoImpl extends AbstractDaoImpl implements MemberDao {
+public class MemberDao extends AbstractDao implements org.nico.consumer.contract.dao.MemberDao {
 
     @Override
     public void createMember(Member member) {

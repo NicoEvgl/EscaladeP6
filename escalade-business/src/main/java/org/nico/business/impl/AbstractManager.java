@@ -1,0 +1,20 @@
+package org.nico.business.impl;
+
+import org.nico.consumer.contract.DaoFactory;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+public abstract class AbstractManager {
+
+    @Inject
+    @Named("txManagerEscalade")
+    private PlatformTransactionManager platformTransactionManager;
+
+    public PlatformTransactionManager getPlatformTransactionManager(){ return platformTransactionManager; }
+
+    @Inject
+    private DaoFactory daoFactory;
+    protected DaoFactory getDaoFactory() { return daoFactory; }
+}

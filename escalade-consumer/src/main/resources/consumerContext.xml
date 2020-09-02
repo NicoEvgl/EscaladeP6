@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- DAO statement -->
-    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDaoImpl" />
+    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDao" />
 
     <!-- DAO Factory -->
     <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">
@@ -13,7 +13,7 @@
 
     <!-- ==== AbstractResource ===== -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="org.nico.consumer.impl.AbstractDaoImpl"/>
+        <property name="targetClass" value="org.nico.consumer.impl.AbstractDao"/>
         <property name="targetMethod" value="setDataSourceEscalade"/>
         <property name="arguments" ref="daoFactory"/>
     </bean>

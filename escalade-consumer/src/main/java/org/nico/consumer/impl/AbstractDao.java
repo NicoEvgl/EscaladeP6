@@ -4,7 +4,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.sql.DataSource;
 
-public abstract class AbstractDaoImpl {
+public abstract class AbstractDao {
 
     @Inject
     @Named("dataSourceEscalade")
@@ -14,6 +14,6 @@ public abstract class AbstractDaoImpl {
     protected DataSource getDataSourceEscalade() { return dataSourceEscalade; }
 
     public static void setDataSourceEscalade(DataSource dataSourceEscalade) {
-        AbstractDaoImpl.dataSourceEscalade = dataSourceEscalade;
+        AbstractDao.dataSourceEscalade = dataSourceEscalade;
     }
 }
