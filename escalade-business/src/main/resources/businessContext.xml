@@ -7,7 +7,7 @@
     <!-- ===== Managers statement ===== -->
     <bean id="memberManager" class="org.nico.business.impl.manager.MemberManagerImpl"></bean>
 
-    <!-- ===== ManagerFactory ===== -->
+    <!-- ===== Manager Factory ===== -->
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
         <property name="MemberManager" ref="memberManager"/>
     </bean>

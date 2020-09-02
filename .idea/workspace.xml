@@ -15,8 +15,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="DAO config on consumerContext.xml">
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="Managers statement &amp; Manager Factory in businessContext.xml">
+      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +267,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="7812000" />
+      <workItem from="1599045032828" duration="8638000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -405,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599052129182</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Managers statement &amp; Manager Factory in businessContext.xml">
+      <created>1599055827681</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1599055827681</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +455,8 @@
     <MESSAGE value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
     <MESSAGE value="AbstractDaoImpl completed" />
     <MESSAGE value="DAO config on consumerContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAO config on consumerContext.xml" />
+    <MESSAGE value="Managers statement &amp; Manager Factory in businessContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Managers statement &amp; Manager Factory in businessContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
