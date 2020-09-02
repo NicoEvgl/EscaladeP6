@@ -15,18 +15,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add file create_db_escalade.sql + import database 'db_escalade'">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl">
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +90,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.consumer.contract.dao" />
       <recent name="org.nico.business.contract.manager" />
       <recent name="org.nico.model.enums" />
     </key>
@@ -271,7 +265,7 @@
       <workItem from="1598539699667" duration="11706000" />
       <workItem from="1598620666321" duration="693000" />
       <workItem from="1598970866217" duration="7603000" />
-      <workItem from="1599045032828" duration="3037000" />
+      <workItem from="1599045032828" duration="3503000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -378,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598972827724</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl">
+      <created>1599048823707</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1599048823707</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +413,8 @@
     <MESSAGE value="new jsp : guideBook.jsp" />
     <MESSAGE value="new enum : Region" />
     <MESSAGE value="add file create_db_escalade.sql + import database 'db_escalade'" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file create_db_escalade.sql + import database 'db_escalade'" />
+    <MESSAGE value="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -423,10 +425,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599048599125">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599049199940">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599048599125" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599049199940" />
     <state x="119" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598980527391">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
