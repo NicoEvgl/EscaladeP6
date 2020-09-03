@@ -59,11 +59,11 @@ public class MemberManagerImpl extends AbstractManager implements MemberManager 
     }
 
     @Override
-    public Member findMemberByUsername (String username) {
+    public Member findMemberByUsername (String username, Object value) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         Member member = transactionTemplate.execute(transactionStatus -> {
             Member memberTx = new Member();
-            memberTx = getDaoFactory().getMemberDao().findMemberByUsername(username);
+            memberTx = getDaoFactory().getMemberDao().findMemberByUsername(username, value);
             return  memberTx;
         });
         return member;

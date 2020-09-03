@@ -76,11 +76,11 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
     }
 
     @Override
-    public Member findMemberByUsername(String username) {
+    public Member findMemberByUsername(String username, Object value) {
         String sql = "SELECT * FROM public.member WHERE "+username+" = :"+username+"";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-        mapSqlParameterSource.addValue("username", username);
+        mapSqlParameterSource.addValue(username, value);
         Member member = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new MemberRowMapper());
 
         return member;

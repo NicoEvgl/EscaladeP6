@@ -123,10 +123,19 @@
     </dependency>
 
     <!-- == Test == -->
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
+
+    <!-- == Validator == -->
+
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

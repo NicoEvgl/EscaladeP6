@@ -9,5 +9,5 @@ public interface MemberManager {
     List<Member> findMemberList();
     void updateMember(Member member);
     void deleteMember(Integer id);
-    Member findMemberByUsername(String username);
+    Member findMemberByUsername(String username, Object value);
 }

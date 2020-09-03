@@ -15,12 +15,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add spring security dependencies">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PasswordManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PasswordManagerImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new enum : Role">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/escalade_webapp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/escalade_webapp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/AbstractManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/AbstractManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/escalade-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/escalade-webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +42,9 @@
         <option value="CSS File" />
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
-        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -276,7 +282,7 @@
       <workItem from="1598970866217" duration="7603000" />
       <workItem from="1599045032828" duration="19859000" />
       <workItem from="1599068989926" duration="36000" />
-      <workItem from="1599142069558" duration="6256000" />
+      <workItem from="1599142069558" duration="10166000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -502,7 +508,35 @@
       <option name="project" value="LOCAL" />
       <updated>1599146925379</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="new class PasswordManager(encoder)">
+      <created>1599148541286</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1599148541286</updated>
+    </task>
+    <task id="LOCAL-00034" summary="method findMemberByUsername in MemberDao">
+      <created>1599149982668</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1599149982668</updated>
+    </task>
+    <task id="LOCAL-00035" summary="method findMemberByUsername in MemberManager">
+      <created>1599150664626</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1599150664626</updated>
+    </task>
+    <task id="LOCAL-00036" summary="new enum : Role">
+      <created>1599152179058</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1599152179058</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,10 +555,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new bean : ClimbingSite / new enum : Cotation" />
-    <MESSAGE value="new jsp : climbingSite.jsp" />
-    <MESSAGE value="new bean : GuideBook" />
-    <MESSAGE value="new controller : GuideBookController" />
     <MESSAGE value="new jsp : guideBook.jsp" />
     <MESSAGE value="new enum : Region" />
     <MESSAGE value="add file create_db_escalade.sql + import database 'db_escalade'" />
@@ -546,7 +576,11 @@
     <MESSAGE value="refactor MemberDaoImpl / method deleteMember in MemberDao" />
     <MESSAGE value="method deleteMember in MemberManager" />
     <MESSAGE value="add spring security dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spring security dependencies" />
+    <MESSAGE value="new class PasswordManager(encoder)" />
+    <MESSAGE value="method findMemberByUsername in MemberDao" />
+    <MESSAGE value="method findMemberByUsername in MemberManager" />
+    <MESSAGE value="new enum : Role" />
+    <option name="LAST_COMMIT_MESSAGE" value="new enum : Role" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -625,6 +659,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1293" height="205" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1598621552061" />
+    <state x="970" y="198" key="Maven.ArtifactSearchDialog" timestamp="1599151168754">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="970" y="198" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599151168754" />
     <state x="922" y="185" key="SettingsEditor" timestamp="1598287297685">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -633,10 +671,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599144531265" />
-    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog" timestamp="1598468761038">
+    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog" timestamp="1599151666443">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598468761038" />
+    <state x="1235" y="288" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599151666443" />
     <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1598384308919">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
