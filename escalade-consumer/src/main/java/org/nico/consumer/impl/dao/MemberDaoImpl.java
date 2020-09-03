@@ -3,6 +3,7 @@ package org.nico.consumer.impl.dao;
 import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.MemberRowMapper;
 import org.nico.model.beans.Member;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -72,5 +73,16 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
         namedParameterJdbcTemplate.update(sql, parameterSource);
+    }
+
+    @Override
+    public Member findMemberByUsername(String username) {
+        String sql = "SELECT * FROM public.member WHERE "+username+" = :"+username+"";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("username", username);
+        Member member = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new MemberRowMapper());
+
+        return member;
     }
 }
