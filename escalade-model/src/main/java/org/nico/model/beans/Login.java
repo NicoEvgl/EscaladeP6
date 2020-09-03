@@ -4,24 +4,24 @@ public class Login {
 
     //====  ATTRIBUTES  ====
 
-    private String email;
+    private String username;
     private String password;
 
     //====  CONSTRUCTOR  ====//
 
     public Login() {}
 
-    public Login(String email, String password) {
-        this.email = email;
+    public Login(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
     //====  GETTERS AND SETTERS  ====//
 
 
-    public String getEmail() { return email; }
+    public String getUsername() { return username; }
 
-    public void setEmail(String email) { this.email = email; }
+    public void setUsername(String email) { this.username = email; }
 
     public String getPassword() { return password; }
 
@@ -30,11 +30,10 @@ public class Login {
 
     /**
      * method to string Login
-     * @return email
-     * @return password
+     * @return Login : pseudo + password
      */
     @Override
     public String toString() {
-        return "email : " + email + "password : " + password;
+        return "Login = " + "pseudo : " + username + "password : " + password;
     }
 }

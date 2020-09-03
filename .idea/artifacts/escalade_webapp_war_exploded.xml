@@ -21,6 +21,10 @@
             <element id="module-output" name="escalade-consumer" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.6.RELEASE" />
           <element id="archive" name="escalade-model-1.0-SNAPSHOT.jar">
             <element id="module-output" name="escalade-model" />
           </element>

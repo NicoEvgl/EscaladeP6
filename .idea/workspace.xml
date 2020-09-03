@@ -15,10 +15,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="refactor MemberDaoImpl / method deleteMember in MemberDao">
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method deleteMember in MemberManager">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +276,7 @@
       <workItem from="1598970866217" duration="7603000" />
       <workItem from="1599045032828" duration="19859000" />
       <workItem from="1599068989926" duration="36000" />
-      <workItem from="1599142069558" duration="3080000" />
+      <workItem from="1599142069558" duration="4776000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -486,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599144522799</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="method deleteMember in MemberManager">
+      <created>1599145187556</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1599145187556</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +514,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new controller : LoginController" />
     <MESSAGE value="new jsp : login.jsp" />
     <MESSAGE value="new bean : ClimbingSite / new enum : Cotation" />
     <MESSAGE value="new jsp : climbingSite.jsp" />
@@ -530,7 +538,8 @@
     <MESSAGE value="methods findMemberList &amp; updateMember in MemberManagerImpl / refactor MemberDaoImpl" />
     <MESSAGE value="methods findMemberList &amp; updateMember in MemberManagerImpl" />
     <MESSAGE value="refactor MemberDaoImpl / method deleteMember in MemberDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor MemberDaoImpl / method deleteMember in MemberDao" />
+    <MESSAGE value="method deleteMember in MemberManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="method deleteMember in MemberManager" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
