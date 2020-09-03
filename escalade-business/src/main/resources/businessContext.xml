@@ -5,6 +5,10 @@
 
 
     <!-- ===== Managers statement ===== -->
+    <bean id="abstractManager" class="org.nico.business.impl.AbstractManager" abstract="true">
+        <property name="daoFactory" ref="daoFactory"/>
+    </bean>
+
     <bean id="memberManager" class="org.nico.business.impl.manager.MemberManagerImpl"></bean>
 
     <!-- ===== Manager Factory ===== -->
@@ -17,4 +21,8 @@
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSourceEscalade"/>
     </bean>
+
+    <!-- Encoder -->
+    <bean id="encoder" class="org.nico.business.impl.manager.PasswordManagerImpl"></bean>
+
 </beans>

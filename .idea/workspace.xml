@@ -15,12 +15,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method deleteMember in MemberManager">
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add spring security dependencies">
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PasswordManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PasswordManagerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/AbstractManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/AbstractManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +37,8 @@
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -93,24 +93,24 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.nico.consumer.impl.rowmapper" />
-      <recent name="org.nico.consumer.impl" />
-      <recent name="org.nico.consumer.contract.dao" />
-      <recent name="org.nico.business.contract.manager" />
-      <recent name="org.nico.model.enums" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org.nico.webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.consumer.impl.rowmapper" />
+      <recent name="org.nico.consumer.impl" />
+      <recent name="org.nico.consumer.contract.dao" />
+      <recent name="org.nico.business.contract.manager" />
+      <recent name="org.nico.model.enums" />
     </key>
   </component>
   <component name="RunManager">
@@ -276,7 +276,7 @@
       <workItem from="1598970866217" duration="7603000" />
       <workItem from="1599045032828" duration="19859000" />
       <workItem from="1599068989926" duration="36000" />
-      <workItem from="1599142069558" duration="4776000" />
+      <workItem from="1599142069558" duration="6256000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -495,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599145187556</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add spring security dependencies">
+      <created>1599146925379</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1599146925379</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +521,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new jsp : login.jsp" />
     <MESSAGE value="new bean : ClimbingSite / new enum : Cotation" />
     <MESSAGE value="new jsp : climbingSite.jsp" />
     <MESSAGE value="new bean : GuideBook" />
@@ -539,7 +545,8 @@
     <MESSAGE value="methods findMemberList &amp; updateMember in MemberManagerImpl" />
     <MESSAGE value="refactor MemberDaoImpl / method deleteMember in MemberDao" />
     <MESSAGE value="method deleteMember in MemberManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="method deleteMember in MemberManager" />
+    <MESSAGE value="add spring security dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add spring security dependencies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">

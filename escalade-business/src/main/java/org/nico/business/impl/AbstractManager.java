@@ -17,4 +17,5 @@ public abstract class AbstractManager {
     @Inject
     private DaoFactory daoFactory;
     protected DaoFactory getDaoFactory() { return daoFactory; }
+    public void setDaoFactory(DaoFactory daoFactory) { this.daoFactory = daoFactory; }
 }
