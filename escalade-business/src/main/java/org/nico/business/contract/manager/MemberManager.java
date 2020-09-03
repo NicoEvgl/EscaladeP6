@@ -8,4 +8,5 @@ public interface MemberManager {
     void createMember(Member member);
     List<Member> findMemberList();
     void updateMember(Member member);
+    void deleteMember(Integer id);
 }
