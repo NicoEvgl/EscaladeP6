@@ -4,6 +4,7 @@ import org.nico.business.contract.manager.MemberManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.Member;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -55,5 +56,16 @@ public class MemberManagerImpl extends AbstractManager implements MemberManager 
                 getDaoFactory().getMemberDao().deleteMember(id);
             }
         });
+    }
+
+    @Override
+    public Member findMemberByUsername (String username) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        Member member = transactionTemplate.execute(transactionStatus -> {
+            Member memberTx = new Member();
+            memberTx = getDaoFactory().getMemberDao().findMemberByUsername(username);
+            return  memberTx;
+        });
+        return member;
     }
 }
