@@ -7,6 +7,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MemberManagerImpl extends AbstractManager implements MemberManager {
 
     @Override
@@ -16,6 +19,28 @@ public class MemberManagerImpl extends AbstractManager implements MemberManager 
             @Override
             protected void doInTransactionWithoutResult(TransactionStatus status) {
                 getDaoFactory().getMemberDao().createMember(member);
+            }
+        });
+    }
+
+    @Override
+    public List<Member> findMemberList() {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        List<Member> memberList = transactionTemplate.execute(transactionStatus -> {
+            List<Member> memberListTx = new ArrayList<>();
+            memberListTx = getDaoFactory().getMemberDao().findMemberList();
+            return  memberListTx;
+        });
+        return memberList;
+    }
+
+    @Override
+    public void updateMember(Member member) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getMemberDao().updateMember(member);
             }
         });
 
