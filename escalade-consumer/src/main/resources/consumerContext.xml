@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- DAO statement -->
-    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDao" />
+    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDaoImpl" />
 
     <!-- DAO Factory -->
     <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">

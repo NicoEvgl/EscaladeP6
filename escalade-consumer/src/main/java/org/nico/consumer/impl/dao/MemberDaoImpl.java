@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import java.sql.Types;
 import java.util.List;
 
-public class MemberDao extends AbstractDao implements org.nico.consumer.contract.dao.MemberDao {
+public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.contract.dao.MemberDao {
 
     @Override
     public void createMember(Member member) {
@@ -63,5 +63,14 @@ public class MemberDao extends AbstractDao implements org.nico.consumer.contract
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
 
         namedParameterJdbcTemplate.update(sql, sqlParameterSource);
+    }
+
+    @Override
+    public void deleteMember(Integer id) {
+        String sql = "DELETE FROM public.member WHERE id = :id";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("id", id);
+        namedParameterJdbcTemplate.update(sql, parameterSource);
     }
 }
