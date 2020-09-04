@@ -1,1 +1,7 @@
-org\nico\model\App.class
+org\nico\model\enums\Role.class
+org\nico\model\beans\GuideBook.class
+org\nico\model\enums\Region.class
+org\nico\model\beans\Login.class
+org\nico\model\beans\Member.class
+org\nico\model\beans\ClimbingSite.class
+org\nico\model\enums\Cotation.class

@@ -14,6 +14,7 @@ public abstract class AbstractManager {
 
     public PlatformTransactionManager getPlatformTransactionManager(){ return platformTransactionManager; }
 
+
     @Inject
     private DaoFactory daoFactory;
     protected DaoFactory getDaoFactory() { return daoFactory; }

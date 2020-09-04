@@ -1,5 +1,6 @@
 package org.nico.consumer.impl.dao;
 
+import org.nico.consumer.contract.dao.MemberDao;
 import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.MemberRowMapper;
 import org.nico.model.beans.Member;
@@ -12,7 +13,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import java.sql.Types;
 import java.util.List;
 
-public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.contract.dao.MemberDao {
+public class MemberDaoImpl extends AbstractDao implements MemberDao {
 
     @Override
     public void createMember(Member member) {
@@ -26,6 +27,10 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
         mapSqlParameterSource.addValue("username", member.getUsername(), Types.VARCHAR);
         mapSqlParameterSource.addValue("email", member.getEmail(), Types.VARCHAR);
         mapSqlParameterSource.addValue("password", member.getPassword(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("address", member.getAddress(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("address2", member.getAddress2(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("zip", member.getZip(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("city", member.getCity(), Types.VARCHAR);
         mapSqlParameterSource.addValue("role", member.getRole(), Types.VARCHAR);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
@@ -50,6 +55,10 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
                 + "username = :username, "
                 + "email = :email, "
                 + "password = :password, "
+                + "address = :address, "
+                + "address2 = :address2, "
+                + "city = :city, "
+                + "zip = :zip, "
                 + "role = :role, "
                 + "WHERE id = :id";
         BeanPropertySqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(member);
@@ -60,6 +69,10 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
         sqlParameterSource.registerSqlType("pseudo", Types.VARCHAR);
         sqlParameterSource.registerSqlType("email", Types.VARCHAR);
         sqlParameterSource.registerSqlType("password", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("address", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("address2", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("zip", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("city", Types.VARCHAR);
         sqlParameterSource.registerSqlType("role", Types.VARCHAR);
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
 
@@ -76,7 +89,7 @@ public class MemberDaoImpl extends AbstractDao implements org.nico.consumer.cont
     }
 
     @Override
-    public Member findMemberByUsername(String username, Object value) {
+    public Member findMemberByAttribute(String username, Object value) {
         String sql = "SELECT * FROM public.member WHERE "+username+" = :"+username+"";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();

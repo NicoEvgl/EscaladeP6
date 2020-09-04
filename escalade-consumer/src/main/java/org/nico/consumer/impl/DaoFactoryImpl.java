@@ -3,7 +3,7 @@ package org.nico.consumer.impl;
 import org.nico.consumer.contract.DaoFactory;
 import org.nico.consumer.contract.dao.MemberDao;
 
-public class DaoFactoryImpl implements DaoFactory {
+public class DaoFactoryImpl extends AbstractDao implements DaoFactory {
 
     private MemberDao memberDao;
 
