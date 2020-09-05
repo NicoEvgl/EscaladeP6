@@ -16,9 +16,10 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 
     @Override
     public void createUser(User user) {
-        String sql = "INSERT INTO public.member (gender, first_name, last_name, username, email, password, address, address2, zip, city, role)"
+        String sql = "INSERT INTO public.user (gender, first_name, last_name, username, email, password, address, address2, zip, city, role)"
                 + "VALUES (:gender, :firstName, :lastName, :username, :email, :password, :address, :address2, :zip, :city, :role)";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
         mapSqlParameterSource.addValue("gender", user.getGender(), Types.VARCHAR);
         mapSqlParameterSource.addValue("firstName", user.getFirstName(), Types.VARCHAR);
@@ -37,7 +38,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 
     @Override
     public List<User> findUserList() {
-        String sql = "SELECT * FROM public.member";
+        String sql = "SELECT * FROM public.user ORDER BY id";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         UserRowMapper userRowMapper = new UserRowMapper();
         List<User> userList = jdbcTemplate.query(sql, userRowMapper);
@@ -46,8 +47,20 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     }
 
     @Override
+    public User findUser(Integer id) {
+        String sql = "SELECT * FROM public.user WHERE id = :id";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+        UserRowMapper userRowMapper = new UserRowMapper();
+        User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, userRowMapper);
+
+        return user;
+    }
+
+    @Override
     public void updateUser(User user) {
-        String sql = "UPDATE public.member SET "
+        String sql = "UPDATE public.user SET "
                 + "gender = :gender, "
                 + "first_name = :firstName, "
                 + "last_name = :lastName, "
@@ -80,7 +93,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 
     @Override
     public void deleteUser(Integer id) {
-        String sql = "DELETE FROM public.member WHERE id = :id";
+        String sql = "DELETE FROM public.user WHERE id = :id";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
@@ -89,7 +102,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
 
     @Override
     public User findUserByAttribute(String attribute, Object attributeValue) {
-        String sql = "SELECT * FROM public.member WHERE "+attribute+" = :"+attribute+"";
+        String sql = "SELECT * FROM public.user WHERE "+attribute+" = :"+attribute+"";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
         mapSqlParameterSource.addValue(attribute, attributeValue);

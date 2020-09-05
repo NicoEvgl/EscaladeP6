@@ -15,21 +15,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method Post doLogin in LoginController / new jsp welcome.jsp">
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method logout in LoginController / update header.jsp / delete welcome.jsp">
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/ClimbingSiteRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/UserRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/UserRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/welcome.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +45,9 @@
         <option value="CSS File" />
         <option value="spring-beans.schema" />
         <option value="Enum" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -102,24 +102,24 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.nico.consumer.impl.rowmapper" />
       <recent name="org.nico.consumer.impl" />
       <recent name="org.nico.consumer.contract.dao" />
       <recent name="org.nico.business.contract.manager" />
       <recent name="org.nico.model.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -292,7 +292,8 @@
       <workItem from="1599237168817" duration="3511000" />
       <workItem from="1599241018920" duration="5886000" />
       <workItem from="1599271422233" duration="1860000" />
-      <workItem from="1599317399227" duration="5537000" />
+      <workItem from="1599317399227" duration="5752000" />
+      <workItem from="1599340040826" duration="6749000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -567,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599319568449</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="method logout in LoginController / update header.jsp / delete welcome.jsp">
+      <created>1599323099062</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1599323099062</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +594,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl" />
     <MESSAGE value="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl" />
     <MESSAGE value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
     <MESSAGE value="AbstractDaoImpl completed" />
@@ -611,7 +618,8 @@
     <MESSAGE value="method registerNewMember in RegistrationController / validator dependency in pom.xml (webapp)" />
     <MESSAGE value="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK" />
     <MESSAGE value="method Post doLogin in LoginController / new jsp welcome.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="method Post doLogin in LoginController / new jsp welcome.jsp" />
+    <MESSAGE value="method logout in LoginController / update header.jsp / delete welcome.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="method logout in LoginController / update header.jsp / delete welcome.jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -630,10 +638,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599239693650">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599344985877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599239693650" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599344985877" />
     <state x="404" y="613" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1599237364689">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -650,54 +658,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598314256656" />
-    <state width="1293" height="107" key="GridCell.Tab.0.bottom" timestamp="1599322895680">
+    <state width="1293" height="107" key="GridCell.Tab.0.bottom" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
-    <state width="1293" height="107" key="GridCell.Tab.0.center" timestamp="1599322895680">
+    <state width="1293" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.0.center" timestamp="1599343515182">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
-    <state width="1293" height="107" key="GridCell.Tab.0.left" timestamp="1599322895680">
+    <state width="1293" height="107" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515182" />
+    <state width="1293" height="107" key="GridCell.Tab.0.left" timestamp="1599343515182">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
-    <state width="1293" height="107" key="GridCell.Tab.0.right" timestamp="1599322895680">
+    <state width="1293" height="107" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515182" />
+    <state width="1293" height="107" key="GridCell.Tab.0.right" timestamp="1599343515182">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
-    <state width="1293" height="107" key="GridCell.Tab.1.bottom" timestamp="1599322895623">
+    <state width="1293" height="107" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515182" />
+    <state width="1293" height="107" key="GridCell.Tab.1.bottom" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
-    <state width="1293" height="107" key="GridCell.Tab.1.center" timestamp="1599322895623">
+    <state width="1293" height="107" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.1.center" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
-    <state width="1293" height="107" key="GridCell.Tab.1.left" timestamp="1599322895623">
+    <state width="1293" height="107" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.1.left" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
-    <state width="1293" height="107" key="GridCell.Tab.1.right" timestamp="1599322895623">
+    <state width="1293" height="107" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.1.right" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
-    <state width="1293" height="107" key="GridCell.Tab.2.bottom" timestamp="1599322895624">
+    <state width="1293" height="107" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.2.bottom" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
-    <state width="1293" height="107" key="GridCell.Tab.2.center" timestamp="1599322895624">
+    <state width="1293" height="107" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.2.center" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
-    <state width="1293" height="107" key="GridCell.Tab.2.left" timestamp="1599322895624">
+    <state width="1293" height="107" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.2.left" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
-    <state width="1293" height="107" key="GridCell.Tab.2.right" timestamp="1599322895624">
+    <state width="1293" height="107" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
+    <state width="1293" height="107" key="GridCell.Tab.2.right" timestamp="1599343515183">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="107" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
+    <state width="1293" height="107" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599343515183" />
     <state x="970" y="198" key="Maven.ArtifactSearchDialog" timestamp="1599151168754">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -710,10 +718,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="922" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598287297685" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599319584094">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599323106389">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599319584094" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599323106389" />
     <state x="760" y="441" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1599170847368">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -730,16 +738,5 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1025" y="226" key="spring file set editor/0.0.1920.1080@0.0.1920.1080" timestamp="1599056910277" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
