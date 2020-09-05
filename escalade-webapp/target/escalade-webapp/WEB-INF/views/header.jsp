@@ -22,20 +22,43 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/register"/>">S'inscrire</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/login"/>">Se connecter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/climbingSite"/>">Les sites d'escalade</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
-                    </li>
-                </ul>
+                <c:choose>
+                    <c:when test="${!empty userInSessionUsername}">
+                        <c:if test="${ !empty sessionScope.userInSessionUsername }">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<c:url value="/"/>">${ sessionScope.userInSessionUsername }</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<c:url value="/climbingSite"/>">Les sites d'escalade</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<c:url value="/logout"/>">Se déconnecter</a>
+                                </li>
+                            </ul>
+                        </c:if>
+
+                    </c:when>
+                    <c:otherwise>
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<c:url value="/register"/>">S'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<c:url value="/login"/>">Se connecter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<c:url value="/climbingSite"/>">Les sites d'escalade</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
+                            </li>
+                        </ul>
+                    </c:otherwise>
+                </c:choose>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

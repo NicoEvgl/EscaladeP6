@@ -15,59 +15,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/UserRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/resources/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method Post doLogin in LoginController / new jsp welcome.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/MemberManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/MemberManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/UserManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/MemberManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/MemberManagerImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/MemberManagerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/MemberDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/MemberRowMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/MemberDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/AbstractDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/MemberDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/rowmapper/MemberRowMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/GuideBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/GuideBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/enums/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/enums/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/resources/bootstrapContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/resources/bootstrapContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/bootstrapContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/bootstrapContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/RegistrationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/bootstrapContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/bootstrapContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/RegistrationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +292,7 @@
       <workItem from="1599237168817" duration="3511000" />
       <workItem from="1599241018920" duration="5886000" />
       <workItem from="1599271422233" duration="1860000" />
-      <workItem from="1599317399227" duration="1907000" />
+      <workItem from="1599317399227" duration="5537000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -598,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599237588741</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="method Post doLogin in LoginController / new jsp welcome.jsp">
+      <created>1599319568449</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1599319568449</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +586,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add file create_db_escalade.sql + import database 'db_escalade'" />
     <MESSAGE value="add ManagerFactory &amp; ManagerFactoryImpl + MemberManager &amp; MemberManagerImpl" />
     <MESSAGE value="add DaoFactory &amp; DaoFactoryImpl + MemberDao &amp; MemberDaoImpl" />
     <MESSAGE value="Creation AbstractDaoImpl (empty) + config datasource on webapp / add context.xml" />
@@ -642,7 +610,8 @@
     <MESSAGE value="new enum : Role" />
     <MESSAGE value="method registerNewMember in RegistrationController / validator dependency in pom.xml (webapp)" />
     <MESSAGE value="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK" />
+    <MESSAGE value="method Post doLogin in LoginController / new jsp welcome.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="method Post doLogin in LoginController / new jsp welcome.jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -681,54 +650,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598314256656" />
-    <state width="619" height="107" key="GridCell.Tab.0.bottom" timestamp="1599319229873">
+    <state width="1293" height="107" key="GridCell.Tab.0.bottom" timestamp="1599322895680">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229873" />
-    <state width="619" height="107" key="GridCell.Tab.0.center" timestamp="1599319229873">
+    <state width="1293" height="107" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
+    <state width="1293" height="107" key="GridCell.Tab.0.center" timestamp="1599322895680">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229873" />
-    <state width="619" height="107" key="GridCell.Tab.0.left" timestamp="1599319229873">
+    <state width="1293" height="107" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
+    <state width="1293" height="107" key="GridCell.Tab.0.left" timestamp="1599322895680">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229873" />
-    <state width="619" height="107" key="GridCell.Tab.0.right" timestamp="1599319229873">
+    <state width="1293" height="107" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
+    <state width="1293" height="107" key="GridCell.Tab.0.right" timestamp="1599322895680">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229873" />
-    <state width="619" height="107" key="GridCell.Tab.1.bottom" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895680" />
+    <state width="1293" height="107" key="GridCell.Tab.1.bottom" timestamp="1599322895623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.1.center" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
+    <state width="1293" height="107" key="GridCell.Tab.1.center" timestamp="1599322895623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.1.left" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
+    <state width="1293" height="107" key="GridCell.Tab.1.left" timestamp="1599322895623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.1.right" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
+    <state width="1293" height="107" key="GridCell.Tab.1.right" timestamp="1599322895623">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.2.bottom" timestamp="1599319229815">
+    <state width="1293" height="107" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895623" />
+    <state width="1293" height="107" key="GridCell.Tab.2.bottom" timestamp="1599322895624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229815" />
-    <state width="619" height="107" key="GridCell.Tab.2.center" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
+    <state width="1293" height="107" key="GridCell.Tab.2.center" timestamp="1599322895624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.2.left" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
+    <state width="1293" height="107" key="GridCell.Tab.2.left" timestamp="1599322895624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
-    <state width="619" height="107" key="GridCell.Tab.2.right" timestamp="1599319229814">
+    <state width="1293" height="107" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
+    <state width="1293" height="107" key="GridCell.Tab.2.right" timestamp="1599322895624">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="107" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599319229814" />
+    <state width="1293" height="107" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599322895624" />
     <state x="970" y="198" key="Maven.ArtifactSearchDialog" timestamp="1599151168754">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -741,10 +710,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="922" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1598287297685" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599237623115">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599319584094">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599237623115" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599319584094" />
     <state x="760" y="441" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1599170847368">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -761,5 +730,16 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1025" y="226" key="spring file set editor/0.0.1920.1080@0.0.1920.1080" timestamp="1599056910277" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/welcome.jsp</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

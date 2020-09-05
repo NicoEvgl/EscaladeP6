@@ -10,8 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.context.request.WebRequest;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
@@ -26,7 +29,6 @@ public class LoginController {
 
     private void addUserInSession(User user, HttpSession httpSession) {
         httpSession.setAttribute("userInSessionUsername", user.getUsername());
-        httpSession.setAttribute("userInSessionPassword", user.getPassword());
         httpSession.setAttribute("userInSessionRole", user.getRole());
     }
 
@@ -48,20 +50,29 @@ public class LoginController {
 
         if (checkPassword == false ) {
             httpSession.invalidate();
-            String errorMessage = "<div style='text-align:center;'/>"
-                    + "<h3>Mot de passe incorrect</h3>";
-            model.addAttribute("errorMessage", errorMessage);
+            model.addAttribute("message", "Mot de passe incorrect");
             return "login";
         } else {
             User loggedInUser = registeredUser;
             addUserInSession(loggedInUser, httpSession);
-            String message = "<div style='text-align:center;'/>"
-                    + "<h3>Connexion réussie</h3>";
+            model.addAttribute("message", "<div style='text-align:center;'/>"
+                    + "<h3>Connexion réussie</h3>");
             model.addAttribute("login", "newLogin");
-            model.addAttribute("message", message);
-
-            return "welcome";
+            return "home";
         }
+    }
+
+    @GetMapping("/logout")
+    public String logoutUser(HttpServletResponse httpServletResponse, HttpSession httpSession, WebRequest webRequest, SessionStatus sessionStatus, Model model){
+       sessionStatus.setComplete();
+       webRequest.removeAttribute("userInSessionUsername", WebRequest.SCOPE_SESSION);
+       webRequest.removeAttribute("userInSessionRole", WebRequest.SCOPE_SESSION);
+       httpServletResponse.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+       httpServletResponse.setHeader("Pragma","no-cache");
+       httpServletResponse.setHeader("Expires","0");
+       httpSession.invalidate();
+
+        return "redirect:/home";
     }
 
 }

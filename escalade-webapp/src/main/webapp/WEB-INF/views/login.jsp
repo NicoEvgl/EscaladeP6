@@ -4,6 +4,7 @@
 
 
 <main class="page login-page">
+    ${message}
     <div class="view" style="background-image: url('https://cdn.crunchify.com/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center ;"/>
     <section class="clean-block clean-form dark">
         <div class="container">
@@ -12,8 +13,8 @@
             </div>
             <form:form method="post" action="loginProcess" modelAttribute="login" >
                 <div class="form-group">
-                    <form:label path="username" for="exampleInputUsername">Email</form:label>
-                    <form:input path="username" type="username" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="username" required="true"/>
+                    <form:label path="username" for="exampleInputUsername">Pseudo</form:label>
+                    <form:input path="username" type="username" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="pseudo" required="true"/>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your login with anyone else.</small>
                     <form:errors path="username" cssClass="error"/>
                 </div>
