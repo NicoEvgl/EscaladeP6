@@ -1,9 +1,9 @@
 package org.nico.business.contract;
 
-import org.nico.business.contract.manager.MemberManager;
+import org.nico.business.contract.manager.UserManager;
 
 public interface ManagerFactory {
 
-    MemberManager getMemberManager();
-    void setMemberManager(MemberManager memberManager);
+    UserManager getUserManager();
+    void setUserManager(UserManager userManager);
 }

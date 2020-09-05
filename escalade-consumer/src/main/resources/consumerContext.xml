@@ -4,15 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- DAO statement -->
-    <bean id="abstractDao" class="org.nico.consumer.impl.AbstractDao" abstract="true">
-        <property name="dataSourceEscalade" ref="dataSourceEscalade"/>
-    </bean>
+   <bean id="abstractDao" class="org.nico.consumer.impl.AbstractDao" abstract="true">
+       <property name="dataSourceEscalade" ref="dataSourceEscalade"></property>
+   </bean>
 
-    <bean id="memberDao" class="org.nico.consumer.impl.dao.MemberDaoImpl" parent="abstractDao" />
+    <bean id="userDao" class="org.nico.consumer.impl.dao.UserDaoImpl" parent="abstractDao" />
 
     <!-- DAO Factory -->
     <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">
-        <property name="MemberDao" ref="memberDao"/>
+        <property name="userDao" ref="userDao"/>
     </bean>
 
 

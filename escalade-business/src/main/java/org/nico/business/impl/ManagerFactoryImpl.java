@@ -1,16 +1,16 @@
 package org.nico.business.impl;
 
 import org.nico.business.contract.ManagerFactory;
-import org.nico.business.contract.manager.MemberManager;
+import org.nico.business.contract.manager.UserManager;
 
 public class ManagerFactoryImpl implements ManagerFactory {
 
 
-    private MemberManager memberManager;
+    private UserManager userManager;
 
     @Override
-    public MemberManager getMemberManager() { return memberManager; }
+    public UserManager getUserManager() { return userManager; }
 
     @Override
-    public void setMemberManager(MemberManager memberManager) { this.memberManager = memberManager; }
+    public void setUserManager(UserManager userManager) { this.userManager = userManager; }
 }

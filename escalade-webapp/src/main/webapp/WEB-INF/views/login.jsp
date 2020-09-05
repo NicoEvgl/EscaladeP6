@@ -10,7 +10,7 @@
             <div class="block-heading">
                 <h3 class="text-info">Se connecter</h3>
             </div>
-            <form:form method="post" action="login" modelAttribute="login" >
+            <form:form method="post" action="loginProcess" modelAttribute="login" >
                 <div class="form-group">
                     <form:label path="username" for="exampleInputUsername">Email</form:label>
                     <form:input path="username" type="username" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="username" required="true"/>

@@ -16,8 +16,8 @@
 
     <!-- import context file Spring -->
     <import resource="classpath:/webappContext.xml"/>
-    <import resource="classpath:businessContext.xml"/>
-    <import resource="classpath:consumerContext.xml"/>
-    <import resource="classpath:modelContext.xml"/>
+    <import resource="classpath:/businessContext.xml"/>
+    <import resource="classpath:/consumerContext.xml"/>
+    <import resource="classpath:/modelContext.xml"/>
 
 </beans>

@@ -1,9 +1,9 @@
 package org.nico.consumer.contract;
 
-import org.nico.consumer.contract.dao.MemberDao;
+import org.nico.consumer.contract.dao.UserDao;
 
 public interface DaoFactory {
 
-    MemberDao getMemberDao();
-    void setMemberDao(MemberDao memberDao);
+    UserDao getUserDao();
+    void setUserDao(UserDao userDao);
 }

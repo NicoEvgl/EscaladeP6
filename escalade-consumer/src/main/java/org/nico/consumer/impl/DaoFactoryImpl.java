@@ -1,15 +1,15 @@
 package org.nico.consumer.impl;
 
 import org.nico.consumer.contract.DaoFactory;
-import org.nico.consumer.contract.dao.MemberDao;
+import org.nico.consumer.contract.dao.UserDao;
 
 public class DaoFactoryImpl extends AbstractDao implements DaoFactory {
 
-    private MemberDao memberDao;
+    private UserDao userDao;
 
     @Override
-    public MemberDao getMemberDao() { return memberDao; }
+    public UserDao getUserDao() { return userDao; }
 
     @Override
-    public void setMemberDao(MemberDao memberDao) { this.memberDao = memberDao; }
+    public void setUserDao(UserDao userDao) { this.userDao = userDao; }
 }

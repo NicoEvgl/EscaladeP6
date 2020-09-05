@@ -13,20 +13,20 @@ public class GuideBook {
     private Date releaseDate;
     private boolean isBooked;
 
-    private Member member;
+    private User user;
 
     //====  CONSTRUCTOR  ====//
 
     public GuideBook(){}
 
-    public GuideBook(Integer id, String name, String description, String region, Date releaseDate, boolean isBooked, Member member) {
+    public GuideBook(Integer id, String name, String description, String region, Date releaseDate, boolean isBooked, User user) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.region = region;
         this.releaseDate = releaseDate;
         this.isBooked = isBooked;
-        this.member = member;
+        this.user = user;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -80,18 +80,18 @@ public class GuideBook {
         isBooked = booked;
     }
 
-    public Member getMember() {
-        return member;
+    public User getUser() {
+        return user;
     }
 
-    public void setMember(Member member) {
-        this.member = member;
+    public void setUser(User user) {
+        this.user = user;
     }
 
 
     /**
      * method to string guidebook
-     * @return id,name,description,region,releaseDate,isBooked,Member
+     * @return id,name,description,region,releaseDate,isBooked,User
      */
     @Override
     public String toString() {
@@ -102,7 +102,7 @@ public class GuideBook {
                 ", Région :'" + region + '\'' +
                 ", Date de parution : " + releaseDate +
                 ", Disponible : " + isBooked +
-                ", Membre : " + member +
+                ", Membre : " + user +
                 '}';
     }
 }

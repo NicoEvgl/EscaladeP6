@@ -11,7 +11,7 @@
                 <h3 class="text-info">S'inscrire</h3>
             </div>
             <div>
-                <form:form cssClass="form-group" method="post" action="registerProcess" modelAttribute="member">
+                <form:form cssClass="form-group" method="post" action="registerProcess" modelAttribute="user">
                     <div class="form-group">
                         <form:select path="gender" type="text" cssClass="form-control" placeholder="Genre" required="true" autofocus="">
                             <form:option value="M" label="Monsieur"/>

@@ -10,12 +10,12 @@
             <div class="block-heading">
                 <h3 class="text-info">Se connecter</h3>
             </div>
-            <form:form method="post" action="login" modelAttribute="login" >
+            <form:form method="post" action="loginProcess" modelAttribute="login" >
                 <div class="form-group">
-                    <form:label path="email" for="exampleInputEmail1">Email</form:label>
-                    <form:input path="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" required="true"/>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    <form:errors path="email" cssClass="error"/>
+                    <form:label path="username" for="exampleInputUsername">Email</form:label>
+                    <form:input path="username" type="username" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="username" required="true"/>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your login with anyone else.</small>
+                    <form:errors path="username" cssClass="error"/>
                 </div>
                 <div class="form-group">
                     <form:label path="password" for="exampleInputPassword1">Mot de passe</form:label>

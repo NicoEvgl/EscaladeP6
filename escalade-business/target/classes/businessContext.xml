@@ -10,11 +10,11 @@
         <property name="daoFactory" ref="daoFactory"/>
     </bean>
 
-    <bean id="memberManager" class="org.nico.business.impl.manager.MemberManagerImpl" parent="abstractManager"></bean>
+    <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"></bean>
 
     <!-- ===== Manager Factory ===== -->
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
-        <property name="MemberManager" ref="memberManager"/>
+        <property name="userManager" ref="userManager"/>
     </bean>
 
     <!-- Transaction manager -->
