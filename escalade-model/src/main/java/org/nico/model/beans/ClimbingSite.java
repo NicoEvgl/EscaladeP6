@@ -12,8 +12,9 @@ public class ClimbingSite {
     private String rockType;
     private String height;
     private Integer nbRoutes;
-    private String orientation;
     private String cotation;
+
+    private User user;
 
     //====  CONSTRUCTOR  ====//
 
@@ -27,7 +28,6 @@ public class ClimbingSite {
         this.rockType = rockType;
         this.height = height;
         this.nbRoutes = nbRoutes;
-        this.orientation = orientation;
         this.cotation = cotation;
     }
 
@@ -62,14 +62,13 @@ public class ClimbingSite {
 
     public void setNbRoutes(Integer nbRoutes) { this.nbRoutes = nbRoutes; }
 
-    public String getOrientation() { return orientation; }
-
-    public void setOrientation(String orientation) { this.orientation = orientation; }
-
     public String getCotation() { return cotation; }
 
     public void setCotation(String cotation) { this.cotation = cotation; }
 
+    public User getUser() { return user; }
+
+    public void setUser(User user) { this.user = user; }
 
     /**
      * method to String climbing sites
@@ -78,7 +77,7 @@ public class ClimbingSite {
     @Override
     public String toString(){
         return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
-                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Orientation : " + orientation + " Cotation : " + cotation ;
+                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Cotation : " + cotation + "User id = " + user.getId() ;
     }
 }
 

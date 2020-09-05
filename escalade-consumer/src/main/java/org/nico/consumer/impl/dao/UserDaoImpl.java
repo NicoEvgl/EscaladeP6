@@ -59,6 +59,17 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     }
 
     @Override
+    public User findUserByAttribute(String attribute, Object attributeValue) {
+        String sql = "SELECT * FROM public.user WHERE "+attribute+" = :"+attribute+"";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue(attribute, attributeValue);
+        User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new UserRowMapper());
+
+        return user;
+    }
+
+    @Override
     public void updateUser(User user) {
         String sql = "UPDATE public.user SET "
                 + "gender = :gender, "
@@ -100,14 +111,5 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
         namedParameterJdbcTemplate.update(sql, parameterSource);
     }
 
-    @Override
-    public User findUserByAttribute(String attribute, Object attributeValue) {
-        String sql = "SELECT * FROM public.user WHERE "+attribute+" = :"+attribute+"";
-        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
-        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
-        mapSqlParameterSource.addValue(attribute, attributeValue);
-        User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new UserRowMapper());
 
-        return user;
-    }
 }

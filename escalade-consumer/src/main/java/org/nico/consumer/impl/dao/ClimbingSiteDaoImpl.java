@@ -1,0 +1,43 @@
+package org.nico.consumer.impl.dao;
+
+import org.nico.consumer.contract.dao.ClimbingSiteDao;
+import org.nico.consumer.impl.AbstractDao;
+import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
+import org.nico.model.beans.ClimbingSite;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import java.sql.Types;
+import java.util.List;
+
+public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao {
+
+    @Override
+    public void createClimbingSite(ClimbingSite climbingSite) {
+        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, cotation, user_id)"
+                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :cotation, :userId)";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("name", climbingSite.getName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("region", climbingSite.getRegion(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("climbingType", climbingSite.getClimbingType(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("rockType", climbingSite.getRockType(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("height", climbingSite.getHeight(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
+        mapSqlParameterSource.addValue("cotation", climbingSite.getCotation(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public List<ClimbingSite> findClimbingSiteList(){
+        String sql = "SELECT * FROM public.climbingSite ORDER BY name";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
+        List<ClimbingSite> climbingSiteList = jdbcTemplate.query(sql, climbingSiteRowMapper);
+
+        return climbingSiteList;
+    }
+}
