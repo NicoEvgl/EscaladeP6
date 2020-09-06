@@ -11,10 +11,12 @@
     </bean>
 
     <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"></bean>
+    <bean id="climbingSiteManager" class="org.nico.business.impl.manager.ClimbingSiteManagerImpl" parent="abstractManager"/>
 
     <!-- ===== Manager Factory ===== -->
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
         <property name="userManager" ref="userManager"/>
+        <property name="climbingSiteManager" ref="climbingSiteManager"/>
     </bean>
 
     <!-- Transaction manager -->
