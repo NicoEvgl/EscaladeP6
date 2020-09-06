@@ -62,6 +62,6 @@ public class SearchFilter {
 
     @Override
     public String toString() {
-        return "SearchFilter = " + " name :'" + name + "', region :'" + region + "', nbRoutes :'" + nbRoutes + "', cotation :'" + cotation + "'.";
+        return "SearchFilter = " + " name :'" + name + "', region :'" + region + "', nbRoutes :'" + nbRoutes + "', cotation :'" + cotation;
     }
 }

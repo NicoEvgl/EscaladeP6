@@ -33,7 +33,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public List<ClimbingSite> findClimbingSiteList(){
-        String sql = "SELECT * FROM public.climbingSite ORDER BY name";
+        String sql = "SELECT * FROM public.climbingsite ORDER BY name";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
         List<ClimbingSite> climbingSiteList = jdbcTemplate.query(sql, climbingSiteRowMapper);
@@ -43,7 +43,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
-        String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
+        String sql = "SELECT * FROM public.climbingsite " +
                 "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.cotation = :cotation";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -52,8 +52,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("nbRoutes", nbRoutes, Types.INTEGER);
         mapSqlParameterSource.addValue("cotation", cotation, Types.VARCHAR);
         ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
-        List<ClimbingSite> climbingAreaList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper );
+        List<ClimbingSite> climbingSiteList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper );
 
-        return climbingAreaList;
+        return climbingSiteList;
     }
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +26,9 @@ public class SearchController {
     @Inject
     private EnumManager enumManager;
 
-    @PostMapping("/climbingSiteList/search")
-    public String displayClimbingSiteListSearchResults(@ModelAttribute("searchFilter") SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "memberInSessionID", required = false) Integer memberInSessionId){
+
+    @PostMapping(value = "/climbingSiteList/search")
+    public String displayClimbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "memberInSessionID", required = false) Integer memberInSessionId){
         if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("") && searchFilter.getNbRoutes() == null && searchFilter.getCotation().equals("")){
             return "redirect:/climbingSiteList";
         }

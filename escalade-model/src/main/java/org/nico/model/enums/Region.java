@@ -15,7 +15,7 @@ public enum Region {
     NOUVELLE_AQUITAINE("Nouvelle-Aquitaine"),
     OCCITANIE("Occitanie"),
     PAYS_DE_LA_LOIRE("Pays-de-la-Loire"),
-    PACA("Paca"),
+    PROVENCE_ALPES_COTE_D_AZUR("Provence-Alpes-Côte-d’Azur"),
     REUNION("Réunion");
 
     private final String param;
