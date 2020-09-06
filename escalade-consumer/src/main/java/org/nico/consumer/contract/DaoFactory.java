@@ -1,6 +1,7 @@
 package org.nico.consumer.contract;
 
 import org.nico.consumer.contract.dao.ClimbingSiteDao;
+import org.nico.consumer.contract.dao.PhotoDao;
 import org.nico.consumer.contract.dao.UserDao;
 
 public interface DaoFactory {
@@ -10,4 +11,7 @@ public interface DaoFactory {
 
     ClimbingSiteDao getClimbingSiteDao();
     void setClimbingSiteDao(ClimbingSiteDao climbingSiteDao);
+
+    PhotoDao getPhotoDao();
+    void setPhotoDao(PhotoDao photoDao);
 }
