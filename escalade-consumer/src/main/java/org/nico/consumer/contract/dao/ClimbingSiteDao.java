@@ -8,4 +8,5 @@ public interface ClimbingSiteDao {
     void createClimbingSite(ClimbingSite climbingSite);
     List<ClimbingSite> findClimbingSiteList();
     List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation);
+    ClimbingSite findClimbingSite(Integer id);
 }
