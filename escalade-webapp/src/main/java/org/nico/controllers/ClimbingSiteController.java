@@ -2,6 +2,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
+import org.nico.business.contract.manager.PhotoManager;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
 import org.springframework.stereotype.Controller;
@@ -18,9 +19,11 @@ public class ClimbingSiteController {
 
     @Inject
     private ClimbingSiteManager climbingSiteManager;
-
     @Inject
     private EnumManager enumManager;
+    @Inject
+    private PhotoManager photoManager;
+
 
     @GetMapping(value = "/climbingSiteList")
     public String displayClimbingSiteList(Model model, @SessionAttribute(value = "memberInSessionId", required = false) Integer memberInSessionId) {
@@ -29,6 +32,10 @@ public class ClimbingSiteController {
         List<String> cotationList = enumManager.getEnumCotationStringValues();
         List<String> nameList = new ArrayList<>();
         List<Integer> nbRoutesList = new ArrayList<>();
+
+        for (ClimbingSite climbingSite : climbingSiteList){
+            climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
+        }
 
         for (ClimbingSite climbingSite : climbingSiteList){
             nameList.add(climbingSite.getName());

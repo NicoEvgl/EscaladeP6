@@ -3,6 +3,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
+import org.nico.business.contract.manager.PhotoManager;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
 import org.springframework.stereotype.Controller;
@@ -22,9 +23,10 @@ public class SearchController {
 
     @Inject
     private ClimbingSiteManager climbingSiteManager;
-
     @Inject
     private EnumManager enumManager;
+    @Inject
+    private PhotoManager photoManager;
 
 
     @PostMapping(value = "/climbingSiteList/search")
@@ -46,6 +48,9 @@ public class SearchController {
 
             for (ClimbingSite climbingArea : climbingSiteCompleteList){
                 nameList.add(climbingArea.getName());
+            }
+            for (ClimbingSite climbingSite : climbingSiteList){
+                climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
             }
             for (int i = 0; i < 101; i++){
                 nbRoutesList.add(i);

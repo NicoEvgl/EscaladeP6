@@ -1,6 +1,8 @@
 package org.nico.model.beans;
 
 
+import java.util.List;
+
 public class ClimbingSite {
 
     //====  ATTRIBUTES  ====//
@@ -15,12 +17,13 @@ public class ClimbingSite {
     private String cotation;
 
     private User user;
+    private List<Photo> photoList;
 
     //====  CONSTRUCTOR  ====//
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String orientation, String cotation) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String cotation, User user, List<Photo> photoList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -29,6 +32,8 @@ public class ClimbingSite {
         this.height = height;
         this.nbRoutes = nbRoutes;
         this.cotation = cotation;
+        this.user = user;
+        this.photoList = photoList;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -69,6 +74,14 @@ public class ClimbingSite {
     public User getUser() { return user; }
 
     public void setUser(User user) { this.user = user; }
+
+    public List<Photo> getPhotoList() {
+        return photoList;
+    }
+
+    public void setPhotoList(List<Photo> photoList) {
+        this.photoList = photoList;
+    }
 
     /**
      * method to String climbing sites
