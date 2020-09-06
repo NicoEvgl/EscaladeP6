@@ -17,8 +17,10 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
     public void createPhoto(Photo photo) {
         String sql = "INSERT INTO public.photo (name, url, climbingsite_id)"
                 + "VALUES (:name, :url, :climbingareaId)";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue("name", photo.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("url", photo.getUrl(), Types.VARCHAR);
         mapSqlParameterSource.addValue("climbingareaId", photo.getClimbingSite().getId(), Types.INTEGER);
@@ -29,8 +31,22 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
     @Override
     public List<Photo> findPhotoList() {
         String sql = "SELECT * FROM public.photo ORDER BY id";
+
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         PhotoRowMapper photoRowMapper = new PhotoRowMapper();
+
+        List<Photo> photoList = jdbcTemplate.query(sql, photoRowMapper);
+
+        return photoList;
+    }
+
+    @Override
+    public List<Photo> findPhotoByClimbingSiteId(Integer id) {
+        String sql = "SELECT * FROM public.photo WHERE climbingsite_id = " + id;
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        PhotoRowMapper photoRowMapper = new PhotoRowMapper();
+
         List<Photo> photoList = jdbcTemplate.query(sql, photoRowMapper);
 
         return photoList;

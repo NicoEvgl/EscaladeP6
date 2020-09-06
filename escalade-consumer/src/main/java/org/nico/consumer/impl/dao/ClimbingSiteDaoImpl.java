@@ -17,8 +17,10 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     public void createClimbingSite(ClimbingSite climbingSite) {
         String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, cotation, user_id)"
                 + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :cotation, :userId)";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue("name", climbingSite.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("region", climbingSite.getRegion(), Types.VARCHAR);
         mapSqlParameterSource.addValue("climbingType", climbingSite.getClimbingType(), Types.VARCHAR);
@@ -34,8 +36,10 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     @Override
     public List<ClimbingSite> findClimbingSiteList(){
         String sql = "SELECT * FROM public.climbingsite ORDER BY name";
+
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
+
         List<ClimbingSite> climbingSiteList = jdbcTemplate.query(sql, climbingSiteRowMapper);
 
         return climbingSiteList;

@@ -18,9 +18,10 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     public void createUser(User user) {
         String sql = "INSERT INTO public.user (gender, first_name, last_name, username, email, password, address, address2, zip, city, role)"
                 + "VALUES (:gender, :firstName, :lastName, :username, :email, :password, :address, :address2, :zip, :city, :role)";
-        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
 
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue("gender", user.getGender(), Types.VARCHAR);
         mapSqlParameterSource.addValue("firstName", user.getFirstName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("lastName", user.getLastName(), Types.VARCHAR);
@@ -39,7 +40,9 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     @Override
     public List<User> findUserList() {
         String sql = "SELECT * FROM public.user ORDER BY id";
+
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+
         UserRowMapper userRowMapper = new UserRowMapper();
         List<User> userList = jdbcTemplate.query(sql, userRowMapper);
 
@@ -49,9 +52,12 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     @Override
     public User findUser(Integer id) {
         String sql = "SELECT * FROM public.user WHERE id = :id";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
         UserRowMapper userRowMapper = new UserRowMapper();
         User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, userRowMapper);
 
@@ -61,9 +67,12 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     @Override
     public User findUserByAttribute(String attribute, Object attributeValue) {
         String sql = "SELECT * FROM public.user WHERE "+attribute+" = :"+attribute+"";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue(attribute, attributeValue);
+
         User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new UserRowMapper());
 
         return user;
@@ -84,7 +93,9 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
                 + "zip = :zip, "
                 + "role = :role, "
                 + "WHERE id = :id";
+
         BeanPropertySqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(user);
+
         sqlParameterSource.registerSqlType("id", Types.INTEGER);
         sqlParameterSource.registerSqlType("gender", Types.VARCHAR);
         sqlParameterSource.registerSqlType("firstName", Types.VARCHAR);
@@ -97,17 +108,20 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
         sqlParameterSource.registerSqlType("zip", Types.VARCHAR);
         sqlParameterSource.registerSqlType("city", Types.VARCHAR);
         sqlParameterSource.registerSqlType("role", Types.VARCHAR);
-        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
 
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         namedParameterJdbcTemplate.update(sql, sqlParameterSource);
     }
 
     @Override
     public void deleteUser(Integer id) {
         String sql = "DELETE FROM public.user WHERE id = :id";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+
         parameterSource.addValue("id", id);
+
         namedParameterJdbcTemplate.update(sql, parameterSource);
     }
 

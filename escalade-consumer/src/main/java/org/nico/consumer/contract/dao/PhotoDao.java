@@ -7,4 +7,6 @@ import java.util.List;
 public interface PhotoDao {
     void createPhoto(Photo photo);
     List<Photo> findPhotoList();
+
+    List<Photo> findPhotoByClimbingSiteId(Integer id);
 }

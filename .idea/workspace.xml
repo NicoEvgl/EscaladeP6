@@ -15,10 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add PhotoRowMapper">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findClimbingSite in ClimbingSiteDao">
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/UserDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,14 +284,7 @@
       <workItem from="1599317399227" duration="5752000" />
       <workItem from="1599340040826" duration="23020000" />
       <workItem from="1599366887085" duration="6504000" />
-      <workItem from="1599426576299" duration="5378000" />
-    </task>
-    <task id="LOCAL-00009" summary="new bean : ClimbingSite / new enum : Cotation">
-      <created>1598470267572</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1598470267572</updated>
+      <workItem from="1599426576299" duration="5747000" />
     </task>
     <task id="LOCAL-00010" summary="new jsp : climbingSite.jsp">
       <created>1598492205039</created>
@@ -629,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599432805448</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="method findClimbingSite in ClimbingSiteDao">
+      <created>1599433154433</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1599433154433</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +648,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new class PasswordManager(encoder)" />
     <MESSAGE value="method findMemberByUsername in MemberDao" />
     <MESSAGE value="method findMemberByUsername in MemberManager" />
     <MESSAGE value="new enum : Role" />
@@ -673,7 +672,8 @@
     <MESSAGE value="method createPhoto in PhotoDao" />
     <MESSAGE value="method findPhotoList in PhotoDao" />
     <MESSAGE value="add PhotoRowMapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="add PhotoRowMapper" />
+    <MESSAGE value="method findClimbingSite in ClimbingSiteDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="method findClimbingSite in ClimbingSiteDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
