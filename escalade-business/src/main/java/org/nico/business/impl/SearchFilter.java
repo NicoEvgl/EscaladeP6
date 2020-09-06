@@ -14,10 +14,20 @@ public class SearchFilter {
 
     //====  CONSTRUCTOR  ====//
 
+    /**
+     * default constructor
+     */
     public SearchFilter(){
 
     }
 
+    /**
+     * constructor
+     * @param name
+     * @param region
+     * @param nbRoutes
+     * @param cotation
+     */
     public SearchFilter(String name, String region, Integer nbRoutes, String cotation) {
         this.name = name;
         this.region = region;

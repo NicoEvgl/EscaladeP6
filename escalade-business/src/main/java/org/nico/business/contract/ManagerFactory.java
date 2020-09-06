@@ -1,6 +1,7 @@
 package org.nico.business.contract;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
+import org.nico.business.contract.manager.PhotoManager;
 import org.nico.business.contract.manager.UserManager;
 
 public interface ManagerFactory {
@@ -10,4 +11,7 @@ public interface ManagerFactory {
 
     ClimbingSiteManager getClimbingSiteManager();
     void setClimbingSiteManager(ClimbingSiteManager climbingSiteManager);
+
+    PhotoManager getPhotoManager();
+    void setPhotoManager(PhotoManager photoManager);
 }
