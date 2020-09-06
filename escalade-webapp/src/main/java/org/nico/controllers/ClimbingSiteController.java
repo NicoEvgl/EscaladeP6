@@ -22,8 +22,8 @@ public class ClimbingSiteController {
     @Inject
     private EnumManager enumManager;
 
-    @GetMapping(value = "/climbingSite")
-    public String displayClimbingSitePage(Model model, @SessionAttribute(value = "memberInSessionId", required = false) Integer memberInSessionId) {
+    @GetMapping(value = "/climbingSiteList")
+    public String displayClimbingSiteList(Model model, @SessionAttribute(value = "memberInSessionId", required = false) Integer memberInSessionId) {
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteList();
         List<String> regionList = enumManager.getEnumRegionStringValues();
         List<String> cotationList = enumManager.getEnumCotationStringValues();

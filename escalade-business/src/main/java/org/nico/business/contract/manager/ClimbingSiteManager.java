@@ -7,4 +7,5 @@ import java.util.List;
 public interface ClimbingSiteManager {
     void createClimbingSite(ClimbingSite climbingSite);
     List<ClimbingSite> findClimbingSiteList();
+    List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, String nbRoutes, String cotation);
 }

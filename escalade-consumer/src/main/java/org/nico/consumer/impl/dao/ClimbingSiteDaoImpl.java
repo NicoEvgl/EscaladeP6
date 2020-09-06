@@ -40,4 +40,20 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
         return climbingSiteList;
     }
+
+    @Override
+    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, String nbRoutes, String cotation) {
+        String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
+                "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.cotation = :cotation";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+        mapSqlParameterSource.addValue("name", name, Types.VARCHAR);
+        mapSqlParameterSource.addValue("region", region, Types.VARCHAR);
+        mapSqlParameterSource.addValue("nbRoutes", nbRoutes, Types.INTEGER);
+        mapSqlParameterSource.addValue("cotation", cotation, Types.VARCHAR);
+        ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
+        List<ClimbingSite> climbingAreaList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper );
+
+        return climbingAreaList;
+    }
 }
