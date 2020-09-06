@@ -10,10 +10,11 @@
         <property name="daoFactory" ref="daoFactory"/>
     </bean>
 
-    <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"></bean>
+    <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"/>
     <bean id="climbingSiteManager" class="org.nico.business.impl.manager.ClimbingSiteManagerImpl" parent="abstractManager"/>
-    <bean id="enumManager" class="org.nico.business.impl.manager.EnumManagerImpl" parent="abstractManager"></bean>
-    <bean id="searchFilter" class="org.nico.business.impl.SearchFilter" parent="abstractManager"></bean>
+
+    <bean id="enumManager" class="org.nico.business.impl.manager.EnumManagerImpl"></bean>
+    <bean id="searchFilter" class="org.nico.business.impl.SearchFilter"></bean>
 
     <!-- ===== Manager Factory ===== -->
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">

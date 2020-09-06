@@ -42,7 +42,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     }
 
     @Override
-    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, String nbRoutes, String cotation) {
+    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
         String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
                 "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.cotation = :cotation";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());

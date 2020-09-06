@@ -3,7 +3,6 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
 import org.nico.model.beans.ClimbingSite;
-import org.nico.model.beans.Login;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +36,6 @@ public class ClimbingSiteController {
         model.addAttribute("nameList", nameList);
         model.addAttribute("climbingSiteList", climbingSiteList);
 
-        return "climbingSite";
+        return "climbingSiteList";
     }
 }

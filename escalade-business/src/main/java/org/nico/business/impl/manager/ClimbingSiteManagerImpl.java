@@ -37,7 +37,7 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
     }
 
     @Override
-    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, String nbRoutes, String cotation) {
+    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
             List<ClimbingSite> climbingSiteListTx = new ArrayList<>();

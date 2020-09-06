@@ -9,7 +9,7 @@ public class SearchFilter {
 
     private String name;
     private String region;
-    private String nbRoutes;
+    private Integer nbRoutes;
     private String cotation;
 
     //====  CONSTRUCTOR  ====//
@@ -18,7 +18,7 @@ public class SearchFilter {
 
     }
 
-    public SearchFilter(String name, String region, String nbRoutes, String cotation) {
+    public SearchFilter(String name, String region, Integer nbRoutes, String cotation) {
         this.name = name;
         this.region = region;
         this.nbRoutes = nbRoutes;
@@ -44,11 +44,11 @@ public class SearchFilter {
         this.region = region;
     }
 
-    public String getNbRoutes() {
+    public Integer getNbRoutes() {
         return nbRoutes;
     }
 
-    public void setNbRoutes(String nbRoutes) {
+    public void setNbRoutes(Integer nbRoutes) {
         this.nbRoutes = nbRoutes;
     }
 
