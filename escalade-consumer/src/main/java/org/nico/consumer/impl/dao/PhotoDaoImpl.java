@@ -2,11 +2,14 @@ package org.nico.consumer.impl.dao;
 
 import org.nico.consumer.contract.dao.PhotoDao;
 import org.nico.consumer.impl.AbstractDao;
+import org.nico.consumer.impl.rowmapper.PhotoRowMapper;
 import org.nico.model.beans.Photo;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.sql.Types;
+import java.util.List;
 
 public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
 
@@ -22,4 +25,16 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
+
+    @Override
+    public List<Photo> findPhotoList() {
+        String sql = "SELECT * FROM public.photo ORDER BY id";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        PhotoRowMapper photoRowMapper = new PhotoRowMapper();
+        List<Photo> photoList = jdbcTemplate.query(sql, photoRowMapper);
+
+        return photoList;
+    }
+
+
 }
