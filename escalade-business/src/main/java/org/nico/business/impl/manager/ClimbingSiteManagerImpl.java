@@ -2,9 +2,7 @@ package org.nico.business.impl.manager;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.impl.AbstractManager;
-import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.model.beans.ClimbingSite;
-import org.nico.model.beans.User;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;

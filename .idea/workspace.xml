@@ -15,15 +15,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findPhoto in PhotoDao">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PhotoManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PhotoManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/SearchFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/SearchFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/UserDao.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="findClimbingSite in ClimbingSiteManager">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PhotoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PhotoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PhotoManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PhotoManagerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,21 +285,7 @@
       <workItem from="1599317399227" duration="5752000" />
       <workItem from="1599340040826" duration="23020000" />
       <workItem from="1599366887085" duration="6504000" />
-      <workItem from="1599426576299" duration="6806000" />
-    </task>
-    <task id="LOCAL-00012" summary="new controller : GuideBookController">
-      <created>1598543520543</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1598543520543</updated>
-    </task>
-    <task id="LOCAL-00013" summary="new jsp : guideBook.jsp">
-      <created>1598544236819</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1598544236819</updated>
+      <workItem from="1599426576299" duration="7759000" />
     </task>
     <task id="LOCAL-00014" summary="new enum : Region">
       <created>1598544504987</created>
@@ -634,7 +616,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599434018427</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add PhotoManager &amp; PhotoManagerImpl / PhotoManager in ManagerFactory / bean manager statement in businessContext.xml">
+      <created>1599434666736</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1599434666736</updated>
+    </task>
+    <task id="LOCAL-00062" summary="findClimbingSite in ClimbingSiteManager">
+      <created>1599435160837</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1599435160837</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,8 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new enum : Role" />
-    <MESSAGE value="method registerNewMember in RegistrationController / validator dependency in pom.xml (webapp)" />
     <MESSAGE value="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK" />
     <MESSAGE value="method Post doLogin in LoginController / new jsp welcome.jsp" />
     <MESSAGE value="method logout in LoginController / update header.jsp / delete welcome.jsp" />
@@ -678,7 +672,9 @@
     <MESSAGE value="method findClimbingSite in ClimbingSiteDao" />
     <MESSAGE value="method findPhotoByClimbingSiteId in PhotoDao" />
     <MESSAGE value="method findPhoto in PhotoDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="method findPhoto in PhotoDao" />
+    <MESSAGE value="add PhotoManager &amp; PhotoManagerImpl / PhotoManager in ManagerFactory / bean manager statement in businessContext.xml" />
+    <MESSAGE value="findClimbingSite in ClimbingSiteManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="findClimbingSite in ClimbingSiteManager" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
