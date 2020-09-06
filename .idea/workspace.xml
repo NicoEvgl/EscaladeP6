@@ -15,9 +15,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="enumManager bean statement in businessContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/SearchFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add SearchFilter">
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +280,7 @@
       <workItem from="1599241018920" duration="5886000" />
       <workItem from="1599271422233" duration="1860000" />
       <workItem from="1599317399227" duration="5752000" />
-      <workItem from="1599340040826" duration="13856000" />
+      <workItem from="1599340040826" duration="14024000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -612,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599353172175</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add SearchFilter">
+      <created>1599356868251</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1599356868251</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +637,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="method findMemberList on MemberDaoImpl / new package : rowmapper / add MemberRowMapper" />
     <MESSAGE value="method updateMember on MemberDaoImpl" />
     <MESSAGE value="add spring tx dependency in pom.xml(business)" />
     <MESSAGE value="add AbstractManager / refactor AbstractDao" />
@@ -656,7 +661,8 @@
     <MESSAGE value="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml" />
     <MESSAGE value="add interface EnumManager + EnumManagerImpl / update method GET (&quot;/climbingSite&quot;) in ClimbingSiteController" />
     <MESSAGE value="enumManager bean statement in businessContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="enumManager bean statement in businessContext.xml" />
+    <MESSAGE value="add SearchFilter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add SearchFilter" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
