@@ -8,5 +8,7 @@ public interface PhotoDao {
     void createPhoto(Photo photo);
     List<Photo> findPhotoList();
 
+    Photo findPhoto(Integer id);
+
     List<Photo> findPhotoByClimbingSiteId(Integer id);
 }
