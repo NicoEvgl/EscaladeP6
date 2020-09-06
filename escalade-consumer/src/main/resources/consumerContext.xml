@@ -10,7 +10,7 @@
 
     <bean id="userDao" class="org.nico.consumer.impl.dao.UserDaoImpl" parent="abstractDao"/>
     <bean id="climbingSiteDao" class="org.nico.consumer.impl.dao.ClimbingSiteDaoImpl" parent="abstractDao"/>
-    <bean id="photoDao" class="org.nico.consumer.impl.dao.PhotoDaoImpl" />
+    <bean id="photoDao" class="org.nico.consumer.impl.dao.PhotoDaoImpl" parent="abstractDao"/>
 
 
     <!-- DAO Factory -->

@@ -5,7 +5,7 @@ import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.consumer.contract.dao.PhotoDao;
 import org.nico.consumer.contract.dao.UserDao;
 
-public class DaoFactoryImpl extends AbstractDao implements DaoFactory {
+public class DaoFactoryImpl implements DaoFactory {
 
     private UserDao userDao;
     private ClimbingSiteDao climbingSiteDao;

@@ -15,11 +15,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : Photo">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method createPhoto in PhotoDao">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -286,14 +285,7 @@
       <workItem from="1599317399227" duration="5752000" />
       <workItem from="1599340040826" duration="23020000" />
       <workItem from="1599366887085" duration="6504000" />
-      <workItem from="1599426576299" duration="2531000" />
-    </task>
-    <task id="LOCAL-00005" summary="new view : register.jsp / new controller : RegistrationController(displayLogin) / new bean on model : User">
-      <created>1598398436920</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1598398436920</updated>
+      <workItem from="1599426576299" duration="3865000" />
     </task>
     <task id="LOCAL-00006" summary="new bean : Login">
       <created>1598455406391</created>
@@ -631,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599428156967</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="new dao PhotoDao / add PhotoDao in DaoFactory / bean dao statement in consumerContext.xml">
+      <created>1599429534886</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1599429534886</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,8 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="methods findMemberList &amp; updateMember in MemberManagerImpl" />
-    <MESSAGE value="refactor MemberDaoImpl / method deleteMember in MemberDao" />
     <MESSAGE value="method deleteMember in MemberManager" />
     <MESSAGE value="add spring security dependencies" />
     <MESSAGE value="new class PasswordManager(encoder)" />
@@ -675,7 +672,9 @@
     <MESSAGE value="New controller : SearchController / PostMapping( &quot;climbingSiteListe/search&quot;)" />
     <MESSAGE value="update climbingSiteList.jsp (renamed from climbingSite.jsp)" />
     <MESSAGE value="new bean : Photo" />
-    <option name="LAST_COMMIT_MESSAGE" value="new bean : Photo" />
+    <MESSAGE value="new dao PhotoDao / add PhotoDao in DaoFactory / bean dao statement in consumerContext.xml" />
+    <MESSAGE value="method createPhoto in PhotoDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="method createPhoto in PhotoDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
