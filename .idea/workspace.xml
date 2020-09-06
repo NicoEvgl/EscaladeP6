@@ -15,10 +15,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add interface ClimbingSiteManager + ClimbingSiteManagerImpl">
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/EnumManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/EnumManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/EnumManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/EnumManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +284,7 @@
       <workItem from="1599241018920" duration="5886000" />
       <workItem from="1599271422233" duration="1860000" />
       <workItem from="1599317399227" duration="5752000" />
-      <workItem from="1599340040826" duration="9533000" />
+      <workItem from="1599340040826" duration="10922000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - Projet Maven multi-module">
       <created>1598269888215</created>
@@ -592,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599350778682</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml">
+      <created>1599351204005</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1599351204005</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +620,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Managers statement &amp; Manager Factory in businessContext.xml" />
     <MESSAGE value="add log4j2.xml + logs depedencies in pom.xml files" />
     <MESSAGE value="method createMember on MemberDaoImpl / sql dialect configured (postgresql);" />
     <MESSAGE value="method findMemberList on MemberDaoImpl / new package : rowmapper / add MemberRowMapper" />
@@ -636,7 +644,8 @@
     <MESSAGE value="add interface ClimbingSiteDao + ClimbingSiteDaoImpl / new rowmapper : ClimbingSiteRowMapper" />
     <MESSAGE value="ClimbingSiteDao in DaoFactory + bean statement in consumerContext.xml" />
     <MESSAGE value="add interface ClimbingSiteManager + ClimbingSiteManagerImpl" />
-    <option name="LAST_COMMIT_MESSAGE" value="add interface ClimbingSiteManager + ClimbingSiteManagerImpl" />
+    <MESSAGE value="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
