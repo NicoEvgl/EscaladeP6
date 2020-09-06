@@ -37,6 +37,18 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
     }
 
     @Override
+    public ClimbingSite findClimbingSite(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        ClimbingSite climbingSite = transactionTemplate.execute(transactionStatus -> {
+            ClimbingSite climbingSiteTx;
+            climbingSiteTx = getDaoFactory().getClimbingSiteDao().findClimbingSite(id);
+            return climbingSiteTx;
+        });
+
+        return climbingSite;
+    }
+
+    @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {

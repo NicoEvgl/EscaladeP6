@@ -4,8 +4,6 @@ import java.util.List;
 
 public interface EnumManager {
     List<String> getEnumRegionStringValues();
-
     List<String> getEnumCotationStringValues();
-
     List<String> getEnumRoleStringValues();
 }
