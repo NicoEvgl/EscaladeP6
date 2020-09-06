@@ -28,9 +28,9 @@ public class UserManagerImpl extends AbstractManager implements UserManager {
     public List<User> findUserList() {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         List<User> userList = transactionTemplate.execute(transactionStatus -> {
-            List<User> userListTxes = new ArrayList<>();
-            userListTxes = getDaoFactory().getUserDao().findUserList();
-            return userListTxes;
+            List<User> userListTx = new ArrayList<>();
+            userListTx = getDaoFactory().getUserDao().findUserList();
+            return userListTx;
         });
         return userList;
     }
