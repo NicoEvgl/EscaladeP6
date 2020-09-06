@@ -45,4 +45,17 @@ public class PhotoManagerImpl extends AbstractManager implements PhotoManager {
 
         return photo;
     }
+
+    @Override
+    public List<Photo> findPhotoByClimbingSiteId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<Photo> photoList = transactionTemplate.execute(transactionStatus -> {
+            List<Photo> photoListTx = new ArrayList<>();
+            photoListTx = getDaoFactory().getPhotoDao().findPhotoByClimbingSiteId(id);
+            return  photoListTx;
+        });
+
+        return photoList;
+    }
 }
