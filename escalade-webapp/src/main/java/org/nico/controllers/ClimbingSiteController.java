@@ -70,22 +70,22 @@ public class ClimbingSiteController {
         return "climbingSite";
     }
 
-    @GetMapping("/updateClimbingSite/{id}")
-    public String displayUpdateClimbingSiteForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    @GetMapping("/editClimbingSite/{id}")
+    public String displayEditClimbingSiteForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
             return "redirect:/login";
         }
-        ClimbingSite updatedClimbingSite = climbingSiteManager.findClimbingSite(id);
+        ClimbingSite editedClimbingSite = climbingSiteManager.findClimbingSite(id);
         List<String> regionList = enumManager.getEnumRegionStringValues();
 
         model.addAttribute("regionList", regionList);
-        model.addAttribute("updatedClimbingSite", updatedClimbingSite);
+        model.addAttribute("editedClimbingSite", editedClimbingSite);
 
-        return "updateClimbingSiteForm";
+        return "editClimbingSiteForm";
     }
 
-    @PostMapping("/updateClimbingSite/updateClimbingSiteProcess/{id}")
-    public String updateClimbingSite(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    @PostMapping("/editClimbingSite/editClimbingSiteProcess/{id}")
+    public String editClimbingSite(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
             return "redirect:/login";
         }
@@ -99,12 +99,14 @@ public class ClimbingSiteController {
             }
             String str = "Une erreur est survenue. Vérifiez les champs.";
 
-            model.addAttribute("updatedClimbingSite", climbingSite);
+            model.addAttribute("editedClimbingSite", climbingSite);
             model.addAttribute("errorMessage", str);
 
-            return "updateClimbingSiteForm";
+            return "editClimbingSiteForm";
         } else {
-            climbingSiteManager.updateClimbingSite(climbingSite);
+            climbingSiteManager.editClimbingSite(climbingSite);
+
+            model.addAttribute("message", "Modificaions enregistrées");
             model.addAttribute("id", id);
 
             return "redirect:/climbingSite/{id}";
