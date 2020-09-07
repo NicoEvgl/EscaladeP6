@@ -4,8 +4,11 @@
 <head>
     <title>Les amis de l'escalade</title>
 </head>
-<body>${message}
-    <div class="bg"></div>
-    <p class="py-5 text-center">
 
+<main class="page home-page">
+<div class="view" style="background-image: url('https://cdn.crunchify.com/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center ;"/>
+
+<body>
+
+${message}
 </body>

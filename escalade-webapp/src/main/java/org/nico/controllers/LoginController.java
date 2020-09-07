@@ -66,13 +66,18 @@ public class LoginController {
 
     @GetMapping("/logout")
     public String logoutUser(HttpServletResponse httpServletResponse, HttpSession httpSession, WebRequest webRequest, SessionStatus sessionStatus, Model model){
-       sessionStatus.setComplete();
-       webRequest.removeAttribute("userInSessionUsername", WebRequest.SCOPE_SESSION);
-       webRequest.removeAttribute("userInSessionRole", WebRequest.SCOPE_SESSION);
-       httpServletResponse.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
-       httpServletResponse.setHeader("Pragma","no-cache");
-       httpServletResponse.setHeader("Expires","0");
-       httpSession.invalidate();
+        sessionStatus.setComplete();
+
+        webRequest.removeAttribute("userInSessionId", WebRequest.SCOPE_SESSION);
+        webRequest.removeAttribute("userInSessionUsername", WebRequest.SCOPE_SESSION);
+        webRequest.removeAttribute("userInSessionEmail", WebRequest.SCOPE_SESSION);
+        webRequest.removeAttribute("userInSessionRole", WebRequest.SCOPE_SESSION);
+
+        httpServletResponse.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+        httpServletResponse.setHeader("Pragma","no-cache");
+        httpServletResponse.setHeader("Expires","0");
+
+        httpSession.invalidate();
 
         return "redirect:/home";
     }

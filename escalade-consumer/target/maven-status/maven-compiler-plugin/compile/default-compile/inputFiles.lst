@@ -1,6 +1,12 @@
-D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\dao\MemberDaoImpl.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\contract\dao\PhotoDao.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\dao\UserDaoImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\DaoFactoryImpl.java
-D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\rowmapper\MemberRowMapper.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\contract\dao\ClimbingSiteDao.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\contract\DaoFactory.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\rowmapper\ClimbingSiteRowMapper.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\AbstractDao.java
-D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\contract\dao\MemberDao.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\rowmapper\UserRowMapper.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\dao\ClimbingSiteDaoImpl.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\dao\PhotoDaoImpl.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\impl\rowmapper\PhotoRowMapper.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-consumer\src\main\java\org\nico\consumer\contract\dao\UserDao.java

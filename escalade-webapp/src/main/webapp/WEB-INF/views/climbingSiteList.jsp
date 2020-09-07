@@ -62,13 +62,13 @@
                                 <img class="card-img-top w-100 d-block" src="<c:url value="/resources/img/no_image_found.png"/>" >
                             </c:if>
                             <c:if test="${!empty climbingSite.photoList}">
-                                <img class="card-img-top w-100 d-block" src="<c:url value="${climbingArea.photoList.get(0).url}"/>">
+                                <img class="card-img-top w-100 d-block" src="<c:url value="${climbingSite.photoList.get(0).url}"/>">
                             </c:if>
                             <div class="card-body">
                                 <h4 class="card-title">${climbingSite.name}</h4>
                                 <p class="card-text">${climbingSite.region}</p>
-                                <p class="card-text">${climbingSite.nbRoutes}</p>
-                                <p class="card-text">${climbingSite.cotation}</p>
+                                <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>
+                                <p class="card-text">Cotation : ${climbingSite.cotation}</p>
                             </div>
                             <div class="card-body">
                                 <a class="btn btn-outline-secondary btn-sm" href="<c:url value="/climbingSite/${climbingSite.id}"/>">Voir</a>

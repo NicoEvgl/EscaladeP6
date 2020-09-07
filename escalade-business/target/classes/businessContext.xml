@@ -12,6 +12,8 @@
 
     <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"/>
     <bean id="climbingSiteManager" class="org.nico.business.impl.manager.ClimbingSiteManagerImpl" parent="abstractManager"/>
+    <bean id="photoManager" class="org.nico.business.impl.manager.PhotoManagerImpl" parent="abstractManager"/>
+
 
     <bean id="enumManager" class="org.nico.business.impl.manager.EnumManagerImpl"></bean>
     <bean id="searchFilter" class="org.nico.business.impl.SearchFilter"></bean>
@@ -20,6 +22,7 @@
     <bean id="managerFactory" class="org.nico.business.impl.ManagerFactoryImpl">
         <property name="userManager" ref="userManager"/>
         <property name="climbingSiteManager" ref="climbingSiteManager"/>
+        <property name="photoManager" ref="photoManager"/>
     </bean>
 
     <!-- Transaction manager -->

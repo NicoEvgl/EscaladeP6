@@ -1,3 +1,4 @@
+org\nico\controllers\SearchController.class
 org\nico\controllers\GuideBookController.class
 org\nico\controllers\HomeController.class
 org\nico\controllers\LoginController.class

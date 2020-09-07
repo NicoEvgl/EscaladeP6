@@ -1,6 +1,12 @@
-org\nico\consumer\impl\dao\MemberDaoImpl.class
-org\nico\consumer\impl\rowmapper\MemberRowMapper.class
+org\nico\consumer\contract\dao\UserDao.class
 org\nico\consumer\impl\DaoFactoryImpl.class
-org\nico\consumer\contract\dao\MemberDao.class
 org\nico\consumer\impl\AbstractDao.class
+org\nico\consumer\contract\dao\ClimbingSiteDao.class
+org\nico\consumer\impl\dao\ClimbingSiteDaoImpl.class
 org\nico\consumer\contract\DaoFactory.class
+org\nico\consumer\contract\dao\PhotoDao.class
+org\nico\consumer\impl\dao\PhotoDaoImpl.class
+org\nico\consumer\impl\dao\UserDaoImpl.class
+org\nico\consumer\impl\rowmapper\PhotoRowMapper.class
+org\nico\consumer\impl\rowmapper\ClimbingSiteRowMapper.class
+org\nico\consumer\impl\rowmapper\UserRowMapper.class
