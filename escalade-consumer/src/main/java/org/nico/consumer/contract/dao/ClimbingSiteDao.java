@@ -9,5 +9,6 @@ public interface ClimbingSiteDao {
     List<ClimbingSite> findClimbingSiteList();
     List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation);
     ClimbingSite findClimbingSite(Integer id);
-    void updateClimbingSite(ClimbingSite climbingSite);
+    void editClimbingSite(ClimbingSite climbingSite);
+    List<ClimbingSite> findClimbingSiteByUserId(Integer id);
 }

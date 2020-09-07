@@ -56,17 +56,30 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
             return  climbingSiteListTx;
         });
 
-        return climbingSiteList;    }
+        return climbingSiteList;
+    }
 
     @Override
-    public void updateClimbingSite(ClimbingSite climbingSite) {
+    public void editClimbingSite(ClimbingSite climbingSite) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             @Override
             protected void doInTransactionWithoutResult(TransactionStatus status) {
-                    getDaoFactory().getClimbingSiteDao().updateClimbingSite(climbingSite);
+                    getDaoFactory().getClimbingSiteDao().editClimbingSite(climbingSite);
             }
         });
+    }
+
+    @Override
+    public List<ClimbingSite> findClimbingSiteByUserId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
+            List<ClimbingSite> climbingAreaListTx = new ArrayList<>();
+            climbingAreaListTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteByUserId(id);
+            return  climbingAreaListTx;
+        });
+
+        return climbingSiteList;
     }
 }
 

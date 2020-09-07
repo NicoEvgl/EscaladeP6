@@ -36,6 +36,29 @@ public class UserManagerImpl extends AbstractManager implements UserManager {
     }
 
     @Override
+    public User findUser(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        User user = transactionTemplate.execute(transactionStatus -> {
+            User userTx;
+            userTx = getDaoFactory().getUserDao().findUser(id);
+            return userTx;
+        });
+
+        return user;
+    }
+
+    @Override
+    public User findUserByAttribute(String attribute, Object attributeValue) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        User user = transactionTemplate.execute(transactionStatus -> {
+            User userTx = new User();
+            userTx = getDaoFactory().getUserDao().findUserByAttribute(attribute, attributeValue);
+            return userTx;
+        });
+        return user;
+    }
+
+    @Override
     public void updateUser(User user) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         transactionTemplate.execute(new TransactionCallbackWithoutResult() {
@@ -58,15 +81,6 @@ public class UserManagerImpl extends AbstractManager implements UserManager {
         });
     }
 
-    @Override
-    public User findUserByAttribute(String attribute, Object attributeValue) {
-        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
-        User user = transactionTemplate.execute(transactionStatus -> {
-            User userTx = new User();
-            userTx = getDaoFactory().getUserDao().findUserByAttribute(attribute, attributeValue);
-            return userTx;
-        });
-        return user;
-    }
+
 
 }
