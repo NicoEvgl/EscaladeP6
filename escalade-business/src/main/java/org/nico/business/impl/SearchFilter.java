@@ -10,7 +10,7 @@ public class SearchFilter {
     private String name;
     private String region;
     private Integer nbRoutes;
-    private String cotation;
+    private String quotation;
 
     //====  CONSTRUCTOR  ====//
 
@@ -26,13 +26,13 @@ public class SearchFilter {
      * @param name
      * @param region
      * @param nbRoutes
-     * @param cotation
+     * @param quotation
      */
-    public SearchFilter(String name, String region, Integer nbRoutes, String cotation) {
+    public SearchFilter(String name, String region, Integer nbRoutes, String quotation) {
         this.name = name;
         this.region = region;
         this.nbRoutes = nbRoutes;
-        this.cotation = cotation;
+        this.quotation = quotation;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -62,16 +62,12 @@ public class SearchFilter {
         this.nbRoutes = nbRoutes;
     }
 
-    public String getCotation() {
-        return cotation;
-    }
+    public String getQuotation() { return quotation; }
 
-    public void setCotation(String cotation) {
-        this.cotation = cotation;
-    }
+    public void setQuotation(String quotation) { this.quotation = quotation; }
 
     @Override
     public String toString() {
-        return "SearchFilter = " + " name :'" + name + "', region :'" + region + "', nbRoutes :'" + nbRoutes + "', cotation :'" + cotation;
+        return "SearchFilter = " + " name :'" + name + "', region :'" + region + "', nbRoutes :'" + nbRoutes + "', quotation :'" + quotation;
     }
 }

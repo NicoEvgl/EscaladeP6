@@ -8,11 +8,15 @@ import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.Photo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +35,7 @@ public class ClimbingSiteController {
     public String displayClimbingSiteList(Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId) {
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteList();
         List<String> regionList = enumManager.getEnumRegionStringValues();
-        List<String> cotationList = enumManager.getEnumCotationStringValues();
+        List<String> quotationList = enumManager.getEnumQuotationStringValues();
         List<String> nameList = new ArrayList<>();
         List<Integer> nbRoutesList = new ArrayList<>();
 
@@ -46,7 +50,7 @@ public class ClimbingSiteController {
             nbRoutesList.add(i);
         }
         model.addAttribute("regionList", regionList);
-        model.addAttribute("cotationList", cotationList);
+        model.addAttribute("quotationList", quotationList);
         model.addAttribute("nameList", nameList);
         model.addAttribute("nbRoutesList", nbRoutesList);
         model.addAttribute("searchFilter", new SearchFilter());
@@ -78,5 +82,32 @@ public class ClimbingSiteController {
         model.addAttribute("updatedClimbingSite", updatedClimbingSite);
 
         return "updateClimbingSiteForm";
+    }
+
+    @PostMapping("/updateClimbingSite/updateClimbingSiteProcess/{id}")
+    public String updateClimbingSite(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        ClimbingSite registeredClimbingSite = climbingSiteManager.findClimbingSite(id);
+        climbingSite.setUser(registeredClimbingSite.getUser());
+
+        if (bindingResult.hasErrors()){
+            List<FieldError> errors = bindingResult.getFieldErrors();
+            for (FieldError error : errors ) {
+                System.out.println (error.getObjectName() + " - " + error.getDefaultMessage());
+            }
+            String str = "Une erreur est survenue. Vérifiez les champs.";
+
+            model.addAttribute("updatedClimbingSite", climbingSite);
+            model.addAttribute("errorMessage", str);
+
+            return "updateClimbingSiteForm";
+        } else {
+            climbingSiteManager.updateClimbingSite(climbingSite);
+            model.addAttribute("id", id);
+
+            return "redirect:/climbingSite/{id}";
+        }
     }
 }

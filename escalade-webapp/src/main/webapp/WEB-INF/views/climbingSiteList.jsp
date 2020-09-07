@@ -37,11 +37,11 @@
                             <form:errors path="nbRoutes" cssClass="error"/>
                         </div>
                         <div class="form-inline select-style">
-                            <form:select path="cotation" cssClass="form-control mb-2 mr-sm-2">
+                            <form:select path="quotation" cssClass="form-control mb-2 mr-sm-2">
                                 <form:option value="">Cotation</form:option>
-                                <form:options items="${cotationList}"/>
+                                <form:options items="${quotationList}"/>
                             </form:select>
-                            <form:errors path="cotation" cssClass="error"/>
+                            <form:errors path="quotation" cssClass="error"/>
                         </div>
                         <div class="form-inline">
                             <form:button class="btn btn-secondary mb-2" type="submit">Rechercher</form:button>
@@ -68,7 +68,7 @@
                                 <h4 class="card-title">${climbingSite.name}</h4>
                                 <p class="card-text">${climbingSite.region}</p>
                                 <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>
-                                <p class="card-text">Cotation : ${climbingSite.cotation}</p>
+                                <p class="card-text">Cotation : ${climbingSite.quotation}</p>
                             </div>
                             <div class="card-body">
                                 <a class="btn btn-outline-secondary btn-sm" href="<c:url value="/climbingSite/${climbingSite.id}"/>">Voir</a>

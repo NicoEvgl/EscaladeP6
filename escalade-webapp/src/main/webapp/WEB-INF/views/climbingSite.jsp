@@ -41,7 +41,7 @@
                                     <p class="card-text">Type de roche : ${climbingSite.rockType}</p>
                                     <p class="card-text">Hauteurs : ${climbingSite.height}</p>
                                     <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>
-                                    <p class="card-text">Cotation : ${climbingSite.cotation}</p>
+                                    <p class="card-text">Cotation : ${climbingSite.quotation}</p>
                                 </div>
                             </div>
                         </div>

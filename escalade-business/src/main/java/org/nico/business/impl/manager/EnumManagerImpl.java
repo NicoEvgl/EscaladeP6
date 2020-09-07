@@ -2,7 +2,7 @@ package org.nico.business.impl.manager;
 
 import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.impl.AbstractManager;
-import org.nico.model.enums.Cotation;
+import org.nico.model.enums.Quotation;
 import org.nico.model.enums.Region;
 import org.nico.model.enums.Role;
 
@@ -26,15 +26,15 @@ public class EnumManagerImpl extends AbstractManager implements EnumManager {
     }
 
     @Override
-    public List<String> getEnumCotationStringValues (){
-        Cotation[] listCotation = Cotation.values();
-        List<String> listCotationStringValues = new ArrayList<>();
+    public List<String> getEnumQuotationStringValues (){
+        Quotation[] listQuotation = Quotation.values();
+        List<String> listQuotationStringValues = new ArrayList<>();
 
-        for (Cotation cotation : listCotation){
-            listCotationStringValues.add(cotation.getCotationValue());
+        for (Quotation quotation : listQuotation){
+            listQuotationStringValues.add(quotation.getQuotationValue());
         }
 
-        return  listCotationStringValues;
+        return  listQuotationStringValues;
     }
 
     @Override

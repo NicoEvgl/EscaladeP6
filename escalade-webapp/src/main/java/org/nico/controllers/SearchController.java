@@ -31,7 +31,7 @@ public class SearchController {
 
     @PostMapping(value = "/climbingSiteList/search")
     public String displayClimbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "memberInSessionID", required = false) Integer memberInSessionId){
-        if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("") && searchFilter.getNbRoutes() == null && searchFilter.getCotation().equals("")){
+        if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("") && searchFilter.getNbRoutes() == null && searchFilter.getQuotation().equals("")){
             return "redirect:/climbingSiteList";
         }
 
@@ -39,11 +39,11 @@ public class SearchController {
             model.addAttribute("errorMessage", "Une erreur s'est produite. Veuillez essayer plus tard.");
             return "redirect:/climbingSiteList";
         } else {
-            List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteSearchRequest(searchFilter.getName(), searchFilter.getRegion(), searchFilter.getNbRoutes(), searchFilter.getCotation());
+            List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteSearchRequest(searchFilter.getName(), searchFilter.getRegion(), searchFilter.getNbRoutes(), searchFilter.getQuotation());
             List<String> nameList = new ArrayList<>();
             List<String> regionList = enumManager.getEnumRegionStringValues();
             List<Integer> nbRoutesList = new ArrayList<>();
-            List<String> cotationList = enumManager.getEnumCotationStringValues();
+            List<String> quotationList = enumManager.getEnumQuotationStringValues();
             List<ClimbingSite> climbingSiteCompleteList = climbingSiteManager.findClimbingSiteList();
 
             for (ClimbingSite climbingArea : climbingSiteCompleteList){
@@ -64,7 +64,7 @@ public class SearchController {
             model.addAttribute("nameList", nameList);
             model.addAttribute("regionList", regionList);
             model.addAttribute("nbRoutesList", nbRoutesList);
-            model.addAttribute("cotationList", cotationList);
+            model.addAttribute("quotationList", quotationList);
 
             return "climbingSiteList";
 

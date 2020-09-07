@@ -14,7 +14,7 @@ public class ClimbingSite {
     private String rockType;
     private String height;
     private Integer nbRoutes;
-    private String cotation;
+    private String quotation;
     private String info;
 
     private User user;
@@ -24,7 +24,7 @@ public class ClimbingSite {
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String cotation, String info, User user, List<Photo> photoList) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, User user, List<Photo> photoList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -32,7 +32,7 @@ public class ClimbingSite {
         this.rockType = rockType;
         this.height = height;
         this.nbRoutes = nbRoutes;
-        this.cotation = cotation;
+        this.quotation = quotation;
         this.info = info;
         this.user = user;
         this.photoList = photoList;
@@ -69,9 +69,9 @@ public class ClimbingSite {
 
     public void setNbRoutes(Integer nbRoutes) { this.nbRoutes = nbRoutes; }
 
-    public String getCotation() { return cotation; }
+    public String getQuotation() { return quotation; }
 
-    public void setCotation(String cotation) { this.cotation = cotation; }
+    public void setQuotation(String quotation) { this.quotation = quotation; }
 
     public String getInfo() { return info; }
 
@@ -92,7 +92,7 @@ public class ClimbingSite {
     @Override
     public String toString(){
         return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
-                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Cotation : " + cotation + "User id = " + user.getId() ;
+                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Quotation : " + quotation + "User id = " + user.getId() ;
     }
 }
 

@@ -1,6 +1,6 @@
 package org.nico.model.enums;
 
-public enum Cotation {
+public enum Quotation {
 
     ONE("1"),
     TWO("2"),
@@ -43,12 +43,12 @@ public enum Cotation {
     NINE_C("9c"),
     NINE_CPLUS("9c+");
 
-    private final String cotationValue;
+    private final String quotationValue;
 
-    Cotation(String cotationValue) {
-        this.cotationValue = cotationValue;
+    Quotation(String quotationValue) {
+        this.quotationValue = quotationValue;
     }
 
-    public String getCotationValue() { return cotationValue; }
+    public String getQuotationValue() { return quotationValue; }
 
 }

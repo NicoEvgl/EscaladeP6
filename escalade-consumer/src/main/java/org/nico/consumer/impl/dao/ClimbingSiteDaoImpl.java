@@ -5,6 +5,7 @@ import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
 import org.nico.model.beans.ClimbingSite;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -15,8 +16,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite) {
-        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, cotation,info, user_id)"
-                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :cotation, :info, :userId)";
+        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation, info, user_id)"
+                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :userId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -27,7 +28,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("rockType", climbingSite.getRockType(), Types.VARCHAR);
         mapSqlParameterSource.addValue("height", climbingSite.getHeight(), Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
-        mapSqlParameterSource.addValue("cotation", climbingSite.getCotation(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotation", climbingSite.getQuotation(), Types.VARCHAR);
         mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
 
@@ -62,9 +63,9 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     }
 
     @Override
-    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
+    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         String sql = "SELECT * FROM public.climbingsite " +
-                "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.cotation = :cotation";
+                "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.quotation = :quotation";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -72,12 +73,43 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("name", name, Types.VARCHAR);
         mapSqlParameterSource.addValue("region", region, Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", nbRoutes, Types.INTEGER);
-        mapSqlParameterSource.addValue("cotation", cotation, Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotation", quotation, Types.VARCHAR);
 
         ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
         List<ClimbingSite> climbingSiteList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper );
 
         return climbingSiteList;
+    }
+
+    @Override
+    public void updateClimbingSite(ClimbingSite climbingSite) {
+        String sql = "UPDATE public.climbingsite SET "
+                + "name = :name, "
+                + "region = :region, "
+                + "climbing_type = :climbingType, "
+                + "rock_type = :rockType, "
+                + "height = :height, "
+                + "nb_routes = :nbRoutes, "
+                + "quotation = :quotation, "
+                + "info = :info, "
+                + "user_id = :userId "
+                + "WHERE id = :id";
+
+        BeanPropertySqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(climbingSite);
+
+        sqlParameterSource.registerSqlType("id", Types.INTEGER);
+        sqlParameterSource.registerSqlType("name", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("region", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("climbingType", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("rockType", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("height", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("nbRoutes", Types.INTEGER);
+        sqlParameterSource.registerSqlType("quotation", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("info", Types.VARCHAR);
+        sqlParameterSource.registerSqlType("userId", Types.INTEGER);
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        namedParameterJdbcTemplate.update(sql, sqlParameterSource);
     }
 
 

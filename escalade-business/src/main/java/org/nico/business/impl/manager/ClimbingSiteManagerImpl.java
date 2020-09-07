@@ -1,5 +1,7 @@
 package org.nico.business.impl.manager;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.ClimbingSite;
@@ -10,7 +12,11 @@ import org.springframework.transaction.support.TransactionTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ClimbingSiteManagerImpl extends AbstractManager implements ClimbingSiteManager {
+
+    private static final Logger logger = LogManager.getLogger(ClimbingSiteManagerImpl.class);
+
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite){
@@ -47,14 +53,29 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
     }
 
     @Override
-    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String cotation) {
+    public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
             List<ClimbingSite> climbingSiteListTx = new ArrayList<>();
-            climbingSiteListTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteSearchRequest(name, region, nbRoutes, cotation);
+            climbingSiteListTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteSearchRequest(name, region, nbRoutes, quotation);
             return  climbingSiteListTx;
         });
 
         return climbingSiteList;    }
+
+    @Override
+    public void updateClimbingSite(ClimbingSite climbingSite) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                try{
+                    getDaoFactory().getClimbingSiteDao().updateClimbingSite(climbingSite);
+                } catch (Exception e){
+                    logger.debug(e.getMessage());
+                }
+            }
+        });
+    }
 }
 
