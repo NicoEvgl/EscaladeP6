@@ -1,7 +1,5 @@
 package org.nico.business.impl.manager;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.ClimbingSite;
@@ -14,9 +12,6 @@ import java.util.List;
 
 
 public class ClimbingSiteManagerImpl extends AbstractManager implements ClimbingSiteManager {
-
-    private static final Logger logger = LogManager.getLogger(ClimbingSiteManagerImpl.class);
-
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite){
@@ -69,11 +64,7 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
         transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             @Override
             protected void doInTransactionWithoutResult(TransactionStatus status) {
-                try{
                     getDaoFactory().getClimbingSiteDao().updateClimbingSite(climbingSite);
-                } catch (Exception e){
-                    logger.debug(e.getMessage());
-                }
             }
         });
     }
