@@ -15,8 +15,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite) {
-        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, cotation, user_id)"
-                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :cotation, :userId)";
+        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, cotation,info, user_id)"
+                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :cotation, :info, :userId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -28,6 +28,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("height", climbingSite.getHeight(), Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
         mapSqlParameterSource.addValue("cotation", climbingSite.getCotation(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);

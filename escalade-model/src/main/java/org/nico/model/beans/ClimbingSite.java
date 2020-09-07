@@ -15,6 +15,7 @@ public class ClimbingSite {
     private String height;
     private Integer nbRoutes;
     private String cotation;
+    private String info;
 
     private User user;
     private List<Photo> photoList;
@@ -23,7 +24,7 @@ public class ClimbingSite {
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String cotation, User user, List<Photo> photoList) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String cotation, String info, User user, List<Photo> photoList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -32,6 +33,7 @@ public class ClimbingSite {
         this.height = height;
         this.nbRoutes = nbRoutes;
         this.cotation = cotation;
+        this.info = info;
         this.user = user;
         this.photoList = photoList;
     }
@@ -71,17 +73,17 @@ public class ClimbingSite {
 
     public void setCotation(String cotation) { this.cotation = cotation; }
 
+    public String getInfo() { return info; }
+
+    public void setInfo(String info) { this.info = info; }
+
     public User getUser() { return user; }
 
     public void setUser(User user) { this.user = user; }
 
-    public List<Photo> getPhotoList() {
-        return photoList;
-    }
+    public List<Photo> getPhotoList() { return photoList; }
 
-    public void setPhotoList(List<Photo> photoList) {
-        this.photoList = photoList;
-    }
+    public void setPhotoList(List<Photo> photoList) { this.photoList = photoList; }
 
     /**
      * method to String climbing sites
