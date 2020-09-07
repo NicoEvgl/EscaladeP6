@@ -58,6 +58,12 @@
                 <c:forEach items="${climbingSiteList}" var="climbingSite">
                     <div class="col-md-6 col-lg-4">
                         <div class="card>">
+                            <c:if test="${empty climbingSite.photoList}">
+                                <img class="card-img-top w-100 d-block" src="<c:url value="/resources/img/no_image_found.png"/>" >
+                            </c:if>
+                            <c:if test="${!empty climbingSite.photoList}">
+                                <img class="card-img-top w-100 d-block" src="<c:url value="${climbingArea.photoList.get(0).url}"/>">
+                            </c:if>
                             <div class="card-body">
                                 <h4 class="card-title">${climbingSite.name}</h4>
                                 <p class="card-text">${climbingSite.region}</p>

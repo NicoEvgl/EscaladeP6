@@ -57,7 +57,7 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
 
     @Override
     public List<Photo> findPhotoByClimbingSiteId(Integer id) {
-        String sql = "SELECT * FROM public.photo WHERE climbingsite_id = :id";
+        String sql = "SELECT * FROM public.photo WHERE climbingsite_id = "+id;
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         PhotoRowMapper photoRowMapper = new PhotoRowMapper();
