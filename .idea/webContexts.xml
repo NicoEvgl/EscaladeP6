@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/Login.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
+        <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
       </map>
     </option>
   </component>

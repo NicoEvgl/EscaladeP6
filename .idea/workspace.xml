@@ -18,11 +18,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method Get displayClimbingSite in ClimbingSiteController">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new jsp : climbingSite.jsp / add attribute info in ClimbingSite bean">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,14 +331,7 @@
       <workItem from="1599488681158" duration="40000" />
       <workItem from="1599488771543" duration="144000" />
       <workItem from="1599488984762" duration="110000" />
-      <workItem from="1599491016145" duration="6327000" />
-    </task>
-    <task id="LOCAL-00020" summary="DAO config on consumerContext.xml">
-      <created>1599052129182</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1599052129182</updated>
+      <workItem from="1599491016145" duration="8349000" />
     </task>
     <task id="LOCAL-00021" summary="Managers statement &amp; Manager Factory in businessContext.xml">
       <created>1599055827681</created>
@@ -676,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599491994857</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="new jsp : climbingSite.jsp / add attribute info in ClimbingSite bean">
+      <created>1599498351019</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1599498351019</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +695,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add interface ClimbingSiteManager + ClimbingSiteManagerImpl" />
     <MESSAGE value="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml" />
     <MESSAGE value="add interface EnumManager + EnumManagerImpl / update method GET (&quot;/climbingSite&quot;) in ClimbingSiteController" />
     <MESSAGE value="enumManager bean statement in businessContext.xml" />
@@ -720,7 +719,8 @@
     <MESSAGE value="update climbingSiteList.jsp / test Photo Ok" />
     <MESSAGE value="add webapp/resources/img : ablon.jpg &amp; no_image_found.png" />
     <MESSAGE value="method Get displayClimbingSite in ClimbingSiteController" />
-    <option name="LAST_COMMIT_MESSAGE" value="method Get displayClimbingSite in ClimbingSiteController" />
+    <MESSAGE value="new jsp : climbingSite.jsp / add attribute info in ClimbingSite bean" />
+    <option name="LAST_COMMIT_MESSAGE" value="new jsp : climbingSite.jsp / add attribute info in ClimbingSite bean" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">

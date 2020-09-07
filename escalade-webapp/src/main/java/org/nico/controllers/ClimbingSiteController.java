@@ -65,4 +65,18 @@ public class ClimbingSiteController {
 
         return "climbingSite";
     }
+
+    @GetMapping("/updateClimbingSite/{id}")
+    public String displayUpdateClimbingSiteForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        ClimbingSite updatedClimbingSite = climbingSiteManager.findClimbingSite(id);
+        List<String> regionList = enumManager.getEnumRegionStringValues();
+
+        model.addAttribute("regionList", regionList);
+        model.addAttribute("updatedClimbingSite", updatedClimbingSite);
+
+        return "updateClimbingSiteForm";
+    }
 }
