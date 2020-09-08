@@ -29,7 +29,7 @@ public class PersonalSpaceController {
     @Inject
     private PhotoManager photoManager;
 
-    @GetMapping("/personalSpace/{memberInSessionId}")
+    @GetMapping("/personalSpace/{userInSessionId}")
     public String displayPersonalSpace(@PathVariable@SessionAttribute("userInSessionId")Integer userInSessionId, Model model){
         if (userInSessionId == null){
             return "redirect:/showHome";
