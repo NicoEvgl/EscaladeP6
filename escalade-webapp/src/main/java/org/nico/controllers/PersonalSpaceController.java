@@ -45,7 +45,9 @@ public class PersonalSpaceController {
         for (ClimbingSite climbingSite : climbingSiteList){
             climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
         }
+        User userInSession = userManager.findUser(userInSessionId);
 
+        model.addAttribute("userInSession", userInSession);
         model.addAttribute("userInSessionId", userInSessionId);
         model.addAttribute("climbingSiteList", climbingSiteList);
 
