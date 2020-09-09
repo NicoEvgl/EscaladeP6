@@ -14,7 +14,8 @@
                     <form:hidden path="id" value="${userEdit.id}"/>
                     <form:errors path="id" cssClass="errors"/>
                 </div>
-
+                <c:choose>
+                    <c:when test="${sessionScope.userInSessionRole == 'Administrator'}">
                         <div class="form-group select-style">
                             <form:select path="role" cssClass="form-control">
                                 <form:option value="">Rôle</form:option>
@@ -22,8 +23,8 @@
                             </form:select>
                             <form:errors path="role" cssClass="error"/>
                         </div>
-
-
+                    </c:when>
+                </c:choose>
                 <div class="form-group">
                     <form:select path="gender" type="text" value="${userEdit.gender}" cssClass="form-control" placeholder="Genre" required="true" autofocus="">
                         <form:option value="" label="Civilité"/>

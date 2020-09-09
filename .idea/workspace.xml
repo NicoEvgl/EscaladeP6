@@ -18,27 +18,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="bugs correction">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/userEditForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/UserRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/UserRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/rowmapper/UserRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/rowmapper/UserRowMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/editClimbingSiteForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/ClimbingSiteEditForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PersonalSpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PersonalSpaceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PersonalSpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PersonalSpaceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,28 +332,7 @@
       <workItem from="1599491016145" duration="15139000" />
       <workItem from="1599514592125" duration="9571000" />
       <workItem from="1599671918150" duration="19000" />
-      <workItem from="1599671948182" duration="5061000" />
-    </task>
-    <task id="LOCAL-00028" summary="tx manager bean in businessContext.xml / method createMember in MemberManagerImpl completed">
-      <created>1599068145606</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1599068145606</updated>
-    </task>
-    <task id="LOCAL-00029" summary="methods findMemberList &amp; updateMember in MemberManagerImpl">
-      <created>1599144467482</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1599144467482</updated>
-    </task>
-    <task id="LOCAL-00030" summary="refactor MemberDaoImpl / method deleteMember in MemberDao">
-      <created>1599144522799</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1599144522799</updated>
+      <workItem from="1599671948182" duration="5437000" />
     </task>
     <task id="LOCAL-00031" summary="method deleteMember in MemberManager">
       <created>1599145187556</created>
@@ -697,7 +656,28 @@
       <option name="project" value="LOCAL" />
       <updated>1599524111739</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="update personalSpace.jsp/ add url to editUser in personalSpace.jsp + bugs correction">
+      <created>1599677213671</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1599677213672</updated>
+    </task>
+    <task id="LOCAL-00078" summary="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp">
+      <created>1599677251736</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1599677251736</updated>
+    </task>
+    <task id="LOCAL-00079" summary="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp">
+      <created>1599677376990</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1599677376990</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,9 +696,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update climbingSiteList.jsp (renamed from climbingSite.jsp)" />
-    <MESSAGE value="new bean : Photo" />
-    <MESSAGE value="new dao PhotoDao / add PhotoDao in DaoFactory / bean dao statement in consumerContext.xml" />
     <MESSAGE value="method createPhoto in PhotoDao" />
     <MESSAGE value="method findPhotoList in PhotoDao" />
     <MESSAGE value="add PhotoRowMapper" />
@@ -741,7 +718,10 @@
     <MESSAGE value="method findClimbingSiteByUserId in ClimbingSiteManager &amp; ClimbingSiteDao" />
     <MESSAGE value="new jsp : personalSpace.jsp" />
     <MESSAGE value="bugs correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugs correction" />
+    <MESSAGE value="update personalSpace.jsp/ add url to editUser in personalSpace.jsp + bugs correction" />
+    <MESSAGE value="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp" />
+    <MESSAGE value="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
