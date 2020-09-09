@@ -2,7 +2,7 @@
 
 <%@include file="header.jsp"%>
 
-<main class="page personalPage-page">
+<main class="page personalPage-page">${message}
     <section class="clean-block clean-services dark">
         <div class="container">
             <div class="container">

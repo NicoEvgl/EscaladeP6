@@ -7,7 +7,7 @@
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
-                <h2 class="text-login">Modifier le profil <${userInSession.username}></h2>
+                <h2 class="text-login">Modifier le profil -${userInSession.username}-</h2>
             </div>
             <form:form method="post" action="editUserProcess/${userEdit.id}" modelAttribute="userEdit">
                 <div class="form-group">

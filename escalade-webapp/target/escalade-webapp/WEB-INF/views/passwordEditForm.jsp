@@ -3,11 +3,16 @@
 <%@include file="header.jsp"%>
 
 
-<main class="page passwordEditForm-page">
+<main class="page passwordEditForm-page">${message}
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
                 <h2 class="text-login">Modifier mot de passe</h2>
+                <p>
+                    <c:if test="${!empty errorMessage}">
+                        <c:out value="${errorMessage}"/>
+                    </c:if>
+                </p>
             </div>
             <form:form method="post" action="editPasswordProcess/${userEdit.id}" modelAttribute="userEdit">
 

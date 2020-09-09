@@ -4,7 +4,6 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.*;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.User;
-import org.nico.model.enums.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -27,6 +26,8 @@ public class PersonalSpaceController {
     private PhotoManager photoManager;
     @Inject
     private EnumManager enumManager;
+    @Inject
+    private PasswordManager passwordManager;
 
     @GetMapping("/personalSpace/{userInSessionId}")
     public String displayPersonalSpace(@PathVariable@SessionAttribute("userInSessionId")Integer userInSessionId, Model model){
@@ -47,7 +48,6 @@ public class PersonalSpaceController {
         model.addAttribute("userInSession", userInSession);
         model.addAttribute("userInSessionId", userInSessionId);
         model.addAttribute("climbingSiteList", climbingSiteList);
-
         return "personalSpace";
     }
 
@@ -62,7 +62,6 @@ public class PersonalSpaceController {
             model.addAttribute("userInSessionId", userInSessionId);
             model.addAttribute("userEdit", registeredUser);
             model.addAttribute("roleList", roleList);
-
             return "userEditForm";
         } else {
             return "redirect:/login";
@@ -100,6 +99,42 @@ public class PersonalSpaceController {
             User registeredUser = userManager.findUser(id);
             model.addAttribute("userEdit", registeredUser);
             return "passwordEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editPassword/editPasswordProcess/{id}")
+    public String editPassword(@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId, BindingResult bindingResult){
+        if(userInSessionId != null && userInSessionId == id){
+            if (bindingResult.hasErrors()){
+                List<FieldError> errors = bindingResult.getFieldErrors();
+                for (FieldError error : errors ) {
+                    System.out.println (error.getObjectName() + " - " + error.getDefaultMessage());
+                }
+                String str = "Une erreur est survenue. Vérifiez les champs.";
+                model.addAttribute("editedUser", user);
+                model.addAttribute("errorMessage", str);
+                return "passwordEditForm";
+            } else {
+                User registeredUser = userManager.findUser(userInSessionId);
+                user.setGender(registeredUser.getGender());
+                user.setFirstName(registeredUser.getFirstName());
+                user.setLastName(registeredUser.getLastName());
+                user.setUsername(registeredUser.getUsername());
+                user.setEmail(registeredUser.getEmail());
+                user.setAddress(registeredUser.getAddress());
+                user.setAddress2(registeredUser.getAddress2());
+                user.setZip(registeredUser.getZip());
+                user.setCity(registeredUser.getCity());
+                user.setRole(registeredUser.getRole());
+
+                String hashPassword = passwordManager.hashPassword(user.getPassword());
+                user.setPassword(hashPassword);
+                userManager.updateUser(user);
+                model.addAttribute("userInSessionId", userInSessionId);
+                return "redirect:/personalSpace/{userInSessionId}";
+            }
         } else {
             return "redirect:/login";
         }
