@@ -30,7 +30,7 @@ public class LoginController {
     private void addUserInSession(User user, HttpSession httpSession) {
         httpSession.setAttribute("userInSessionId", user.getId());
         httpSession.setAttribute("userInSessionUsername", user.getUsername());
-        httpSession.setAttribute("userInSessionEmail", user.getUsername());
+        httpSession.setAttribute("userInSessionEmail", user.getEmail());
         httpSession.setAttribute("userInSessionRole", user.getRole());
     }
 

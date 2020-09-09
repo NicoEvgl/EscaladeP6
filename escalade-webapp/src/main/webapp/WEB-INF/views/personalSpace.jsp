@@ -12,10 +12,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <a href="<c:url value="/editUser/${userInSessionId}"/>" class="btn btn-outline-primary btn-block">Modifier le profil</a>
+                            </div>
                             <div class="card-body">
                                 <table class="table text-center my-0">
                                     <thead>
                                     <tr>
+                                        <th>Genre</th>
                                         <th>Prénom</th>
                                         <th>Nom</th>
                                         <th>Pseudo</th>
@@ -24,10 +28,29 @@
                                     </thead>
                                     <tbody>
                                     <tr>
+                                        <td>${userInSession.gender}</td>
                                         <td>${userInSession.firstName}</td>
                                         <td>${userInSession.lastName}</td>
                                         <td>${userInSession.username}</td>
                                         <td>${userInSession.email}</td>
+                                    </tr>
+                                    </tbody>
+                                    <thead>
+                                    <tr>
+                                        <th>Adresse</th>
+                                        <th>Adresse2</th>
+                                        <th>Code Postal</th>
+                                        <th>Ville</th>
+                                        <th>Rôle</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>${userInSession.address}</td>
+                                        <td>${userInSession.address2}</td>
+                                        <td>${userInSession.zip}</td>
+                                        <td>${userInSession.city}</td>
+                                        <td>${userInSession.role}</td>
                                     </tr>
                                     </tbody>
                                 </table>

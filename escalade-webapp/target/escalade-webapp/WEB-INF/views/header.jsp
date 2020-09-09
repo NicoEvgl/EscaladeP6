@@ -26,7 +26,7 @@
                     <c:when test="${!empty userInSessionId}">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="<c:url value="/"/>">${ userInSessionUsername }</a>
+                                <a class="nav-link" href="<c:url value="/personalSpace/${userInSessionId}"/>">${ userInSessionUsername }</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<c:url value="/climbingSiteList"/>">Les sites d'escalade</a>
