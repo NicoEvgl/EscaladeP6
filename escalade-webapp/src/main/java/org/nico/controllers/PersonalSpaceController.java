@@ -94,4 +94,14 @@ public class PersonalSpaceController {
         }
     }
 
+    @GetMapping("/editPassword/{id}")
+    public String displayPasswordEditForm(@PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId){
+        if(userInSessionId != null && userInSessionId == id){
+            User registeredUser = userManager.findUser(id);
+            model.addAttribute("userEdit", registeredUser);
+            return "passwordEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
 }

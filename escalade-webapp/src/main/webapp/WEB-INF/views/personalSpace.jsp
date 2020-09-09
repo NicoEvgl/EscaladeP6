@@ -42,6 +42,9 @@
                                         <th>Code Postal</th>
                                         <th>Ville</th>
                                         <th>Rôle</th>
+                                        <td>
+                                            <a href="<c:url value="/editPassword/${userInSession.id}"/>" class="btn btn-outline-secondary btn-sm">Modifier le mot de passe</a>
+                                        </td>
                                     </tr>
                                     </thead>
                                     <tbody>
