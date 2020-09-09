@@ -8,6 +8,7 @@
         <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/header.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/home.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/updateClimbingSiteForm.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
+        <entry key="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/userEditForm.jsp" value="file://$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views" />
       </map>
     </option>
   </component>
