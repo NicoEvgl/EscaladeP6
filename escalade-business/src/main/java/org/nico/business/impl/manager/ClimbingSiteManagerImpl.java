@@ -60,12 +60,12 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
     }
 
     @Override
-    public void editClimbingSite(ClimbingSite climbingSite) {
+    public void updateClimbingSite(ClimbingSite climbingSite) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         transactionTemplate.execute(new TransactionCallbackWithoutResult() {
             @Override
             protected void doInTransactionWithoutResult(TransactionStatus status) {
-                    getDaoFactory().getClimbingSiteDao().editClimbingSite(climbingSite);
+                    getDaoFactory().getClimbingSiteDao().updateClimbingSite(climbingSite);;
             }
         });
     }

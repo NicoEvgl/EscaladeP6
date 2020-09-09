@@ -7,7 +7,7 @@
         <div class="container">
             <div class="block-heading">
                 <h2 class="text-info">${climbingSite.name.toUpperCase()}</h2>
-                <c:if test="${sessionScope.userInSessionRole == 'Administrator' || climbingSite.user.id == sessionScope.userInSessionId}">
+                <c:if test="${sessionScope.userInSessionRole == 'Admin'}">
                   <span>
                       <a class="btn btn-sm btn-outline-primary" href="<c:url value="/editClimbingSite/${climbingSite.id}"/>">Modifier le site</a>
                   </span>

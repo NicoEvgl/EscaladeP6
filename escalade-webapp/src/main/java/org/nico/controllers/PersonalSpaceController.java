@@ -7,12 +7,12 @@ import org.nico.model.beans.User;
 import org.nico.model.enums.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -37,10 +37,6 @@ public class PersonalSpaceController {
 
         User registeredUser = userManager.findUser(userInSessionId);
 
-        if (registeredUser.getRole() == Role.ADMIN.getParam()){
-            List<User> userList = userManager.findUserList();
-            model.addAttribute("userList", userList);
-        }
         //show all the climbing area's owner
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteByUserId(userInSessionId);
         for (ClimbingSite climbingSite : climbingSiteList){
@@ -68,6 +64,31 @@ public class PersonalSpaceController {
             model.addAttribute("roleList", roleList);
 
             return "userEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editUser/editUserProcess/{id}")
+    public String editUser(@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId,BindingResult bindingResult){
+        if(userInSessionId != null && userInSessionId == id){
+            if (bindingResult.hasErrors()){
+                List<FieldError> errors = bindingResult.getFieldErrors();
+                for (FieldError error : errors ) {
+                    System.out.println (error.getObjectName() + " - " + error.getDefaultMessage());
+                }
+                String str = "Une erreur est survenue. Vérifiez les champs.";
+                model.addAttribute("editedUser", user);
+                model.addAttribute("errorMessage", str);
+                return "userEditForm";
+            } else {
+                User registeredUser = userManager.findUser(userInSessionId);
+                user.setPassword(registeredUser.getPassword());
+                userManager.updateUser(user);
+                user.setRole((registeredUser.getRole()));
+                model.addAttribute("userInSessionId", userInSessionId);
+                return "redirect:/personalSpace/{userInSessionId}";
+            }
         } else {
             return "redirect:/login";
         }

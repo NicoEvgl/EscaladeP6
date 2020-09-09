@@ -7,15 +7,14 @@
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
-                <h2 class="text-login">Modifier le profil</h2>
+                <h2 class="text-login">Modifier le profil <${userInSession.username}></h2>
             </div>
             <form:form method="post" action="editUserProcess/${userEdit.id}" modelAttribute="userEdit">
                 <div class="form-group">
                     <form:hidden path="id" value="${userEdit.id}"/>
                     <form:errors path="id" cssClass="errors"/>
                 </div>
-                <c:choose>
-                    <c:when test="${sessionScope.userInSessionRole == 'Administrator'}">
+
                         <div class="form-group select-style">
                             <form:select path="role" cssClass="form-control">
                                 <form:option value="">Rôle</form:option>
@@ -23,8 +22,7 @@
                             </form:select>
                             <form:errors path="role" cssClass="error"/>
                         </div>
-                    </c:when>
-                </c:choose>
+
                 <div class="form-group">
                     <form:select path="gender" type="text" value="${userEdit.gender}" cssClass="form-control" placeholder="Genre" required="true" autofocus="">
                         <form:option value="" label="Civilité"/>
@@ -52,7 +50,7 @@
                     <form:input path="address" type="text" value="${userEdit.address}" cssClass="form-control item" placeholder="Adresse" required="true" autofocus=""/>
                     <form:errors  path="address" cssClass="error"/>
 
-                    <form:input path="address2" type="text" value="${userEdit.address2}" cssClass="form-control item" placeholder="appartement, étage..." required="false" autofocus=""/>
+                    <form:input path="address2" type="text" value="${userEdit.address2}" cssClass="form-control item" placeholder="appartement, étage..." autofocus=""/>
                     <form:errors  path="address2" cssClass="error"/>
                 </div>
                 <div class="form-group">

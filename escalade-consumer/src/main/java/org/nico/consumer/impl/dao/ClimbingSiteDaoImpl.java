@@ -82,7 +82,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     }
 
     @Override
-    public void editClimbingSite(ClimbingSite climbingSite) {
+    public void updateClimbingSite(ClimbingSite climbingSite) {
         String sql = "UPDATE public.climbingsite SET "
                 + "name = :name, "
                 + "region = :region, "

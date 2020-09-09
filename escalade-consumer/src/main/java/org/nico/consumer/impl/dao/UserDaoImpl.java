@@ -5,7 +5,6 @@ import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.UserRowMapper;
 import org.nico.model.beans.User;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -91,26 +90,26 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
                 + "address2 = :address2, "
                 + "city = :city, "
                 + "zip = :zip, "
-                + "role = :role, "
+                + "role = :role "
                 + "WHERE id = :id";
 
-        BeanPropertySqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(user);
-
-        sqlParameterSource.registerSqlType("id", Types.INTEGER);
-        sqlParameterSource.registerSqlType("gender", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("firstName", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("lastName", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("pseudo", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("email", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("password", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("address", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("address2", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("zip", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("city", Types.VARCHAR);
-        sqlParameterSource.registerSqlType("role", Types.VARCHAR);
-
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
-        namedParameterJdbcTemplate.update(sql, sqlParameterSource);
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", user.getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("gender", user.getGender(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("firstName", user.getFirstName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("lastName", user.getLastName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("username", user.getUsername(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("email", user.getEmail(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("password", user.getPassword(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("address", user.getAddress(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("address2", user.getAddress2(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("zip", user.getZip(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("city", user.getCity(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("role", user.getRole(), Types.VARCHAR);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
 
     @Override

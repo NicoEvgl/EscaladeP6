@@ -104,7 +104,7 @@ public class ClimbingSiteController {
 
             return "ClimbingSiteEditForm";
         } else {
-            climbingSiteManager.editClimbingSite(climbingSite);
+            climbingSiteManager.updateClimbingSite(climbingSite);
 
             model.addAttribute("message", "Modificaions enregistrées");
             model.addAttribute("id", id);

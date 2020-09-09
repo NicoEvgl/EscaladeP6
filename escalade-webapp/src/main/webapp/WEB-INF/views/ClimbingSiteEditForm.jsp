@@ -30,15 +30,15 @@
                     <form:errors path="region" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="climbingType" type="text" value="${editedClimbingSite.climbingType}" cssClass="form-control item" placeholder="Type d'escalade" required="false" autofocus=""/>
+                    <form:input path="climbingType" type="text" value="${editedClimbingSite.climbingType}" cssClass="form-control item" placeholder="Type d'escalade" autofocus=""/>
                     <form:errors  path="climbingType" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="rockType" type="text" value="${editedClimbingSite.rockType}" cssClass="form-control item" placeholder="Type de roche" required="false" autofocus=""/>
+                    <form:input path="rockType" type="text" value="${editedClimbingSite.rockType}" cssClass="form-control item" placeholder="Type de roche" autofocus=""/>
                     <form:errors  path="rockType" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="height" type="text" value="${editedClimbingSite.height}" cssClass="form-control item" placeholder="Hauteurs (de ...m à ...m)" required="false" autofocus=""/>
+                    <form:input path="height" type="text" value="${editedClimbingSite.height}" cssClass="form-control item" placeholder="Hauteurs (de ...m à ...m)" autofocus=""/>
                     <form:errors  path="height" cssClass="error"/>
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                     <form:errors  path="quotation" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:textarea path="info" type="text" rows="5" value="${editedClimbingSite.info}" cssClass="form-control item" placeholder="Infos du site" required="false" autofocus=""/>
+                    <form:textarea path="info" type="text" rows="5" value="${editedClimbingSite.info}" cssClass="form-control item" placeholder="Infos du site" autofocus=""/>
                     <form:errors  path="info" cssClass="error"/>
                 </div>
                 <div class="form-group">
