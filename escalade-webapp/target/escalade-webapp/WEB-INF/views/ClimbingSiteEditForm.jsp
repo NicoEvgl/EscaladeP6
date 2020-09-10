@@ -57,7 +57,7 @@
                     <form:button class="btn btn-primary btn-block" type="submit">Enregistrer</form:button>
                 </div>
                 <div class="form-group">
-                    <a href="<c:url value="/climbingSiteList"/>" class="btn btn-outline-primary btn-block">
+                    <a href="<c:url value="/climbingSite/${editedClimbingSite.id}"/>" class="btn btn-outline-primary btn-block">
                         Annuler
                     </a>
                 </div>
