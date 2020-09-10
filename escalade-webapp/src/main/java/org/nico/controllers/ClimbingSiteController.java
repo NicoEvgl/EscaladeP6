@@ -89,7 +89,7 @@ public class ClimbingSiteController {
         ClimbingSite registeredClimbingSite = climbingSiteManager.findClimbingSiteByAttribute("name", newClimbingSite.getName());
         if (registeredClimbingSite != null){
             model.addAttribute("errorMessage", "Désolé ce site existe déjà");
-            return "redirect:/climbingSiteForm";
+            return "climbingSiteForm";
         } else {
             if (bindingResult.hasErrors()){
                 model.addAttribute("errorMessage", "Une erreur est survenue. Vérifiez les champs.");

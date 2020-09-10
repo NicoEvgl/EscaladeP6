@@ -3,7 +3,9 @@ package org.nico.consumer.impl.dao;
 import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
+import org.nico.consumer.impl.rowmapper.UserRowMapper;
 import org.nico.model.beans.ClimbingSite;
+import org.nico.model.beans.User;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -17,7 +19,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite) {
         String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation, info, user_id)"
-                + "VALUES ( :name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :userId)";
+                + "VALUES (:name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :userId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -81,9 +83,12 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     public ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue) {
         String sql = "SELECT * FROM public.climbingsite WHERE "+attribute+" = ?";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
-
+        try{
             ClimbingSite climbingSite = jdbcTemplate.queryForObject(sql, new ClimbingSiteRowMapper(), attributeValue);
             return climbingSite;
+        } catch (EmptyResultDataAccessException ex) {
+            return null;
+        }
     }
 
 

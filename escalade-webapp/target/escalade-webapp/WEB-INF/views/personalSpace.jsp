@@ -69,6 +69,7 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Mes sites</h2>
+                    <a href="<c:url value="/climbingSiteForm"/>" class="btn btn-outline-primary btn-block">Ajouter un site</a>
                 </div>
                 <div class="row">
                     <c:forEach items="${climbingSiteList}" var="climbingSite" >

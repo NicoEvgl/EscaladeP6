@@ -26,6 +26,5 @@ public class ClimbingSiteRowMapper implements RowMapper<ClimbingSite> {
         climbingSite.setUser(userDao.findUser(resultSet.getInt("user_id")));
 
         return climbingSite;
-
     }
 }
