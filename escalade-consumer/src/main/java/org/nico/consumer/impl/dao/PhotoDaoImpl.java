@@ -68,6 +68,25 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
     }
 
     @Override
+    public void updatePhoto(Photo photo) {
+        String sql = "UPDATE public.photo SET "
+                + "climbingsite_id = :climbingareaId, "
+                + "name = :name, "
+                + "url = :url "
+                + "WHERE id = :id";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", photo.getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("climbingareaId", photo.getClimbingSite().getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("name", photo.getName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("url", photo.getUrl(), Types.VARCHAR);
+
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
     public void deletePhoto(Integer id) {
         String sql = "DELETE FROM public.photo WHERE id = :id";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());

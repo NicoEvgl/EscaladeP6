@@ -9,5 +9,7 @@ public interface PhotoManager {
     List<Photo> findPhotoList();
     Photo findPhoto(Integer id);
     List<Photo> findPhotoByClimbingSiteId(Integer id);
+    void updatePhoto(Photo photo);
     void deletePhoto(Integer id);
+
 }
