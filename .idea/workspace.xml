@@ -18,13 +18,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="bugs correction / test website OK">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PhotoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/photoForm.jsp" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="modification url to cancel climbing site edit">
+      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/resources/img/buoux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/resources/img/pen-hir.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/ClimbingSiteEditForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/ClimbingSiteEditForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PhotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/photoForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/photoForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PhotoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PhotoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PhotoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PhotoController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,12 +102,12 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.consumer.impl.rowmapper" />
+      <recent name="org.nico.consumer.impl" />
+      <recent name="org.nico.consumer.contract.dao" />
+      <recent name="org.nico.business.contract.manager" />
+      <recent name="org.nico.model.enums" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
@@ -113,12 +115,12 @@
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\WEB-INF\resources\img" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.nico.consumer.impl.rowmapper" />
-      <recent name="org.nico.consumer.impl" />
-      <recent name="org.nico.consumer.contract.dao" />
-      <recent name="org.nico.business.contract.manager" />
-      <recent name="org.nico.model.enums" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources\org\nico\webapp" />
     </key>
   </component>
   <component name="RunManager">
@@ -342,21 +344,7 @@
       <workItem from="1599514592125" duration="9571000" />
       <workItem from="1599671918150" duration="19000" />
       <workItem from="1599671948182" duration="25941000" />
-      <workItem from="1599749383873" duration="2119000" />
-    </task>
-    <task id="LOCAL-00043" summary="ClimbingSiteDao in DaoFactory + bean statement in consumerContext.xml">
-      <created>1599350117355</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1599350117355</updated>
-    </task>
-    <task id="LOCAL-00044" summary="add interface ClimbingSiteManager + ClimbingSiteManagerImpl">
-      <created>1599350778682</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1599350778682</updated>
+      <workItem from="1599749383873" duration="4602000" />
     </task>
     <task id="LOCAL-00045" summary="ClimbingSiteManager in ManagerFactory + bean statement in businessContext.xml">
       <created>1599351204005</created>
@@ -687,7 +675,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599703629319</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="new controller PhotoController with method GetMapping displayClimbingSitePhotoForm / new jsp : photoForm.jsp / url to add photo in climbingSite.jsp">
+      <created>1599751876116</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1599751876117</updated>
+    </task>
+    <task id="LOCAL-00093" summary="modification url to cancel climbing site edit">
+      <created>1599751926362</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1599751926362</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,8 +708,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add webapp/resources/img : ablon.jpg &amp; no_image_found.png" />
-    <MESSAGE value="method Get displayClimbingSite in ClimbingSiteController" />
     <MESSAGE value="new jsp : climbingSite.jsp / add attribute info in ClimbingSite bean" />
     <MESSAGE value="method Get displayUpdateClimbingSiteForm in ClimbingSiteController / add /updateClimbingSite in climbingSite.jsp" />
     <MESSAGE value="method Post updateClimbingSite in ClimbingSiteController / new method updateClimbingSite in ClimbingSiteManager &amp; ClimbingSiteDao / new jsp : updateClimbingSiteForm.jsp" />
@@ -731,7 +731,9 @@
     <MESSAGE value="method deletePhoto in PhotoDao &amp; PhotoManager" />
     <MESSAGE value="method deleteClimbingSite in ClimbingSiteController / add link to delete climbing site in personalSpace.jsp" />
     <MESSAGE value="bugs correction / test website OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugs correction / test website OK" />
+    <MESSAGE value="new controller PhotoController with method GetMapping displayClimbingSitePhotoForm / new jsp : photoForm.jsp / url to add photo in climbingSite.jsp" />
+    <MESSAGE value="modification url to cancel climbing site edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification url to cancel climbing site edit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -774,54 +776,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="619" height="154" key="GridCell.Tab.0.bottom" timestamp="1599751457834">
+    <state width="1293" height="143" key="GridCell.Tab.0.bottom" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457834" />
-    <state width="619" height="154" key="GridCell.Tab.0.center" timestamp="1599751457834">
+    <state width="1293" height="143" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.0.center" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457834" />
-    <state width="619" height="154" key="GridCell.Tab.0.left" timestamp="1599751457834">
+    <state width="1293" height="143" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.0.left" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457834" />
-    <state width="619" height="154" key="GridCell.Tab.0.right" timestamp="1599751457834">
+    <state width="1293" height="143" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.0.right" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457834" />
-    <state width="619" height="154" key="GridCell.Tab.1.bottom" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.1.bottom" timestamp="1599753979181">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.1.center" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979181" />
+    <state width="1293" height="143" key="GridCell.Tab.1.center" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.1.left" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.1.left" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.1.right" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.1.right" timestamp="1599753979180">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.2.bottom" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979180" />
+    <state width="1293" height="143" key="GridCell.Tab.2.bottom" timestamp="1599753979181">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.2.center" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979181" />
+    <state width="1293" height="143" key="GridCell.Tab.2.center" timestamp="1599753979181">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.2.left" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979181" />
+    <state width="1293" height="143" key="GridCell.Tab.2.left" timestamp="1599753979181">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
-    <state width="619" height="154" key="GridCell.Tab.2.right" timestamp="1599751457765">
+    <state width="1293" height="143" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979181" />
+    <state width="1293" height="143" key="GridCell.Tab.2.right" timestamp="1599753979181">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="154" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599751457765" />
+    <state width="1293" height="143" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599753979181" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

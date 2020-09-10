@@ -6,7 +6,7 @@
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
-                <h2 class="text-info">Ajouter photo pour ${}</h2>
+                <h2 class="text-info">Ajouter photo</h2>
                 <p>
                     <c:if test="${!empty errorMessage}">
                         <c:out value="${errorMessage}"/>
