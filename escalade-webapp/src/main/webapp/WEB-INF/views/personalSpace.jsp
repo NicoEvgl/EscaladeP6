@@ -64,4 +64,35 @@
             </div>
         </div>
     </section>
+    <section class="clean-block clean-services dark">
+        <div class="container">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Mes sites</h2>
+                </div>
+                <div class="row">
+                    <c:forEach items="${climbingSiteList}" var="climbingSite" >
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card">
+                                <c:if test="${empty climbingSite.photoList}">
+                                    <img class="card-img-top w-100 d-block" src="<c:url value="/resources/img/no_image_found.png"/>" >
+                                </c:if>
+                                <c:if test="${!empty climbingSite.photoList}">
+                                    <img class="card-img-top w-100 d-block" src="<c:url value="${climbingSite.photoList.get(0).url}"/>">
+                                </c:if>
+                                <div class="card-body">
+                                    <h4 class="card-title">${climbingSite.name}</h4>
+                                    <p class="card-text" style="height: 50px">${climbingSite.region}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="<c:url value="/climbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm">Voir</a>
+                                    <a href="<c:url value="/editClimbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm"> Modifier </a>
+                                </div>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>

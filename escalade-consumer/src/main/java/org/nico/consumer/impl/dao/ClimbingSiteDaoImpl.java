@@ -5,7 +5,6 @@ import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
 import org.nico.model.beans.ClimbingSite;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -64,7 +63,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
-        String sql = "SELECT * FROM public.climbingsite " +
+        String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
                 "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.quotation = :quotation";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());

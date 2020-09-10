@@ -3,7 +3,7 @@
 <%@include file="header.jsp"%>
 
 
-<main class="page passwordEditForm-page">${message}
+<main class="page passwordEditForm-page">
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
