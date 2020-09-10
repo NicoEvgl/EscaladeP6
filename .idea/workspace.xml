@@ -18,25 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findClimbingSiteByAttribute in ClimbingSiteDao &amp; ClimbingSiteManager">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/ClimbingSiteManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/ClimbingSiteManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/ClimbingSiteManagerImpl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/ClimbingSiteManagerImpl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/ClimbingSiteManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/ClimbingSiteManagerImpl.class" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="correction method findClimbingSiteByAttribute in ClimbingSiteDao">
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/ClimbingSiteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/ClimbingSiteManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/ClimbingSiteRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/ClimbingSiteRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/ClimbingSiteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/ClimbingSiteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSiteForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSiteForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSiteList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSiteList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,14 +338,7 @@
       <workItem from="1599491016145" duration="15139000" />
       <workItem from="1599514592125" duration="9571000" />
       <workItem from="1599671918150" duration="19000" />
-      <workItem from="1599671948182" duration="24678000" />
-    </task>
-    <task id="LOCAL-00038" summary="correction Manager &amp; Dao Statement / Method Post in RegistrationController / account registration OK">
-      <created>1599237588741</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1599237588741</updated>
+      <workItem from="1599671948182" duration="25172000" />
     </task>
     <task id="LOCAL-00039" summary="method Post doLogin in LoginController / new jsp welcome.jsp">
       <created>1599319568449</created>
@@ -696,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599698901659</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="correction method findClimbingSiteByAttribute in ClimbingSiteDao">
+      <created>1599702731560</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1599702731560</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +702,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="findClimbingSite in ClimbingSiteManager" />
     <MESSAGE value="createPhoto, findPhotoList &amp; findPhoto in PhotoManager" />
     <MESSAGE value="findPhotoByClimbingSiteId in PhotoManager" />
     <MESSAGE value="Inject PhotoManager in ClimbingSiteController &amp; SearchController" />
@@ -740,7 +726,8 @@
     <MESSAGE value="section &quot;Mes sites&quot; in personalSpace.jsp" />
     <MESSAGE value="method GetMapping displayClimbingSiteForm + method PostMapping addClimbingSite in ClimbingSiteController / add link to add climbing site in personalSpace.jsp / new jsp : climbingSiteForm.jsp" />
     <MESSAGE value="method findClimbingSiteByAttribute in ClimbingSiteDao &amp; ClimbingSiteManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="method findClimbingSiteByAttribute in ClimbingSiteDao &amp; ClimbingSiteManager" />
+    <MESSAGE value="correction method findClimbingSiteByAttribute in ClimbingSiteDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction method findClimbingSiteByAttribute in ClimbingSiteDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -851,10 +838,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="726" y="186" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599364260166" />
-    <state x="600" y="260" key="RollbackChangesDialog" timestamp="1599170896096">
+    <state x="600" y="260" key="RollbackChangesDialog" timestamp="1599702606908">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="600" y="260" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599170896096" />
+    <state x="600" y="260" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599702606908" />
     <state x="880" y="185" key="SettingsEditor" timestamp="1599506096781">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

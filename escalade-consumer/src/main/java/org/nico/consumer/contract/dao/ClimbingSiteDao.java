@@ -12,5 +12,5 @@ public interface ClimbingSiteDao {
     ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue);
     List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation);
     void updateClimbingSite(ClimbingSite climbingSite);
-
+    void deleteClimbingSite(Integer id);
 }

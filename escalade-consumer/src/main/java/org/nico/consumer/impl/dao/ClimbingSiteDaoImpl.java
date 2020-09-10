@@ -143,9 +143,14 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
 
+    @Override
+    public void deleteClimbingSite(Integer id) {
+        String sql = "DELETE FROM public.climbingsite WHERE id = :id";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
+        mapSqlParameterSource.addValue("id", id);
 
-
-
-
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
 }
