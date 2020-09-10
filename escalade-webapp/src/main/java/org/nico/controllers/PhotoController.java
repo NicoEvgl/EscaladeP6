@@ -83,4 +83,23 @@ public class PhotoController {
         model.addAttribute("userInSessionId", userInSessionId);
         return "photoEditForm";
     }
+
+    @PostMapping("/editPhoto/editPhotoProcess/{id}")
+    public String editPhoto(@PathVariable Integer id, @Valid Photo photo, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId == null){
+            return "redirect:/login";
+        }
+
+        if (bindingResult.hasErrors()){
+            model.addAttribute("errorMessage", "Erreur... La photo n'a pu être modifiées");
+            model.addAttribute("editedPhoto", photoManager.findPhoto(id));
+            model.addAttribute("userInSessionId", userInSessionId);
+            return "photoEditForm";
+        } else {
+            photoManager.updatePhoto(photo);
+            model.addAttribute("climbingSiteId", photo.getClimbingSite().getId());
+            model.addAttribute("userInSessionId", userInSessionId);
+            return "redirect:/climbingSite/{climbingSiteId}";
+        }
+    }
 }
