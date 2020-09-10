@@ -4,7 +4,7 @@
 
 
 <div class="view" style="background-image: url('https://cdn.crunchify.com/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center ;"/>
-<main class="page climbingSite-page">${message}
+<main class="page climbingSite-page">
     <section class="clean-block clean-services dark">
         <div class="container">
             <div class="block-heading">

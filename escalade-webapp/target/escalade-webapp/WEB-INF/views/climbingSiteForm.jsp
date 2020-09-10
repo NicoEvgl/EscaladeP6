@@ -2,7 +2,7 @@
 
 <%@include file="header.jsp"%>
 
-<main class="page climbingAreaForm-page">${message}
+<main class="page climbingAreaForm-page">
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
@@ -46,7 +46,7 @@
                     <form:errors  path="quotation" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:textarea path="info" type="text" cssClass="form-control item" placeholder="Infos du site" autofocus=""/>
+                    <form:textarea path="info" type="text" rows="5" cssClass="form-control item" placeholder="Infos du site" autofocus=""/>
                     <form:errors  path="info" cssClass="error"/>
                 </div>
                 <div class="form-group">

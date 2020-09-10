@@ -88,6 +88,7 @@
                                 <div class="card-footer">
                                     <a href="<c:url value="/climbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm">Voir</a>
                                     <a href="<c:url value="/editClimbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm"> Modifier </a>
+                                    <a href="<c:url value="/deleteClimbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm"> Supprimer </a>
                                 </div>
                             </div>
                         </div>
