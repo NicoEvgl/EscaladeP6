@@ -30,6 +30,13 @@
                                         </a>
                                     </c:forEach>
                                 </div>
+                                <div>
+                                    <c:if test="${sessionScope.userInSessionId == climbingSite.user.id || sessionScope.userInSessionRole == 'Admin'}">
+                                        <a href="<c:url value="/climbingSite/${climbingSite.id}/photoForm"/>" class="btn btn-outline-secondary">
+                                            Ajouter une photo
+                                        </a>
+                                    </c:if>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
