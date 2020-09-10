@@ -48,6 +48,30 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
     }
 
     @Override
+    public List<ClimbingSite> findClimbingSiteByUserId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
+            List<ClimbingSite> climbingAreaListTx = new ArrayList<>();
+            climbingAreaListTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteByUserId(id);
+            return  climbingAreaListTx;
+        });
+
+        return climbingSiteList;
+    }
+
+    @Override
+    public ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        ClimbingSite climbingSite = transactionTemplate.execute(transactionStatus -> {
+            ClimbingSite climbingSiteTx = new ClimbingSite();
+            climbingSiteTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteByAttribute(attribute, attributeValue);
+            return  climbingSiteTx;
+        });
+
+        return climbingSite;
+    }
+
+    @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
@@ -70,16 +94,5 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
         });
     }
 
-    @Override
-    public List<ClimbingSite> findClimbingSiteByUserId(Integer id) {
-        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
-        List<ClimbingSite> climbingSiteList = transactionTemplate.execute(transactionStatus -> {
-            List<ClimbingSite> climbingAreaListTx = new ArrayList<>();
-            climbingAreaListTx = getDaoFactory().getClimbingSiteDao().findClimbingSiteByUserId(id);
-            return  climbingAreaListTx;
-        });
-
-        return climbingSiteList;
-    }
 }
 

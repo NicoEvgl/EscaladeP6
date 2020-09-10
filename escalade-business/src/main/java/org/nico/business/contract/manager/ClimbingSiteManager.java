@@ -8,7 +8,9 @@ public interface ClimbingSiteManager {
     void createClimbingSite(ClimbingSite climbingSite);
     List<ClimbingSite> findClimbingSiteList();
     ClimbingSite findClimbingSite(Integer id);
+    List<ClimbingSite> findClimbingSiteByUserId(Integer id);
+    ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue);
     List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation);
     void updateClimbingSite(ClimbingSite climbingSite);
-    List<ClimbingSite> findClimbingSiteByUserId(Integer id);
+
 }

@@ -4,6 +4,7 @@ import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
 import org.nico.model.beans.ClimbingSite;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -62,6 +63,32 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     }
 
     @Override
+    public List<ClimbingSite> findClimbingSiteByUserId(Integer id) {
+        String sql = "SELECT * FROM public.climbingsite WHERE user_id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
+        ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
+        List<ClimbingSite> climbingSiteList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper);
+
+        return climbingSiteList;
+    }
+
+    @Override
+    public ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue) {
+        String sql = "SELECT * FROM public.climbingsite WHERE "+attribute+" = ?";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+
+            ClimbingSite climbingSite = jdbcTemplate.queryForObject(sql, new ClimbingSiteRowMapper(), attributeValue);
+            return climbingSite;
+    }
+
+
+
+    @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
                 "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.quotation = :quotation";
@@ -111,20 +138,9 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
 
-    @Override
-    public List<ClimbingSite> findClimbingSiteByUserId(Integer id) {
-        String sql = "SELECT * FROM public.climbingsite WHERE user_id = :id";
 
-        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
-        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
-        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
 
-        ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
-        List<ClimbingSite> climbingSiteList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper);
-
-        return climbingSiteList;
-    }
 
 
 }

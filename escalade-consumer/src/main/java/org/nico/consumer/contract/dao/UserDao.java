@@ -8,7 +8,8 @@ public interface UserDao {
     void createUser(User user);
     List<User> findUserList();
     User findUser(Integer id);
+    User findUserByAttribute(String attribute, Object attributeValue);
     void updateUser(User user);
     void deleteUser(Integer id);
-    User findUserByAttribute(String attribute, Object attributeValue);
+
 }

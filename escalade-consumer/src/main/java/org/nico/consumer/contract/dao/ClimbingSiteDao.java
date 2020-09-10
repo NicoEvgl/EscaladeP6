@@ -7,8 +7,10 @@ import java.util.List;
 public interface ClimbingSiteDao {
     void createClimbingSite(ClimbingSite climbingSite);
     List<ClimbingSite> findClimbingSiteList();
-    List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation);
     ClimbingSite findClimbingSite(Integer id);
-    void updateClimbingSite(ClimbingSite climbingSite);
     List<ClimbingSite> findClimbingSiteByUserId(Integer id);
+    ClimbingSite findClimbingSiteByAttribute(String attribute, Object attributeValue);
+    List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation);
+    void updateClimbingSite(ClimbingSite climbingSite);
+
 }
