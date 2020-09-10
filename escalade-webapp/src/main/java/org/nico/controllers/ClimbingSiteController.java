@@ -144,4 +144,17 @@ public class ClimbingSiteController {
             return "redirect:/climbingSite/{id}";
         }
     }
+
+    @GetMapping("/deleteClimbingSite/{id}")
+    public String deleteClimbingSite(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(id);
+        for (Photo photo : photoList){
+            photoManager.deletePhoto(photo.getId());
+        }
+        climbingSiteManager.deleteClimbingSite(id);
+        return "redirect:/climbingSiteList";
+    }
 }

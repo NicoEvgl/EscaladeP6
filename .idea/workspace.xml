@@ -18,11 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="correction method findClimbingSiteByAttribute in ClimbingSiteDao">
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/ClimbingSiteManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/ClimbingSiteManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/ClimbingSiteManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/ClimbingSiteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/ClimbingSiteDaoImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager">
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PhotoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/PhotoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PhotoManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/PhotoManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/PhotoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,14 +339,7 @@
       <workItem from="1599491016145" duration="15139000" />
       <workItem from="1599514592125" duration="9571000" />
       <workItem from="1599671918150" duration="19000" />
-      <workItem from="1599671948182" duration="25172000" />
-    </task>
-    <task id="LOCAL-00039" summary="method Post doLogin in LoginController / new jsp welcome.jsp">
-      <created>1599319568449</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1599319568449</updated>
+      <workItem from="1599671948182" duration="25577000" />
     </task>
     <task id="LOCAL-00040" summary="method logout in LoginController / update header.jsp / delete welcome.jsp">
       <created>1599323099062</created>
@@ -683,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599702731560</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager">
+      <created>1599703033734</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1599703033734</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,7 +703,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="createPhoto, findPhotoList &amp; findPhoto in PhotoManager" />
     <MESSAGE value="findPhotoByClimbingSiteId in PhotoManager" />
     <MESSAGE value="Inject PhotoManager in ClimbingSiteController &amp; SearchController" />
     <MESSAGE value="update climbingSiteList.jsp / test Photo Ok" />
@@ -727,7 +727,8 @@
     <MESSAGE value="method GetMapping displayClimbingSiteForm + method PostMapping addClimbingSite in ClimbingSiteController / add link to add climbing site in personalSpace.jsp / new jsp : climbingSiteForm.jsp" />
     <MESSAGE value="method findClimbingSiteByAttribute in ClimbingSiteDao &amp; ClimbingSiteManager" />
     <MESSAGE value="correction method findClimbingSiteByAttribute in ClimbingSiteDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction method findClimbingSiteByAttribute in ClimbingSiteDao" />
+    <MESSAGE value="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
