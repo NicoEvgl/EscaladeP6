@@ -3,6 +3,7 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.contract.manager.PhotoManager;
+import org.nico.business.contract.manager.UserManager;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.Photo;
@@ -10,10 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -29,6 +27,8 @@ public class ClimbingSiteController {
     private EnumManager enumManager;
     @Inject
     private PhotoManager photoManager;
+    @Inject
+    private UserManager userManager;
 
 
     @GetMapping("/climbingSiteList")
@@ -70,8 +70,40 @@ public class ClimbingSiteController {
         return "climbingSite";
     }
 
+    @GetMapping("/climbingSiteForm")
+    public String displayClimbingSiteForm(Model model, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        List<String> regionList = enumManager.getEnumRegionStringValues();
+        model.addAttribute("regionList", regionList);
+        model.addAttribute("climbingSite", new ClimbingSite());
+        return "climbingSiteForm";
+    }
+
+    @PostMapping("/addClimbingSiteProcess")
+    public String addClimbingSite(@Valid @ModelAttribute("climbingSite") ClimbingSite newClimbingSite, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = true) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        ClimbingSite registeredClimbingSite = climbingSiteManager.findClimbingSiteByAttribute("name", newClimbingSite.getName());
+        if (registeredClimbingSite != null){
+            model.addAttribute("errorMessage", "Désolé ce site existe déjà");
+            return "redirect:/climbingSiteForm";
+        } else {
+            if (bindingResult.hasErrors()){
+                model.addAttribute("errorMessage", "Une erreur est survenue. Vérifiez les champs.");
+                return "redirect:/climbingSiteForm";
+            } else {
+                newClimbingSite.setUser(userManager.findUser(userInSessionId));
+                climbingSiteManager.createClimbingSite(newClimbingSite);
+                return "redirect:/climbingSiteList";
+            }
+        }
+    }
+
     @GetMapping("/editClimbingSite/{id}")
-    public String displayEditClimbingSiteForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    public String displayClimbingSiteEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
             return "redirect:/login";
         }
