@@ -35,6 +35,9 @@
                                         <a href="<c:url value="/climbingSite/${climbingSite.id}/photoForm"/>" class="btn btn-outline-secondary">
                                             Ajouter une photo
                                         </a>
+                                        <a href="<c:url value="/climbingSite/${climbingSite.id}/photoList"/>" class="btn btn-outline-secondary">
+                                            Afficher toutes les photos
+                                        </a>
                                     </c:if>
                                 </div>
                             </div>

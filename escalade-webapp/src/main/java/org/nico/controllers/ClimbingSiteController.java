@@ -113,7 +113,7 @@ public class ClimbingSiteController {
         model.addAttribute("regionList", regionList);
         model.addAttribute("editedClimbingSite", editedClimbingSite);
 
-        return "ClimbingSiteEditForm";
+        return "climbingSiteEditForm";
     }
 
     @PostMapping("/editClimbingSite/editClimbingSiteProcess/{id}")
@@ -134,7 +134,7 @@ public class ClimbingSiteController {
             model.addAttribute("editedClimbingSite", climbingSite);
             model.addAttribute("errorMessage", str);
 
-            return "ClimbingSiteEditForm";
+            return "climbingSiteEditForm";
         } else {
             climbingSiteManager.updateClimbingSite(climbingSite);
 

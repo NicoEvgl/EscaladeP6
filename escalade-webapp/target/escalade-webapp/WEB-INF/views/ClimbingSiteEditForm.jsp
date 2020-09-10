@@ -2,7 +2,7 @@
 
 <%@include file="header.jsp"%>
 
-<main class="page updateClimbingSiteForm-page">
+<main class="page climbingSiteEditForm-page">
     <section class="clean-block clean-form dark">
         <div class="container">${message}
             <div class="block-heading">

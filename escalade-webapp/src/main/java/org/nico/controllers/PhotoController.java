@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+import java.util.List;
 
 
 @Controller
@@ -53,5 +54,17 @@ public class PhotoController {
             model.addAttribute("userInSessionId", userInSessionId);
             return "redirect:/climbingSite/{climbingSiteId}";
         }
+    }
+
+    @GetMapping("/climbingSite/{climbingSiteId}/photoList")
+    public String displayClimbingSitePhotoList(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null){
+            return "redirect:/login";
+        }
+        List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(climbingSiteId);
+        model.addAttribute("climbingSiteId", climbingSiteId);
+        model.addAttribute("photoList", photoList);
+
+        return "photoList";
     }
 }

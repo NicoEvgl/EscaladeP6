@@ -2,7 +2,7 @@
 
 <%@include file="header.jsp"%>
 
-<main class="page climbingAreaForm-page">
+<main class="page climbingSiteForm-page">
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
