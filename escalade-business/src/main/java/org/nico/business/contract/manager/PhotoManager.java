@@ -8,6 +8,6 @@ public interface PhotoManager {
     void createPhoto(Photo photo);
     List<Photo> findPhotoList();
     Photo findPhoto(Integer id);
-
     List<Photo> findPhotoByClimbingSiteId(Integer id);
+    void deletePhoto(Integer id);
 }

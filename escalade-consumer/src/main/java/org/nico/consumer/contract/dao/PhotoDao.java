@@ -9,4 +9,5 @@ public interface PhotoDao {
     List<Photo> findPhotoList();
     Photo findPhoto(Integer id);
     List<Photo> findPhotoByClimbingSiteId(Integer id);
+    void deletePhoto(Integer id);
 }

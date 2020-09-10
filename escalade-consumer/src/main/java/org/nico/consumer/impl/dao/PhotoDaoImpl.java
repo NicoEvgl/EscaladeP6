@@ -67,6 +67,16 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
         return photoList;
     }
 
+    @Override
+    public void deletePhoto(Integer id) {
+        String sql = "DELETE FROM public.photo WHERE id = :id";
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
 
 
 
