@@ -2,6 +2,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.PhotoManager;
+import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.Photo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -62,9 +63,24 @@ public class PhotoController {
             return "redirect:/login";
         }
         List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(climbingSiteId);
+        ClimbingSite climbingSite = climbingSiteManager.findClimbingSite(climbingSiteId);
+
+        model.addAttribute("climbingSite", climbingSite);
         model.addAttribute("climbingSiteId", climbingSiteId);
         model.addAttribute("photoList", photoList);
 
         return "photoList";
+    }
+
+    @GetMapping("/editPhoto/{id}")
+    public String displayPhotoEditForm(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null){
+            return "redirect:/login";
+        }
+
+        Photo editedPhoto = photoManager.findPhoto(id);
+        model.addAttribute("editedPhoto", editedPhoto);
+        model.addAttribute("userInSessionId", userInSessionId);
+        return "photoEditForm";
     }
 }

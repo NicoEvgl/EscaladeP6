@@ -7,7 +7,7 @@
         <div class="container">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Liste des photos</h2>
+                    <h2 class="text-info">Liste des photos du site ${climbingSite.name}</h2>
                     <a href="<c:url value="/climbingSite/${climbingSiteId}"/>" class="btn btn-outline-primary btn-block">
                         Annuler
                     </a>
