@@ -99,7 +99,17 @@ public class PhotoController {
             photoManager.updatePhoto(photo);
             model.addAttribute("climbingSiteId", photo.getClimbingSite().getId());
             model.addAttribute("userInSessionId", userInSessionId);
-            return "redirect:/climbingSite/{climbingSiteId}";
+            return "redirect:/climbingSite/{climbingSiteId}/photoList";
         }
+    }
+
+    @GetMapping("/deletePhoto/{id}")
+    public String deletePhoto(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute("climbingSiteId", photoManager.findPhoto(id).getClimbingSite().getId());
+        photoManager.deletePhoto(id);
+        return "redirect:/climbingSite/{climbingSiteId}/photoList";
     }
 }
