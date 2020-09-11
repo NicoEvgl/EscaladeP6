@@ -17,6 +17,13 @@ public class Sector {
      */
     public Sector() {}
 
+    /**
+     *
+     * @param id : sector's id
+     * @param name : sector's name
+     * @param description : sector's description
+     * @param climbingSite : sector's climbingSite
+     */
     public Sector(Integer id, String name, String description, ClimbingSite climbingSite){
         this.id = id;
         this.name = name;

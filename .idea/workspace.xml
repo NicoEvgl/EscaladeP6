@@ -18,11 +18,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add nav-tab (sectors,routes,comments) in climbingSite.jsp">
-      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Sector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : Sector">
+      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/Quotation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,14 +340,7 @@
       <workItem from="1599671948182" duration="25941000" />
       <workItem from="1599749383873" duration="9807000" />
       <workItem from="1599769658812" duration="3705000" />
-      <workItem from="1599821958594" duration="1039000" />
-    </task>
-    <task id="LOCAL-00052" summary="update climbingSiteList.jsp (renamed from climbingSite.jsp)">
-      <created>1599365527394</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1599365527394</updated>
+      <workItem from="1599821958594" duration="1564000" />
     </task>
     <task id="LOCAL-00053" summary="new bean : Photo">
       <created>1599428156966</created>
@@ -687,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599787713900</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="new bean : Sector">
+      <created>1599823104022</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1599823104022</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +704,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugs correction" />
     <MESSAGE value="update personalSpace.jsp/ add url to editUser in personalSpace.jsp + bugs correction" />
     <MESSAGE value="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp" />
     <MESSAGE value="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp" />
@@ -731,7 +728,8 @@
     <MESSAGE value="method updatePhoto in PhotoDao &amp; PhotoManager" />
     <MESSAGE value="method GetMapping deletePhoto in PhotoController" />
     <MESSAGE value="add nav-tab (sectors,routes,comments) in climbingSite.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add nav-tab (sectors,routes,comments) in climbingSite.jsp" />
+    <MESSAGE value="new bean : Sector" />
+    <option name="LAST_COMMIT_MESSAGE" value="new bean : Sector" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
