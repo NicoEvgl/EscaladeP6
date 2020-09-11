@@ -18,13 +18,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method updatePhoto in PhotoDao &amp; PhotoManager">
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/PhotoManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/PhotoManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/PhotoManagerImpl$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/PhotoManagerImpl$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/PhotoManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/PhotoManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/PhotoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/PhotoDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/PhotoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/PhotoDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PhotoController.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method GetMapping deletePhoto in PhotoController">
+      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/resources/img/claret.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,15 +120,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -342,14 +338,8 @@
       <workItem from="1599514592125" duration="9571000" />
       <workItem from="1599671918150" duration="19000" />
       <workItem from="1599671948182" duration="25941000" />
-      <workItem from="1599749383873" duration="8270000" />
-    </task>
-    <task id="LOCAL-00050" summary="method findClimbingSiteSearchRequest in ClimbingSiteManager &amp; ClimbingSiteDao">
-      <created>1599359924865</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1599359924865</updated>
+      <workItem from="1599749383873" duration="9807000" />
+      <workItem from="1599769658812" duration="3240000" />
     </task>
     <task id="LOCAL-00051" summary="New controller : SearchController / PostMapping( &quot;climbingSiteListe/search&quot;)">
       <created>1599359998186</created>
@@ -687,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599757470796</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="method GetMapping deletePhoto in PhotoController">
+      <created>1599757842306</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1599757842306</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +703,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="method findClimbingSiteByUserId in ClimbingSiteManager &amp; ClimbingSiteDao" />
     <MESSAGE value="new jsp : personalSpace.jsp" />
     <MESSAGE value="bugs correction" />
     <MESSAGE value="update personalSpace.jsp/ add url to editUser in personalSpace.jsp + bugs correction" />
@@ -731,7 +727,8 @@
     <MESSAGE value="method GetMapping to display photo edit form in PhotoController / new jsp : photoEditForm.jsp / url to edit photo in photoList.jsp" />
     <MESSAGE value="method PostMapping editPhoto in PhotoController" />
     <MESSAGE value="method updatePhoto in PhotoDao &amp; PhotoManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="method updatePhoto in PhotoDao &amp; PhotoManager" />
+    <MESSAGE value="method GetMapping deletePhoto in PhotoController" />
+    <option name="LAST_COMMIT_MESSAGE" value="method GetMapping deletePhoto in PhotoController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -774,54 +771,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="1293" height="143" key="GridCell.Tab.0.bottom" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.0.bottom" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.0.center" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.0.center" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.0.left" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.0.left" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.0.right" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.0.right" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.1.bottom" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.1.bottom" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.1.center" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.1.center" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.1.left" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.1.left" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.1.right" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.1.right" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.2.bottom" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.2.bottom" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.2.center" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.2.center" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.2.left" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.2.left" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
-    <state width="1293" height="143" key="GridCell.Tab.2.right" timestamp="1599757344293">
+    <state width="629" height="334" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.2.right" timestamp="1599771052195">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="143" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599757344293" />
+    <state width="629" height="334" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -850,10 +847,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="880" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599506096781" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599703644880">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599757861827">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599703644880" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599757861827" />
     <state x="333" y="415" key="extract.method.dialog" timestamp="1599515106758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

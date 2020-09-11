@@ -57,6 +57,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="product-info">
+                    <div>
+                        <ul class="nav nav-tabs" id="Tab">
+                            <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" id="sectors-tab" href="#sectors">Secteurs</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="routes-tabs" href="#routes">Routes</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="comments-tab" href="#comments">Commentaires</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
