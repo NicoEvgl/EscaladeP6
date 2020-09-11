@@ -2,7 +2,7 @@ package org.nico.model.beans;
 
 public class Login {
 
-    //====  ATTRIBUTES  ====
+    //====  ATTRIBUTES  ====//
 
     private String username;
     private String password;

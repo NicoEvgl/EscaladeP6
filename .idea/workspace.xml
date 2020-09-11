@@ -18,11 +18,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method GetMapping deletePhoto in PhotoController">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/resources/img/claret.jpg" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add nav-tab (sectors,routes,comments) in climbingSite.jsp">
+      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Sector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -120,13 +120,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -339,14 +341,8 @@
       <workItem from="1599671918150" duration="19000" />
       <workItem from="1599671948182" duration="25941000" />
       <workItem from="1599749383873" duration="9807000" />
-      <workItem from="1599769658812" duration="3240000" />
-    </task>
-    <task id="LOCAL-00051" summary="New controller : SearchController / PostMapping( &quot;climbingSiteListe/search&quot;)">
-      <created>1599359998186</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1599359998186</updated>
+      <workItem from="1599769658812" duration="3705000" />
+      <workItem from="1599821958594" duration="1039000" />
     </task>
     <task id="LOCAL-00052" summary="update climbingSiteList.jsp (renamed from climbingSite.jsp)">
       <created>1599365527394</created>
@@ -684,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599757842306</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="add nav-tab (sectors,routes,comments) in climbingSite.jsp">
+      <created>1599787713900</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1599787713900</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +706,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new jsp : personalSpace.jsp" />
     <MESSAGE value="bugs correction" />
     <MESSAGE value="update personalSpace.jsp/ add url to editUser in personalSpace.jsp + bugs correction" />
     <MESSAGE value="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp" />
@@ -728,7 +730,8 @@
     <MESSAGE value="method PostMapping editPhoto in PhotoController" />
     <MESSAGE value="method updatePhoto in PhotoDao &amp; PhotoManager" />
     <MESSAGE value="method GetMapping deletePhoto in PhotoController" />
-    <option name="LAST_COMMIT_MESSAGE" value="method GetMapping deletePhoto in PhotoController" />
+    <MESSAGE value="add nav-tab (sectors,routes,comments) in climbingSite.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add nav-tab (sectors,routes,comments) in climbingSite.jsp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -747,10 +750,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599757146669">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599822958394">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599757146669" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599822958394" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -771,54 +774,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="629" height="334" key="GridCell.Tab.0.bottom" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.0.bottom" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.0.center" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.0.center" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.0.left" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.0.left" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.0.right" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.0.right" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.1.bottom" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.1.bottom" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.1.center" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.1.center" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.1.left" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.1.left" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.1.right" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.1.right" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.2.bottom" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.2.bottom" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.2.center" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.2.center" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.2.left" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.2.left" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
-    <state width="629" height="334" key="GridCell.Tab.2.right" timestamp="1599771052195">
+    <state width="629" height="334" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
+    <state width="629" height="334" key="GridCell.Tab.2.right" timestamp="1599787794137">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="629" height="334" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599771052195" />
+    <state width="629" height="334" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599787794137" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -839,18 +842,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="726" y="186" key="Maven.ArtifactSearchDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599364260166" />
-    <state x="600" y="260" key="RollbackChangesDialog" timestamp="1599702606908">
+    <state x="600" y="260" key="RollbackChangesDialog" timestamp="1599787650069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="600" y="260" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599702606908" />
+    <state x="600" y="260" key="RollbackChangesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599787650069" />
     <state x="880" y="185" key="SettingsEditor" timestamp="1599506096781">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="880" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599506096781" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599757861827">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599787758287">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599757861827" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599787758287" />
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599787549742">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599787549742" />
     <state x="333" y="415" key="extract.method.dialog" timestamp="1599515106758">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -1,8 +1,9 @@
 package org.nico.model.beans;
 
+
 public class User {
 
-    //====  ATTRIBUTES  ====
+    //====  ATTRIBUTES  ====//
 
     private Integer id;
     private String gender;
@@ -17,7 +18,7 @@ public class User {
     private String city;
     private String role;
 
-    //====  CONSTRUCTOR  ====
+    //====  CONSTRUCTOR  ====//
 
     /**
      * Default constructor
@@ -28,18 +29,18 @@ public class User {
     /**
      * Constructor
      *
-     * @param id
-     * @param gender
-     * @param firstName
-     * @param lastName
-     * @param username
-     * @param email
-     * @param password
-     * @param address
-     * @param address2
-     * @param zip
-     * @param city
-     * @param role
+     * @param id : user's id
+     * @param gender : user's gender ( Mr or Mrs )
+     * @param firstName : user's first name
+     * @param lastName : user's last name
+     * @param username : user's username
+     * @param email : user's email address
+     * @param password : user's account password
+     * @param address : user's living address
+     * @param address2 : user's details address ( apartment, floor ...)
+     * @param zip : city's zip
+     * @param city : user's living city
+     * @param role : user's role
      */
     public User(Integer id, String gender, String firstName, String lastName, String username, String email,
                 String password, String address, String address2, String zip, String city, String role) {
@@ -53,11 +54,11 @@ public class User {
         this.address = address;
         this.address2 = address2;
         this.zip = zip;
-        this.city= city;
-        this.role= role;
+        this.city = city;
+        this.role = role;
     }
 
-    //====  GETTERS AND SETTERS  ====
+    //====  GETTERS AND SETTERS  ====//
 
     public Integer getId() {
         return id;
