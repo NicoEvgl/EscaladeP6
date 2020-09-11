@@ -18,12 +18,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add sector bean dao statement in consumerContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/RouteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/RouteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/SectorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/SectorDaoImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory">
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,14 +339,7 @@
       <workItem from="1599769658812" duration="3705000" />
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
-      <workItem from="1599846864457" duration="2975000" />
-    </task>
-    <task id="LOCAL-00056" summary="method findPhotoList in PhotoDao">
-      <created>1599432780851</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1599432780851</updated>
+      <workItem from="1599846864457" duration="3085000" />
     </task>
     <task id="LOCAL-00057" summary="add PhotoRowMapper">
       <created>1599432805448</created>
@@ -688,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599848867304</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory">
+      <created>1599849903928</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1599849903928</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +703,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="correction userEditForm.jsp" />
     <MESSAGE value="method PostMapping editUser in PersonalSpaceController / correction method updateUser in UserDaoImpl / bugs corrections in climbingSite.jsp, ClimbingSiteController &amp; ClimbingSiteEditForm.jsp" />
     <MESSAGE value="method GetMapping displayPasswordEditForm in PersonalSpaceController / new jsp : passwordEditForm.jsp / add link to editPassword in personalSpace.jsp" />
     <MESSAGE value="method PostMapping editPassword in PersonalSpaceController" />
@@ -732,7 +727,8 @@
     <MESSAGE value="new bean : Route" />
     <MESSAGE value="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory" />
     <MESSAGE value="add sector bean dao statement in consumerContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sector bean dao statement in consumerContext.xml" />
+    <MESSAGE value="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
