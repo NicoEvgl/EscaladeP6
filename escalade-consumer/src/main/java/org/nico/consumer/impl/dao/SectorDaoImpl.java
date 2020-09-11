@@ -18,7 +18,7 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
         mapSqlParameterSource.addValue("name", sector.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("description", sector.getDescription(), Types.VARCHAR);
-        mapSqlParameterSource.addValue("climbingareaId", sector.getClimbingSite().getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("climbingsiteId", sector.getClimbingSite().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
 

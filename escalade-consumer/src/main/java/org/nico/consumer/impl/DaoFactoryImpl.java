@@ -1,10 +1,7 @@
 package org.nico.consumer.impl;
 
 import org.nico.consumer.contract.DaoFactory;
-import org.nico.consumer.contract.dao.ClimbingSiteDao;
-import org.nico.consumer.contract.dao.PhotoDao;
-import org.nico.consumer.contract.dao.SectorDao;
-import org.nico.consumer.contract.dao.UserDao;
+import org.nico.consumer.contract.dao.*;
 
 public class DaoFactoryImpl implements DaoFactory {
 
@@ -12,6 +9,7 @@ public class DaoFactoryImpl implements DaoFactory {
     private ClimbingSiteDao climbingSiteDao;
     private PhotoDao photoDao;
     private SectorDao sectorDao;
+    private RouteDao routeDao;
 
     @Override
     public UserDao getUserDao() { return userDao; }
@@ -32,4 +30,10 @@ public class DaoFactoryImpl implements DaoFactory {
     public SectorDao getSectorDao() { return sectorDao; }
     @Override
     public void setSectorDao(SectorDao sectorDao) { this.sectorDao = sectorDao; }
+
+    @Override
+    public RouteDao getRouteDao() { return routeDao; }
+    @Override
+    public void setRouteDao(RouteDao routeDao) { this.routeDao = routeDao; }
 }
+
