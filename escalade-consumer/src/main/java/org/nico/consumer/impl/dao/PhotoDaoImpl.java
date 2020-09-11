@@ -16,14 +16,14 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
     @Override
     public void createPhoto(Photo photo) {
         String sql = "INSERT INTO public.photo (name, url, climbingsite_id)"
-                + "VALUES (:name, :url, :climbingareaId)";
+                + "VALUES (:name, :url, :climbingsiteId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
         mapSqlParameterSource.addValue("name", photo.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("url", photo.getUrl(), Types.VARCHAR);
-        mapSqlParameterSource.addValue("climbingareaId", photo.getClimbingSite().getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("climbingsiteId", photo.getClimbingSite().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
@@ -70,18 +70,17 @@ public class PhotoDaoImpl extends AbstractDao implements PhotoDao {
     @Override
     public void updatePhoto(Photo photo) {
         String sql = "UPDATE public.photo SET "
-                + "climbingsite_id = :climbingareaId, "
                 + "name = :name, "
-                + "url = :url "
+                + "url = :url, "
+                + "climbingsite_id = :climbingsiteId "
                 + "WHERE id = :id";
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
         mapSqlParameterSource.addValue("id", photo.getId(), Types.INTEGER);
-        mapSqlParameterSource.addValue("climbingareaId", photo.getClimbingSite().getId(), Types.INTEGER);
         mapSqlParameterSource.addValue("name", photo.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("url", photo.getUrl(), Types.VARCHAR);
-
+        mapSqlParameterSource.addValue("climbingsiteId", photo.getClimbingSite().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }

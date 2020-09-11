@@ -18,7 +18,7 @@ public class Sector {
     public Sector() {}
 
     /**
-     *
+     *Constructor
      * @param id : sector's id
      * @param name : sector's name
      * @param description : sector's description

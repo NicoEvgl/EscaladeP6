@@ -3,6 +3,7 @@ package org.nico.consumer.impl;
 import org.nico.consumer.contract.DaoFactory;
 import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.consumer.contract.dao.PhotoDao;
+import org.nico.consumer.contract.dao.SectorDao;
 import org.nico.consumer.contract.dao.UserDao;
 
 public class DaoFactoryImpl implements DaoFactory {
@@ -10,6 +11,7 @@ public class DaoFactoryImpl implements DaoFactory {
     private UserDao userDao;
     private ClimbingSiteDao climbingSiteDao;
     private PhotoDao photoDao;
+    private SectorDao sectorDao;
 
     @Override
     public UserDao getUserDao() { return userDao; }
@@ -25,4 +27,9 @@ public class DaoFactoryImpl implements DaoFactory {
     public PhotoDao getPhotoDao() { return photoDao; }
     @Override
     public void setPhotoDao(PhotoDao photoDao) { this.photoDao = photoDao; }
+
+    @Override
+    public SectorDao getSectorDao() { return sectorDao; }
+    @Override
+    public void setSectorDao(SectorDao sectorDao) { this.sectorDao = sectorDao; }
 }

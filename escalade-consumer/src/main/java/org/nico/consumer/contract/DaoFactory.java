@@ -2,6 +2,7 @@ package org.nico.consumer.contract;
 
 import org.nico.consumer.contract.dao.ClimbingSiteDao;
 import org.nico.consumer.contract.dao.PhotoDao;
+import org.nico.consumer.contract.dao.SectorDao;
 import org.nico.consumer.contract.dao.UserDao;
 
 public interface DaoFactory {
@@ -14,4 +15,7 @@ public interface DaoFactory {
 
     PhotoDao getPhotoDao();
     void setPhotoDao(PhotoDao photoDao);
+
+    SectorDao getSectorDao();
+    void setSectorDao(SectorDao sectorDao);
 }

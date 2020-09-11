@@ -16,8 +16,19 @@ public class Route {
 
     //====  CONSTRUCTOR  ====//
 
+    /**
+     * Default constructor
+     */
     public Route() {}
 
+    /**
+     * Constructor
+     * @param id : route's id
+     * @param name : route's name
+     * @param quotation : route's quotation
+     * @param height : route's height
+     * @param sector : route's sector
+     */
     public Route(Integer id, String name, String quotation, String height, Sector sector) {
         this.id = id;
         this.name = name;
