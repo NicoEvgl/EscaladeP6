@@ -18,13 +18,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : Route">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/SectorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/SectorDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/PhotoDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Sector.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Sector.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory">
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,14 +339,7 @@
       <workItem from="1599769658812" duration="3705000" />
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
-      <workItem from="1599846864457" duration="1459000" />
-    </task>
-    <task id="LOCAL-00054" summary="new dao PhotoDao / add PhotoDao in DaoFactory / bean dao statement in consumerContext.xml">
-      <created>1599429534886</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1599429534886</updated>
+      <workItem from="1599846864457" duration="1911000" />
     </task>
     <task id="LOCAL-00055" summary="method createPhoto in PhotoDao">
       <created>1599431777051</created>
@@ -689,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599823829171</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory">
+      <created>1599848597141</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1599848597141</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +703,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp" />
     <MESSAGE value="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp" />
     <MESSAGE value="correction userEditForm.jsp" />
     <MESSAGE value="method PostMapping editUser in PersonalSpaceController / correction method updateUser in UserDaoImpl / bugs corrections in climbingSite.jsp, ClimbingSiteController &amp; ClimbingSiteEditForm.jsp" />
@@ -733,7 +727,8 @@
     <MESSAGE value="add nav-tab (sectors,routes,comments) in climbingSite.jsp" />
     <MESSAGE value="new bean : Sector" />
     <MESSAGE value="new bean : Route" />
-    <option name="LAST_COMMIT_MESSAGE" value="new bean : Route" />
+    <MESSAGE value="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -752,10 +747,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599823790403">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599848425301">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599823790403" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599848425301" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
