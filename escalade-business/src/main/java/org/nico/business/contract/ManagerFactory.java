@@ -18,4 +18,7 @@ public interface ManagerFactory {
 
     RouteManager getRouteManager();
     void setRouteManager(RouteManager routeManager);
+
+    CommentManager getCommentManager();
+    void setCommentManager(CommentManager commentManager);
 }

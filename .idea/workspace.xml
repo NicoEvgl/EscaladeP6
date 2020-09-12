@@ -18,10 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : Comment">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/CommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/CommentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/CommentRowMapper.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper">
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/CommentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/CommentManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,14 +347,7 @@
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
       <workItem from="1599846864457" duration="3774000" />
-      <workItem from="1599912032313" duration="20078000" />
-    </task>
-    <task id="LOCAL-00071" summary="method Post updateClimbingSite in ClimbingSiteController / new method updateClimbingSite in ClimbingSiteManager &amp; ClimbingSiteDao / new jsp : updateClimbingSiteForm.jsp">
-      <created>1599504971232</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1599504971232</updated>
+      <workItem from="1599912032313" duration="21246000" />
     </task>
     <task id="LOCAL-00072" summary="minor modifications">
       <created>1599507631127</created>
@@ -690,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599931873724</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper">
+      <created>1599933686937</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1599933686937</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +711,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="method PostMapping to add climbing site photo in PhotoController / add buoux.jpg &amp; pen-hir.jpg" />
     <MESSAGE value="method GetMapping to display climbing site photo list in PhotoController / new jsp : photoList.jsp / url to display photo list in climbingSite.jsp" />
     <MESSAGE value="method GetMapping to display photo edit form in PhotoController / new jsp : photoEditForm.jsp / url to edit photo in photoList.jsp" />
     <MESSAGE value="method PostMapping editPhoto in PhotoController" />
@@ -734,7 +735,8 @@
     <MESSAGE value="new jsp : footer.jsp / include footer.jsp in all jsp / add script jquery-3.4.1.min.js, popper.min.js, theme.js, smoothproducts.css + smoothproducts.min.js, simple-line-icons" />
     <MESSAGE value="corrections jsp" />
     <MESSAGE value="new bean : Comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="new bean : Comment" />
+    <MESSAGE value="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -753,10 +755,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599931834917">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599934612908">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599931834917" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599934612908" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

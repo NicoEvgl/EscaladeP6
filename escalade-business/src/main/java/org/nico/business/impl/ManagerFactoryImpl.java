@@ -11,6 +11,7 @@ public class ManagerFactoryImpl implements ManagerFactory {
     private PhotoManager photoManager;
     private SectorManager sectorManager;
     private RouteManager routeManager;
+    private CommentManager commentManager;
 
     @Override
     public UserManager getUserManager() { return userManager; }
@@ -40,5 +41,10 @@ public class ManagerFactoryImpl implements ManagerFactory {
     public RouteManager getRouteManager() { return routeManager; }
     @Override
     public void setRouteManager(RouteManager routeManager) { this.routeManager = routeManager; }
+
+    @Override
+    public CommentManager getCommentManager() { return commentManager; }
+    @Override
+    public void setCommentManager(CommentManager commentManager) { this.commentManager = commentManager; }
 }
 
