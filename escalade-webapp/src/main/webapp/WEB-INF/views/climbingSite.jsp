@@ -168,6 +168,38 @@
                                     </section>
                                 </c:forEach>
                             </div>
+                            <div class="tab-pane fade show" role="tabpanel" id="comments">
+                                <c:if test="${!empty userInSessionId}">
+                                    <p class="my-5">
+                                        <a href="<c:url value="/addComment/${climbingSite.id}"/>" class="btn btn-outline-primary">
+                                            <i class="fas fa-plus-square ml-2"> Ajouter un commentaire </i>
+                                        </a>
+                                    </p>
+                                </c:if>
+                                <c:if test="${empty userInSessionId}">
+                                    <a href="<c:url value="/login"/>" class="btn btn-outline-primary">
+                                        <i class="fas fa-plus-square ml-2"> Connectez-vous pour ajouter un commentaire </i>
+                                    </a>
+                                </c:if>
+                                <c:forEach items="${climbingSite.commentList}" var="comment">
+                                    <div class="reviews">
+                                        <div class="review-item">
+                                            <c:if test="${sessionScope.userInSessionRole == 'Admin' || sessionScope.userInSessionRole == 'Member'}">
+                                                <div class="align-items-sm-start">
+                                                    <a href="<c:url value="/editComment/${comment.id}"/> " class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-edit ml-2"></i>
+                                                    </a>
+                                                    <a href="<c:url value="/deleteComment/${comment.id}"/> " class="btn btn-sm btn-outline-danger">
+                                                        <i class="fas fa-trash ml-2"></i>
+                                                    </a>
+                                                </div>
+                                            </c:if>
+                                            <h4>${comment.user.username}</h4><span class="text-muted"><a href="#">${comment.user.username}</a>, <fmt:formatDate value="${comment.creationDate}" pattern="dd/MM/yyyy HH:mm:ss"/> </span>
+                                            <p>${comment.commentText}</p>
+                                        </div>
+                                    </div>
+                                </c:forEach>
+                            </div>
                         </div>
                     </div>
                 </div>
