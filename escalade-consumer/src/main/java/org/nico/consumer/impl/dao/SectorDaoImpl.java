@@ -2,11 +2,14 @@ package org.nico.consumer.impl.dao;
 
 import org.nico.consumer.contract.dao.SectorDao;
 import org.nico.consumer.impl.AbstractDao;
+import org.nico.consumer.impl.rowmapper.SectorRowMapper;
 import org.nico.model.beans.Sector;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.sql.Types;
+import java.util.List;
 
 public class SectorDaoImpl extends AbstractDao implements SectorDao {
 
@@ -22,5 +25,15 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
 
+    }
+
+    @Override
+    public List<Sector> findSectorByClimbingSiteId(Integer id) {
+        String sql = "SELECT * FROM public.sector WHERE climbingsite_id = " + id + " ORDER BY id";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        SectorRowMapper sectorRowMapper = new SectorRowMapper();
+        List<Sector> sectorList = jdbcTemplate.query(sql, sectorRowMapper);
+
+        return sectorList;
     }
 }

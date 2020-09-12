@@ -7,6 +7,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SectorManagerImpl extends AbstractManager implements SectorManager {
 
     @Override
@@ -18,5 +21,18 @@ public class SectorManagerImpl extends AbstractManager implements SectorManager 
                 getDaoFactory().getSectorDao().createSector(sector);
             }
         });
+    }
+
+    @Override
+    public List<Sector> findSectorByClimbingSiteId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<Sector> sectorList = transactionTemplate.execute(transactionStatus -> {
+            List<Sector> sectorListTx = new ArrayList<>();
+            sectorListTx = getDaoFactory().getSectorDao().findSectorByClimbingSiteId(id);
+            return  sectorListTx;
+        });
+
+        return sectorList;
     }
 }
