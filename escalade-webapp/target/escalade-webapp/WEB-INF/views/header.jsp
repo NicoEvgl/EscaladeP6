@@ -4,6 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="input" uri="http://www.springframework.org/tags/form" %>
 
+
 <html lang="fr">
     <head>
         <title>Les amis de l'escalade</title>

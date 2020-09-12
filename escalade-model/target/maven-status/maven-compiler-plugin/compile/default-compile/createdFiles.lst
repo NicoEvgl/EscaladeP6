@@ -1,8 +1,11 @@
 org\nico\model\enums\Role.class
+org\nico\model\beans\Sector.class
 org\nico\model\beans\GuideBook.class
+org\nico\model\beans\Route.class
+org\nico\model\enums\Quotation.class
 org\nico\model\enums\Region.class
 org\nico\model\beans\Login.class
 org\nico\model\beans\Photo.class
 org\nico\model\beans\User.class
 org\nico\model\beans\ClimbingSite.class
-org\nico\model\enums\Cotation.class
+org\nico\model\beans\Comment.class

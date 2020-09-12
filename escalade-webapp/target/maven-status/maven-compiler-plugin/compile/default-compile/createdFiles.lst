@@ -1,6 +1,11 @@
 org\nico\controllers\SearchController.class
 org\nico\controllers\GuideBookController.class
-org\nico\controllers\HomeController.class
+org\nico\controllers\PhotoController.class
 org\nico\controllers\LoginController.class
-org\nico\controllers\ClimbingSiteController.class
+org\nico\controllers\SectorController.class
 org\nico\controllers\RegistrationController.class
+org\nico\controllers\RouteController.class
+org\nico\controllers\CommentController.class
+org\nico\controllers\HomeController.class
+org\nico\controllers\ClimbingSiteController.class
+org\nico\controllers\PersonalSpaceController.class

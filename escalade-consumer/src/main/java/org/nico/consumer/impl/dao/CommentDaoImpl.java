@@ -15,7 +15,7 @@ public class CommentDaoImpl extends AbstractDao implements CommentDao {
     @Override
     public void createComment(Comment comment) {
         String sql = "INSERT INTO public.comment (comment_text, creation_date, update_date, user_id, climbingsite_id)"
-                + "VALUES (:description, :creationDate, :updateDate, :userId, :climbingSiteId)";
+                + "VALUES (:commentText, :creationDate, :updateDate, :userId, :climbingSiteId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();

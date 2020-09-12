@@ -1,4 +1,5 @@
 <%@ page pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <%@include file="header.jsp"%>
 
@@ -194,7 +195,7 @@
                                                     </a>
                                                 </div>
                                             </c:if>
-                                            <h4>${comment.user.username}</h4><span class="text-muted"><a href="#">${comment.user.username}</a>, <fmt:formatDate value="${comment.creationDate}" pattern="dd/MM/yyyy HH:mm:ss"/> </span>
+                                            <span class="text-muted"><a href="#">${comment.user.username}</a>, <fmt:formatDate value="${comment.creationDate}" pattern="dd/MM/yyyy HH:mm:ss"/></span>
                                             <p>${comment.commentText}</p>
                                         </div>
                                     </div>

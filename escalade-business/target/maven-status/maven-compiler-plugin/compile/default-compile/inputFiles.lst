@@ -2,6 +2,8 @@ D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\ma
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\SearchFilter.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\AbstractManager.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\PasswordManager.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\RouteManager.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\CommentManagerImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\EnumManagerImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\PasswordManagerImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\ManagerFactory.java
@@ -11,4 +13,8 @@ D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\ma
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\UserManager.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\ClimbingSiteManagerImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\PhotoManagerImpl.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\CommentManager.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\SectorManagerImpl.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\impl\manager\RouteManagerImpl.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\PhotoManager.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\java\org\nico\business\contract\manager\SectorManager.java

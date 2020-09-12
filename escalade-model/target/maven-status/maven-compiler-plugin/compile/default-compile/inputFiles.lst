@@ -1,7 +1,10 @@
-D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\enums\Cotation.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\Route.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\enums\Role.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\Comment.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\enums\Quotation.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\ClimbingSite.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\enums\Region.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\Sector.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\GuideBook.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\Login.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-model\src\main\java\org\nico\model\beans\Photo.java

@@ -42,7 +42,7 @@ public class SectorManagerImpl extends AbstractManager implements SectorManager 
 
         List<Sector> sectorList = transactionTemplate.execute(transactionStatus -> {
             List<Sector> sectorListTx = new ArrayList<>();
-            sectorListTx = getDaoFactory().getSectorDao().findSectorByClimbingSiteId(id);
+            sectorListTx = getDaoFactory().getSectorDao().findSectorByClimbingSite(id);
             return  sectorListTx;
         });
 

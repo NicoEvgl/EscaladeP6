@@ -1,6 +1,11 @@
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\HomeController.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\PhotoController.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\RouteController.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\LoginController.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\SearchController.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\CommentController.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\GuideBookController.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\ClimbingSiteController.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\PersonalSpaceController.java
 D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\RegistrationController.java
+D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\java\org\nico\controllers\SectorController.java

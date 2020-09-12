@@ -25,8 +25,8 @@
         <property name="userManager" ref="userManager"/>
         <property name="climbingSiteManager" ref="climbingSiteManager"/>
         <property name="photoManager" ref="photoManager"/>
-        <property name="sectorManager" ref="SectorManager"/>
-        <property name="routeManager" ref="RouteManager"/>
+        <property name="sectorManager" ref="sectorManager"/>
+        <property name="routeManager" ref="routeManager"/>
     </bean>
 
     <!-- Transaction manager -->
