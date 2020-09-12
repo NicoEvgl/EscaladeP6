@@ -35,4 +35,38 @@ public class RouteManagerImpl extends AbstractManager implements RouteManager {
 
         return routeList;
     }
+
+    @Override
+    public Route findRoute(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        Route route = transactionTemplate.execute(transactionStatus -> {
+            Route routeTx;
+            routeTx = getDaoFactory().getRouteDao().findRoute(id);
+            return routeTx;
+        });
+
+        return route;
+    }
+
+    @Override
+    public void updateRoute(Route route) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getRouteDao().updateRoute(route);
+            }
+        });
+    }
+
+    @Override
+    public void deleteRoute(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getRouteDao().deleteRoute(id);
+            }
+        });
+    }
 }

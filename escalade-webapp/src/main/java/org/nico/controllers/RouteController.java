@@ -61,4 +61,52 @@ public class RouteController {
             return "redirect:/login";
         }
     }
+
+    @GetMapping("/editRoute/{id}")
+    public String updateRoute(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+            Route editedRoute = routeManager.findRoute(id);
+            List<String> quotationList = enumManager.getEnumQuotationStringValues();
+
+            model.addAttribute("quotationList", quotationList);
+            model.addAttribute("userInSessionId", userInSessionId);
+            model.addAttribute("editedRoute", editedRoute);
+            return "routeEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editRoute/editRouteProcess/{id}")
+    public String updatingRoute(@Valid Route route, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+            if (bindingResult.hasErrors()){
+                model.addAttribute("memberInSessionId", userInSessionId);
+                model.addAttribute("editedRoute", routeManager.findRoute(id));
+                return  "routeEditForm";
+            } else {
+                Integer climbingSiteId = sectorManager.findSector(routeManager.findRoute(id).getSector().getId()).getClimbingSite().getId();
+
+                routeManager.updateRoute(route);
+                model.addAttribute("climbingSiteId", climbingSiteId);
+                model.addAttribute("userInSessionId", userInSessionId);
+                return "redirect:/climbingSite/{climbingSiteId}";
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/deleteRoute/{id}")
+    public String deleteRoute(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            Integer climbingSiteId = routeManager.findRoute(id).getSector().getClimbingSite().getId();
+
+            routeManager.deleteRoute(id);
+            model.addAttribute("climbingSiteId", climbingSiteId);
+            return "redirect:/climbingSite/{climbingSiteId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
 }
