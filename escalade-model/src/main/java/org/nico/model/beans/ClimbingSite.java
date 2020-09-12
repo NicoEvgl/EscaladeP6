@@ -1,6 +1,5 @@
 package org.nico.model.beans;
 
-
 import java.util.List;
 
 public class ClimbingSite {
