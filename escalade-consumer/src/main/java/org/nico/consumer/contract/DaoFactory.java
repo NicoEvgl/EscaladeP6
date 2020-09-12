@@ -17,6 +17,8 @@ public interface DaoFactory {
     void setSectorDao(SectorDao sectorDao);
 
     RouteDao getRouteDao();
-
     void setRouteDao(RouteDao routeDao);
+
+    CommentDao getCommentDao();
+    void setCommentDao(CommentDao commentDao);
 }

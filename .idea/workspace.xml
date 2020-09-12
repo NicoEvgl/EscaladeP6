@@ -18,9 +18,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="corrections jsp">
-      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : Comment">
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/CommentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/CommentRowMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +37,8 @@
         <option value="CSS File" />
         <option value="spring-beans.schema" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -344,14 +345,7 @@
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
       <workItem from="1599846864457" duration="3774000" />
-      <workItem from="1599912032313" duration="18893000" />
-    </task>
-    <task id="LOCAL-00070" summary="method Get displayUpdateClimbingSiteForm in ClimbingSiteController / add /updateClimbingSite in climbingSite.jsp">
-      <created>1599500850311</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1599500850311</updated>
+      <workItem from="1599912032313" duration="20078000" />
     </task>
     <task id="LOCAL-00071" summary="method Post updateClimbingSite in ClimbingSiteController / new method updateClimbingSite in ClimbingSiteManager &amp; ClimbingSiteDao / new jsp : updateClimbingSiteForm.jsp">
       <created>1599504971232</created>
@@ -689,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599931326080</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="new bean : Comment">
+      <created>1599931873724</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1599931873724</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +709,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modification url to cancel climbing site edit" />
     <MESSAGE value="method PostMapping to add climbing site photo in PhotoController / add buoux.jpg &amp; pen-hir.jpg" />
     <MESSAGE value="method GetMapping to display climbing site photo list in PhotoController / new jsp : photoList.jsp / url to display photo list in climbingSite.jsp" />
     <MESSAGE value="method GetMapping to display photo edit form in PhotoController / new jsp : photoEditForm.jsp / url to edit photo in photoList.jsp" />
@@ -733,7 +733,8 @@
     <MESSAGE value="new controller RouteController (method addRoute) / new jsp : routeForm.jsp / method findRouteBySectorId in RouteManager &amp; RouteDao + ClimbingSiteController in displayClimbingSite's method" />
     <MESSAGE value="new jsp : footer.jsp / include footer.jsp in all jsp / add script jquery-3.4.1.min.js, popper.min.js, theme.js, smoothproducts.css + smoothproducts.min.js, simple-line-icons" />
     <MESSAGE value="corrections jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrections jsp" />
+    <MESSAGE value="new bean : Comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="new bean : Comment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">

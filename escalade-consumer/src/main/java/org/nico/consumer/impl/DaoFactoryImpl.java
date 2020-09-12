@@ -10,6 +10,7 @@ public class DaoFactoryImpl implements DaoFactory {
     private PhotoDao photoDao;
     private SectorDao sectorDao;
     private RouteDao routeDao;
+    private CommentDao commentDao;
 
     @Override
     public UserDao getUserDao() { return userDao; }
@@ -35,5 +36,10 @@ public class DaoFactoryImpl implements DaoFactory {
     public RouteDao getRouteDao() { return routeDao; }
     @Override
     public void setRouteDao(RouteDao routeDao) { this.routeDao = routeDao; }
+
+    @Override
+    public CommentDao getCommentDao() { return commentDao; }
+    @Override
+    public void setCommentDao(CommentDao commentDao) { this.commentDao = commentDao; }
 }
 

@@ -11,8 +11,10 @@
     <bean id="userDao" class="org.nico.consumer.impl.dao.UserDaoImpl" parent="abstractDao"/>
     <bean id="climbingSiteDao" class="org.nico.consumer.impl.dao.ClimbingSiteDaoImpl" parent="abstractDao"/>
     <bean id="photoDao" class="org.nico.consumer.impl.dao.PhotoDaoImpl" parent="abstractDao"/>
-    <bean id="sectorDao" class="org.nico.consumer.impl.dao.SectorDaoImpl" />
-    <bean id="routeDao" class="org.nico.consumer.impl.dao.RouteDaoImpl"/>
+    <bean id="sectorDao" class="org.nico.consumer.impl.dao.SectorDaoImpl" parent="abstractDao" />
+    <bean id="routeDao" class="org.nico.consumer.impl.dao.RouteDaoImpl" parent="abstractDao"/>
+    <bean id="commentDao" class="org.nico.consumer.impl.dao.CommentDaoImpl" parent="abstractDao"/>
+
 
     <!-- DAO Factory -->
     <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">
@@ -21,6 +23,7 @@
         <property name="photoDao" ref="photoDao"/>
         <property name="sectorDao" ref="sectorDao"/>
         <property name="routeDao" ref="routeDao"/>
+        <property name="commentDao" ref="commentDao"/>
     </bean>
 
 
