@@ -18,14 +18,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="route bean dao statement in consumerContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/RouteManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/SectorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/RouteManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/SectorManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory">
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,14 +342,7 @@
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
       <workItem from="1599846864457" duration="3774000" />
-      <workItem from="1599912032313" duration="633000" />
-    </task>
-    <task id="LOCAL-00058" summary="method findClimbingSite in ClimbingSiteDao">
-      <created>1599433154433</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1599433154433</updated>
+      <workItem from="1599912032313" duration="814000" />
     </task>
     <task id="LOCAL-00059" summary="method findPhotoByClimbingSiteId in PhotoDao">
       <created>1599433566130</created>
@@ -693,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599849987162</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory">
+      <created>1599912708631</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1599912708631</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +706,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="method GetMapping displayPasswordEditForm in PersonalSpaceController / new jsp : passwordEditForm.jsp / add link to editPassword in personalSpace.jsp" />
     <MESSAGE value="method PostMapping editPassword in PersonalSpaceController" />
     <MESSAGE value="section &quot;Mes sites&quot; in personalSpace.jsp" />
     <MESSAGE value="method GetMapping displayClimbingSiteForm + method PostMapping addClimbingSite in ClimbingSiteController / add link to add climbing site in personalSpace.jsp / new jsp : climbingSiteForm.jsp" />
@@ -737,7 +730,8 @@
     <MESSAGE value="add sector bean dao statement in consumerContext.xml" />
     <MESSAGE value="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory" />
     <MESSAGE value="route bean dao statement in consumerContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="route bean dao statement in consumerContext.xml" />
+    <MESSAGE value="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -756,10 +750,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599849771172">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599912559163">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599849771172" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599912559163" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

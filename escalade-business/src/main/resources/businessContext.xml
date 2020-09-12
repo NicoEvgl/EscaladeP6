@@ -13,7 +13,8 @@
     <bean id="userManager" class="org.nico.business.impl.manager.UserManagerImpl" parent="abstractManager"/>
     <bean id="climbingSiteManager" class="org.nico.business.impl.manager.ClimbingSiteManagerImpl" parent="abstractManager"/>
     <bean id="photoManager" class="org.nico.business.impl.manager.PhotoManagerImpl" parent="abstractManager"/>
-
+    <bean id="SectorManager" class="org.nico.business.impl.manager.SectorManagerImpl" parent="abstractManager"/>
+    <bean id="RouteManager" class="org.nico.business.impl.manager.RouteManagerImpl" parent="abstractManager"/>
 
     <bean id="enumManager" class="org.nico.business.impl.manager.EnumManagerImpl"></bean>
     <bean id="searchFilter" class="org.nico.business.impl.SearchFilter"></bean>
@@ -23,6 +24,8 @@
         <property name="userManager" ref="userManager"/>
         <property name="climbingSiteManager" ref="climbingSiteManager"/>
         <property name="photoManager" ref="photoManager"/>
+        <property name="sectorManager" ref="SectorManager"/>
+        <property name="routeManager" ref="RouteManager"/>
     </bean>
 
     <!-- Transaction manager -->
