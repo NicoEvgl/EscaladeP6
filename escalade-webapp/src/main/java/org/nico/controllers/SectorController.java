@@ -23,7 +23,7 @@ public class SectorController {
     private SectorManager sectorManager;
 
 
-    @GetMapping("/sectorForm/{climbingSiteId}")
+    @GetMapping("/addSector/{climbingSiteId}")
     public String displaySectorForm(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
             Sector sector = new Sector();
@@ -38,7 +38,7 @@ public class SectorController {
         }
     }
 
-    @PostMapping("/sectorForm/addSectorProcess/{climbingSiteId}")
+    @PostMapping("/addSector/addSectorProcess/{climbingSiteId}")
     public String addSector(@PathVariable Integer climbingSiteId, Model model, @Valid Sector sector, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
 
         if (userInSessionId != null){
@@ -49,6 +49,37 @@ public class SectorController {
             } else {
                 sectorManager.createSector(sector);
 
+                return "redirect:/climbingSite/{climbingSiteId}";
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/editSector/{id}")
+    public String displaySectorEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+            Sector editedSector = sectorManager.findSector(id);
+
+            model.addAttribute("userInSessionId", userInSessionId);
+            model.addAttribute("editedSector", editedSector);
+            return "sectorEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editSector/editSectorProcess/{id}")
+    public String editSector(@Valid Sector sector, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+            if (bindingResult.hasErrors()){
+                model.addAttribute("userInSessionId", userInSessionId);
+                model.addAttribute("editedSector", sectorManager.findSector(id));
+                return  "sectorEditForm";
+            } else {
+                sectorManager.updateSector(sector);
+                model.addAttribute("climbingSiteId", sector.getClimbingSite().getId());
+                model.addAttribute("userInSessionId", userInSessionId);
                 return "redirect:/climbingSite/{climbingSiteId}";
             }
         } else {

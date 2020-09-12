@@ -11,13 +11,16 @@
     <bean id="userDao" class="org.nico.consumer.impl.dao.UserDaoImpl" parent="abstractDao"/>
     <bean id="climbingSiteDao" class="org.nico.consumer.impl.dao.ClimbingSiteDaoImpl" parent="abstractDao"/>
     <bean id="photoDao" class="org.nico.consumer.impl.dao.PhotoDaoImpl" parent="abstractDao"/>
-
+    <bean id="sectorDao" class="org.nico.consumer.impl.dao.SectorDaoImpl" />
+    <bean id="routeDao" class="org.nico.consumer.impl.dao.RouteDaoImpl"/>
 
     <!-- DAO Factory -->
     <bean id="daoFactory" class="org.nico.consumer.impl.DaoFactoryImpl">
         <property name="userDao" ref="userDao"/>
         <property name="climbingSiteDao" ref="climbingSiteDao"/>
         <property name="photoDao" ref="photoDao"/>
+        <property name="sectorDao" ref="sectorDao"/>
+        <property name="routeDao" ref="routeDao"/>
     </bean>
 
 

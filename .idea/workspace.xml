@@ -18,19 +18,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="SectorManager &amp; RouteManager bean manager statement in businessContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/SectorRowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/SectorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/sectorForm.jsp" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findSectorByClimbingSiteId in SectorManager &amp; SectorDao / new rowmapper : SectorRowMapper">
+      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/sectorEditForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/SectorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/SectorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/SectorManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/SectorManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/SectorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/SectorDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/SectorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/SectorDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/ClimbingSite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/PhotoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/PhotoDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/ClimbingSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/ClimbingSite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/beans/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/enums/Quotation.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-model/target/classes/org/nico/model/enums/Quotation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/SectorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/SectorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +59,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -353,28 +365,7 @@
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
       <workItem from="1599846864457" duration="3774000" />
-      <workItem from="1599912032313" duration="5948000" />
-    </task>
-    <task id="LOCAL-00060" summary="method findPhoto in PhotoDao">
-      <created>1599434018426</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1599434018427</updated>
-    </task>
-    <task id="LOCAL-00061" summary="add PhotoManager &amp; PhotoManagerImpl / PhotoManager in ManagerFactory / bean manager statement in businessContext.xml">
-      <created>1599434666736</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1599434666736</updated>
-    </task>
-    <task id="LOCAL-00062" summary="findClimbingSite in ClimbingSiteManager">
-      <created>1599435160837</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1599435160837</updated>
+      <workItem from="1599912032313" duration="8214000" />
     </task>
     <task id="LOCAL-00063" summary="createPhoto, findPhotoList &amp; findPhoto in PhotoManager">
       <created>1599435520772</created>
@@ -698,7 +689,28 @@
       <option name="project" value="LOCAL" />
       <updated>1599912918758</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="sector tab panel in climbingSite.jsp/ new jsp : sectorForm.jsp / new controller : SectorController ( method addSector )">
+      <created>1599918242804</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1599918242804</updated>
+    </task>
+    <task id="LOCAL-00110" summary="add attribute sectorList in ClimbingSite / add setSectorList in method GetMapping displayClimbingSite in ClimbingSiteController">
+      <created>1599918338598</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1599918338598</updated>
+    </task>
+    <task id="LOCAL-00111" summary="method findSectorByClimbingSiteId in SectorManager &amp; SectorDao / new rowmapper : SectorRowMapper">
+      <created>1599918393748</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1599918393748</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,9 +729,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section &quot;Mes sites&quot; in personalSpace.jsp" />
-    <MESSAGE value="method GetMapping displayClimbingSiteForm + method PostMapping addClimbingSite in ClimbingSiteController / add link to add climbing site in personalSpace.jsp / new jsp : climbingSiteForm.jsp" />
-    <MESSAGE value="method findClimbingSiteByAttribute in ClimbingSiteDao &amp; ClimbingSiteManager" />
     <MESSAGE value="correction method findClimbingSiteByAttribute in ClimbingSiteDao" />
     <MESSAGE value="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager" />
     <MESSAGE value="method deletePhoto in PhotoDao &amp; PhotoManager" />
@@ -742,7 +751,10 @@
     <MESSAGE value="route bean dao statement in consumerContext.xml" />
     <MESSAGE value="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory" />
     <MESSAGE value="SectorManager &amp; RouteManager bean manager statement in businessContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="SectorManager &amp; RouteManager bean manager statement in businessContext.xml" />
+    <MESSAGE value="sector tab panel in climbingSite.jsp/ new jsp : sectorForm.jsp / new controller : SectorController ( method addSector )" />
+    <MESSAGE value="add attribute sectorList in ClimbingSite / add setSectorList in method GetMapping displayClimbingSite in ClimbingSiteController" />
+    <MESSAGE value="method findSectorByClimbingSiteId in SectorManager &amp; SectorDao / new rowmapper : SectorRowMapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="method findSectorByClimbingSiteId in SectorManager &amp; SectorDao / new rowmapper : SectorRowMapper" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -761,10 +773,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599917337572">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599920334351">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599917337572" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599920334351" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -861,10 +873,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="880" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599506096781" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599850005627">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1599918540289">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599850005627" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1599918540289" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599787549742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

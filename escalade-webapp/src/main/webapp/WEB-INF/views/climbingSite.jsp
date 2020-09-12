@@ -68,7 +68,7 @@
                             <div class="tab-pane active fade show specifications" role="tabpanel" id="sectors">
                                 <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionId == 'Admin'}">
                                     <p class="my-5">
-                                        <a href="<c:url value="/sectorForm/${climbingSite.id}"/>" class="btn btn-outline-primary">
+                                        <a href="<c:url value="/addSector/${climbingSite.id}"/>" class="btn btn-outline-primary">
                                             <i class="fas fa-plus-square ml-2"> Ajouter un secteur </i>
                                         </a>
                                     </p>
