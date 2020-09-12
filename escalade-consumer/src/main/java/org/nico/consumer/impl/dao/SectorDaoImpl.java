@@ -17,21 +17,36 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
     public void createSector(Sector sector) {
         String sql = "INSERT INTO public.sector (name, description, climbingsite_id)"
                 + "VALUES (:name, :description, :climbingsiteId)";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
         mapSqlParameterSource.addValue("name", sector.getName(), Types.VARCHAR);
         mapSqlParameterSource.addValue("description", sector.getDescription(), Types.VARCHAR);
         mapSqlParameterSource.addValue("climbingsiteId", sector.getClimbingSite().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
 
+    @Override
+    public List<Sector> findSectorList() {
+        String sql = "SELECT * FROM public.sector ORDER BY id";
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        SectorRowMapper sectorRowMapper = new SectorRowMapper();
+
+        List<Sector> sectorList = jdbcTemplate.query(sql, sectorRowMapper);
+
+        return sectorList;
     }
 
     @Override
     public List<Sector> findSectorByClimbingSiteId(Integer id) {
         String sql = "SELECT * FROM public.sector WHERE climbingsite_id = " + id + " ORDER BY id";
+
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         SectorRowMapper sectorRowMapper = new SectorRowMapper();
+
         List<Sector> sectorList = jdbcTemplate.query(sql, sectorRowMapper);
 
         return sectorList;
@@ -40,6 +55,7 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
     @Override
     public Sector findSector(Integer id) {
         String sql = "SELECT * FROM public.sector WHERE id = :id";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
@@ -58,6 +74,7 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
                 + "description = :description, "
                 + "climbingsite_id = :climbingSiteId "
                 + "WHERE id = :id";
+
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
@@ -68,6 +85,16 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
 
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
 
+    @Override
+    public void deleteSector(Integer id) {
+        String sql = "DELETE FROM public.sector WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
 }

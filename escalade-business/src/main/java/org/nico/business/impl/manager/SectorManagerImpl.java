@@ -24,6 +24,19 @@ public class SectorManagerImpl extends AbstractManager implements SectorManager 
     }
 
     @Override
+    public List<Sector> findSectorList() {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<Sector> sectorList = transactionTemplate.execute(transactionStatus -> {
+            List<Sector> sectorListTx = new ArrayList<>();
+            sectorListTx = getDaoFactory().getSectorDao().findSectorList();
+            return  sectorListTx;
+        });
+
+        return sectorList;
+    }
+
+    @Override
     public List<Sector> findSectorByClimbingSiteId(Integer id) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
 
@@ -55,6 +68,17 @@ public class SectorManagerImpl extends AbstractManager implements SectorManager 
             @Override
             protected void doInTransactionWithoutResult(TransactionStatus status) {
                 getDaoFactory().getSectorDao().updateSector(sector);
+            }
+        });
+    }
+
+    @Override
+    public void deleteSector(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getSectorDao().deleteSector(id);
             }
         });
     }

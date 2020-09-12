@@ -2,6 +2,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.SectorManager;
+import org.nico.model.beans.Route;
 import org.nico.model.beans.Sector;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class SectorController {
@@ -82,6 +84,17 @@ public class SectorController {
                 model.addAttribute("userInSessionId", userInSessionId);
                 return "redirect:/climbingSite/{climbingSiteId}";
             }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/deleteSector/{id}")
+    public String deleteSector(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            model.addAttribute("climbingSiteId", sectorManager.findSector(id).getClimbingSite().getId());
+            sectorManager.deleteSector(id);
+            return "redirect:/climbingSite/{climbingSiteId}";
         } else {
             return "redirect:/login";
         }

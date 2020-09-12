@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface SectorManager {
     void createSector(Sector sector);
+    List<Sector> findSectorList();
     List<Sector> findSectorByClimbingSiteId(Integer id);
     Sector findSector(Integer id);
     void updateSector(Sector sector);
+    void deleteSector(Integer id);
 }
