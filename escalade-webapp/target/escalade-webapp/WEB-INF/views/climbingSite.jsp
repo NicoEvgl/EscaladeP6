@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="gallery">
-                                <div class="sp-wrap">
+                                <div>
                                     <c:if test="${empty climbingSite.photoList}">
                                         <a href="<c:url value="/resources/img/no_image_found.png"/>">
                                             <img class="img-fluid d-block mx-auto" src="<c:url value="/resources/img/no_image_found.png"/>" alt="no image found">
@@ -61,8 +61,8 @@
                     <div>
                         <ul class="nav nav-tabs" id="Tab">
                             <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" id="sectors-tab" href="#sectors">Secteurs</a></li>
-                            <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" id="routes-tabs" href="#routes">Voies</a></li>
-                            <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" id="comments-tab" href="#comments">Commentaires</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="routes-tabs" href="#routes">Voies</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="comments-tab" href="#comments">Commentaires</a></li>
                         </ul>
                         <div class="tab-content" id="TabContent">
                             <div class="tab-pane active fade show specifications" role="tabpanel" id="sectors">
@@ -175,3 +175,5 @@
         </div>
     </section>
 </main>
+
+<%@include file="footer.jsp"%>

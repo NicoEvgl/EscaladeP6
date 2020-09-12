@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="gallery">
-                                <div class="sp-wrap">
+                                <div>
                                     <c:if test="${empty climbingSite.photoList}">
                                         <a href="<c:url value="/resources/img/no_image_found.png"/>">
                                             <img class="img-fluid d-block mx-auto" src="<c:url value="/resources/img/no_image_found.png"/>" alt="no image found">

@@ -3,7 +3,6 @@
 <%@include file="header.jsp"%>
 
 
-<div class="view" style="background-image: url('https://cdn.crunchify.com/bg.png'); background-repeat: no-repeat; background-size: cover; background-position: center ;"/>
 <main class="page climbingSiteList-page">
     <section class="clean-block clean-services dark">
         <div class="container">
