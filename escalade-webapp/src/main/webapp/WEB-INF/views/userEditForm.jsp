@@ -73,3 +73,5 @@
         </div>
     </section>
 </main>
+
+<%@include file="footer.jsp"%>

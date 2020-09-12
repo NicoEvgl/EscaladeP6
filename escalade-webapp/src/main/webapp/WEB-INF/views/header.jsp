@@ -8,9 +8,14 @@
     <head>
         <title>Les amis de l'escalade</title>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css"/>"/>
-        <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
 
+        <script src="https://kit.fontawesome.com/c822637fde.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css"/>"/>
+        <link rel="stylesheet" href="<c:url value="/resources/fonts/simple-line-icons.min.css"/>">
+        <link rel="stylesheet" href="<c:url value="/resources/css/smoothproducts.css"/>"/>
+        <link rel="stylesheet" href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"/>"/>
+        <link rel="stylesheet" href="<c:url value="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"/>"/>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
