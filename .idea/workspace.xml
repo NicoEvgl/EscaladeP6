@@ -18,8 +18,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findRoute, updateRoute &amp; deleteRoute in RouteManager &amp; RouteDao / method editRoute &amp; deleteRoute in RouteController / new jsp : routeEditForm.jsp">
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/SectorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/SectorController.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="add deleteRoute in method deleteSector of SectorController">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/SectorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/SectorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/ClimbingSiteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/SectorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/SectorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/climbingSite.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,14 +355,7 @@
       <workItem from="1599821958594" duration="3201000" />
       <workItem from="1599846824185" duration="30000" />
       <workItem from="1599846864457" duration="3774000" />
-      <workItem from="1599912032313" duration="27518000" />
-    </task>
-    <task id="LOCAL-00078" summary="rename editClimbingSiteForm.jsp to ClimbingSiteEditForm.jsp">
-      <created>1599677251736</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1599677251736</updated>
+      <workItem from="1599912032313" duration="28588000" />
     </task>
     <task id="LOCAL-00079" summary="method GetMapping displayUserEditForm in PersonalSpaceController + new jsp : userEditForm.jsp">
       <created>1599677376990</created>
@@ -688,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599940990239</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add deleteRoute in method deleteSector of SectorController">
+      <created>1599941118789</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1599941118789</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +719,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new bean : Sector" />
     <MESSAGE value="new bean : Route" />
     <MESSAGE value="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory" />
     <MESSAGE value="add sector bean dao statement in consumerContext.xml" />
@@ -732,7 +743,8 @@
     <MESSAGE value="new controller : CommentController ( method addComment ) / new jsp : commentForm.jsp / bug corrections" />
     <MESSAGE value="method findComment, updateComment &amp; deleteComment in CommentManager &amp; CommentDao / method editComment &amp; deleteComment in CommentController / new jsp : commentEditForm.jsp" />
     <MESSAGE value="method findRoute, updateRoute &amp; deleteRoute in RouteManager &amp; RouteDao / method editRoute &amp; deleteRoute in RouteController / new jsp : routeEditForm.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="method findRoute, updateRoute &amp; deleteRoute in RouteManager &amp; RouteDao / method editRoute &amp; deleteRoute in RouteController / new jsp : routeEditForm.jsp" />
+    <MESSAGE value="add deleteRoute in method deleteSector of SectorController" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deleteRoute in method deleteSector of SectorController" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -775,54 +787,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="1293" height="248" key="GridCell.Tab.0.bottom" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.0.bottom" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.0.center" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.0.center" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.0.left" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.0.left" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.0.right" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.0.right" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.1.bottom" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.1.bottom" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.1.center" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.1.center" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.1.left" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.1.left" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.1.right" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.1.right" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.2.bottom" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.2.bottom" timestamp="1599942151062">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.2.center" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151062" />
+    <state width="1293" height="248" key="GridCell.Tab.2.center" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.2.left" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.2.left" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
-    <state width="1293" height="248" key="GridCell.Tab.2.right" timestamp="1599940894218">
+    <state width="1293" height="248" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
+    <state width="1293" height="248" key="GridCell.Tab.2.right" timestamp="1599942151061">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="248" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599940894218" />
+    <state width="1293" height="248" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599942151061" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

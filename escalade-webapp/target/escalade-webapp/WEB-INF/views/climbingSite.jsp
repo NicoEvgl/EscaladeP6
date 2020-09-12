@@ -195,7 +195,7 @@
                                                     </a>
                                                 </div>
                                             </c:if>
-                                            <span class="text-muted"><a href="#">${comment.user.username}</a>, <fmt:formatDate value="${comment.creationDate}" pattern="dd/MM/yyyy HH:mm:ss"/></span>
+                                            <span class="text-muted"><a href="/personalSpace/${comment.user.username}">${comment.user.username}</a>, <fmt:formatDate value="${comment.creationDate}" pattern="dd/MM/yyyy HH:mm:ss"/></span>
                                             <p>${comment.commentText}</p>
                                         </div>
                                     </div>

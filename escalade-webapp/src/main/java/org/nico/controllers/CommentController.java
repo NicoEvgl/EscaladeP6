@@ -56,6 +56,7 @@ public class CommentController {
 
                 commentManager.createComment(comment);
                 model.addAttribute("climbingSiteId", climbingSiteId);
+
                 return "redirect:/climbingSite/{climbingSiteId}";
             }
         } else {

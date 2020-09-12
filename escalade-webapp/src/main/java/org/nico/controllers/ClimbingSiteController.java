@@ -79,6 +79,8 @@ public class ClimbingSiteController {
             sector.setRouteList(routeList);
         }
         model.addAttribute("climbingSite", climbingSite);
+        model.addAttribute("userInSessionId", userInSessionId);
+
 
         return "climbingSite";
     }
