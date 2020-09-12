@@ -63,5 +63,49 @@ public class CommentController {
         }
     }
 
+    @GetMapping("/editComment/{id}")
+    public String displayCommentEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+
+            Comment editedComment = commentManager.findComment(id);
+            model.addAttribute("userInSessionId", userInSessionId);
+            model.addAttribute("editedComment", editedComment);
+            return "commentEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editComment/editCommentProcess/{id}")
+    public String editComment(@Valid Comment comment, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        if (userInSessionId != null){
+            if (bindingResult.hasErrors()){
+                model.addAttribute("userInSessionId", userInSessionId);
+                model.addAttribute("editedComment", commentManager.findComment(id));
+                return  "commentEditForm";
+            } else {
+                model.addAttribute("climbingSiteId", commentManager.findComment(id).getClimbingSite().getId());
+                model.addAttribute("userInSessionId", userInSessionId);
+                comment.setUpdateDate (new Timestamp(System.currentTimeMillis()));
+                commentManager.updateComment(comment);
+                return "redirect:/climbingSite/{climbingSiteId}";
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/deleteComment/{id}")
+    public String deleteComment(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            model.addAttribute("climbId", commentManager.findComment(id).getClimbingSite().getId());
+            model.addAttribute("userInSessionId", userInSessionId);
+            commentManager.deleteComment(id);
+            return "redirect:/climbingSite/{climbingSiteId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
 
 }

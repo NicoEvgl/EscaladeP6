@@ -37,10 +37,58 @@ public class CommentDaoImpl extends AbstractDao implements CommentDao {
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
         mapSqlParameterSource.addValue("id", id, Types.INTEGER);
-        CommentRowMapper commentRowMapper = new CommentRowMapper();
 
+        CommentRowMapper commentRowMapper = new CommentRowMapper();
         List<Comment> commentListByClimbingSite = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, commentRowMapper);
 
         return commentListByClimbingSite;
+    }
+
+    @Override
+    public Comment findComment(Integer id) {
+        String sql = "SELECT * FROM public.comment WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
+        CommentRowMapper commentRowMapper = new CommentRowMapper();
+        Comment comment = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, commentRowMapper);
+
+        return comment;
+    }
+
+    @Override
+    public void updateComment(Comment comment) {
+        String sql = "UPDATE public.comment SET "
+                + "comment_text = :commentText, "
+                + "update_date = :updateDate, "
+                + "user_id = :userId, "
+                + "climbingsite_id = :climbingSiteId "
+                + "WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", comment.getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("commentText", comment.getCommentText(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("updateDate", comment.getUpdateDate(), Types.TIMESTAMP);
+        mapSqlParameterSource.addValue("userId", comment.getUser().getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("climbingSiteId", comment.getClimbingSite().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public void deleteComment(Integer id) {
+        String sql = "DELETE FROM public.comment WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+
     }
 }

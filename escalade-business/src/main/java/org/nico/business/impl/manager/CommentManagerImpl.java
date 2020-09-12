@@ -35,4 +35,37 @@ public class CommentManagerImpl extends AbstractManager implements CommentManage
 
         return commentListByClimbingSite;
     }
+
+    @Override
+    public Comment findComment(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        Comment comment = transactionTemplate.execute(transactionStatus -> {
+            Comment commentTx;
+            commentTx = getDaoFactory().getCommentDao().findComment(id);
+            return commentTx;
+        });
+
+        return comment;    }
+
+    @Override
+    public void updateComment(Comment comment) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getCommentDao().updateComment(comment);
+            }
+        });
+    }
+
+    @Override
+    public void deleteComment(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getCommentDao().deleteComment(id);
+            }
+        });
+    }
 }
