@@ -1,6 +1,7 @@
 package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
+import org.nico.business.contract.manager.RouteManager;
 import org.nico.business.contract.manager.SectorManager;
 import org.nico.model.beans.Route;
 import org.nico.model.beans.Sector;
@@ -23,6 +24,8 @@ public class SectorController {
     private ClimbingSiteManager climbingSiteManager;
     @Inject
     private SectorManager sectorManager;
+    @Inject
+    private RouteManager routeManager;
 
 
     @GetMapping("/addSector/{climbingSiteId}")
@@ -93,6 +96,10 @@ public class SectorController {
     public String deleteSector(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
             model.addAttribute("climbingSiteId", sectorManager.findSector(id).getClimbingSite().getId());
+            List<Route> routeList = routeManager.findRouteBySector(id);
+            for (Route route : routeList){
+                routeManager.deleteRoute(route.getId());
+            }
             sectorManager.deleteSector(id);
             return "redirect:/climbingSite/{climbingSiteId}";
         } else {
