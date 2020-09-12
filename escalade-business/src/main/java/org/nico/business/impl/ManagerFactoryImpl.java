@@ -1,9 +1,7 @@
 package org.nico.business.impl;
 
 import org.nico.business.contract.ManagerFactory;
-import org.nico.business.contract.manager.ClimbingSiteManager;
-import org.nico.business.contract.manager.PhotoManager;
-import org.nico.business.contract.manager.UserManager;
+import org.nico.business.contract.manager.*;
 
 public class ManagerFactoryImpl implements ManagerFactory {
 
@@ -11,6 +9,8 @@ public class ManagerFactoryImpl implements ManagerFactory {
     private UserManager userManager;
     private ClimbingSiteManager climbingSiteManager;
     private PhotoManager photoManager;
+    private SectorManager sectorManager;
+    private RouteManager routeManager;
 
     @Override
     public UserManager getUserManager() { return userManager; }
@@ -30,5 +30,15 @@ public class ManagerFactoryImpl implements ManagerFactory {
     public void setPhotoManager(PhotoManager photoManager) {
         this.photoManager = photoManager;
     }
+
+    @Override
+    public SectorManager getSectorManager() { return sectorManager; }
+    @Override
+    public void setSectorManager(SectorManager sectorManager) { this.sectorManager = sectorManager; }
+
+    @Override
+    public RouteManager getRouteManager() { return routeManager; }
+    @Override
+    public void setRouteManager(RouteManager routeManager) { this.routeManager = routeManager; }
 }
 
