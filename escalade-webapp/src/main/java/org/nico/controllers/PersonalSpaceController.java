@@ -4,6 +4,7 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.*;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.User;
+import org.nico.model.enums.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -35,10 +36,11 @@ public class PersonalSpaceController {
         if (userInSessionId == null){
             return "redirect:/home";
         }
-
         User registeredUser = userManager.findUser(userInSessionId);
-
-        //show all the climbing area's owner
+        if (registeredUser.getRole() == Role.ADMIN.getParam()){
+            List<User> userList = userManager.findUserList();
+            model.addAttribute("memberList", userList);
+        }
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteByUserId(userInSessionId);
         for (ClimbingSite climbingSite : climbingSiteList){
             climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
