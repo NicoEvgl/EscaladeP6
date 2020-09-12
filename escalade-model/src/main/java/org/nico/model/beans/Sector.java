@@ -1,5 +1,7 @@
 package org.nico.model.beans;
 
+import java.util.List;
+
 public class Sector {
 
     //====  ATTRIBUTES  ====//
@@ -9,6 +11,7 @@ public class Sector {
     private String description;
 
     private ClimbingSite climbingSite;
+    private List<Route> routeList;
 
     //====  CONSTRUCTOR  ====//
 
@@ -24,11 +27,12 @@ public class Sector {
      * @param description : sector's description
      * @param climbingSite : sector's climbingSite
      */
-    public Sector(Integer id, String name, String description, ClimbingSite climbingSite){
+    public Sector(Integer id, String name, String description, ClimbingSite climbingSite, List<Route> routeList){
         this.id = id;
         this.name = name;
         this.description = description;
         this.climbingSite = climbingSite;
+        this.routeList = routeList;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -49,4 +53,8 @@ public class Sector {
     public ClimbingSite getClimbingSite() { return climbingSite; }
 
     public void setClimbingSite(ClimbingSite climbingSite) { this.climbingSite = climbingSite; }
+
+    public List<Route> getRouteList() { return routeList; }
+
+    public void setRouteList(List<Route> routeList) { this.routeList = routeList; }
 }

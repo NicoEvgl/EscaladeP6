@@ -10,14 +10,12 @@ import java.sql.SQLException;
 public class SectorRowMapper implements RowMapper<Sector> {
     @Override
     public Sector mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-
         Sector sector = new Sector();
+        ClimbingSiteDaoImpl climbingSiteDao = new ClimbingSiteDaoImpl();
 
         sector.setId(resultSet.getInt("id"));
         sector.setName(resultSet.getString("name"));
         sector.setDescription(resultSet.getString("description"));
-
-        ClimbingSiteDaoImpl climbingSiteDao = new ClimbingSiteDaoImpl();
         sector.setClimbingSite(climbingSiteDao.findClimbingSite(resultSet.getInt("climbingSite_id")));
 
         return sector;

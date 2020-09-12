@@ -7,6 +7,10 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class RouteManagerImpl extends AbstractManager implements RouteManager {
     @Override
     public void createRoute(Route route) {
@@ -17,5 +21,18 @@ public class RouteManagerImpl extends AbstractManager implements RouteManager {
                 getDaoFactory().getRouteDao().createRoute(route);
             }
         });
+    }
+
+    @Override
+    public List<Route> findRouteBySectorId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<Route> routeList = transactionTemplate.execute(transactionStatus -> {
+            List<Route> routeListTx = new ArrayList<>();
+            routeListTx = getDaoFactory().getRouteDao().findRouteBySectorId(id);
+            return  routeListTx;
+        });
+
+        return routeList;
     }
 }

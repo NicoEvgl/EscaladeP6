@@ -4,6 +4,7 @@ import org.nico.business.contract.manager.*;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.Photo;
+import org.nico.model.beans.Route;
 import org.nico.model.beans.Sector;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,6 +30,8 @@ public class ClimbingSiteController {
     private UserManager userManager;
     @Inject
     private SectorManager sectorManager;
+    @Inject
+    private RouteManager routeManager;
 
 
     @GetMapping("/climbingSiteList")
@@ -67,6 +70,13 @@ public class ClimbingSiteController {
 
         climbingSite.setPhotoList(photoList);
         climbingSite.setSectorList(sectorList);
+        for (Sector sector : sectorList){
+            List<Route> routeList = new ArrayList<>();
+            for (Route route : routeManager.findRouteBySectorId(sector.getId())){
+                routeList.add(route);
+            }
+            sector.setRouteList(routeList);
+        }
         model.addAttribute("climbingSite", climbingSite);
 
         return "climbingSite";

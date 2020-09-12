@@ -1,6 +1,5 @@
 package org.nico.controllers;
 
-
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.contract.manager.PhotoManager;

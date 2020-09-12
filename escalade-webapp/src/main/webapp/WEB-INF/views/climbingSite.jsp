@@ -80,6 +80,7 @@
                                         <th class="align-middle" style="text-align: center">Description</th>
                                         <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionId.equals('Admin')}">
                                             <th class="align-middle" style="text-align: center">Modifier secteur</th>
+                                            <th class="align-middle" style="text-align: center">Ajouter une voie</th>
                                             <th class="align-middle" style="text-align: center">Supprimer secteur</th>
                                         </c:if>
                                     </tr>
@@ -96,6 +97,12 @@
                                                     </a>
                                                 </td>
                                                 <td class="align-middle" style="text-align: center">
+                                                    <a href="<c:url value="/addRoute/${sector.id}"/>" class="btn btn-outline-success">
+                                                        <i class="fas fa-plus-square ml-2">
+                                                        </i>
+                                                    </a>
+                                                </td>
+                                                <td class="align-middle" style="text-align: center">
                                                     <a href="<c:url value="/deleteSector/${sector.id}"/> " class="btn btn-outline-danger">
                                                         <i class="fas fa-trash ml-2"></i>
                                                     </a>
@@ -106,6 +113,61 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="tab-pane fade show specifications" role="tabpanel" id="routes">
+                                <c:forEach items="${climbingSite.sectorList}" var="sector" >
+                                    <section class="clean-block clean-services dark">
+                                        <div class="container">
+                                            <div class="block-heading">
+                                                <h2 class="text-info">Voies du secteur ${sector.name.toUpperCase()}</h2>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="card shadow mb-3">
+                                                        <div class="card-header py-3">
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <table class="table text-justify my-0">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th class="align-middle" style="text-align: center">Nom</th>
+                                                                    <th class="align-middle" style="text-align: center">Cotation</th>
+                                                                    <th class="align-middle" style="text-align: center">Hauteur</th>
+                                                                    <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == sector.climbingSite.user.id) || sessionScope.userInSessionRole.equals('Admin')}">
+                                                                        <th class="align-middle" style="text-align: center">Modifier voie</th>
+                                                                        <th class="align-middle" style="text-align: center">Supprimer voie</th>
+                                                                    </c:if>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <c:forEach items="${sector.routeList}" var="route">
+                                                                    <tr>
+                                                                        <td class="align-middle" style="text-align: center">${route.name}</td>
+                                                                        <td class="align-middle" style="text-align: center">${route.quotation}</td>
+                                                                        <td class="align-middle" style="text-align: center">${route.height}</td>
+                                                                        <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == sector.climbingSite.user.id) || sessionScope.userInSessionRole.equals('Admin')}">
+                                                                            <td class="align-middle" style="text-align: center">
+                                                                                <a href="<c:url value="/editRoute/${route.id}"/> " class="btn btn-outline-primary">
+                                                                                    <i class="fas fa-edit ml-2"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="align-middle" style="text-align: center">
+                                                                                <a href="<c:url value="/deleteRoute/${route.id}"/> " class="btn btn-outline-danger">
+                                                                                    <i class="fas fa-trash ml-2"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                        </c:if>
+                                                                    </tr>
+                                                                </c:forEach>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </c:forEach>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,3 +175,5 @@
         </div>
     </section>
 </main>
+
+<%@include file="footer.jsp"%>
