@@ -61,9 +61,52 @@
                     <div>
                         <ul class="nav nav-tabs" id="Tab">
                             <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" id="sectors-tab" href="#sectors">Secteurs</a></li>
-                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="routes-tabs" href="#routes">Routes</a></li>
+                            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="routes-tabs" href="#routes">Voies</a></li>
                             <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" id="comments-tab" href="#comments">Commentaires</a></li>
                         </ul>
+                        <div class="tab-content" id="TabContent">
+                            <div class="tab-pane active fade show specifications" role="tabpanel" id="sectors">
+                                <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionId == 'Admin'}">
+                                    <p class="my-5">
+                                        <a href="<c:url value="/sectorForm/${climbingSite.id}"/>" class="btn btn-outline-primary">
+                                            <i class="fas fa-plus-square ml-2"> Ajouter un secteur </i>
+                                        </a>
+                                    </p>
+                                </c:if>
+                                <table class="table table-striped table-responsive-lg">
+                                    <thead>
+                                    <tr>
+                                        <th class="align-middle" style="text-align: center">Secteur</th>
+                                        <th class="align-middle" style="text-align: center">Description</th>
+                                        <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionId.equals('Admin')}">
+                                            <th class="align-middle" style="text-align: center">Modifier secteur</th>
+                                            <th class="align-middle" style="text-align: center">Supprimer secteur</th>
+                                        </c:if>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${climbingSite.sectorList}" var="sector" >
+                                        <tr>
+                                            <td class="align-middle" style="text-align: center">${sector.name}</td>
+                                            <td class="align-middle" style="text-align: justify">${sector.description}</td>
+                                            <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == sector.climbingSite.user.id) || sessionScope.userInSessionId.equals('Admin')}">
+                                                <td class="align-middle" style="text-align: center">
+                                                    <a href="<c:url value="/editSector/${sector.id}"/>" class="btn btn-outline-primary">
+                                                        <i class="fas fa-edit ml-2"></i>
+                                                    </a>
+                                                </td>
+                                                <td class="align-middle" style="text-align: center">
+                                                    <a href="<c:url value="/deleteSector/${sector.id}"/> " class="btn btn-outline-danger">
+                                                        <i class="fas fa-trash ml-2"></i>
+                                                    </a>
+                                                </td>
+                                            </c:if>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
