@@ -49,7 +49,7 @@ public class SearchController {
                 nameList.add(climbingArea.getName());
             }
             for (ClimbingSite climbingSite : climbingSiteList){
-                climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
+                climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
             }
             for (int i = 0; i < 101; i++){
                 nbRoutesList.add(i);

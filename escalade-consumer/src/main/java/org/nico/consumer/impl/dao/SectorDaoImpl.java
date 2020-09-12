@@ -41,7 +41,7 @@ public class SectorDaoImpl extends AbstractDao implements SectorDao {
     }
 
     @Override
-    public List<Sector> findSectorByClimbingSiteId(Integer id) {
+    public List<Sector> findSectorByClimbingSite(Integer id) {
         String sql = "SELECT * FROM public.sector WHERE climbingsite_id = " + id + " ORDER BY id";
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());

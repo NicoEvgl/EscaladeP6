@@ -19,12 +19,13 @@ public class ClimbingSite {
     private User user;
     private List<Photo> photoList;
     private List<Sector> sectorList;
+    private List<Comment> commentList;
 
     //====  CONSTRUCTOR  ====//
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, User user, List<Photo> photoList, List<Sector> sectorList) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, User user, List<Photo> photoList, List<Sector> sectorList, List<Comment> commentList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -37,6 +38,7 @@ public class ClimbingSite {
         this.user = user;
         this.photoList = photoList;
         this.sectorList = sectorList;
+        this.commentList = commentList;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -89,6 +91,10 @@ public class ClimbingSite {
     public List<Sector> getSectorList() { return sectorList; }
 
     public void setSectorList(List<Sector> sectorList) { this.sectorList = sectorList; }
+
+    public List<Comment> getCommentList() { return commentList; }
+
+    public void setCommentList(List<Comment> commentList) { this.commentList = commentList; }
 
     /**
      * method to String climbing sites

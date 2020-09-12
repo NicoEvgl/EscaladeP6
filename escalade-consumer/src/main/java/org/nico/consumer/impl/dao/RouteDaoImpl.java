@@ -29,7 +29,7 @@ public class RouteDaoImpl extends AbstractDao implements RouteDao {
     }
 
     @Override
-    public List<Route> findRouteBySectorId(Integer id) {
+    public List<Route> findRouteBySector(Integer id) {
         String sql = "SELECT * FROM public.route WHERE sector_id = " + id + " ORDER BY id";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
         RouteRowMapper routeRowMapper = new RouteRowMapper();

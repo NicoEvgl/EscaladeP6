@@ -41,7 +41,7 @@ public class PersonalSpaceController {
         //show all the climbing area's owner
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteByUserId(userInSessionId);
         for (ClimbingSite climbingSite : climbingSiteList){
-            climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
+            climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
         }
         User userInSession = userManager.findUser(userInSessionId);
 

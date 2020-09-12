@@ -62,7 +62,7 @@ public class PhotoController {
         if (userInSessionId == null){
             return "redirect:/login";
         }
-        List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(climbingSiteId);
+        List<Photo> photoList = photoManager.findPhotoByClimbingSite(climbingSiteId);
         ClimbingSite climbingSite = climbingSiteManager.findClimbingSite(climbingSiteId);
 
         model.addAttribute("climbingSite", climbingSite);

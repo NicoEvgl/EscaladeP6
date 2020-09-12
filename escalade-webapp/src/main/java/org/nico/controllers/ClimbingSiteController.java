@@ -2,10 +2,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.*;
 import org.nico.business.impl.SearchFilter;
-import org.nico.model.beans.ClimbingSite;
-import org.nico.model.beans.Photo;
-import org.nico.model.beans.Route;
-import org.nico.model.beans.Sector;
+import org.nico.model.beans.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,6 +29,8 @@ public class ClimbingSiteController {
     private SectorManager sectorManager;
     @Inject
     private RouteManager routeManager;
+    @Inject
+    private CommentManager commentManager;
 
 
     @GetMapping("/climbingSiteList")
@@ -43,7 +42,7 @@ public class ClimbingSiteController {
         List<Integer> nbRoutesList = new ArrayList<>();
 
         for (ClimbingSite climbingSite : climbingSiteList){
-            climbingSite.setPhotoList(photoManager.findPhotoByClimbingSiteId(climbingSite.getId()));
+            climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
         }
 
         for (ClimbingSite climbingSite : climbingSiteList){
@@ -65,14 +64,16 @@ public class ClimbingSiteController {
     @GetMapping("/climbingSite/{id}")
     public String displayClimbingSite(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         ClimbingSite climbingSite = climbingSiteManager.findClimbingSite(id);
-        List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(id);
-        List<Sector> sectorList = sectorManager.findSectorByClimbingSiteId(id);
+        List<Photo> photoList = photoManager.findPhotoByClimbingSite(id);
+        List<Sector> sectorList = sectorManager.findSectorByClimbingSite(id);
+        List<Comment> commentList = commentManager.findCommentByClimbingSite(id);
 
         climbingSite.setPhotoList(photoList);
         climbingSite.setSectorList(sectorList);
+        climbingSite.setCommentList(commentList);
         for (Sector sector : sectorList){
             List<Route> routeList = new ArrayList<>();
-            for (Route route : routeManager.findRouteBySectorId(sector.getId())){
+            for (Route route : routeManager.findRouteBySector(sector.getId())){
                 routeList.add(route);
             }
             sector.setRouteList(routeList);
@@ -162,7 +163,7 @@ public class ClimbingSiteController {
         if (userInSessionId == null) {
             return "redirect:/login";
         }
-        List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(id);
+        List<Photo> photoList = photoManager.findPhotoByClimbingSite(id);
         for (Photo photo : photoList){
             photoManager.deletePhoto(photo.getId());
         }

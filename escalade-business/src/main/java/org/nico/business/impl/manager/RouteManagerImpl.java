@@ -24,7 +24,7 @@ public class RouteManagerImpl extends AbstractManager implements RouteManager {
     }
 
     @Override
-    public List<Route> findRouteBySectorId(Integer id) {
+    public List<Route> findRouteBySector(Integer id) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
 
         List<Route> routeList = transactionTemplate.execute(transactionStatus -> {

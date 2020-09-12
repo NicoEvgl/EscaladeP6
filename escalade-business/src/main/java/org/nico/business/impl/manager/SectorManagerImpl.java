@@ -37,7 +37,7 @@ public class SectorManagerImpl extends AbstractManager implements SectorManager 
     }
 
     @Override
-    public List<Sector> findSectorByClimbingSiteId(Integer id) {
+    public List<Sector> findSectorByClimbingSite(Integer id) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
 
         List<Sector> sectorList = transactionTemplate.execute(transactionStatus -> {

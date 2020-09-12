@@ -7,6 +7,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CommentManagerImpl extends AbstractManager implements CommentManager {
 
     @Override
@@ -18,5 +21,18 @@ public class CommentManagerImpl extends AbstractManager implements CommentManage
                 getDaoFactory().getCommentDao().createComment(comment);
             }
         });
+    }
+
+    @Override
+    public List<Comment> findCommentByClimbingSite(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<Comment> commentListByClimbingSite = transactionTemplate.execute(transactionStatus -> {
+            List<Comment> commentListTx = new ArrayList<>();
+            commentListTx = getDaoFactory().getCommentDao().findCommentByClimbingSite(id);
+            return  commentListTx;
+        });
+
+        return commentListByClimbingSite;
     }
 }
