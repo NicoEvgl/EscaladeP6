@@ -1,12 +1,10 @@
 package org.nico.controllers;
 
-import org.nico.business.contract.manager.ClimbingSiteManager;
-import org.nico.business.contract.manager.EnumManager;
-import org.nico.business.contract.manager.PhotoManager;
-import org.nico.business.contract.manager.UserManager;
+import org.nico.business.contract.manager.*;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.Photo;
+import org.nico.model.beans.Sector;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -29,6 +27,8 @@ public class ClimbingSiteController {
     private PhotoManager photoManager;
     @Inject
     private UserManager userManager;
+    @Inject
+    private SectorManager sectorManager;
 
 
     @GetMapping("/climbingSiteList")
@@ -63,8 +63,10 @@ public class ClimbingSiteController {
     public String displayClimbingSite(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         ClimbingSite climbingSite = climbingSiteManager.findClimbingSite(id);
         List<Photo> photoList = photoManager.findPhotoByClimbingSiteId(id);
+        List<Sector> sectorList = sectorManager.findSectorByClimbingSiteId(id);
 
         climbingSite.setPhotoList(photoList);
+        climbingSite.setSectorList(sectorList);
         model.addAttribute("climbingSite", climbingSite);
 
         return "climbingSite";
