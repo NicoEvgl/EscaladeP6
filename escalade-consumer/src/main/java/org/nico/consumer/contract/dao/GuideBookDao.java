@@ -10,4 +10,5 @@ public interface GuideBookDao {
     List<GuideBook> findGuideBookSearchRequest(String name, String region);
     GuideBook findGuideBook(Integer id);
     GuideBook findGuideBookByAttribute(String attribute, Object attributeValue);
+    List<GuideBook> findGuideBookByUserId(Integer id);
 }
