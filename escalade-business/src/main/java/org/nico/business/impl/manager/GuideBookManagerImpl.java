@@ -2,6 +2,7 @@ package org.nico.business.impl.manager;
 
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.impl.AbstractManager;
+import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
@@ -30,6 +31,18 @@ public class GuideBookManagerImpl extends AbstractManager implements GuideBookMa
         List<GuideBook> guideBookList = transactionTemplate.execute(transactionStatus -> {
             List<GuideBook> guideBookListTx = new ArrayList<>();
             guideBookListTx = getDaoFactory().getGuideBookDao().findGuideBookList();
+            return  guideBookListTx;
+        });
+
+        return guideBookList;
+    }
+
+    @Override
+    public List<GuideBook> findGuideBookSearchRequest(String name, String region) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        List<GuideBook> guideBookList = transactionTemplate.execute(transactionStatus -> {
+            List<GuideBook> guideBookListTx = new ArrayList<>();
+            guideBookListTx = getDaoFactory().getGuideBookDao().findGuideBookSearchRequest(name, region);
             return  guideBookListTx;
         });
 

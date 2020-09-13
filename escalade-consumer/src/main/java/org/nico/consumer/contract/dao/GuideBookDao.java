@@ -7,4 +7,5 @@ import java.util.List;
 public interface GuideBookDao {
     void createGuideBook(GuideBook guideBook);
     List<GuideBook> findGuideBookList();
+    List<GuideBook> findGuideBookSearchRequest(String name, String region);
 }

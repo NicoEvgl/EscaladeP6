@@ -91,8 +91,6 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         }
     }
 
-
-
     @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +

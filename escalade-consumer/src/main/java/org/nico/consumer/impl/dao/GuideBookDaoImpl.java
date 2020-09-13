@@ -2,7 +2,9 @@ package org.nico.consumer.impl.dao;
 
 import org.nico.consumer.contract.dao.GuideBookDao;
 import org.nico.consumer.impl.AbstractDao;
+import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
 import org.nico.consumer.impl.rowmapper.GuideBookRowMapper;
+import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -40,6 +42,23 @@ public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
 
         GuideBookRowMapper guideBookRowMapper = new GuideBookRowMapper();
         List<GuideBook> guideBookList = jdbcTemplate.query(sql, guideBookRowMapper);
+
+        return guideBookList;
+    }
+
+    @Override
+    public List<GuideBook> findGuideBookSearchRequest(String name, String region) {
+        String sql = "SELECT distinct guidebook. * FROM public.guidebook " +
+                "WHERE guidebook.name = :name OR guidebook.region = :region";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("name", name, Types.VARCHAR);
+        mapSqlParameterSource.addValue("region", region, Types.VARCHAR);
+
+        GuideBookRowMapper guideBookRowMapper = new GuideBookRowMapper();
+        List<GuideBook> guideBookList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, guideBookRowMapper );
 
         return guideBookList;
     }
