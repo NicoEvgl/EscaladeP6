@@ -11,6 +11,7 @@ public class DaoFactoryImpl implements DaoFactory {
     private SectorDao sectorDao;
     private RouteDao routeDao;
     private CommentDao commentDao;
+    private GuideBookDao guideBookDao;
 
     @Override
     public UserDao getUserDao() { return userDao; }
@@ -41,5 +42,10 @@ public class DaoFactoryImpl implements DaoFactory {
     public CommentDao getCommentDao() { return commentDao; }
     @Override
     public void setCommentDao(CommentDao commentDao) { this.commentDao = commentDao; }
+
+    @Override
+    public GuideBookDao getGuideBookDao() { return guideBookDao; }
+    @Override
+    public void setGuideBookDao(GuideBookDao guideBookDao) { this.guideBookDao = guideBookDao; }
 }
 

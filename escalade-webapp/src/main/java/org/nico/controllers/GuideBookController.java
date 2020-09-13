@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GuideBookController {
 
-    @GetMapping(value = "/guideBook")
+    @GetMapping(value = "/guideBookList")
     public String displayGuideBookPage(Model model) {
         model.addAttribute("guidebook", new GuideBook());
-        return "guideBook";
+        return "guideBookList";
     }
 }

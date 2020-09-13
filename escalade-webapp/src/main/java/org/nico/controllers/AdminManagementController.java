@@ -28,7 +28,7 @@ public class AdminManagementController {
     private EnumManager enumManager;
 
     @GetMapping("/userList")
-    public String displayMemberList(@SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, Model model){
+    public String displayUserList(@SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, Model model){
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
             return "redirect:/home";
@@ -87,7 +87,7 @@ public class AdminManagementController {
     }
 
     @GetMapping("/deleteUser/{id}")
-    public String deleteMember(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId){
+    public String deleteUser(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId){
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
             return "redirect:/home";

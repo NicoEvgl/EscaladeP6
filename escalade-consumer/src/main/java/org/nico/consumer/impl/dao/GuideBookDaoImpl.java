@@ -1,0 +1,46 @@
+package org.nico.consumer.impl.dao;
+
+import org.nico.consumer.contract.dao.GuideBookDao;
+import org.nico.consumer.impl.AbstractDao;
+import org.nico.consumer.impl.rowmapper.GuideBookRowMapper;
+import org.nico.model.beans.GuideBook;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import java.sql.Types;
+import java.util.List;
+
+public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
+
+    @Override
+    public void createGuidebook(GuideBook guideBook) {
+        String sql = "INSERT INTO public.guidebook (name, description,region, release_date, is_booked, user_id)"
+                + "VALUES (:name, :description, :region, :releaseDate, :isBooked, :userId)";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("name", guideBook.getName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("description", guideBook.getDescription(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("region", guideBook.getRegion(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("releaseDate", guideBook.getReleaseDate(), Types.DATE);
+        mapSqlParameterSource.addValue("isBooked", guideBook.isBooked(), Types.BOOLEAN);
+        mapSqlParameterSource.addValue("userId", guideBook.getUser().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+
+    }
+
+    @Override
+    public List<GuideBook> findGuideBookList() {
+        String sql = "SELECT * FROM public.guidebook";
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+
+        GuideBookRowMapper guideBookRowMapper = new GuideBookRowMapper();
+        List<GuideBook> guideBookList = jdbcTemplate.query(sql, guideBookRowMapper);
+
+        return guideBookList;
+    }
+}

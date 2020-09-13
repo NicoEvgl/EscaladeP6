@@ -21,4 +21,7 @@ public interface DaoFactory {
 
     CommentDao getCommentDao();
     void setCommentDao(CommentDao commentDao);
+
+    GuideBookDao getGuideBookDao();
+    void setGuideBookDao(GuideBookDao guideBookDao);
 }
