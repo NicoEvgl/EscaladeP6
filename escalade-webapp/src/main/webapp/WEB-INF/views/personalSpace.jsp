@@ -72,7 +72,7 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Mes sites</h2>
-                    <a href="<c:url value="/climbingSiteForm"/>" class="btn btn-outline-primary btn-block">Ajouter un site</a>
+                    <a href="<c:url value="/addClimbingSite"/>" class="btn btn-outline-primary btn-block">Ajouter un site</a>
                 </div>
                 <div class="row">
                     <c:forEach items="${climbingSiteList}" var="climbingSite" >
@@ -92,6 +92,35 @@
                                     <a href="<c:url value="/climbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm">Voir</a>
                                     <a href="<c:url value="/editClimbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm"> Modifier </a>
                                     <a href="<c:url value="/deleteClimbingSite/${climbingSite.id}"/>" class="btn btn-outline-primary btn-sm"> Supprimer </a>
+                                </div>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clean-block clean-services dark">
+        <div class="container">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Mes Topos</h2>
+                    <a href="<c:url value="/addGuideBook"/>" class="btn btn-outline-primary btn-block">Ajouter un Topo</a>
+                </div>
+                <div class="row">
+                    <c:forEach items="${guideBookList}" var="guideBook" >
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card">
+                                <div class="card-body" style="overflow: hidden">
+                                    <h4 class="card-title">${guideBook.name}</h4>
+                                    <div style="max-height: 200px; word-wrap: break-word; overflow: auto">
+                                        <p class="card-text">${guideBook.description}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="<c:url value="/guideBook/${guideBook.id}"/>" class="btn btn-outline-primary btn-sm">Voir</a>
+                                    <a href="<c:url value="/editGuideBook/${guideBook.id}"/>" class="btn btn-outline-primary btn-sm">Modifier</a>
+                                    <a href="<c:url value="/deleteGuideBook/${guideBook.id}"/>" class="btn btn-outline-primary btn-sm">Supprimer</a>
                                 </div>
                             </div>
                         </div>

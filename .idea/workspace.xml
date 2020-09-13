@@ -18,16 +18,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findGuideBookSearchRequest in GuideBookManager &amp; GuideBookDao">
-      <change afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method findGuideBook in GuideBookManager &amp; GuideBookDao">
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookManagerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/ClimbingSiteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBookList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBookList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,21 +351,7 @@
       <workItem from="1599846864457" duration="3774000" />
       <workItem from="1599912032313" duration="28788000" />
       <workItem from="1599945213829" duration="12534000" />
-      <workItem from="1599989991601" duration="6368000" />
-    </task>
-    <task id="LOCAL-00087" summary="correction method findClimbingSiteByAttribute in ClimbingSiteDao">
-      <created>1599702731560</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1599702731560</updated>
-    </task>
-    <task id="LOCAL-00088" summary="method deleteClimbingSite in ClimbingSiteDao &amp; ClimbingSiteManager">
-      <created>1599703033734</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1599703033734</updated>
+      <workItem from="1599989991601" duration="7573000" />
     </task>
     <task id="LOCAL-00089" summary="method deletePhoto in PhotoDao &amp; PhotoManager">
       <created>1599703436870</created>
@@ -698,7 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599994850344</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="method displayGuideBook in GuideBookController / edit guideBookList.jsp / new jsp : guideBook.jsp">
+      <created>1599996925231</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1599996925231</updated>
+    </task>
+    <task id="LOCAL-00137" summary="method findGuideBook in GuideBookManager &amp; GuideBookDao">
+      <created>1599996950396</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1599996950396</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,8 +715,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sector tab panel in climbingSite.jsp/ new jsp : sectorForm.jsp / new controller : SectorController ( method addSector )" />
-    <MESSAGE value="add attribute sectorList in ClimbingSite / add setSectorList in method GetMapping displayClimbingSite in ClimbingSiteController" />
     <MESSAGE value="method findSectorByClimbingSiteId in SectorManager &amp; SectorDao / new rowmapper : SectorRowMapper" />
     <MESSAGE value="method editSector in ClimbingSiteController / new jsp : sectorEditForm.jsp" />
     <MESSAGE value="method findSector &amp; updateSector in SectorManager &amp; SectorDao" />
@@ -742,7 +738,9 @@
     <MESSAGE value="GuideBookManager (method createGuideBook &amp; findGuideBookList) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
     <MESSAGE value="method displayGuideBookList on GuideBookController / method displayGuideBookListSearchResults in SearchController / edit guideBookList.jsp" />
     <MESSAGE value="method findGuideBookSearchRequest in GuideBookManager &amp; GuideBookDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="method findGuideBookSearchRequest in GuideBookManager &amp; GuideBookDao" />
+    <MESSAGE value="method displayGuideBook in GuideBookController / edit guideBookList.jsp / new jsp : guideBook.jsp" />
+    <MESSAGE value="method findGuideBook in GuideBookManager &amp; GuideBookDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="method findGuideBook in GuideBookManager &amp; GuideBookDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -761,10 +759,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599996422230">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599997914244">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599996422230" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599997914244" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -85,7 +85,7 @@ public class ClimbingSiteController {
         return "climbingSite";
     }
 
-    @GetMapping("/climbingSiteForm")
+    @GetMapping("/addClimbingSite")
     public String displayClimbingSiteForm(Model model, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId == null) {
             return "redirect:/login";
@@ -104,11 +104,11 @@ public class ClimbingSiteController {
         ClimbingSite registeredClimbingSite = climbingSiteManager.findClimbingSiteByAttribute("name", newClimbingSite.getName());
         if (registeredClimbingSite != null){
             model.addAttribute("errorMessage", "Désolé ce site existe déjà");
-            return "climbingSiteForm";
+            return "redirect:/addClimbingSite";
         } else {
             if (bindingResult.hasErrors()){
                 model.addAttribute("errorMessage", "Une erreur est survenue. Vérifiez les champs.");
-                return "redirect:/climbingSiteForm";
+                return "redirect:/addClimbingSite";
             } else {
                 newClimbingSite.setUser(userManager.findUser(userInSessionId));
                 climbingSiteManager.createClimbingSite(newClimbingSite);
