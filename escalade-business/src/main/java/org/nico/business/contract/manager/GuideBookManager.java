@@ -1,10 +1,10 @@
-package org.nico.consumer.contract.dao;
+package org.nico.business.contract.manager;
 
 import org.nico.model.beans.GuideBook;
 
 import java.util.List;
 
-public interface GuideBookDao {
+public interface GuideBookManager {
     void createGuideBook(GuideBook guideBook);
     List<GuideBook> findGuideBookList();
 }

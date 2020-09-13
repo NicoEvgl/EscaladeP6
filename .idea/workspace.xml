@@ -18,20 +18,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new controller : AdminManagementController / new jsp : userListPage.jsp &amp; userAdminEditForm.jsp / add url /userList in personalSpace.jsp">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/rowmapper/GuideBookRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/AdminManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/AdminManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBookList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/AdminManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/AdminManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/AdminManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/AdminManagementController.class" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="GuideBookDao (method createGuideBook &amp; findGuideBookList) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml">
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,14 +351,7 @@
       <workItem from="1599846864457" duration="3774000" />
       <workItem from="1599912032313" duration="28788000" />
       <workItem from="1599945213829" duration="12534000" />
-      <workItem from="1599989991601" duration="1679000" />
-    </task>
-    <task id="LOCAL-00083" summary="method PostMapping editPassword in PersonalSpaceController">
-      <created>1599692364344</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1599692364344</updated>
+      <workItem from="1599989991601" duration="2199000" />
     </task>
     <task id="LOCAL-00084" summary="section &quot;Mes sites&quot; in personalSpace.jsp">
       <created>1599696388813</created>
@@ -702,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599955604702</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="GuideBookDao (method createGuideBook &amp; findGuideBookList) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml">
+      <created>1599991736182</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1599991736182</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,7 +715,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory" />
     <MESSAGE value="route bean dao statement in consumerContext.xml" />
     <MESSAGE value="SectorManager &amp; RouteManager / geters &amp; setters in ManagerFactory" />
     <MESSAGE value="SectorManager &amp; RouteManager bean manager statement in businessContext.xml" />
@@ -746,7 +739,8 @@
     <MESSAGE value="corrections" />
     <MESSAGE value="new controller : UserProfileController / new jsp : userProfile.jsp" />
     <MESSAGE value="new controller : AdminManagementController / new jsp : userListPage.jsp &amp; userAdminEditForm.jsp / add url /userList in personalSpace.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="new controller : AdminManagementController / new jsp : userListPage.jsp &amp; userAdminEditForm.jsp / add url /userList in personalSpace.jsp" />
+    <MESSAGE value="GuideBookDao (method createGuideBook &amp; findGuideBookList) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuideBookDao (method createGuideBook &amp; findGuideBookList) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -765,10 +759,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599940407424">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1599991998701">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599940407424" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599991998701" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

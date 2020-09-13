@@ -21,4 +21,7 @@ public interface ManagerFactory {
 
     CommentManager getCommentManager();
     void setCommentManager(CommentManager commentManager);
+
+    GuideBookManager getGuideBookManager();
+    void setGuideBookManager(GuideBookManager guideBookManager);
 }

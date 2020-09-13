@@ -14,7 +14,7 @@ import java.util.List;
 public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
 
     @Override
-    public void createGuidebook(GuideBook guideBook) {
+    public void createGuideBook(GuideBook guideBook) {
         String sql = "INSERT INTO public.guidebook (name, description,region, release_date, is_booked, user_id)"
                 + "VALUES (:name, :description, :region, :releaseDate, :isBooked, :userId)";
 
