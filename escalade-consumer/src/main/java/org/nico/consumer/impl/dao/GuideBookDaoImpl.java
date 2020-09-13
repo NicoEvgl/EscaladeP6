@@ -62,4 +62,19 @@ public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
 
         return guideBookList;
     }
+
+    @Override
+    public GuideBook findGuideBook(Integer id) {
+        String sql = "SELECT * FROM public.guidebook WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
+        GuideBookRowMapper guideBookRowMapper = new GuideBookRowMapper();
+        GuideBook guideBook = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, guideBookRowMapper);
+
+        return guideBook;
+    }
 }

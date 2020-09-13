@@ -8,4 +8,5 @@ public interface GuideBookDao {
     void createGuideBook(GuideBook guideBook);
     List<GuideBook> findGuideBookList();
     List<GuideBook> findGuideBookSearchRequest(String name, String region);
+    GuideBook findGuideBook(Integer id);
 }
