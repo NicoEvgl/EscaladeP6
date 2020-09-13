@@ -6,6 +6,7 @@ import org.nico.consumer.impl.rowmapper.ClimbingSiteRowMapper;
 import org.nico.consumer.impl.rowmapper.GuideBookRowMapper;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -74,6 +75,19 @@ public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
 
         GuideBookRowMapper guideBookRowMapper = new GuideBookRowMapper();
         GuideBook guideBook = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, guideBookRowMapper);
+
+        return guideBook;
+    }
+
+    @Override
+    public GuideBook findGuideBookByAttribute(String attribute, Object attributeValue) {
+        String sql = "SELECT * FROM public.guidebook WHERE "+attribute+" = :"+attribute+"";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue(attribute, attributeValue);
+        GuideBook guideBook = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new GuideBookRowMapper());
 
         return guideBook;
     }

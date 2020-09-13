@@ -9,4 +9,5 @@ public interface GuideBookManager {
     List<GuideBook> findGuideBookList();
     List<GuideBook> findGuideBookSearchRequest(String name, String region);
     GuideBook findGuideBook(Integer id);
+    GuideBook findGuideBookByAttribute(String name, String name1);
 }

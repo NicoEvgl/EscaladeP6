@@ -61,5 +61,15 @@ public class GuideBookManagerImpl extends AbstractManager implements GuideBookMa
         return guideBook;
     }
 
+    @Override
+    public GuideBook findGuideBookByAttribute(String attribute, String attributeValue) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        GuideBook guideBook = transactionTemplate.execute(transactionStatus -> {
+            GuideBook guideBookTx = new GuideBook();
+            guideBookTx = getDaoFactory().getGuideBookDao().findGuideBookByAttribute(attribute, attributeValue);
+            return guideBookTx;
+        });
 
+        return guideBook;
+    }
 }
