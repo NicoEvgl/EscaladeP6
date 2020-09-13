@@ -26,7 +26,7 @@
                     <form:errors path="region" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="releaseDate" type="date" cssClass="form-control item" placeholder="Date de parution" required="true" autofocus=""/>
+                    <form:input path="releaseDate" type="text" cssClass="form-control item" placeholder="Date de parution" required="true" autofocus=""/>
                     <form:errors  path="releaseDate" cssClass="error"/>
                 </div>
                 <div class="form-group">

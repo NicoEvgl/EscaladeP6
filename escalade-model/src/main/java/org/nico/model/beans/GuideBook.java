@@ -95,14 +95,6 @@ public class GuideBook {
      */
     @Override
     public String toString() {
-        return "Topo {" +
-                "id : " + id +
-                ", Nom : " + name + '\'' +
-                ", Description :'" + description + '\'' +
-                ", Région :'" + region + '\'' +
-                ", Date de parution : " + releaseDate +
-                ", Disponible : " + isBooked +
-                ", Membre : " + user +
-                '}';
+        return "Topo id : " + id + "Nom : " + name + "description : " + description + " Région : " + region + " date de parution : " + releaseDate + " réservé : " + isBooked + "User id = " + user.getId() ;
     }
 }

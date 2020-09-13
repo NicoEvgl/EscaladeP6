@@ -3,6 +3,7 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.*;
 import org.nico.model.beans.ClimbingSite;
+import org.nico.model.beans.GuideBook;
 import org.nico.model.beans.User;
 import org.nico.model.enums.Role;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,9 @@ public class PersonalSpaceController {
     private EnumManager enumManager;
     @Inject
     private PasswordManager passwordManager;
+    @Inject
+    private GuideBookManager guideBookManager;
+
 
     @GetMapping("/personalSpace/{userInSessionId}")
     public String displayPersonalSpace(@PathVariable@SessionAttribute("userInSessionId")Integer userInSessionId, Model model){
@@ -45,11 +49,15 @@ public class PersonalSpaceController {
         for (ClimbingSite climbingSite : climbingSiteList){
             climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
         }
+        List<GuideBook> guideBookList = guideBookManager.findGuideBookByUserId(userInSessionId);
+
         User userInSession = userManager.findUser(userInSessionId);
 
+        model.addAttribute("climbingSiteList", climbingSiteList);
+        model.addAttribute("guideBookList", guideBookList);
         model.addAttribute("userInSession", userInSession);
         model.addAttribute("userInSessionId", userInSessionId);
-        model.addAttribute("climbingSiteList", climbingSiteList);
+
         return "personalSpace";
     }
 

@@ -5,7 +5,6 @@ import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.contract.manager.UserManager;
 import org.nico.business.impl.SearchFilter;
-import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -70,10 +69,8 @@ public class GuideBookController {
     }
 
     @PostMapping("/addGuideBookProcess")
-    public String addGuideBook(@Valid @ModelAttribute("guideBook") GuideBook newGuideBook, BindingResult bindingResult, Model model,
-                                @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    public String addGuideBook(@Valid @ModelAttribute("guideBook") GuideBook newGuideBook, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
-
             GuideBook registeredGuideBook = guideBookManager.findGuideBookByAttribute("name", newGuideBook.getName());
             if (registeredGuideBook != null){
                 model.addAttribute("errorMessage", "Désolé ce site existe déjà");
