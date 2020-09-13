@@ -1,6 +1,8 @@
 package org.nico.model.beans;
 
 
+import java.util.List;
+
 public class User {
 
     //====  ATTRIBUTES  ====//
@@ -17,6 +19,10 @@ public class User {
     private String zip;
     private String city;
     private String role;
+
+    private List<ClimbingSite> climbingSiteList;
+    private List<Comment> commentList;
+    private List<GuideBook> guideBookList;
 
     //====  CONSTRUCTOR  ====//
 
@@ -43,7 +49,9 @@ public class User {
      * @param role : user's role
      */
     public User(Integer id, String gender, String firstName, String lastName, String username, String email,
-                String password, String address, String address2, String zip, String city, String role) {
+                String password, String address, String address2, String zip, String city, String role,
+                List<ClimbingSite> climbingSiteList, List<Comment> commentList, List<GuideBook> guideBookList) {
+
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -56,6 +64,9 @@ public class User {
         this.zip = zip;
         this.city = city;
         this.role = role;
+        this.climbingSiteList = climbingSiteList;
+        this.commentList = commentList;
+        this.guideBookList = guideBookList;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -151,6 +162,18 @@ public class User {
     public String getRole() { return role; }
 
     public void setRole(String role) { this.role = role; }
+
+    public List<ClimbingSite> getClimbingSiteList() { return climbingSiteList; }
+
+    public void setClimbingSiteList(List<ClimbingSite> climbingSiteList) { this.climbingSiteList = climbingSiteList; }
+
+    public List<Comment> getCommentList() { return commentList; }
+
+    public void setCommentList(List<Comment> commentList) { this.commentList = commentList; }
+
+    public List<GuideBook> getGuideBookList() { return guideBookList; }
+
+    public void setGuideBookList(List<GuideBook> guideBookList) { this.guideBookList = guideBookList; }
 
     /**
      * method to string user

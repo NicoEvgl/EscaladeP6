@@ -39,7 +39,7 @@
                                     <a class="nav-link" href="<c:url value="/climbingSiteList"/>">Les sites d'escalade</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
+                                    <a class="nav-link" href="<c:url value="/guideBookList"/>">Les topos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<c:url value="/logout"/>">Se déconnecter</a>
@@ -58,7 +58,7 @@
                                     <a class="nav-link" href="<c:url value="/climbingSiteList"/>">Les sites d'escalade</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<c:url value="/guideBook"/>">Les topos</a>
+                                    <a class="nav-link" href="<c:url value="/guideBookList"/>">Les topos</a>
                                 </li>
                             </ul>
                         </c:otherwise>

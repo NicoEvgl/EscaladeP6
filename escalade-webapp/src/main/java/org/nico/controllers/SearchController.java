@@ -2,9 +2,11 @@ package org.nico.controllers;
 
 import org.nico.business.contract.manager.ClimbingSiteManager;
 import org.nico.business.contract.manager.EnumManager;
+import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.contract.manager.PhotoManager;
 import org.nico.business.impl.SearchFilter;
 import org.nico.model.beans.ClimbingSite;
+import org.nico.model.beans.GuideBook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,10 +28,12 @@ public class SearchController {
     private EnumManager enumManager;
     @Inject
     private PhotoManager photoManager;
+    @Inject
+    private GuideBookManager guideBookManager;
 
 
     @PostMapping(value = "/climbingSiteList/search")
-    public String displayClimbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "memberInSessionID", required = false) Integer memberInSessionId){
+    public String displayClimbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("") && searchFilter.getNbRoutes() == null && searchFilter.getQuotation().equals("")){
             return "redirect:/climbingSiteList";
         }
@@ -66,7 +70,38 @@ public class SearchController {
             model.addAttribute("quotationList", quotationList);
 
             return "climbingSiteList";
+        }
+    }
 
+    @PostMapping(value = "/guideBookList/search")
+    public String displayGuideBookListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("")){
+            return "redirect:/guideBookList";
+        }
+
+        if (bindingResult.hasErrors()){
+            model.addAttribute("errorMessage", "Une erreur s'est produite. Veuillez essayer plus tard.");
+            return "redirect:/guideBookList";
+        } else {
+            List<GuideBook> guideBookList = guideBookManager.findGuideBookSearchRequest(searchFilter.getName(), searchFilter.getRegion());
+            List<String> nameList = new ArrayList<>();
+            List<String> regionList = enumManager.getEnumRegionStringValues();
+
+            List<GuideBook> guideBookCompleteList = guideBookManager.findGuideBookList();
+
+            for (GuideBook guideBook : guideBookCompleteList){
+                nameList.add(guideBook.getName());
+            }
+            if (guideBookList.isEmpty()){
+                model.addAttribute("noResults", "Aucun Résultat");
+            }
+
+            model.addAttribute("action", "guideBookList/search");
+            model.addAttribute("guideBookList", guideBookList);
+            model.addAttribute("nameList", nameList);
+            model.addAttribute("regionList", regionList);
+
+            return "guideBookList";
         }
     }
 }
