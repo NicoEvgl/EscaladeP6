@@ -2,7 +2,6 @@
 
 <%@include file="header.jsp"%>
 
-
 <main class="page guideBookList-page">
     <section class="clean-block clean-services dark">
         <div class="container">
@@ -38,6 +37,32 @@
                         <h4 class="text-info">${noResults}</h4>
                     </div>
                 </c:if>
+            </div>
+            <div class="row">
+                <c:forEach items="${guideBookList}" var="guideBook" >
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">${guideBook.name}</h4>
+                            </div>
+                            <div class="card-body">
+                                <a href="<c:url value="/guideBook/${guideBook.id}"/>" class="btn btn-outline-secondary btn-sm">
+                                    Voir
+                                </a>
+                            </div>
+                            <div class="card-footer">
+                                <c:choose>
+                                    <c:when test="${guideBook.booked == false}">
+                                        <p class="bg-success text-white">DISPONIBLE</p>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <p class="bg-danger text-white">INDISPONIBLE</p>
+                                    </c:otherwise>
+                                </c:choose>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
             </div>
         </div>
     </section>

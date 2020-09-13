@@ -9,6 +9,8 @@ import org.nico.model.beans.GuideBook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -40,5 +42,14 @@ public class GuideBookController {
         model.addAttribute("guideBookList", guideBookList);
 
         return "guideBookList";
+    }
+
+    @GetMapping("/guideBook/{id}")
+    public String displayGuideBook(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
+        GuideBook guideBook = guideBookManager.findGuideBook(id);
+
+        model.addAttribute("guideBook", guideBook);
+        model.addAttribute("userInSessionId", userInSessionId);
+        return "guideBook";
     }
 }
