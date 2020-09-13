@@ -13,6 +13,9 @@
                     <div class="col">
                         <div class="card shadow mb-3">
                             <div class="card-header py-3">
+                                <c:if test="${sessionScope.userInSessionRole == 'Admin'}">
+                                    <a href="<c:url value="/userList"/>" class="btn btn-outline-secondary btn-block">Liste des utilisateurs</a>
+                                </c:if>
                                 <a href="<c:url value="/editUser/${userInSessionId}"/>" class="btn btn-outline-primary btn-block">Modifier le profil</a>
                             </div>
                             <div class="card-body">
