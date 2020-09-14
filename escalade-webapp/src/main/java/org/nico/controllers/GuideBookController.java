@@ -91,4 +91,50 @@ public class GuideBookController {
             return "redirect:/login";
         }
     }
+
+    @GetMapping("/editGuideBook/{id}")
+    public String displayGuideBookEditForm(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
+        GuideBook registeredGuideBook = guideBookManager.findGuideBook(id);
+
+        if (userInSessionId != null && userInSessionId == registeredGuideBook.getUser().getId()){
+            List<String> regionList = enumManager.getEnumRegionStringValues();
+            model.addAttribute("regionList", regionList);
+            model.addAttribute("editedGuideBook", registeredGuideBook);
+            model.addAttribute("userInSessionId", userInSessionId);
+            return "guideBookEditForm";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/editGuideBook/editGuideBookProcess/{id}")
+    public String editGuideBook(@PathVariable Integer id, @Valid GuideBook guideBook, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
+        GuideBook registeredGuideBook = guideBookManager.findGuideBook(id);
+        if (userInSessionId != null  && userInSessionId == registeredGuideBook.getUser().getId()){
+            guideBook.setUser(registeredGuideBook.getUser());
+
+            if (bindingResult.hasErrors()){
+                model.addAttribute("guideBook", guideBook);
+                model.addAttribute("userInSessionId", userInSessionId);
+                return "guideBookEditForm";
+            } else {
+                guideBook.setBooked(registeredGuideBook.isBooked());
+                guideBookManager.updateGuideBook(guideBook);
+                return "redirect:/guideBookList";
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/deleteGuideBook/{id}")
+    public String deleteGuideBook(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
+        if (userInSessionId != null){
+            guideBookManager.deleteGuideBook(id);
+            model.addAttribute("userInSessionId", userInSessionId);
+            return "redirect:/guideBookList";
+        } else {
+            return "redirect:/login";
+        }
+    }
 }
