@@ -11,4 +11,6 @@ public interface GuideBookManager {
     GuideBook findGuideBook(Integer id);
     GuideBook findGuideBookByAttribute(String name, String name1);
     List<GuideBook> findGuideBookByUserId(Integer id);
+    void updateGuideBook(GuideBook guideBook);
+    void deleteGuideBook(Integer id);
 }

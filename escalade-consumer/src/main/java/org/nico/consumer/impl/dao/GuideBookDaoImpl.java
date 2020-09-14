@@ -105,4 +105,40 @@ public class GuideBookDaoImpl extends AbstractDao implements GuideBookDao {
 
         return guideBookList;
     }
+
+    @Override
+    public void updateGuideBook(GuideBook guideBook) {
+        String sql = "UPDATE public.guidebook SET "
+                + "name = :name, "
+                + "description = :description, "
+                + "region = :region, "
+                + "release_date = :releaseDate, "
+                + "is_booked = :isBooked, "
+                + "user_id = :userId "
+                + "WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", guideBook.getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("name", guideBook.getName(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("description", guideBook.getDescription(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("region", guideBook.getRegion(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("releaseDate", guideBook.getReleaseDate(), Types.DATE);
+        mapSqlParameterSource.addValue("isBooked", guideBook.isBooked(), Types.BOOLEAN);
+        mapSqlParameterSource.addValue("userId", guideBook.getUser().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public void deleteGuideBook(Integer id) {
+        String sql = "DELETE FROM public.guidebook WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
 }

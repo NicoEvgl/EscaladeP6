@@ -11,4 +11,6 @@ public interface GuideBookDao {
     GuideBook findGuideBook(Integer id);
     GuideBook findGuideBookByAttribute(String attribute, Object attributeValue);
     List<GuideBook> findGuideBookByUserId(Integer id);
+    void updateGuideBook(GuideBook guideBook);
+    void deleteGuideBook(Integer id);
 }
