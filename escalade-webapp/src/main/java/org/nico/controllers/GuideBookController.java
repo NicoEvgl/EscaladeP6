@@ -5,7 +5,9 @@ import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.contract.manager.UserManager;
 import org.nico.business.impl.SearchFilter;
+import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
+import org.nico.model.beans.Sector;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -93,14 +95,14 @@ public class GuideBookController {
     }
 
     @GetMapping("/editGuideBook/{id}")
-    public String displayGuideBookEditForm(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
-        GuideBook registeredGuideBook = guideBookManager.findGuideBook(id);
-
-        if (userInSessionId != null && userInSessionId == registeredGuideBook.getUser().getId()){
+    public String displayGuideBookEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        GuideBook editedGuideBook = guideBookManager.findGuideBook(id);
+        if (userInSessionId != null && userInSessionId == editedGuideBook.getUser().getId()){
             List<String> regionList = enumManager.getEnumRegionStringValues();
+
             model.addAttribute("regionList", regionList);
-            model.addAttribute("editedGuideBook", registeredGuideBook);
             model.addAttribute("userInSessionId", userInSessionId);
+            model.addAttribute("editedGuideBook", editedGuideBook);
             return "guideBookEditForm";
         } else {
             return "redirect:/login";
@@ -108,18 +110,17 @@ public class GuideBookController {
     }
 
     @PostMapping("/editGuideBook/editGuideBookProcess/{id}")
-    public String editGuideBook(@PathVariable Integer id, @Valid GuideBook guideBook, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
-        GuideBook registeredGuideBook = guideBookManager.findGuideBook(id);
-        if (userInSessionId != null  && userInSessionId == registeredGuideBook.getUser().getId()){
-            guideBook.setUser(registeredGuideBook.getUser());
-
+    public String editGuideBook(@Valid GuideBook guideBook, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+        GuideBook editedGuideBook = guideBookManager.findGuideBook(id);
+        if (userInSessionId != null && userInSessionId == editedGuideBook.getUser().getId()){
             if (bindingResult.hasErrors()){
-                model.addAttribute("guideBook", guideBook);
                 model.addAttribute("userInSessionId", userInSessionId);
-                return "guideBookEditForm";
+                model.addAttribute("editedGuideBook", guideBookManager.findGuideBook(id));
+                return  "guideBookEditForm";
             } else {
-                guideBook.setBooked(registeredGuideBook.isBooked());
+                guideBook.setBooked(editedGuideBook.isBooked());
                 guideBookManager.updateGuideBook(guideBook);
+                model.addAttribute("userInSessionId", userInSessionId);
                 return "redirect:/guideBookList";
             }
         } else {

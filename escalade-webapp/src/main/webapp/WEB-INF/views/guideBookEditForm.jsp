@@ -9,7 +9,7 @@
             <div class="block-heading">
                 <h2 class="text-login">Modifer topo</h2>
             </div>
-            <form:form modelAttribute="editedGuideBook" method="post" action="editGuideBookProcess/${editedGuideBook.id}">
+            <form:form method="post" action="editGuideBookProcess/${editedGuideBook.id}" modelAttribute="editedGuideBook">
                 <div class="form-group">
                     <form:hidden path="id" value="${editedGuideBook.id}"/>
                     <form:errors path="id" cssClass="errors"/>
@@ -30,7 +30,7 @@
                     <form:errors path="region" cssClass="error"/>
                 </div>
                 <div class="form-group">
-                    <form:input path="releaseDate" type="date" value="${editedGuideBook.releaseDate}" cssClass="form-control item" placeholder="Date de parution" required="true" autofocus=""/>
+                    <form:input path="releaseDate" type="text" value="${editedGuideBook.releaseDate}" cssClass="form-control item" placeholder="Date de parution" required="true" autofocus=""/>
                     <form:errors  path="releaseDate" cssClass="error"/>
                 </div>
                 <div class="form-group">
