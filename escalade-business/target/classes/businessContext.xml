@@ -17,6 +17,7 @@
     <bean id="routeManager" class="org.nico.business.impl.manager.RouteManagerImpl" parent="abstractManager"/>
     <bean id="commentManager" class="org.nico.business.impl.manager.CommentManagerImpl" parent="abstractManager"/>
     <bean id="guideBookManager" class="org.nico.business.impl.manager.GuideBookManagerImpl" parent="abstractManager"/>
+    <bean id="guideBookReservationManager" class="org.nico.business.impl.manager.GuideBookReservationManagerImpl" parent="abstractManager"/>
 
     <bean id="enumManager" class="org.nico.business.impl.manager.EnumManagerImpl"></bean>
     <bean id="searchFilter" class="org.nico.business.impl.SearchFilter"></bean>
@@ -30,6 +31,7 @@
         <property name="routeManager" ref="routeManager"/>
         <property name="commentManager" ref="commentManager"/>
         <property name="guideBookManager" ref="guideBookManager"/>
+        <property name="guideBookReservationManager" ref="guideBookReservationManager"/>
     </bean>
 
     <!-- Transaction manager -->

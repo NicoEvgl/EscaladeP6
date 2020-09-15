@@ -15,6 +15,7 @@
     <bean id="routeDao" class="org.nico.consumer.impl.dao.RouteDaoImpl" parent="abstractDao"/>
     <bean id="commentDao" class="org.nico.consumer.impl.dao.CommentDaoImpl" parent="abstractDao"/>
     <bean id="guideBookDao" class="org.nico.consumer.impl.dao.GuideBookDaoImpl" parent="abstractDao"/>
+    <bean id="guideBookReservationDao" class="org.nico.consumer.impl.dao.GuideBookReservationDaoImpl" parent="abstractDao"/>
 
 
     <!-- DAO Factory -->
@@ -26,7 +27,7 @@
         <property name="routeDao" ref="routeDao"/>
         <property name="commentDao" ref="commentDao"/>
         <property name="guideBookDao" ref="guideBookDao"/>
+        <property name="guideBookReservationDao" ref="guideBookReservationDao"/>
     </bean>
-
 
 </beans>

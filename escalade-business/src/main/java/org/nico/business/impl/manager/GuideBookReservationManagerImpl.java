@@ -36,12 +36,12 @@ public class GuideBookReservationManagerImpl extends AbstractManager implements 
     }
 
     @Override
-    public List<GuideBookReservation> findGuideBookReservationListByUserInSession(Integer id) {
+    public List<GuideBookReservation> findGuideBookReservationRequestList(Integer id) {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
 
         List<GuideBookReservation> guideBookReservationList = transactionTemplate.execute(transactionStatus -> {
             List<GuideBookReservation> guideBookReservationListTx = new ArrayList<>();
-            guideBookReservationListTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationListByUserInSession(id);
+            guideBookReservationListTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationRequestList(id);
             return  guideBookReservationListTx;
         });
 

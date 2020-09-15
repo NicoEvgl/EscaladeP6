@@ -48,7 +48,7 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
     }
 
     @Override
-    public List<GuideBookReservation> findGuideBookReservationListByUserInSession(Integer id) {
+    public List<GuideBookReservation> findGuideBookReservationRequestList(Integer id) {
         String sql = "SELECT guidebook_reservation. * FROM public.guidebook_reservation " +
                 "JOIN public.guidebook ON guidebook.id = guidebook_reservation.guidebook_id " +
                 "WHERE guidebook.user_id = :id";

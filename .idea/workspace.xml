@@ -18,8 +18,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/ReservationStatus.java" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="methods findGuideBookReservationListByUserInSession &amp; findGuideBookReservationListByUserId in GuideBookReservationManager &amp; GuideBookReservationDao">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookReservationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookReservationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookReservationManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookReservationManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/businessContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/ManagerFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/ManagerFactoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookReservationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookReservationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookReservationDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/consumerContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/DaoFactoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/PersonalSpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/personalSpace.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PersonalSpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/PersonalSpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/GuideBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/GuideBookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PersonalSpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/PersonalSpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +53,10 @@
       <list>
         <option value="CSS File" />
         <option value="spring-beans.schema" />
-        <option value="Jsp File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -95,12 +114,12 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.nico.consumer.impl.rowmapper" />
-      <recent name="org.nico.consumer.impl" />
-      <recent name="org.nico.consumer.contract.dao" />
-      <recent name="org.nico.business.contract.manager" />
-      <recent name="org.nico.model.enums" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
+      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
@@ -109,12 +128,12 @@
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
       <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\css" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\js" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\webapp\resources\img" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-webapp\src\main\resources" />
-      <recent name="D:\Documents\DocNico\OpenClassrooms\Projet_6\EscaladeP6\escalade-business\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.nico.consumer.impl.rowmapper" />
+      <recent name="org.nico.consumer.impl" />
+      <recent name="org.nico.consumer.contract.dao" />
+      <recent name="org.nico.business.contract.manager" />
+      <recent name="org.nico.model.enums" />
     </key>
   </component>
   <component name="RunManager">
@@ -347,42 +366,7 @@
       <workItem from="1599945213829" duration="12534000" />
       <workItem from="1599989991601" duration="10248000" />
       <workItem from="1600095958912" duration="5180000" />
-      <workItem from="1600182320175" duration="5325000" />
-    </task>
-    <task id="LOCAL-00100" summary="add nav-tab (sectors,routes,comments) in climbingSite.jsp">
-      <created>1599787713900</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1599787713900</updated>
-    </task>
-    <task id="LOCAL-00101" summary="new bean : Sector">
-      <created>1599823104022</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1599823104022</updated>
-    </task>
-    <task id="LOCAL-00102" summary="new bean : Route">
-      <created>1599823829171</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1599823829171</updated>
-    </task>
-    <task id="LOCAL-00103" summary="new Dao : SectorDao (method createSector), getter &amp; setter of SectorDao in DaoFactory">
-      <created>1599848597141</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1599848597141</updated>
-    </task>
-    <task id="LOCAL-00104" summary="add sector bean dao statement in consumerContext.xml">
-      <created>1599848867304</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1599848867304</updated>
+      <workItem from="1600182320175" duration="10434000" />
     </task>
     <task id="LOCAL-00105" summary="new dao : RouteDao (method createRoute) / getter &amp; setter RouteDao in DaoFactory">
       <created>1599849903928</created>
@@ -692,7 +676,42 @@
       <option name="project" value="LOCAL" />
       <updated>1600188628539</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="new enum : ReservationStatus">
+      <created>1600189176517</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1600189176517</updated>
+    </task>
+    <task id="LOCAL-00150" summary="new enum : ReservationStatus ( renamed )">
+      <created>1600189253841</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1600189253841</updated>
+    </task>
+    <task id="LOCAL-00151" summary="method findGuideBookReservationByGuideBookAndUserId in GuideBookReservationManager &amp; GuideBookReservationDao / new rowmapper : GuideBookReservationRowMapper">
+      <created>1600191420578</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1600191420578</updated>
+    </task>
+    <task id="LOCAL-00152" summary="new controller : GuideBookReservationController / new jsp : guideBookReservationForm.jsp">
+      <created>1600193554458</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1600193554458</updated>
+    </task>
+    <task id="LOCAL-00153" summary="methods findGuideBookReservationListByUserInSession &amp; findGuideBookReservationListByUserId in GuideBookReservationManager &amp; GuideBookReservationDao">
+      <created>1600193594571</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1600193594571</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,11 +730,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tab panel &quot;comments&quot; in climbingSite.jsp" />
-    <MESSAGE value="new controller : CommentController ( method addComment ) / new jsp : commentForm.jsp / bug corrections" />
-    <MESSAGE value="method findComment, updateComment &amp; deleteComment in CommentManager &amp; CommentDao / method editComment &amp; deleteComment in CommentController / new jsp : commentEditForm.jsp" />
-    <MESSAGE value="method findRoute, updateRoute &amp; deleteRoute in RouteManager &amp; RouteDao / method editRoute &amp; deleteRoute in RouteController / new jsp : routeEditForm.jsp" />
-    <MESSAGE value="add deleteRoute in method deleteSector of SectorController" />
     <MESSAGE value="corrections" />
     <MESSAGE value="new controller : UserProfileController / new jsp : userProfile.jsp" />
     <MESSAGE value="new controller : AdminManagementController / new jsp : userListPage.jsp &amp; userAdminEditForm.jsp / add url /userList in personalSpace.jsp" />
@@ -736,7 +750,12 @@
     <MESSAGE value="new bean : GuideBookReservation" />
     <MESSAGE value="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
     <MESSAGE value="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
+    <MESSAGE value="new enum : ReservationStatus" />
+    <MESSAGE value="new enum : ReservationStatus ( renamed )" />
+    <MESSAGE value="method findGuideBookReservationByGuideBookAndUserId in GuideBookReservationManager &amp; GuideBookReservationDao / new rowmapper : GuideBookReservationRowMapper" />
+    <MESSAGE value="new controller : GuideBookReservationController / new jsp : guideBookReservationForm.jsp" />
+    <MESSAGE value="methods findGuideBookReservationListByUserInSession &amp; findGuideBookReservationListByUserId in GuideBookReservationManager &amp; GuideBookReservationDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="methods findGuideBookReservationListByUserInSession &amp; findGuideBookReservationListByUserId in GuideBookReservationManager &amp; GuideBookReservationDao" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -755,10 +774,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1600188468506">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1600193197351">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600188468506" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600193197351" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -779,54 +798,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="1293" height="252" key="GridCell.Tab.0.bottom" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.0.bottom" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.0.center" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.0.center" timestamp="1600193642103">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.0.left" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642103" />
+    <state width="1293" height="252" key="GridCell.Tab.0.left" timestamp="1600193642103">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.0.right" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642103" />
+    <state width="1293" height="252" key="GridCell.Tab.0.right" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.1.bottom" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.1.bottom" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.1.center" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.1.center" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.1.left" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.1.left" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.1.right" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.1.right" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.2.bottom" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.2.bottom" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.2.center" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.2.center" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.2.left" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.2.left" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
-    <state width="1293" height="252" key="GridCell.Tab.2.right" timestamp="1600101142498">
+    <state width="1293" height="252" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
+    <state width="1293" height="252" key="GridCell.Tab.2.right" timestamp="1600193642104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1293" height="252" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600193642104" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -855,6 +874,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="880" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599506096781" />
+    <state width="498" height="468" key="SwitcherDM" timestamp="1600192915474">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="498" height="468" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1600192915474" />
     <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1600101056367">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

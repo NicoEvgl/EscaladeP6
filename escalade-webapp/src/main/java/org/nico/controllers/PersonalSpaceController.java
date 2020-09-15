@@ -4,6 +4,7 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.*;
 import org.nico.model.beans.ClimbingSite;
 import org.nico.model.beans.GuideBook;
+import org.nico.model.beans.GuideBookReservation;
 import org.nico.model.beans.User;
 import org.nico.model.enums.Role;
 import org.springframework.stereotype.Controller;
@@ -32,6 +33,8 @@ public class PersonalSpaceController {
     private PasswordManager passwordManager;
     @Inject
     private GuideBookManager guideBookManager;
+    @Inject
+    private GuideBookReservationManager guideBookReservationManager;
 
 
     @GetMapping("/personalSpace/{userInSessionId}")
@@ -50,11 +53,14 @@ public class PersonalSpaceController {
             climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
         }
         List<GuideBook> guideBookList = guideBookManager.findGuideBookByUserId(userInSessionId);
-
+        List<GuideBookReservation> guideBookReservationRequestList = guideBookReservationManager.findGuideBookReservationRequestList(userInSessionId);
+        List<GuideBookReservation> userGuideBookReservationList = guideBookReservationManager.findGuideBookReservationListByUserId(userInSessionId);
         User userInSession = userManager.findUser(userInSessionId);
 
         model.addAttribute("climbingSiteList", climbingSiteList);
         model.addAttribute("guideBookList", guideBookList);
+        model.addAttribute("guideBookReservationRequestList", guideBookReservationRequestList);
+        model.addAttribute("userGuideBookReservationList", userGuideBookReservationList);
         model.addAttribute("userInSession", userInSession);
         model.addAttribute("userInSessionId", userInSessionId);
 
