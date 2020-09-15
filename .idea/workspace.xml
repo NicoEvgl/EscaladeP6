@@ -18,12 +18,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml">
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookReservationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookReservationManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml">
+      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/enums/ReservationStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +34,10 @@
       <list>
         <option value="CSS File" />
         <option value="spring-beans.schema" />
-        <option value="Enum" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -351,14 +347,7 @@
       <workItem from="1599945213829" duration="12534000" />
       <workItem from="1599989991601" duration="10248000" />
       <workItem from="1600095958912" duration="5180000" />
-      <workItem from="1600182320175" duration="4750000" />
-    </task>
-    <task id="LOCAL-00099" summary="method GetMapping deletePhoto in PhotoController">
-      <created>1599757842306</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1599757842306</updated>
+      <workItem from="1600182320175" duration="5325000" />
     </task>
     <task id="LOCAL-00100" summary="add nav-tab (sectors,routes,comments) in climbingSite.jsp">
       <created>1599787713900</created>
@@ -696,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600186985342</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml">
+      <created>1600188628539</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1600188628539</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +711,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="method findCommentByClimbingSite in CommentManager &amp; CommentDao + edit method displayClimbingSite in ClimbingSiteController / corrections method names /" />
     <MESSAGE value="tab panel &quot;comments&quot; in climbingSite.jsp" />
     <MESSAGE value="new controller : CommentController ( method addComment ) / new jsp : commentForm.jsp / bug corrections" />
     <MESSAGE value="method findComment, updateComment &amp; deleteComment in CommentManager &amp; CommentDao / method editComment &amp; deleteComment in CommentController / new jsp : commentEditForm.jsp" />
@@ -740,7 +735,8 @@
     <MESSAGE value="bugs correction in GuideBookController (method editGuideBook)" />
     <MESSAGE value="new bean : GuideBookReservation" />
     <MESSAGE value="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
+    <MESSAGE value="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="new manager : GuideBookReservationManager ( method createGuideBookReservation) / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
