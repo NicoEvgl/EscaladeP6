@@ -19,4 +19,16 @@ public class GuideBookReservationManagerImpl extends AbstractManager implements 
             }
         });
     }
+
+    @Override
+    public GuideBookReservation findGuideBookReservationByGuideBookAndUserId(Integer guideBookId, Integer userId) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        GuideBookReservation guideBookReservation = transactionTemplate.execute(transactionStatus -> {
+            GuideBookReservation guideBookReservationTx;
+            guideBookReservationTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationByGuideBookAndUserId(guideBookId, userId);
+            return guideBookReservationTx;
+        });
+
+        return guideBookReservation;
+    }
 }
