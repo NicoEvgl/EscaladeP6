@@ -8,15 +8,15 @@ public enum ReservationStatus {
     ACCEPTED ("Acceptée"),
     CLOSED ("Clôturée");
 
-    private final String reservationStatusValue;
+    private final String statusValue;
 
     //====  CONSTRUCTOR  ====
 
-    ReservationStatus(String reservationStatusValue){
-        this.reservationStatusValue = reservationStatusValue;
+    ReservationStatus(String statusValue){
+        this.statusValue = statusValue;
     }
 
-    public String getReservationStatusValue(){
-        return this.reservationStatusValue;
+    public String getStatusValue(){
+        return this.statusValue;
     }
 }
