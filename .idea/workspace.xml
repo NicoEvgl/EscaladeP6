@@ -18,12 +18,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new bean : GuideBookReservation">
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/dao/GuideBookReservationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/dao/GuideBookReservationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/contract/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/java/org/nico/consumer/impl/DaoFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml">
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/manager/GuideBookReservationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/manager/GuideBookReservationManagerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/contract/ManagerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/java/org/nico/business/impl/ManagerFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/src/main/resources/businessContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,14 +351,7 @@
       <workItem from="1599945213829" duration="12534000" />
       <workItem from="1599989991601" duration="10248000" />
       <workItem from="1600095958912" duration="5180000" />
-      <workItem from="1600182320175" duration="3492000" />
-    </task>
-    <task id="LOCAL-00098" summary="method updatePhoto in PhotoDao &amp; PhotoManager">
-      <created>1599757470796</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1599757470796</updated>
+      <workItem from="1600182320175" duration="4750000" />
     </task>
     <task id="LOCAL-00099" summary="method GetMapping deletePhoto in PhotoController">
       <created>1599757842306</created>
@@ -696,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600184477142</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml">
+      <created>1600186985342</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1600186985342</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +715,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CommentManager / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
     <MESSAGE value="method findCommentByClimbingSite in CommentManager &amp; CommentDao + edit method displayClimbingSite in ClimbingSiteController / corrections method names /" />
     <MESSAGE value="tab panel &quot;comments&quot; in climbingSite.jsp" />
     <MESSAGE value="new controller : CommentController ( method addComment ) / new jsp : commentForm.jsp / bug corrections" />
@@ -740,7 +739,8 @@
     <MESSAGE value="method editGuideBook &amp; deleteGuideBook in GuideBookController / new jsp : guideBookEditForm.jsp" />
     <MESSAGE value="bugs correction in GuideBookController (method editGuideBook)" />
     <MESSAGE value="new bean : GuideBookReservation" />
-    <option name="LAST_COMMIT_MESSAGE" value="new bean : GuideBookReservation" />
+    <MESSAGE value="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="new dao : GuideBookReservationDao ( method createGuideBookReservation) / getter and setter in DaoFactory / bean dao statement in consumerContext.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -759,10 +759,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="828" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1598972618700" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1600186551676">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1600188468506">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600186551676" />
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1600188468506" />
     <state x="640" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1599488858437">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

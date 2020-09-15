@@ -13,6 +13,7 @@ public class ManagerFactoryImpl implements ManagerFactory {
     private RouteManager routeManager;
     private CommentManager commentManager;
     private GuideBookManager guideBookManager;
+    private GuideBookReservationManager guideBookReservationManager;
 
     @Override
     public UserManager getUserManager() { return userManager; }
@@ -52,5 +53,10 @@ public class ManagerFactoryImpl implements ManagerFactory {
     public GuideBookManager getGuideBookManager() { return guideBookManager; }
     @Override
     public void setGuideBookManager(GuideBookManager guideBookManager) { this.guideBookManager = guideBookManager; }
+
+    @Override
+    public GuideBookReservationManager getGuideBookReservationManager() { return guideBookReservationManager; }
+    @Override
+    public void setGuideBookReservationManager(GuideBookReservationManager guideBookReservationManager) { this.guideBookReservationManager = guideBookReservationManager; }
 }
 

@@ -24,4 +24,7 @@ public interface ManagerFactory {
 
     GuideBookManager getGuideBookManager();
     void setGuideBookManager(GuideBookManager guideBookManager);
+
+    GuideBookReservationManager getGuideBookReservationManager();
+    void setGuideBookReservationManager(GuideBookReservationManager guideBookReservationManager);
 }
