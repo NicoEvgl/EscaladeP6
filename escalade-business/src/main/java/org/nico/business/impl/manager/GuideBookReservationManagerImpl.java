@@ -7,6 +7,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GuideBookReservationManagerImpl extends AbstractManager implements GuideBookReservationManager {
 
     @Override
@@ -30,5 +33,31 @@ public class GuideBookReservationManagerImpl extends AbstractManager implements 
         });
 
         return guideBookReservation;
+    }
+
+    @Override
+    public List<GuideBookReservation> findGuideBookReservationListByUserInSession(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<GuideBookReservation> guideBookReservationList = transactionTemplate.execute(transactionStatus -> {
+            List<GuideBookReservation> guideBookReservationListTx = new ArrayList<>();
+            guideBookReservationListTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationListByUserInSession(id);
+            return  guideBookReservationListTx;
+        });
+
+        return guideBookReservationList;
+    }
+
+    @Override
+    public List<GuideBookReservation> findGuideBookReservationListByUserId(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+
+        List<GuideBookReservation> guideBookReservationList = transactionTemplate.execute(transactionStatus -> {
+            List<GuideBookReservation> guideBookReservationListTx = new ArrayList<>();
+            guideBookReservationListTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationListByUserId(id);
+            return  guideBookReservationListTx;
+        });
+
+        return guideBookReservationList;
     }
 }

@@ -5,10 +5,12 @@ import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.GuideBookReservationRowMapper;
 import org.nico.model.beans.GuideBookReservation;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.sql.Types;
+import java.util.List;
 
 public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBookReservationDao {
 
@@ -44,4 +46,33 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
             return null;
         }
     }
+
+    @Override
+    public List<GuideBookReservation> findGuideBookReservationListByUserInSession(Integer id) {
+        String sql = "SELECT guidebook_reservation. * FROM public.guidebook_reservation " +
+                "JOIN public.guidebook ON guidebook.id = guidebook_reservation.guidebook_id " +
+                "WHERE guidebook.user_id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
+
+        GuideBookReservationRowMapper guideBookReservationRowMapper = new GuideBookReservationRowMapper();
+        List<GuideBookReservation> guideBookReservationList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, guideBookReservationRowMapper);
+
+        return guideBookReservationList;
+    }
+
+    @Override
+    public List<GuideBookReservation> findGuideBookReservationListByUserId(Integer id) {
+        String sql = "SELECT * FROM public.guidebook_reservation WHERE user_id = "+ id;
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSourceEscalade());
+        GuideBookReservationRowMapper guideBookReservationRowMapper = new GuideBookReservationRowMapper();
+        List<GuideBookReservation> guideBookReservationList = jdbcTemplate.query(sql, guideBookReservationRowMapper);
+
+        return guideBookReservationList;
+    }
+
 }
