@@ -24,4 +24,7 @@ public interface DaoFactory {
 
     GuideBookDao getGuideBookDao();
     void setGuideBookDao(GuideBookDao guideBookDao);
+
+    GuideBookReservationDao getGuideBookReservationDao();
+    void setGuideBookReservationDao(GuideBookReservationDao guideBookReservationDao);
 }
