@@ -18,19 +18,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="method editGuideBook &amp; deleteGuideBook in GuideBookController / new jsp : guideBookEditForm.jsp">
+    <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="bugs correction in GuideBookController (method editGuideBook)">
+      <change afterPath="$PROJECT_DIR$/escalade-model/src/main/java/org/nico/model/beans/GuideBookReservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/GuideBookManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/contract/manager/GuideBookManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/GuideBookManagerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-business/target/classes/org/nico/business/impl/manager/GuideBookManagerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/GuideBookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/contract/dao/GuideBookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/GuideBookDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-consumer/target/classes/org/nico/consumer/impl/dao/GuideBookDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/java/org/nico/controllers/GuideBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBookEditForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/src/main/webapp/WEB-INF/views/guideBookEditForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/GuideBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/classes/org/nico/controllers/GuideBookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/GuideBookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/classes/org/nico/controllers/GuideBookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-business-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/lib/escalade-model-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +38,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -129,13 +120,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -355,14 +348,8 @@
       <workItem from="1599912032313" duration="28788000" />
       <workItem from="1599945213829" duration="12534000" />
       <workItem from="1599989991601" duration="10248000" />
-      <workItem from="1600095958912" duration="4932000" />
-    </task>
-    <task id="LOCAL-00096" summary="method GetMapping to display photo edit form in PhotoController / new jsp : photoEditForm.jsp / url to edit photo in photoList.jsp">
-      <created>1599756657050</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1599756657050</updated>
+      <workItem from="1600095958912" duration="5180000" />
+      <workItem from="1600182320175" duration="1714000" />
     </task>
     <task id="LOCAL-00097" summary="method PostMapping editPhoto in PhotoController">
       <created>1599757432890</created>
@@ -700,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600097669966</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="bugs correction in GuideBookController (method editGuideBook)">
+      <created>1600101043504</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1600101043504</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +713,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new bean : Comment" />
     <MESSAGE value="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper" />
     <MESSAGE value="CommentManager / getter and setter in ManagerFactory / bean manager statement in businessContext.xml" />
     <MESSAGE value="method findCommentByClimbingSite in CommentManager &amp; CommentDao + edit method displayClimbingSite in ClimbingSiteController / corrections method names /" />
@@ -744,7 +737,8 @@
     <MESSAGE value="method findGuideBookByUserId in GuideBookManager &amp; GuideBookDao" />
     <MESSAGE value="method updateGuideBook &amp; deleteGuideBook in GuideBookManager &amp; GuideBookDao" />
     <MESSAGE value="method editGuideBook &amp; deleteGuideBook in GuideBookController / new jsp : guideBookEditForm.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="method editGuideBook &amp; deleteGuideBook in GuideBookController / new jsp : guideBookEditForm.jsp" />
+    <MESSAGE value="bugs correction in GuideBookController (method editGuideBook)" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs correction in GuideBookController (method editGuideBook)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1066" y="218" key="#Inspections" timestamp="1598456731696">
@@ -787,54 +781,54 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599442813400" />
-    <state width="619" height="252" key="GridCell.Tab.0.bottom" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.0.bottom" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.0.center" timestamp="1600100894855">
+    <state width="1293" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.0.center" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894855" />
-    <state width="619" height="252" key="GridCell.Tab.0.left" timestamp="1600100894855">
+    <state width="1293" height="252" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.0.left" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894855" />
-    <state width="619" height="252" key="GridCell.Tab.0.right" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.0.right" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.1.bottom" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.1.bottom" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.1.center" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.1.center" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.1.left" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.1.left" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.1.right" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.1.right" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.2.bottom" timestamp="1600100894857">
+    <state width="1293" height="252" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.2.bottom" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894857" />
-    <state width="619" height="252" key="GridCell.Tab.2.center" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.2.center" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.2.left" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.2.left" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
-    <state width="619" height="252" key="GridCell.Tab.2.right" timestamp="1600100894856">
+    <state width="1293" height="252" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
+    <state width="1293" height="252" key="GridCell.Tab.2.right" timestamp="1600101142498">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="619" height="252" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600100894856" />
+    <state width="1293" height="252" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600101142498" />
     <state width="1293" height="520" key="GridCell.Tab.3.bottom" timestamp="1599505889761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -863,10 +857,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="880" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599506096781" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1600000717261">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1600101056367">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1600000717261" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1600101056367" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599787549742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
