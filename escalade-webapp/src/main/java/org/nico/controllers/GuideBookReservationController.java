@@ -3,12 +3,14 @@ package org.nico.controllers;
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.contract.manager.GuideBookReservationManager;
 import org.nico.business.contract.manager.UserManager;
+import org.nico.model.beans.GuideBook;
 import org.nico.model.beans.GuideBookReservation;
 import org.nico.model.enums.ReservationStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -65,6 +67,76 @@ public class GuideBookReservationController {
                 guideBookReservationManager.createGuideBookReservation(newGuideBookReservation);
                 return "redirect:/guideBookList";
             }
+        }
+    }
+
+    @GetMapping("/cancelGuideBookReservation/{id}")
+    public String cancelReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            GuideBookReservation registeredReservation = guideBookReservationManager.findGuideBookReservationById(id);
+            registeredReservation.setReservationStatus(ReservationStatus.CANCELLED.getStatusValue());
+            GuideBook rentedGuideBook = registeredReservation.getGuideBook();
+            rentedGuideBook.setBooked(false);
+            guideBookReservationManager.updateGuideBookReservation(registeredReservation);
+            guideBookManager.updateGuideBook(rentedGuideBook);
+
+            model.addAttribute("userInSessionId", userInSessionId);
+
+            return "redirect:/personalSpace/{userInSessionId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/acceptGuideBookReservation/{id}")
+    public String acceptReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            GuideBookReservation registeredReservation = guideBookReservationManager.findGuideBookReservationById(id);
+            registeredReservation.setReservationStatus(ReservationStatus.ACCEPTED.getStatusValue());
+            GuideBook rentedGuideBook = registeredReservation.getGuideBook();
+            rentedGuideBook.setBooked(true);
+            guideBookReservationManager.updateGuideBookReservation(registeredReservation);
+            guideBookManager.updateGuideBook(rentedGuideBook);
+
+            model.addAttribute("userInSessionId", userInSessionId);
+
+            return "redirect:/personalSpace/{userInSessionId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/refuseGuideBookReservation/{id}")
+    public String refuseReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            GuideBookReservation registeredReservation = guideBookReservationManager.findGuideBookReservationById(id);
+            registeredReservation.setReservationStatus(ReservationStatus.REFUSED.getStatusValue());
+            guideBookReservationManager.updateGuideBookReservation(registeredReservation);
+
+            model.addAttribute("userInSessionId", userInSessionId);
+
+            String uri = ServletUriComponentsBuilder.fromCurrentRequestUri().toUriString();
+            System.out.println(uri);
+            return "redirect:/personalSpace/{userInSessionId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/closeGuideBookReservation/{id}")
+    public String closeReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            GuideBookReservation registeredReservation = guideBookReservationManager.findGuideBookReservationById(id);
+            registeredReservation.setReservationStatus(ReservationStatus.CLOSED.getStatusValue());
+            GuideBook rentedGuideBook = registeredReservation.getGuideBook();
+            rentedGuideBook.setBooked(false);
+            guideBookReservationManager.updateGuideBookReservation(registeredReservation);
+            guideBookManager.updateGuideBook(rentedGuideBook);
+            model.addAttribute("userInSessionId", userInSessionId);
+
+            return "redirect:/personalSpace/{userInSessionId}";
+        } else {
+            return "redirect:/login";
         }
     }
 }

@@ -82,6 +82,5 @@ public class GuideBookReservationManagerImpl extends AbstractManager implements 
                 getDaoFactory().getGuideBookReservationDao().updateGuideBookReservation(guideBookReservation);
             }
         });
-
     }
 }
