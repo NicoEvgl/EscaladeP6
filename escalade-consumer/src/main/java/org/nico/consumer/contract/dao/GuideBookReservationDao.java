@@ -9,4 +9,6 @@ public interface GuideBookReservationDao {
     GuideBookReservation findGuideBookReservationByGuideBookAndUserId(Integer guideBookId, Integer userId);
     List<GuideBookReservation> findGuideBookReservationRequestList(Integer id);
     List<GuideBookReservation> findGuideBookReservationListByUserId(Integer id);
+    GuideBookReservation findGuideBookReservationById(Integer id);
+    void updateGuideBookReservation(GuideBookReservation guideBookReservation);
 }

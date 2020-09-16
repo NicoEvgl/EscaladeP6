@@ -75,4 +75,37 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
         return guideBookReservationList;
     }
 
+    @Override
+    public GuideBookReservation findGuideBookReservationById(Integer id) {
+        String sql = "SELECT * FROM public.guidebook_reservation WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
+        GuideBookReservationRowMapper guideBookReservationRowMapper = new GuideBookReservationRowMapper();
+        GuideBookReservation guideBookReservation = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, guideBookReservationRowMapper);
+
+        return guideBookReservation;
+    }
+
+    @Override
+    public void updateGuideBookReservation(GuideBookReservation guideBookReservation) {
+        String sql = "UPDATE public.guidebook_reservation SET "
+                + "reservation_status = :status, "
+                + "guidebook_id = :guidebookId, "
+                + "user_id = :userId "
+                + "WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", guideBookReservation.getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("reservationStatus", guideBookReservation.getReservationStatus(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("guidebookId", guideBookReservation.getGuideBook().getId(), Types.INTEGER);
+        mapSqlParameterSource.addValue("userId", guideBookReservation.getUser().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
 }

@@ -60,4 +60,28 @@ public class GuideBookReservationManagerImpl extends AbstractManager implements 
 
         return guideBookReservationList;
     }
+
+    @Override
+    public GuideBookReservation findGuideBookReservationById(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        GuideBookReservation guideBookReservation = transactionTemplate.execute(transactionStatus -> {
+            GuideBookReservation guideBookReservationTx;
+            guideBookReservationTx = getDaoFactory().getGuideBookReservationDao().findGuideBookReservationById(id);
+            return guideBookReservationTx;
+        });
+
+        return guideBookReservation;
+    }
+
+    @Override
+    public void updateGuideBookReservation(GuideBookReservation guideBookReservation) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getGuideBookReservationDao().updateGuideBookReservation(guideBookReservation);
+            }
+        });
+
+    }
 }
