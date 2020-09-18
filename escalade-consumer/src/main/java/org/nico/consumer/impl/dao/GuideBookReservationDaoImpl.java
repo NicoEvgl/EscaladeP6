@@ -93,7 +93,7 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
     @Override
     public void updateGuideBookReservation(GuideBookReservation guideBookReservation) {
         String sql = "UPDATE public.guidebook_reservation SET "
-                + "reservation_status = :status, "
+                + "reservation_status = :reservationStatus, "
                 + "guidebook_id = :guidebookId, "
                 + "user_id = :userId "
                 + "WHERE id = :id";
@@ -105,6 +105,19 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
         mapSqlParameterSource.addValue("reservationStatus", guideBookReservation.getReservationStatus(), Types.VARCHAR);
         mapSqlParameterSource.addValue("guidebookId", guideBookReservation.getGuideBook().getId(), Types.INTEGER);
         mapSqlParameterSource.addValue("userId", guideBookReservation.getUser().getId(), Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public void deleteGuideBookReservation(Integer id) {
+        String sql = "DELETE FROM public.guidebook_reservation WHERE id = :id";
+        System.out.println(sql);
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }

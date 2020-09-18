@@ -11,4 +11,5 @@ public interface GuideBookReservationManager {
     List<GuideBookReservation> findGuideBookReservationListByUserId(Integer id);
     GuideBookReservation findGuideBookReservationById(Integer id);
     void updateGuideBookReservation(GuideBookReservation guideBookReservation);
+    void deleteGuideBookReservation(Integer id);
 }
