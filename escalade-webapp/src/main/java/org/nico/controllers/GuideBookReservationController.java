@@ -139,4 +139,16 @@ public class GuideBookReservationController {
             return "redirect:/login";
         }
     }
+
+    @GetMapping("/deleteGuideBookReservation/{id}")
+    public String deleteReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId != null){
+            model.addAttribute("userInSessionId", userInSessionId);
+            guideBookReservationManager.deleteGuideBookReservation(id);
+            System.out.println("On rentre dans la methode");
+            return "redirect:/personalSpace/{userInSessionId}";
+        } else {
+            return "redirect:/login";
+        }
+    }
 }

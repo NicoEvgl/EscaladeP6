@@ -207,9 +207,12 @@
                                             </c:if>
                                             <c:if test="${guideBookReservationRequest.reservationStatus == 'Acceptée'}">
                                                 <td>
-                                                    <a href="<c:url value="/closeGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-info btn-sm">RETOUR</a>
+                                                    <a href="<c:url value="/closeGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-info btn-sm">ANNULER</a>
                                                 </td>
                                             </c:if>
+                                            <td>
+                                                <a href="<c:url value="/deleteGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-danger btn-sm">Supprimer Réservation</a>
+                                            </td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
