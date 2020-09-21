@@ -129,6 +129,101 @@
             </div>
         </div>
     </section>
+    <section class="clean-block clean-services dark">
+        <div class="container">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Mes réservations</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                            </div>
+                            <div class="card-body">
+                                <table class="table text-justify my-3">
+                                    <thead>
+                                    <tr>
+                                        <th>Nom du Topo</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${userGuideBookReservationList}" var="guideBookReservation">
+                                        <tr>
+                                            <td>${guideBookReservation.guideBook.name}</td>
+                                            <td>${guideBookReservation.reservationStatus}</td>
+                                            <c:if test="${guideBookReservation.reservationStatus == 'En attente'}">
+                                                <td>
+                                                    <a href="<c:url value="/cancelGuideBookReservation/${guideBookReservation.id}"/>" class="btn btn-outline-danger btn-sm">ANNULER</a>
+                                                </td>
+                                            </c:if>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clean-block clean-services dark">
+        <div class="container">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Demandes de réservations</h2>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                            </div>
+                            <div class="card-body">
+                                <table class="table text-justify my-0">
+                                    <thead>
+                                    <tr>
+                                        <th>Nom du Topo</th>
+                                        <th>Pseudo du client</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${guideBookReservationRequestList}" var="guideBookReservationRequest">
+                                        <tr>
+                                            <td>${guideBookReservationRequest.guideBook.name}</td>
+                                            <td>${guideBookReservationRequest.user.username}</td>
+                                            <td>${guideBookReservationRequest.user.email}</td>
+                                            <td>${guideBookReservationRequest.reservationStatus}</td>
+                                            <c:if test="${guideBookReservationRequest.reservationStatus == 'En attente'}">
+                                                <td>
+                                                    <a href="<c:url value="/acceptGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-success btn-sm">ACCEPTER</a>
+                                                </td>
+                                                <td>
+                                                    <a href="<c:url value="/refuseGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-danger btn-sm">REFUSER</a>
+                                                </td>
+                                            </c:if>
+                                            <c:if test="${guideBookReservationRequest.reservationStatus == 'Acceptée'}">
+                                                <td>
+                                                    <a href="<c:url value="/closeGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-info btn-sm">ANNULER</a>
+                                                </td>
+                                            </c:if>
+                                            <td>
+                                                <a href="<c:url value="/deleteGuideBookReservation/${guideBookReservationRequest.id}"/>" class="btn btn-outline-danger btn-sm">Supprimer Réservation</a>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <%@include file="footer.jsp"%>

@@ -145,7 +145,6 @@ public class GuideBookReservationController {
         if (userInSessionId != null){
             model.addAttribute("userInSessionId", userInSessionId);
             guideBookReservationManager.deleteGuideBookReservation(id);
-            System.out.println("On rentre dans la methode");
             return "redirect:/personalSpace/{userInSessionId}";
         } else {
             return "redirect:/login";

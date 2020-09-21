@@ -64,6 +64,9 @@
                                 <img class="card-img-top w-100 d-block" src="<c:url value="${climbingSite.photoList.get(0).url}"/>">
                             </c:if>
                             <div class="card-body">
+                                <c:if test="${climbingSite.certified == true}">
+                                    <p><img src="<c:url value="/resources/img/approuved.png"/>" style="width: 120px; height:auto"></p>
+                                </c:if>
                                 <h4 class="card-title">${climbingSite.name}</h4>
                                 <p class="card-text">${climbingSite.region}</p>
                                 <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>

@@ -45,6 +45,22 @@
                         </div>
                         <div class="col-md-6">
                             <div class="info">
+                                <c:if test="${climbingSite.certified == false && (sessionScope.userInSessionRole == 'Admin' || sessionScope.userInSessionRole == 'Member')}">
+                                    <div class="text-info">
+                                        <a href="<c:url value="/climbingSiteTag/${climbingSite.id}"/>" class="btn btn-outline-secondary btn-sm"> Approuver le site </a>
+                                    </div>
+                                </c:if>
+                                <c:if test="${climbingSite.certified == true}">
+                                    <div class="text-info">
+                                        <p>Site officiel : <img src="<c:url value="/resources/img/approuved.png"/>" style="width: 120px; height:auto">
+                                        </p>
+                                        <c:if test="${climbingSite.certified == true && (sessionScope.userInSessionRole == 'Admin' || sessionScope.userInSessionRole == 'Member')}">
+                                            <p>
+                                                <a href="<c:url value="/climbingSiteTag/${climbingSite.id}"/>" class="btn btn-outline-secondary btn-sm"> Détaguer </a>
+                                            </p>
+                                        </c:if>
+                                    </div>
+                                </c:if>
                                 <h3>Description</h3>
                                 <div class="summary">
                                     <p>${climbingSite.info}</p>
@@ -67,7 +83,7 @@
                         </ul>
                         <div class="tab-content" id="TabContent">
                             <div class="tab-pane active fade show specifications" role="tabpanel" id="sectors">
-                                <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionId == 'Admin'}">
+                                <c:if test="${(!empty userInSessionId && sessionScope.userInSessionId == climbingSite.user.id) || sessionScope.userInSessionRole == 'Admin'}">
                                     <p class="my-5">
                                         <a href="<c:url value="/addSector/${climbingSite.id}"/>" class="btn btn-outline-primary">
                                             <i class="fas fa-plus-square ml-2"> Ajouter un secteur </i>

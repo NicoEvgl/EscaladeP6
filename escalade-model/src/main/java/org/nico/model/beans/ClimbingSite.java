@@ -15,6 +15,7 @@ public class ClimbingSite {
     private Integer nbRoutes;
     private String quotation;
     private String info;
+    private boolean certified;
 
     private User user;
     private List<Photo> photoList;
@@ -25,7 +26,7 @@ public class ClimbingSite {
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, User user, List<Photo> photoList, List<Sector> sectorList, List<Comment> commentList) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, boolean certified, User user, List<Photo> photoList, List<Sector> sectorList, List<Comment> commentList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -39,6 +40,7 @@ public class ClimbingSite {
         this.photoList = photoList;
         this.sectorList = sectorList;
         this.commentList = commentList;
+        this.certified = certified;
     }
 
     //====  GETTERS AND SETTERS  ====//
@@ -80,6 +82,10 @@ public class ClimbingSite {
 
     public void setInfo(String info) { this.info = info; }
 
+    public boolean isCertified() { return this.certified; }
+
+    public void setCertified(boolean certified) { this.certified = certified; }
+
     public User getUser() { return user; }
 
     public void setUser(User user) { this.user = user; }
@@ -103,7 +109,7 @@ public class ClimbingSite {
     @Override
     public String toString(){
         return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
-                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Quotation : " + quotation + "User id = " + user.getId() ;
+                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Quotation : " + quotation + "User id = " + user.getId() + " Certifié : " + certified ;
     }
 }
 

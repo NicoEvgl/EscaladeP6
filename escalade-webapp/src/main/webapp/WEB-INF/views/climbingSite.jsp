@@ -45,6 +45,22 @@
                         </div>
                         <div class="col-md-6">
                             <div class="info">
+                                <c:if test="${climbingSite.certified == false && (sessionScope.userInSessionRole == 'Admin' || sessionScope.userInSessionRole == 'Member')}">
+                                    <div class="text-info">
+                                        <a href="<c:url value="/climbingSiteTag/${climbingSite.id}"/>" class="btn btn-outline-secondary btn-sm"> Approuver le site </a>
+                                    </div>
+                                </c:if>
+                                <c:if test="${climbingSite.certified == true}">
+                                    <div class="text-info">
+                                        <p>Site officiel : <img src="<c:url value="/resources/img/approuved.png"/>" style="width: 120px; height:auto">
+                                        </p>
+                                        <c:if test="${climbingSite.certified == true && (sessionScope.userInSessionRole == 'Admin' || sessionScope.userInSessionRole == 'Member')}">
+                                            <p>
+                                                <a href="<c:url value="/climbingSiteTag/${climbingSite.id}"/>" class="btn btn-outline-secondary btn-sm"> Détaguer </a>
+                                            </p>
+                                        </c:if>
+                                    </div>
+                                </c:if>
                                 <h3>Description</h3>
                                 <div class="summary">
                                     <p>${climbingSite.info}</p>

@@ -172,4 +172,46 @@ public class ClimbingSiteController {
         climbingSiteManager.deleteClimbingSite(id);
         return "redirect:/climbingSiteList";
     }
+
+    @GetMapping("/climbingSiteTag/{id}")
+    public String displayClimbingSiteTag(Model model, @PathVariable Integer id,
+                                          @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        ClimbingSite tagedClimbingSite = climbingSiteManager.findClimbingSite(id);
+        List<String> regionList = enumManager.getEnumRegionStringValues();
+        model.addAttribute("regionList", regionList);
+        model.addAttribute("tagedClimbingSite", tagedClimbingSite);
+        return "climbingSiteTag";
+    }
+
+    @PostMapping("/climbingSiteTag/climbingSiteTagProcess/{id}")
+    public String climbingSiteTag(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model,
+                                        @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+        if (userInSessionId == null) {
+            return "redirect:/login";
+        }
+        ClimbingSite registeredClimbingSite = climbingSiteManager.findClimbingSite(id);
+        climbingSite.setUser(registeredClimbingSite.getUser());
+
+        if (bindingResult.hasErrors()){
+            List<FieldError> errors = bindingResult.getFieldErrors();
+            for (FieldError error : errors ) {
+                System.out.println (error.getObjectName() + " - " + error.getDefaultMessage());
+            }
+            String str = "Une erreur est survenue. Vérifiez les champs.";
+            model.addAttribute("registeredClimbingSite", climbingSite);
+            model.addAttribute("errorMessage", str);
+            return "climbingSiteTag";
+        } else {
+            if (climbingSite.isCertified() == true){
+                climbingSiteManager.addTag(id);
+            } else {
+                climbingSiteManager.deleteTag(id);
+            }
+            model.addAttribute("id", id);
+            return "redirect:/climbingSite/{id}";
+        }
+    }
 }
