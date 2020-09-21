@@ -23,6 +23,7 @@ public class ClimbingSiteRowMapper implements RowMapper<ClimbingSite> {
         climbingSite.setNbRoutes(resultSet.getInt("nb_routes"));
         climbingSite.setQuotation(resultSet.getString("quotation"));
         climbingSite.setInfo(resultSet.getString("info"));
+        climbingSite.setCertified(resultSet.getBoolean("is_certified"));
         climbingSite.setUser(userDao.findUser(resultSet.getInt("user_id")));
 
         return climbingSite;

@@ -105,5 +105,27 @@ public class ClimbingSiteManagerImpl extends AbstractManager implements Climbing
         });
     }
 
+    @Override
+    public void addTag(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getClimbingSiteDao().addTag(id);
+            }
+        });
+    }
+
+    @Override
+    public void deleteTag(Integer id) {
+        TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
+        transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus status) {
+                getDaoFactory().getClimbingSiteDao().deleteTag(id);
+            }
+        });
+    }
+
 }
 

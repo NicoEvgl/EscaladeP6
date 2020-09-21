@@ -112,7 +112,6 @@ public class GuideBookReservationDaoImpl extends AbstractDao implements GuideBoo
     @Override
     public void deleteGuideBookReservation(Integer id) {
         String sql = "DELETE FROM public.guidebook_reservation WHERE id = :id";
-        System.out.println(sql);
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();

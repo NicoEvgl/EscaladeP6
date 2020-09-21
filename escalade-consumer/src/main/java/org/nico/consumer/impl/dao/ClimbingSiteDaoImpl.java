@@ -18,8 +18,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite) {
-        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation, info, user_id)"
-                + "VALUES (:name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :userId)";
+        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation, info, is_certified, user_id)"
+                + "VALUES (:name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :isCertified, :userId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -32,6 +32,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
         mapSqlParameterSource.addValue("quotation", climbingSite.getQuotation(), Types.VARCHAR);
         mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("isCertified", climbingSite.isCertified(), Types.BOOLEAN);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
@@ -121,6 +122,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
                 + "nb_routes = :nbRoutes, "
                 + "quotation = :quotation, "
                 + "info = :info, "
+                + "is_certified = :isCertified, "
                 + "user_id = :userId "
                 + "WHERE id = :id";
 
@@ -136,6 +138,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
         mapSqlParameterSource.addValue("quotation", climbingSite.getQuotation(), Types.VARCHAR);
         mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("isCertified", climbingSite.isCertified(), Types.BOOLEAN);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
@@ -148,6 +151,34 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
         mapSqlParameterSource.addValue("id", id);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public void addTag(Integer id) {
+        String sql = "UPDATE public.climbingsite "
+                + "SET is_certified = true "
+                + "WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
+
+        namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
+    }
+
+    @Override
+    public void deleteTag(Integer id) {
+        String sql = "UPDATE public.climbingsite "
+                + "SET is_certified = false "
+                + "WHERE id = :id";
+
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
+        MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
+
+        mapSqlParameterSource.addValue("id", id, Types.INTEGER);
 
         namedParameterJdbcTemplate.update(sql, mapSqlParameterSource);
     }
