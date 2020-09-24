@@ -1,5 +1,7 @@
 package org.nico.business.impl.manager;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.CommentManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.Comment;

@@ -1,5 +1,7 @@
 package org.nico.controllers;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.contract.manager.GuideBookReservationManager;
 import org.nico.business.contract.manager.UserManager;
@@ -17,6 +19,9 @@ import javax.validation.Valid;
 
 @Controller
 public class GuideBookReservationController {
+
+    private static final Logger logger = LogManager.getLogger(GuideBookReservationController.class);
+
 
     @Inject
     private GuideBookReservationManager guideBookReservationManager;
@@ -43,6 +48,7 @@ public class GuideBookReservationController {
         } else {
             reservationStatus = "null";
         }
+        logger.debug(reservationStatus);
         model.addAttribute("reservationStatus", reservationStatus);
         model.addAttribute("guideBookId", id);
         model.addAttribute("guideBookReservation", new GuideBookReservation());

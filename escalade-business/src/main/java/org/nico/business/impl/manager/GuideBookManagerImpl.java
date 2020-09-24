@@ -1,5 +1,7 @@
 package org.nico.business.impl.manager;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.GuideBookManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.GuideBook;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuideBookManagerImpl extends AbstractManager implements GuideBookManager {
+
 
     @Override
     public void createGuideBook(GuideBook guideBook) {

@@ -1,6 +1,8 @@
 package org.nico.controllers;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.EnumManager;
 import org.nico.business.contract.manager.UserManager;
 import org.nico.model.beans.User;
@@ -22,6 +24,8 @@ import java.util.List;
 @Controller
 public class AdminManagementController {
 
+    private static final Logger logger = LogManager.getLogger(AdminManagementController.class);
+
     @Inject
     private UserManager userManager;
     @Inject
@@ -29,8 +33,10 @@ public class AdminManagementController {
 
     @GetMapping("/userList")
     public String displayUserList(@SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, Model model){
+        logger.debug("AdminManagementController userList");
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
+            logger.debug("role : " + adminUser.getRole());
             return "redirect:/home";
         }
         List<User> userList = new ArrayList<>();
@@ -43,9 +49,9 @@ public class AdminManagementController {
 
     @GetMapping("/editUserRole/{id}")
     public String displayUserAdminEditForm(@PathVariable("id") Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
-
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
+            logger.debug("Bad role or no Id");
             return "redirect:/home";
         }
         User editedUser = userManager.findUser(id);
@@ -56,8 +62,10 @@ public class AdminManagementController {
 
     @PostMapping("/editUserRole/editUserRoleProcess/{id}")
     public String editUserRole (@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, BindingResult bindingResult){
+        logger.debug("AdminManagementController editUserRoleProcess");
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
+            logger.debug("Bad role or no Id");
             return "redirect:/home";
         }
         if (bindingResult.hasErrors()){
@@ -88,8 +96,10 @@ public class AdminManagementController {
 
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId){
+        logger.debug("AdminManagementController deleteUser");
         User adminUser = userManager.findUser(userInSessionId);
         if (!adminUser.getRole().equals(Role.ADMIN.getParam())){
+            logger.debug("Bad role or no Id");
             return "redirect:/home";
         }
         userManager.deleteUser(id);
