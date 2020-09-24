@@ -19,7 +19,9 @@
                     Nos fiches des sites d'escalade vous offriront une multitude d’informations
                     (localisation, type d'escalde, nombre de voies, secteurs ...) pour vous aider à faire votre choix.
                 </p>
-                <p>Vous avez également la possibilité d'emprunter un topo à un membre, alors n'attendez plus et GRIMPEZ avec nous !
+                <p>
+                    Vous avez également la possibilité d'emprunter un topo à un membre, alors n'attendez plus et
+                    GRIMPEZ avec nous !
                 </p>
             </div>
             <div class="row align-items-center">
