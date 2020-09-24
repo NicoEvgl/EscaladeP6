@@ -3,8 +3,8 @@ package org.nico.model.enums;
 public enum Role {
 
     ADMIN("Admin"),
-    MEMBER("Membre"),
-    USER("Utilisateur");
+    MEMBER("Member"),
+    USER("User");
 
     private final String param;
 
