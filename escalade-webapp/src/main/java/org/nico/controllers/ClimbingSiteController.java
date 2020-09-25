@@ -91,7 +91,10 @@ public class ClimbingSiteController {
             return "redirect:/login";
         }
         List<String> regionList = enumManager.getEnumRegionStringValues();
+        List<String> quotationList = enumManager.getEnumQuotationStringValues();
+
         model.addAttribute("regionList", regionList);
+        model.addAttribute("quotationList", quotationList);
         model.addAttribute("climbingSite", new ClimbingSite());
         return "climbingSiteForm";
     }
@@ -124,8 +127,10 @@ public class ClimbingSiteController {
         }
         ClimbingSite editedClimbingSite = climbingSiteManager.findClimbingSite(id);
         List<String> regionList = enumManager.getEnumRegionStringValues();
+        List<String> quotationList = enumManager.getEnumQuotationStringValues();
 
         model.addAttribute("regionList", regionList);
+        model.addAttribute("quotationList", quotationList);
         model.addAttribute("editedClimbingSite", editedClimbingSite);
 
         return "climbingSiteEditForm";
@@ -180,8 +185,6 @@ public class ClimbingSiteController {
             return "redirect:/login";
         }
         ClimbingSite tagedClimbingSite = climbingSiteManager.findClimbingSite(id);
-        List<String> regionList = enumManager.getEnumRegionStringValues();
-        model.addAttribute("regionList", regionList);
         model.addAttribute("tagedClimbingSite", tagedClimbingSite);
         return "climbingSiteTag";
     }

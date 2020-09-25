@@ -18,8 +18,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
 
     @Override
     public void createClimbingSite(ClimbingSite climbingSite) {
-        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation, info, is_certified, user_id)"
-                + "VALUES (:name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotation, :info, :isCertified, :userId)";
+        String sql = "INSERT INTO public.climbingSite (name, region, climbing_type, rock_type, height, nb_routes, quotation_min, quotation_max, info, is_certified, user_id)"
+                + "VALUES (:name, :region, :climbingType, :rockType, :height, :nbRoutes, :quotationMin, :quotationMax, :info, :isCertified, :userId)";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -30,7 +30,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("rockType", climbingSite.getRockType(), Types.VARCHAR);
         mapSqlParameterSource.addValue("height", climbingSite.getHeight(), Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
-        mapSqlParameterSource.addValue("quotation", climbingSite.getQuotation(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMin", climbingSite.getQuotationMin(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMax", climbingSite.getQuotationMax(), Types.VARCHAR);
         mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
         mapSqlParameterSource.addValue("isCertified", climbingSite.isCertified(), Types.BOOLEAN);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);
@@ -95,7 +96,7 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
     @Override
     public List<ClimbingSite> findClimbingSiteSearchRequest(String name, String region, Integer nbRoutes, String quotation) {
         String sql = "SELECT distinct climbingsite. * FROM public.climbingsite " +
-                "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.quotation = :quotation";
+                "WHERE climbingsite.name = :name OR climbingsite.region = :region OR climbingsite.nb_routes = :nbRoutes OR climbingsite.quotation_min = :quotationMin OR climbingsite.quotation_max = :quotationMax";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
@@ -103,7 +104,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("name", name, Types.VARCHAR);
         mapSqlParameterSource.addValue("region", region, Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", nbRoutes, Types.INTEGER);
-        mapSqlParameterSource.addValue("quotation", quotation, Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMin", quotation, Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMax", quotation, Types.VARCHAR);
 
         ClimbingSiteRowMapper climbingSiteRowMapper = new ClimbingSiteRowMapper();
         List<ClimbingSite> climbingSiteList = namedParameterJdbcTemplate.query(sql, mapSqlParameterSource, climbingSiteRowMapper );
@@ -120,7 +122,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
                 + "rock_type = :rockType, "
                 + "height = :height, "
                 + "nb_routes = :nbRoutes, "
-                + "quotation = :quotation, "
+                + "quotation_min = :quotationMin, "
+                + "quotation_max = :quotationMax,"
                 + "info = :info, "
                 + "is_certified = :isCertified, "
                 + "user_id = :userId "
@@ -136,7 +139,8 @@ public class ClimbingSiteDaoImpl extends AbstractDao implements ClimbingSiteDao 
         mapSqlParameterSource.addValue("rockType", climbingSite.getRockType(), Types.VARCHAR);
         mapSqlParameterSource.addValue("height", climbingSite.getHeight(), Types.VARCHAR);
         mapSqlParameterSource.addValue("nbRoutes", climbingSite.getNbRoutes(), Types.INTEGER);
-        mapSqlParameterSource.addValue("quotation", climbingSite.getQuotation(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMin", climbingSite.getQuotationMin(), Types.VARCHAR);
+        mapSqlParameterSource.addValue("quotationMax", climbingSite.getQuotationMax(), Types.VARCHAR);
         mapSqlParameterSource.addValue("info", climbingSite.getInfo(), Types.VARCHAR);
         mapSqlParameterSource.addValue("isCertified", climbingSite.isCertified(), Types.BOOLEAN);
         mapSqlParameterSource.addValue("userId", climbingSite.getUser().getId(), Types.INTEGER);

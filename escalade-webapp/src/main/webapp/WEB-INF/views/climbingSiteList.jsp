@@ -70,7 +70,7 @@
                                 <h4 class="card-title">${climbingSite.name}</h4>
                                 <p class="card-text">${climbingSite.region}</p>
                                 <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>
-                                <p class="card-text">Cotation : ${climbingSite.quotation}</p>
+                                <p class="card-text">Cotation : de <b>${climbingSite.quotationMin}</b> à <b>${climbingSite.quotationMax}</b></p>
                             </div>
                             <div class="card-body">
                                 <a class="btn btn-outline-secondary btn-sm" href="<c:url value="/climbingSite/${climbingSite.id}"/>">Voir</a>

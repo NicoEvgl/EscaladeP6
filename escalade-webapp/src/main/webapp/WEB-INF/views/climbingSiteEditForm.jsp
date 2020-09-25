@@ -45,9 +45,17 @@
                     <form:input path="nbRoutes" type="number" value="${editedClimbingSite.nbRoutes}" cssClass="form-control item" placeholder="Nombre de voies" required="true" autofocus=""/>
                     <form:errors  path="nbRoutes" cssClass="error"/>
                 </div>
-                <div class="form-group">
-                    <form:input path="quotation" type="text" value="${editedClimbingSite.quotation}" cssClass="form-control item" placeholder="Cotation" required="true" autofocus=""/>
-                    <form:errors  path="quotation" cssClass="error"/>
+                <div class="form-group select-style">
+                    <form:select path="quotationMin" cssClass="form-control">
+                        <form:option value="">Cotation min</form:option>
+                        <form:options items="${quotationList}"/>
+                    </form:select>
+                    <form:errors path="quotationMin" cssClass="error"/>
+                    <form:select path="quotationMax" cssClass="form-control">
+                        <form:option value="">Cotation max</form:option>
+                        <form:options items="${quotationList}"/>
+                    </form:select>
+                    <form:errors path="quotationMax" cssClass="error"/>
                 </div>
                 <div class="form-group">
                     <form:textarea path="info" type="text" rows="5" value="${editedClimbingSite.info}" cssClass="form-control item" placeholder="Infos du site" autofocus=""/>

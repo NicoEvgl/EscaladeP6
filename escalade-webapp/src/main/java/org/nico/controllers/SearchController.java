@@ -55,7 +55,7 @@ public class SearchController {
             for (ClimbingSite climbingSite : climbingSiteList){
                 climbingSite.setPhotoList(photoManager.findPhotoByClimbingSite(climbingSite.getId()));
             }
-            for (int i = 0; i < 101; i++){
+            for (int i = 0; i < 900; i++){
                 nbRoutesList.add(i);
             }
             if (climbingSiteList.isEmpty()){

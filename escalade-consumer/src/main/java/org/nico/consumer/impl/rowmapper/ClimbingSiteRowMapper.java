@@ -21,7 +21,8 @@ public class ClimbingSiteRowMapper implements RowMapper<ClimbingSite> {
         climbingSite.setRockType(resultSet.getString("rock_type"));
         climbingSite.setHeight(resultSet.getString("height"));
         climbingSite.setNbRoutes(resultSet.getInt("nb_routes"));
-        climbingSite.setQuotation(resultSet.getString("quotation"));
+        climbingSite.setQuotationMin(resultSet.getString("quotation_min"));
+        climbingSite.setQuotationMax(resultSet.getString("quotation_max"));
         climbingSite.setInfo(resultSet.getString("info"));
         climbingSite.setCertified(resultSet.getBoolean("is_certified"));
         climbingSite.setUser(userDao.findUser(resultSet.getInt("user_id")));

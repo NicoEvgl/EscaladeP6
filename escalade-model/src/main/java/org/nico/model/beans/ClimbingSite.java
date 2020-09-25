@@ -13,7 +13,8 @@ public class ClimbingSite {
     private String rockType;
     private String height;
     private Integer nbRoutes;
-    private String quotation;
+    private String quotationMin;
+    private String quotationMax;
     private String info;
     private boolean certified;
 
@@ -26,7 +27,7 @@ public class ClimbingSite {
 
     public ClimbingSite() {}
 
-    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotation, String info, boolean certified, User user, List<Photo> photoList, List<Sector> sectorList, List<Comment> commentList) {
+    public ClimbingSite(Integer id, String name, String region, String climbingType, String rockType, String height, Integer nbRoutes, String quotationMin, String quotationMax, String info, boolean certified, User user, List<Photo> photoList, List<Sector> sectorList, List<Comment> commentList) {
         this.id = id;
         this.name = name;
         this.region = region;
@@ -34,7 +35,8 @@ public class ClimbingSite {
         this.rockType = rockType;
         this.height = height;
         this.nbRoutes = nbRoutes;
-        this.quotation = quotation;
+        this.quotationMin = quotationMin;
+        this.quotationMax = quotationMax;
         this.info = info;
         this.user = user;
         this.photoList = photoList;
@@ -74,9 +76,13 @@ public class ClimbingSite {
 
     public void setNbRoutes(Integer nbRoutes) { this.nbRoutes = nbRoutes; }
 
-    public String getQuotation() { return quotation; }
+    public String getQuotationMin() { return quotationMin; }
 
-    public void setQuotation(String quotation) { this.quotation = quotation; }
+    public void setQuotationMin(String quotationMin) { this.quotationMin = quotationMin; }
+
+    public String getQuotationMax() { return quotationMax; }
+
+    public void setQuotationMax(String quotationMax) { this.quotationMax = quotationMax; }
 
     public String getInfo() { return info; }
 
@@ -102,14 +108,5 @@ public class ClimbingSite {
 
     public void setCommentList(List<Comment> commentList) { this.commentList = commentList; }
 
-    /**
-     * method to String climbing sites
-     * @return id,name,region,climbingType,rockType,height,nbRoutes,orientation,cotation
-     */
-    @Override
-    public String toString(){
-        return "Site id : " + id + "Nom : " + name + " Région : " + region + " Type d'escalade : " + climbingType + " Type de roche : " + rockType +
-                " Hauteur : " + height + " Nombre de voies : " + nbRoutes + " Quotation : " + quotation + "User id = " + user.getId() + " Certifié : " + certified ;
-    }
 }
 
