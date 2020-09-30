@@ -158,6 +158,10 @@
                                                     <a href="<c:url value="/cancelGuideBookReservation/${guideBookReservation.id}"/>" class="btn btn-outline-danger btn-sm">ANNULER</a>
                                                 </td>
                                             </c:if>
+                                            <c:if test="${guideBookReservation.reservationStatus == 'Acceptée'}">
+                                                <td><a href="<c:url value="/userProfile/${guideBookReservation.guideBook.user.id}"/>">${guideBookReservation.guideBook.user.username}</a></td>
+                                                <td><a href="<c:url value="mailto:${guideBookReservation.guideBook.user.email}"/>">${guideBookReservation.guideBook.user.email}</a></td>
+                                            </c:if>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -194,8 +198,8 @@
                                     <c:forEach items="${guideBookReservationRequestList}" var="guideBookReservationRequest">
                                         <tr>
                                             <td>${guideBookReservationRequest.guideBook.name}</td>
-                                            <td>${guideBookReservationRequest.user.username}</td>
-                                            <td>${guideBookReservationRequest.user.email}</td>
+                                            <td><a href="<c:url value="/userProfile/${guideBookReservationRequest.user.id}"/>">${guideBookReservationRequest.user.username}</a></td>
+                                            <td><a href="<c:url value="mailto:${guideBookReservationRequest.user.email}"/>">${guideBookReservationRequest.user.email}</a></td>
                                             <td>${guideBookReservationRequest.reservationStatus}</td>
                                             <c:if test="${guideBookReservationRequest.reservationStatus == 'En attente'}">
                                                 <td>

@@ -85,8 +85,12 @@ public class AdminManagementController {
             user.setFirstName(registeredUser.getFirstName());
             user.setLastName(registeredUser.getLastName());
             user.setUsername(registeredUser.getUsername());
-            user.setEmail(registeredUser.getEmail());
             user.setPassword(registeredUser.getPassword());
+            user.setEmail(registeredUser.getEmail());
+            user.setAddress(registeredUser.getAddress());
+            user.setAddress2(registeredUser.getAddress2());
+            user.setZip(registeredUser.getZip());
+            user.setCity(registeredUser.getCity());
 
             userManager.updateUser(user);
             model.addAttribute("userInSessionId", userInSessionId);

@@ -67,8 +67,8 @@
                                     <p class="card-text">Type d'escalade : ${climbingSite.climbingType}</p>
                                     <p class="card-text">Type de roche : ${climbingSite.rockType}</p>
                                     <p class="card-text">Hauteurs : ${climbingSite.height}</p>
-                                    <p class="card-text">Voies : ${climbingSite.nbRoutes}</p>
-                                    <p class="card-text">Cotation : ${climbingSite.quotation}</p>
+                                    <p class="card-text">Voies : <b>${climbingSite.nbRoutes}</b></p>
+                                    <p class="card-text">Cotation : de <b>${climbingSite.quotationMin}</b> à <b>${climbingSite.quotationMax}</b></p>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ package org.nico.business.impl.manager;
 import org.nico.business.contract.manager.UserManager;
 import org.nico.business.impl.AbstractManager;
 import org.nico.model.beans.User;
+import org.nico.model.exception.UserBlockedException;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -48,11 +49,15 @@ public class UserManagerImpl extends AbstractManager implements UserManager {
     }
 
     @Override
-    public User findUserByAttribute(String attribute, Object attributeValue) {
+    public User findUserByAttribute(String attribute, Object attributeValue) throws UserBlockedException {
         TransactionTemplate transactionTemplate = new TransactionTemplate(getPlatformTransactionManager());
         User user = transactionTemplate.execute(transactionStatus -> {
             User userTx = new User();
-            userTx = getDaoFactory().getUserDao().findUserByAttribute(attribute, attributeValue);
+            try {
+                userTx = getDaoFactory().getUserDao().findUserByAttribute(attribute, attributeValue);
+            }catch (UserBlockedException e) {
+                e.printStackTrace();
+            }
             return userTx;
         });
         return user;

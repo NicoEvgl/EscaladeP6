@@ -1,10 +1,13 @@
 package org.nico.controllers;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.nico.business.contract.manager.UserManager;
 import org.nico.business.contract.manager.PasswordManager;
 import org.nico.model.beans.Login;
 import org.nico.model.beans.User;
 import org.nico.model.enums.Role;
+import org.nico.model.exception.UserBlockedException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +37,7 @@ public class LoginController {
         httpSession.setAttribute("userInSessionRole", user.getRole());
     }
 
+    private  static final Logger logger = LogManager.getLogger(LoginController.class);
 
     @GetMapping(value = "/login")
     public String displayLoginPage(Model model) {
@@ -42,26 +46,41 @@ public class LoginController {
     }
 
     @PostMapping(value = "/loginProcess")
-    public String doLogin(@ModelAttribute("login") Login newLogin, HttpSession httpSession, Model model) {
+    public String doLogin(@ModelAttribute("login") Login login, HttpSession httpSession, Model model) throws UserBlockedException {
 
-        User registeredUser = userManager.findUserByAttribute("username", newLogin.getUsername());
+        logger.debug(login.toString());
+        if (login != null) {
+            User registeredUser = userManager.findUserByAttribute("username", login.getUsername());
+            logger.debug(registeredUser.toString());
+            boolean checkPassword = false;
 
-        boolean checkPassword = true;
-
-        checkPassword = passwordManager.matches(newLogin.getPassword(), registeredUser.getPassword());
-
-        if (checkPassword == false ) {
-            httpSession.invalidate();
-            model.addAttribute("message", "Mot de passe incorrect");
-            return "login";
-        } else {
-            User loggedInUser = registeredUser;
-            addUserInSession(loggedInUser, httpSession);
-            model.addAttribute("message", "<div style='text-align:center;'/>"
-                    + "<h3>Connexion réussie</h3>");
-            model.addAttribute("login", "newLogin");
-            return "home";
+            if (registeredUser == null) {
+                httpSession.invalidate();
+                model.addAttribute("message", "Pseudo ou Mot de passe incorrect");
+                return "login";
+            }
+            checkPassword = passwordManager.matches(login.getPassword(), registeredUser.getPassword());
+            logger.debug(checkPassword);
+            if (checkPassword == true) {
+                User loggedInUser = registeredUser;
+                if (loggedInUser.getRole().equals(Role.ADMIN.getParam()) || loggedInUser.getRole().equals(Role.MEMBER.getParam()) || loggedInUser.getRole().equals(Role.USER.getParam())) {
+                    addUserInSession(loggedInUser, httpSession);
+                    model.addAttribute("message", "<div style='text-align:center;'/>"
+                            + "<h3>Connexion réussie</h3>");
+                    return "redirect:/home";
+                } else {
+                    UserBlockedException userBlockedException = new UserBlockedException("Compte invalide ou supprimé");
+                    model.addAttribute("message", userBlockedException);
+                    return "login";
+                }
+            } else {
+                httpSession.invalidate();
+                model.addAttribute("message", "Pseudo ou Mot de passe incorrect");
+                return "login";
+            }
         }
+        model.addAttribute("login", "login");
+        return "redirect:/home";
     }
 
     @GetMapping("/logout")

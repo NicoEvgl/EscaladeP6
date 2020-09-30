@@ -28,12 +28,11 @@ public class Login {
     public void setPassword(String password) { this.password = password; }
 
 
-    /**
-     * method to string Login
-     * @return Login : pseudo + password
-     */
     @Override
     public String toString() {
-        return "Login = " + "pseudo : " + username + "password : " + password;
+    return "login{" +
+            "username='" + username + '\'' +
+            ", password='" + password + '\'' +
+            '}';
     }
 }

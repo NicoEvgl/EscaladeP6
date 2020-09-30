@@ -88,13 +88,4 @@ public class GuideBook {
         this.user = user;
     }
 
-
-    /**
-     * method to string guidebook
-     * @return id,name,description,region,releaseDate,isBooked,User
-     */
-    @Override
-    public String toString() {
-        return "Topo id : " + id + "Nom : " + name + "description : " + description + " Région : " + region + " date de parution : " + releaseDate + " réservé : " + isBooked + "User id = " + user.getId() ;
-    }
 }

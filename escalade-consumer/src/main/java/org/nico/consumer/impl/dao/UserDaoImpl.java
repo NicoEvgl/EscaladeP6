@@ -4,6 +4,8 @@ import org.nico.consumer.contract.dao.UserDao;
 import org.nico.consumer.impl.AbstractDao;
 import org.nico.consumer.impl.rowmapper.UserRowMapper;
 import org.nico.model.beans.User;
+import org.nico.model.exception.UserBlockedException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -64,17 +66,19 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     }
 
     @Override
-    public User findUserByAttribute(String attribute, Object attributeValue) {
+    public User findUserByAttribute(String attribute, Object attributeValue) throws UserBlockedException {
         String sql = "SELECT * FROM public.user WHERE "+attribute+" = :"+attribute+"";
 
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(getDataSourceEscalade());
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
 
         mapSqlParameterSource.addValue(attribute, attributeValue);
-
-        User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new UserRowMapper());
-
-        return user;
+        try {
+            User user = namedParameterJdbcTemplate.queryForObject(sql, mapSqlParameterSource, new UserRowMapper());
+            return user;
+        }catch (EmptyResultDataAccessException ex){
+            return null;
+        }
     }
 
     @Override

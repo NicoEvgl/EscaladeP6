@@ -4,11 +4,15 @@
 
 
 <main class="page login-page">
-    ${message}
     <section class="clean-block clean-form dark">
         <div class="container">
             <div class="block-heading">
                 <h3 class="text-info">Se connecter</h3>
+                <p>
+                    <c:if test="${!empty errorMessage}">
+                        <c:out value="${errorMessage}"/>
+                    </c:if>
+                </p>
             </div>
             <form:form method="post" action="loginProcess" modelAttribute="login" >
                 <div class="form-group">

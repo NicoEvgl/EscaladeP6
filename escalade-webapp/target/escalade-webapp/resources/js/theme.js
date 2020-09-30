@@ -1,4 +1,4 @@
-// Custome theme code
+// Custom theme code
 
 if ($('.clean-gallery').length > 0) {
    baguetteBox.run('.clean-gallery', { animation: 'slideIn'});
