@@ -55,7 +55,7 @@ Cette application a été développé avec :
 ## Déploiement
 
 Pour la base de données :   
-    * Ouvrer le dossier "database";    
+    * Ouvrer le dossier "db_escalade";    
 	* Lancer le script de création de la base de donnée "create_db_escalade.sql";   
 	* Lancer le script de jeu de donnée demo "dataset_db_escalade.sql";  
 
