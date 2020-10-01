@@ -30,6 +30,11 @@ public class GuideBookController {
     private UserManager userManager;
 
 
+    /**
+     * Display guide book list page.
+     * @param model
+     * @return guideBookList
+     */
     @GetMapping(value = "/guideBookList")
     public String displayGuideBookList(Model model) {
         List<GuideBook> guideBookList = guideBookManager.findGuideBookList();
@@ -48,6 +53,13 @@ public class GuideBookController {
         return "guideBookList";
     }
 
+    /**
+     * Display guide book page.
+     * @param id
+     * @param userInSessionId
+     * @param model
+     * @return guideBook
+     */
     @GetMapping("/guideBook/{id}")
     public String displayGuideBook(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         GuideBook guideBook = guideBookManager.findGuideBook(id);
@@ -57,6 +69,12 @@ public class GuideBookController {
         return "guideBook";
     }
 
+    /**
+     * Display form to add a new guide book.
+     * @param userInSessionId
+     * @param model
+     * @return guideBookForm
+     */
     @GetMapping("/addGuideBook")
     public String displayGuidebookForm(@SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         if (userInSessionId != null){
@@ -70,6 +88,14 @@ public class GuideBookController {
         }
     }
 
+    /**
+     * Process to add a new guide book.
+     * @param newGuideBook
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return "/personnalSpace/{id}"
+     */
     @PostMapping("/addGuideBookProcess")
     public String addGuideBook(@Valid @ModelAttribute("guideBook") GuideBook newGuideBook, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -94,6 +120,13 @@ public class GuideBookController {
         }
     }
 
+    /**
+     * Display form to edit a guide book.
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return guideBookEditForm
+     */
     @GetMapping("/editGuideBook/{id}")
     public String displayGuideBookEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         GuideBook editedGuideBook = guideBookManager.findGuideBook(id);
@@ -109,6 +142,15 @@ public class GuideBookController {
         }
     }
 
+    /**
+     * Process to edit a guide book
+     * @param guideBook
+     * @param id
+     * @param model
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/guideBookList"
+     */
     @PostMapping("/editGuideBook/editGuideBookProcess/{id}")
     public String editGuideBook(@Valid GuideBook guideBook, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         GuideBook editedGuideBook = guideBookManager.findGuideBook(id);
@@ -128,6 +170,13 @@ public class GuideBookController {
         }
     }
 
+    /**
+     * Method to delete a guide book.
+     * @param id
+     * @param userInSessionId
+     * @param model
+     * @return "/guideBookList"
+     */
     @GetMapping("/deleteGuideBook/{id}")
     public String deleteGuideBook(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         if (userInSessionId != null){

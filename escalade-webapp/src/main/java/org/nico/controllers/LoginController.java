@@ -39,12 +39,25 @@ public class LoginController {
 
     private  static final Logger logger = LogManager.getLogger(LoginController.class);
 
+    /**
+     * Display login page
+     * @param model
+     * @return login
+     */
     @GetMapping(value = "/login")
     public String displayLoginPage(Model model) {
         model.addAttribute("login", new Login());
         return "login";
     }
 
+    /**
+     * Process to login
+     * @param login
+     * @param httpSession
+     * @param model
+     * @return "/home"
+     * @throws UserBlockedException
+     */
     @PostMapping(value = "/loginProcess")
     public String doLogin(@ModelAttribute("login") Login login, HttpSession httpSession, Model model) throws UserBlockedException {
 
@@ -83,6 +96,15 @@ public class LoginController {
         return "redirect:/home";
     }
 
+    /**
+     * Method to logout
+     * @param httpServletResponse
+     * @param httpSession
+     * @param webRequest
+     * @param sessionStatus
+     * @param model
+     * @return "/home"
+     */
     @GetMapping("/logout")
     public String logoutUser(HttpServletResponse httpServletResponse, HttpSession httpSession, WebRequest webRequest, SessionStatus sessionStatus, Model model){
         sessionStatus.setComplete();

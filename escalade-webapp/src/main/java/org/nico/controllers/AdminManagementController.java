@@ -31,6 +31,12 @@ public class AdminManagementController {
     @Inject
     private EnumManager enumManager;
 
+    /**
+     * Display user list page.
+     * @param userInSessionId
+     * @param model
+     * @return userListPage
+     */
     @GetMapping("/userList")
     public String displayUserList(@SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, Model model){
         logger.debug("AdminManagementController userList");
@@ -47,6 +53,13 @@ public class AdminManagementController {
         return "userListPage";
     }
 
+    /**
+     * Display admin page to edit user.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return userAdminEditForm
+     */
     @GetMapping("/editUserRole/{id}")
     public String displayUserAdminEditForm(@PathVariable("id") Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         User adminUser = userManager.findUser(userInSessionId);
@@ -60,6 +73,15 @@ public class AdminManagementController {
         return "userAdminEditForm";
     }
 
+    /**
+     * Method Post to edit user role.
+     * @param user
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @param bindingResult
+     * @return method getMapping("/userList")
+     */
     @PostMapping("/editUserRole/editUserRoleProcess/{id}")
     public String editUserRole (@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId, BindingResult bindingResult){
         logger.debug("AdminManagementController editUserRoleProcess");
@@ -98,6 +120,12 @@ public class AdminManagementController {
         }
     }
 
+    /**
+     * Delete user account.
+     * @param id
+     * @param userInSessionId
+     * @return userListPage
+     */
     @GetMapping("/deleteUser/{id}")
     public String deleteUser(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId" , required = false) Integer userInSessionId){
         logger.debug("AdminManagementController deleteUser");

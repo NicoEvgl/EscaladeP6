@@ -27,6 +27,13 @@ public class RouteController {
     @Inject
     private EnumManager enumManager;
 
+    /**
+     * Display form to add a new route.
+     * @param sectorId
+     * @param model
+     * @param userInSessionId
+     * @return routeForm
+     */
     @GetMapping("/addRoute/{sectorId}")
     public String displayRouteForm(@PathVariable Integer sectorId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -43,6 +50,15 @@ public class RouteController {
         }
     }
 
+    /**
+     * Process to add a new route.
+     * @param sectorId
+     * @param model
+     * @param route
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @PostMapping("/addRoute/addRouteProcess/{sectorId}")
     public String addRoute(@PathVariable Integer sectorId, Model model, @Valid Route route, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
 
@@ -62,8 +78,15 @@ public class RouteController {
         }
     }
 
+    /**
+     * Display form to edit a route.
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return routeEditForm
+     */
     @GetMapping("/editRoute/{id}")
-    public String updateRoute(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+    public String displayEditRouteForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
             Route editedRoute = routeManager.findRoute(id);
             List<String> quotationList = enumManager.getEnumQuotationStringValues();
@@ -77,8 +100,17 @@ public class RouteController {
         }
     }
 
+    /**
+     * Process to edit a route.
+     * @param route
+     * @param id
+     * @param model
+     * @param bindingResult
+     * @param userInSessionId
+     * @return  "/climbingSite/{id}"
+     */
     @PostMapping("/editRoute/editRouteProcess/{id}")
-    public String updatingRoute(@Valid Route route, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
+    public String editRoute(@Valid Route route, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
             if (bindingResult.hasErrors()){
                 model.addAttribute("memberInSessionId", userInSessionId);
@@ -97,6 +129,13 @@ public class RouteController {
         }
     }
 
+    /**
+     * Method to delete a route.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @GetMapping("/deleteRoute/{id}")
     public String deleteRoute(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){

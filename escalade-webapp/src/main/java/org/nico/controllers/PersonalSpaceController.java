@@ -37,6 +37,12 @@ public class PersonalSpaceController {
     private GuideBookReservationManager guideBookReservationManager;
 
 
+    /**
+     * Display personal space.
+     * @param userInSessionId
+     * @param model
+     * @return personalSpace
+     */
     @GetMapping("/personalSpace/{userInSessionId}")
     public String displayPersonalSpace(@PathVariable@SessionAttribute("userInSessionId")Integer userInSessionId, Model model){
 
@@ -67,6 +73,13 @@ public class PersonalSpaceController {
         return "personalSpace";
     }
 
+    /**
+     * Display form to edit personal infos.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return userEditForm
+     */
     @GetMapping("/editUser/{id}")
     public String displayUserEditForm(@PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId){
         User registeredUser = userManager.findUser(id);
@@ -84,6 +97,15 @@ public class PersonalSpaceController {
         }
     }
 
+    /**
+     * Process to edit personal infos.
+     * @param user
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @param bindingResult
+     * @return "/personalSpace/{id}"
+     */
     @PostMapping("/editUser/editUserProcess/{id}")
     public String editUser(@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId,BindingResult bindingResult){
         if(userInSessionId != null && userInSessionId == id){
@@ -109,6 +131,13 @@ public class PersonalSpaceController {
         }
     }
 
+    /**
+     * Display form to edit a password.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return passwordEditForm
+     */
     @GetMapping("/editPassword/{id}")
     public String displayPasswordEditForm(@PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId){
         if(userInSessionId != null && userInSessionId == id){
@@ -120,6 +149,15 @@ public class PersonalSpaceController {
         }
     }
 
+    /**
+     * Process to edit a password.
+     * @param user
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @param bindingResult
+     * @return "/personalSpace/{id}"
+     */
     @PostMapping("/editPassword/editPasswordProcess/{id}")
     public String editPassword(@Valid User user, @PathVariable("id") Integer id, Model model, @SessionAttribute("userInSessionId") Integer userInSessionId, BindingResult bindingResult){
         if(userInSessionId != null && userInSessionId == id){

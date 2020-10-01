@@ -32,8 +32,16 @@ public class SearchController {
     private GuideBookManager guideBookManager;
 
 
+    /**
+     * Process to search climbing sites.
+     * @param searchFilter
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return climbingSiteList
+     */
     @PostMapping(value = "/climbingSiteList/search")
-    public String displayClimbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    public String climbingSiteListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("") && searchFilter.getNbRoutes() == null && searchFilter.getQuotation().equals("")){
             return "redirect:/climbingSiteList";
         }
@@ -73,8 +81,16 @@ public class SearchController {
         }
     }
 
+    /**
+     * Process to search guide books.
+     * @param searchFilter
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return guideBookList
+     */
     @PostMapping(value = "/guideBookList/search")
-    public String displayGuideBookListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
+    public String guideBookListSearchResults(@Valid SearchFilter searchFilter, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (searchFilter.getName().equals("") && searchFilter.getRegion().equals("")){
             return "redirect:/guideBookList";
         }

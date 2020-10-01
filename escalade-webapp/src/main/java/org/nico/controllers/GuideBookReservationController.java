@@ -30,6 +30,13 @@ public class GuideBookReservationController {
     @Inject
     private UserManager userManager;
 
+    /**
+     * Display form to reserve a guide book.
+     * @param id
+     * @param userInSessionId
+     * @param model
+     * @return guideBookReservationForm
+     */
     @GetMapping("/guideBookReservation/{id}")
     public String displayGuideBookReservationForm(@PathVariable Integer id, @SessionAttribute("userInSessionId")Integer userInSessionId, Model model){
         if (userInSessionId == null){
@@ -56,6 +63,15 @@ public class GuideBookReservationController {
         return "guideBookReservationForm";
     }
 
+    /**
+     * Process to make a reservation.
+     * @param newGuideBookReservation
+     * @param id
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return "/guideBookList"
+     */
     @PostMapping("/guideBookReservation/guideBookReservationProcess/{id}")
     public String doReservation(@Valid @ModelAttribute("guideBookReservation")GuideBookReservation newGuideBookReservation, @PathVariable Integer id, BindingResult bindingResult, Model model,
                                 @SessionAttribute("userInSessionId")Integer userInSessionId){
@@ -76,6 +92,13 @@ public class GuideBookReservationController {
         }
     }
 
+    /**
+     * Method to cancel a reservation.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/personalSpace/{id}"
+     */
     @GetMapping("/cancelGuideBookReservation/{id}")
     public String cancelReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -94,6 +117,13 @@ public class GuideBookReservationController {
         }
     }
 
+    /**
+     * Method to accept a reservation.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/personalSpace/{id}"
+     */
     @GetMapping("/acceptGuideBookReservation/{id}")
     public String acceptReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -112,6 +142,13 @@ public class GuideBookReservationController {
         }
     }
 
+    /**
+     * Method to refuse a reservation.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/personalSpace/{id}"
+     */
     @GetMapping("/refuseGuideBookReservation/{id}")
     public String refuseReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -129,6 +166,13 @@ public class GuideBookReservationController {
         }
     }
 
+    /**
+     * Method to close a reservation.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/personalSpace/{id}"
+     */
     @GetMapping("/closeGuideBookReservation/{id}")
     public String closeReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -146,6 +190,13 @@ public class GuideBookReservationController {
         }
     }
 
+    /**
+     * Method to delete a reservation.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/personalSpace/{id}"
+     */
     @GetMapping("/deleteGuideBookReservation/{id}")
     public String deleteReservation(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){

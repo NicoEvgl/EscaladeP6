@@ -28,6 +28,13 @@ public class SectorController {
     private RouteManager routeManager;
 
 
+    /**
+     * Display form to add a sector.
+     * @param climbingSiteId
+     * @param model
+     * @param userInSessionId
+     * @return sectorForm
+     */
     @GetMapping("/addSector/{climbingSiteId}")
     public String displaySectorForm(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -43,6 +50,15 @@ public class SectorController {
         }
     }
 
+    /**
+     * Process to add a sector.
+     * @param climbingSiteId
+     * @param model
+     * @param sector
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @PostMapping("/addSector/addSectorProcess/{climbingSiteId}")
     public String addSector(@PathVariable Integer climbingSiteId, Model model, @Valid Sector sector, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
 
@@ -61,6 +77,13 @@ public class SectorController {
         }
     }
 
+    /**
+     * Display form to edit a sector.
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return sectorEditForm
+     */
     @GetMapping("/editSector/{id}")
     public String displaySectorEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
@@ -74,6 +97,15 @@ public class SectorController {
         }
     }
 
+    /**
+     * Process to edit a sector.
+     * @param sector
+     * @param id
+     * @param model
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @PostMapping("/editSector/editSectorProcess/{id}")
     public String editSector(@Valid Sector sector, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
@@ -92,6 +124,13 @@ public class SectorController {
         }
     }
 
+    /**
+     * Method to delete a sector.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @GetMapping("/deleteSector/{id}")
     public String deleteSector(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){

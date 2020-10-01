@@ -19,6 +19,12 @@ public class UserProfileController {
     @Inject
     private UserManager userManager;
 
+    /**
+     * Display a user profile
+     * @param userProfileId
+     * @param model
+     * @return userProfile
+     */
     @GetMapping("/userProfile/{userProfileId}")
     public String displayUserProfile(@PathVariable @SessionAttribute("userProfileId")Integer userProfileId, Model model){
 

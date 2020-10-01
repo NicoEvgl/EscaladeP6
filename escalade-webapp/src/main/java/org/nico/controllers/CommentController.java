@@ -28,6 +28,13 @@ public class CommentController {
     private UserManager userManager;
 
 
+    /**
+     * Display form to add a comment.
+     * @param climbingSiteId
+     * @param model
+     * @param userInSessionId
+     * @return commentForm
+     */
     @GetMapping("/addComment/{climbingSiteId}")
     public String displayCommentForm(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -41,6 +48,15 @@ public class CommentController {
         }
     }
 
+    /**
+     * Process to add a comment
+     * @param climbingSiteId
+     * @param model
+     * @param comment
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climningSite/{id}"
+     */
     @PostMapping("/addComment/addCommentProcess/{climbingSiteId}")
     public String saveComment(@PathVariable Integer climbingSiteId, Model model, @Valid Comment comment, BindingResult bindingResult,
                               @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
@@ -64,6 +80,13 @@ public class CommentController {
         }
     }
 
+    /**
+     * Display form to edit a comment.
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return commentEditForm
+     */
     @GetMapping("/editComment/{id}")
     public String displayCommentEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
@@ -77,6 +100,15 @@ public class CommentController {
         }
     }
 
+    /**
+     * Process to edit a comment.
+     * @param comment
+     * @param id
+     * @param model
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @PostMapping("/editComment/editCommentProcess/{id}")
     public String editComment(@Valid Comment comment, @PathVariable Integer id, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId != null){
@@ -96,6 +128,13 @@ public class CommentController {
         }
     }
 
+    /**
+     * Method to delete a comment
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @GetMapping("/deleteComment/{id}")
     public String deleteComment(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId != null){
@@ -107,6 +146,5 @@ public class CommentController {
             return "redirect:/login";
         }
     }
-
 
 }

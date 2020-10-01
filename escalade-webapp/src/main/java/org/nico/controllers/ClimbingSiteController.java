@@ -33,6 +33,12 @@ public class ClimbingSiteController {
     private CommentManager commentManager;
 
 
+    /**
+     * Display climbing site list page.
+     * @param model
+     * @param userInSessionId
+     * @return climbingSiteList
+     */
     @GetMapping("/climbingSiteList")
     public String displayClimbingSiteList(Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId) {
         List<ClimbingSite> climbingSiteList = climbingSiteManager.findClimbingSiteList();
@@ -61,6 +67,13 @@ public class ClimbingSiteController {
         return "climbingSiteList";
     }
 
+    /**
+     * Display climbing site page
+     * @param id
+     * @param userInSessionId
+     * @param model
+     * @return climbingSite
+     */
     @GetMapping("/climbingSite/{id}")
     public String displayClimbingSite(@PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, Model model){
         ClimbingSite climbingSite = climbingSiteManager.findClimbingSite(id);
@@ -85,6 +98,12 @@ public class ClimbingSiteController {
         return "climbingSite";
     }
 
+    /**
+     * Display form page to add a new climbing site.
+     * @param model
+     * @param userInSessionId
+     * @return climbingSiteForm
+     */
     @GetMapping("/addClimbingSite")
     public String displayClimbingSiteForm(Model model, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId == null) {
@@ -99,6 +118,14 @@ public class ClimbingSiteController {
         return "climbingSiteForm";
     }
 
+    /**
+     * Method Post to add a new climbing site.
+     * @param newClimbingSite
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return method getMapping("/climbingSiteList")
+     */
     @PostMapping("/addClimbingSiteProcess")
     public String addClimbingSite(@Valid @ModelAttribute("climbingSite") ClimbingSite newClimbingSite, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = true) Integer userInSessionId){
         if (userInSessionId == null) {
@@ -120,6 +147,13 @@ public class ClimbingSiteController {
         }
     }
 
+    /**
+     * Display form page to edit a climbing site.
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return climbingSiteEditForm
+     */
     @GetMapping("/editClimbingSite/{id}")
     public String displayClimbingSiteEditForm(Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
@@ -136,6 +170,15 @@ public class ClimbingSiteController {
         return "climbingSiteEditForm";
     }
 
+    /**
+     * Method Post to edit a climbing site
+     * @param climbingSite
+     * @param bindingResult
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return method getMapping("/climbingSite/{id}")
+     */
     @PostMapping("/editClimbingSite/editClimbingSiteProcess/{id}")
     public String editClimbingSite(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model, @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
@@ -165,6 +208,13 @@ public class ClimbingSiteController {
         }
     }
 
+    /**
+     * Method to delete a climbing site.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return
+     */
     @GetMapping("/deleteClimbingSite/{id}")
     public String deleteClimbingSite(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
@@ -178,6 +228,13 @@ public class ClimbingSiteController {
         return "redirect:/climbingSiteList";
     }
 
+    /**
+     * Display page to tag a climbing site as official "Les amis de l'escalade".
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return climbingSiteTag
+     */
     @GetMapping("/climbingSiteTag/{id}")
     public String displayClimbingSiteTag(Model model, @PathVariable Integer id,
                                           @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
@@ -189,6 +246,15 @@ public class ClimbingSiteController {
         return "climbingSiteTag";
     }
 
+    /**
+     * Method Post to tag a climbing site as official "Les amis de l'escalade".
+     * @param climbingSite
+     * @param bindingResult
+     * @param model
+     * @param id
+     * @param userInSessionId
+     * @return method getMapping("/climbingSite/{id}")
+     */
     @PostMapping("/climbingSiteTag/climbingSiteTagProcess/{id}")
     public String climbingSiteTag(@Valid ClimbingSite climbingSite, BindingResult bindingResult, Model model,
                                         @PathVariable Integer id, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){

@@ -24,12 +24,24 @@ public class RegistrationController {
     private PasswordManager passwordManager;
 
 
+    /**
+     * Display registration page.
+     * @param model
+     * @return register
+     */
     @GetMapping(value = "/register")
     public String displayRegisterPage(Model model) {
         model.addAttribute("user", new User());
         return "register";
     }
 
+    /**
+     * Process to register an account.
+     * @param newUser
+     * @param bindingResult
+     * @param model
+     * @return home
+     */
     @PostMapping(value = "/registerProcess")
     public String userRegistration(@ModelAttribute("user") User newUser, BindingResult bindingResult, Model model) {
 

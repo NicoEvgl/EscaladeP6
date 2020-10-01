@@ -15,6 +15,13 @@ public class HomeController {
     static Logger logger = LogManager.getLogger(HomeController.class);
 
 
+    /**
+     * Display home page.
+     * @param model
+     * @param userInSessionId
+     * @param httpSession
+     * @return home
+     */
     @GetMapping({"/home", "/"})
     public String displayHomePage(Model model , @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId, HttpSession httpSession){
         if(userInSessionId == null){

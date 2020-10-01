@@ -26,6 +26,13 @@ public class PhotoController {
     private ClimbingSiteManager climbingSiteManager;
 
 
+    /**
+     * Display form to add a photo.
+     * @param climbingSiteId
+     * @param model
+     * @param userInSessionId
+     * @return photoForm
+     */
     @GetMapping("/climbingSite/{climbingSiteId}/photoForm")
     public String displayClimbingSitePhotoForm(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null){
@@ -37,6 +44,15 @@ public class PhotoController {
         return "photoForm";
     }
 
+    /**
+     * Process to add a photo
+     * @param climbingSiteId
+     * @param photo
+     * @param bindingResult
+     * @param model
+     * @param userInSessionId
+     * @return "/climbingSite/{id}"
+     */
     @PostMapping("/climbingSite/{climbingSiteId}/addPhotoProcess")
     public String addClimbingSitePhoto(@PathVariable Integer climbingSiteId, @Valid Photo photo, BindingResult bindingResult, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null){
@@ -57,6 +73,13 @@ public class PhotoController {
         }
     }
 
+    /**
+     * Display climbing site's photos.
+     * @param climbingSiteId
+     * @param model
+     * @param userInSessionId
+     * @return photoList
+     */
     @GetMapping("/climbingSite/{climbingSiteId}/photoList")
     public String displayClimbingSitePhotoList(@PathVariable Integer climbingSiteId, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null){
@@ -72,6 +95,13 @@ public class PhotoController {
         return "photoList";
     }
 
+    /**
+     * Display form to edit a photo.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return photoEditForm
+     */
     @GetMapping("/editPhoto/{id}")
     public String displayPhotoEditForm(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null){
@@ -84,6 +114,15 @@ public class PhotoController {
         return "photoEditForm";
     }
 
+    /**
+     * Process to edit a photo.
+     * @param id
+     * @param photo
+     * @param model
+     * @param bindingResult
+     * @param userInSessionId
+     * @return "/climbingSite/{id}/photoList"
+     */
     @PostMapping("/editPhoto/editPhotoProcess/{id}")
     public String editPhoto(@PathVariable Integer id, @Valid Photo photo, Model model, BindingResult bindingResult, @SessionAttribute(value = "userInSessionId", required = false)Integer userInSessionId){
         if (userInSessionId == null){
@@ -103,6 +142,13 @@ public class PhotoController {
         }
     }
 
+    /**
+     * Method to delete a photo.
+     * @param id
+     * @param model
+     * @param userInSessionId
+     * @return "/ClimbingSite/{id}/photoList"
+     */
     @GetMapping("/deletePhoto/{id}")
     public String deletePhoto(@PathVariable Integer id, Model model, @SessionAttribute(value = "userInSessionId", required = false) Integer userInSessionId){
         if (userInSessionId == null) {
