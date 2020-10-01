@@ -15,7 +15,7 @@
                     <form:form cssClass="form-inline" modelAttribute="searchFilter" method="post" action="${actionForm}">
                         <div class="form-inline select-style">
                             <form:select path="name" cssClass="form-control mb-2 mr-sm-2">
-                                <form:option value="">Site</form:option>
+                                <form:option value="">Nom</form:option>
                                 <form:options items="${nameList}"/>
                             </form:select>
                             <form:errors path="name" cssClass="error"/>

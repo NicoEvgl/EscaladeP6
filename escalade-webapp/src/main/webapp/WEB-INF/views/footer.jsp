@@ -2,7 +2,7 @@
 
 <footer class="page-footer dark">
     <div class="footer-copyright">
-        <p>© 2018 Copyright Les Amis de l'Escalade, association loi 1901</p>
+        <p>Les Amis de l'Escalade</p>
     </div>
 </footer>
 
