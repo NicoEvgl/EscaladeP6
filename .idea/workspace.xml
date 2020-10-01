@@ -19,10 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22b1c518-aab2-4478-ac9f-80e2c8d76724" name="Default Changelist" comment="global modif">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/guideBookList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/guideBookList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/userProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/escalade-webapp/target/escalade-webapp/WEB-INF/views/userProfile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,14 +361,7 @@
       <workItem from="1601473109920" duration="9517000" />
       <workItem from="1601484165680" duration="540000" />
       <workItem from="1601485690956" duration="12000" />
-      <workItem from="1601549298985" duration="6611000" />
-    </task>
-    <task id="LOCAL-00120" summary="CommentDao / getter and setter in DaoFactory / bean dao statement in consumerContext.xml / new rowmapper: CommentRowMapper">
-      <created>1599933686937</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1599933686937</updated>
+      <workItem from="1601549298985" duration="6783000" />
     </task>
     <task id="LOCAL-00121" summary="CommentManager / getter and setter in ManagerFactory / bean manager statement in businessContext.xml">
       <created>1599934840344</created>
@@ -709,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601555739300</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="global modif">
+      <created>1601556031242</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1601556031242</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,10 +889,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="497" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1600429179854" />
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1601555746575">
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2" timestamp="1601556038356">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601555746575" />
+    <state x="1032" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601556038356" />
     <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599787549742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

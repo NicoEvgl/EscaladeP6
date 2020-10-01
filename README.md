@@ -54,10 +54,10 @@ Cette application a été développé avec :
 
 ## Déploiement
 
-Pour la base de données :
-Vous trouverez ce qu'il vous faut dans le dossier "db_escalade":
-	* Lancer le script de création de la base de donnée "create_db_escalade.sql"
-	* Lancer le script de jeu de donnée demo "dataset_db_escalade.sql"
+Pour la base de données :   
+    * Ouvrer le dossier "database";    
+	* Lancer le script de création de la base de donnée "create_db_escalade.sql";   
+	* Lancer le script de jeu de donnée demo "dataset_db_escalade.sql";  
 
 Sur votre terminal :
 Lancer le serveur tomcat en ouvrant le fichier "startup.bat" situé dans le dossier "bin".
