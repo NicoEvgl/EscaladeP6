@@ -41,7 +41,7 @@ La plateforme se contente de mettre en contact les deux parties pour le	prêt d�
 Les contraintes fonctionnelles
 - Vocabulaire de l'escalade utilisé.
 - Le site est responsive.
-- le site est sécurisé. (aucun mot de passe est stocké en clair dans la BDD)
+- le site est sécurisé. (aucun mot de passe est stocké en clair dans la base de donnée)
 
 Développement et déploiement
 ## Développement
