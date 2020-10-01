@@ -57,6 +57,7 @@ Cette application a été développé avec :
 Pour la base de données :
 Vous trouverez ce qu'il vous faut dans le dossier "db_escalade":
 	* Lancer le script de création de la base de donnée "create_db_escalade.sql"
+	* Lancer le script de jeu de donnée demo "dataset_db_escalade.sql"
 
 Sur votre terminal :
 Lancer le serveur tomcat en ouvrant le fichier "startup.bat" situé dans le dossier "bin".
@@ -65,4 +66,4 @@ http://localhost:8080/lesamisdelescalade-webapp/
 
 Sur votre IDE :
 Configurer le serveur tomcat sur votre ide avec l'url http://localhost:8080/escalade_webapp_war/ et le fichier war "escalade-wepapp:war" pour déployer le server.
-Lancer le serveur.
+Lancer le serveur à partir de l'ide.
