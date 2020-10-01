@@ -12,6 +12,9 @@
                 <div class="row">
                     <div class="col">
                         <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <a href="<c:out value="javascript:history.go(-1)"/>" class="btn btn-outline-primary btn-block">Retour</a>
+                            </div>
                             <div class="card-body">
                                 <table class="table text-center my-0">
                                     <thead>
